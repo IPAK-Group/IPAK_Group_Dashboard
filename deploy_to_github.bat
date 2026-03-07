@@ -2,6 +2,8 @@
 title KPI Dashboard - Update & Deploy
 color 0A
 
+SET GIT="C:\Program Files\Git\bin\git.exe"
+
 echo ================================================
 echo   KPI DASHBOARD - UPDATE AND PUBLISH
 echo ================================================
@@ -23,7 +25,7 @@ echo.
 
 REM ── Step 2: Stage all changes ────────────────────
 echo [2/3] Preparing files for upload...
-git add dashboard_clean.html data.js
+%GIT% add dashboard_clean.html data.js
 if %ERRORLEVEL% NEQ 0 (
     color 0C
     echo ERROR: Git staging failed. Is Git installed?
@@ -38,8 +40,8 @@ echo [3/3] Publishing to GitHub...
 REM Get current date/time for the commit message
 for /f "tokens=1-3 delims=/ " %%a in ("%date%") do set TODAY=%%c-%%b-%%a
 for /f "tokens=1-2 delims=: " %%a in ("%time%") do set NOW=%%a:%%b
-git commit -m "Dashboard update: %TODAY% %NOW%"
-git push origin main
+%GIT% commit -m "Dashboard update: %TODAY% %NOW%"
+%GIT% push origin main
 if %ERRORLEVEL% NEQ 0 (
     color 0C
     echo.
