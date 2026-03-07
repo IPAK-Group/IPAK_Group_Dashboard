@@ -1019,10 +1019,21 @@
 
             const year = document.getElementById('detail-year')?.value || 'all';
             const month = document.getElementById('detail-month')?.value || 'all';
-            const data = getFilteredData(dashboardData.mainData, activePlant, year, month);
+            const mainDataFiltered = getFilteredData(dashboardData.mainData, activePlant, year, month);
+            const offlineDataFiltered = getFilteredData(dashboardData.offlineData, activePlant, year, month);
+            const productDataFiltered = getFilteredData(dashboardData.productData, activePlant, year, month);
 
             // Fetch yearly data for average calculation (selected year, all months)
-            const yearData = getFilteredData(dashboardData.mainData, activePlant, year, 'all');
+            const yearMainData = getFilteredData(dashboardData.mainData, activePlant, year, 'all');
+            const yearOfflineData = getFilteredData(dashboardData.offlineData, activePlant, year, 'all');
+            const yearProductData = getFilteredData(dashboardData.productData, activePlant, year, 'all');
+
+            const getDataSourceForMetric = (metric, returnDataType) => {
+                if (dashboardData.mainData && dashboardData.mainData[0] && metric in dashboardData.mainData[0]) return returnDataType === 'year' ? yearMainData : mainDataFiltered;
+                if (dashboardData.offlineData && dashboardData.offlineData[0] && metric in dashboardData.offlineData[0]) return returnDataType === 'year' ? yearOfflineData : offlineDataFiltered;
+                if (dashboardData.productData && dashboardData.productData[0] && metric in dashboardData.productData[0]) return returnDataType === 'year' ? yearProductData : productDataFiltered;
+                return returnDataType === 'year' ? yearMainData : mainDataFiltered; // fallback
+            };
 
             // Helper for specific styling based on metric name
             const getKPIStyle = (metric) => {
@@ -1067,21 +1078,24 @@
 
             container.innerHTML = pinnedKPIs.map(metric => {
                 let value = 0;
-                if (data.length > 0) {
+                const metricData = getDataSourceForMetric(metric, 'filtered');
+                const metricYearData = getDataSourceForMetric(metric, 'year');
+
+                if (metricData.length > 0) {
                     if (isRatioMetric(metric)) {
-                        const valid = data.filter(d => d[metric] !== undefined && d[metric] !== null && d[metric] !== '-');
+                        const valid = metricData.filter(d => d[metric] !== undefined && d[metric] !== null && d[metric] !== '-');
                         value = valid.length ? valid.reduce((a, b) => a + (Number(b[metric]) || 0), 0) / valid.length : 0;
                     } else {
-                        value = data.reduce((a, b) => a + (Number(b[metric]) || 0), 0);
+                        value = metricData.reduce((a, b) => a + (Number(b[metric]) || 0), 0);
                     }
                 }
 
                 // Yearly Average calculation for Production and Waste (exclude percentage metrics)
                 let yearlyAvg = null;
                 if ((metric.toLowerCase().includes('production') || metric.toLowerCase().includes('waste')) && !metric.includes('%')) {
-                    if (yearData.length > 0) {
-                        const totalYear = yearData.reduce((a, b) => a + (Number(b[metric]) || 0), 0);
-                        yearlyAvg = totalYear / yearData.length;
+                    if (metricYearData.length > 0) {
+                        const totalYear = metricYearData.reduce((a, b) => a + (Number(b[metric]) || 0), 0);
+                        yearlyAvg = totalYear / metricYearData.length;
                     }
                 }
 
