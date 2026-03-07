@@ -31,7 +31,7 @@
                     if (typeof initializeDashboard === 'function') {
                         initializeDashboard();
                     } else {
-                        window.addEventListener('load', () => {
+                        window.addEventListener('load', function() {
                             if (typeof initializeDashboard === 'function') {
                                 initializeDashboard();
                             }
@@ -64,7 +64,7 @@
                     if (mainDashboard) mainDashboard.classList.remove('hidden');
                 });
             }
-        })();
+        }
     </script>
 
     <!-- Font Awesome -->
@@ -1017,72 +1017,16 @@
             }, 150);
         }
 
-        // ===== VIRTUAL METRIC RESOLUTION HELPERS =====
-        function getDataSourceForMetric(metric, returnDataType, activePlant, year, month) {
-            const m = metric.toUpperCase();
-
-            const mainDataFiltered = getFilteredData(dashboardData.mainData, activePlant, year, month);
-            const offlineDataFiltered = getFilteredData(dashboardData.offlineData, activePlant, year, month);
-            const productDataFiltered = getFilteredData(dashboardData.productData, activePlant, year, month);
-
-            const yearMainData = getFilteredData(dashboardData.mainData, activePlant, year, 'all');
-            const yearOfflineData = getFilteredData(dashboardData.offlineData, activePlant, year, 'all');
-            const yearProductData = getFilteredData(dashboardData.productData, activePlant, year, 'all');
-
-            if (m.includes('OFFLINE')) {
-                return returnDataType === 'year' ? yearOfflineData : offlineDataFiltered;
-            }
-            if (m.includes('P-PLAIN-GR') || m.includes('PRODUCT')) {
-                let filtered = returnDataType === 'year' ? yearProductData : productDataFiltered;
-                if (m.includes('P-PLAIN-GR')) {
-                    filtered = filtered.filter(d => d['Product'] === 'P-PLAIN-GR' || d['Product Type'] === 'P-PLAIN-GR');
-                }
-                return filtered;
-            }
-            if (m.includes('FPL') || m === 'RUNNING DAYS') {
-                return returnDataType === 'year' ? yearMainData : mainDataFiltered;
-            }
-
-            if (dashboardData.mainData && dashboardData.mainData[0] && metric in dashboardData.mainData[0]) return returnDataType === 'year' ? yearMainData : mainDataFiltered;
-            if (dashboardData.offlineData && dashboardData.offlineData[0] && metric in dashboardData.offlineData[0]) return returnDataType === 'year' ? yearOfflineData : offlineDataFiltered;
-            if (dashboardData.productData && dashboardData.productData[0] && metric in dashboardData.productData[0]) return returnDataType === 'year' ? yearProductData : productDataFiltered;
-            return returnDataType === 'year' ? yearMainData : mainDataFiltered;
-        }
-
-        function resolveMetricValue(metric, dataset, isSinglePoint = false) {
-            if (!dataset) return 0;
-            const dataArr = isSinglePoint ? [dataset] : dataset;
-            if (dataArr.length === 0) return 0;
-
-            let value = 0;
-            let calculationMethod = 'sum';
-            let sourceCol = metric;
-
-            const m = metric.toUpperCase();
-            if (m === 'FPL PRODUCTION (KG)' || m === 'FPL PRODUCTION') sourceCol = 'Production';
-            else if (m === 'FPL WASTE (KG)' || m === 'FPL WASTE') sourceCol = 'Waste';
-            else if (m === 'OFFLINE PRODUCTION (KG)' || m === 'OFFLINE PRODUCTION') sourceCol = 'Production';
-            else if (m === 'OFFLINE WASTE (KG)' || m === 'OFFLINE WASTE') sourceCol = 'Waste';
-            else if (m.includes('PRODUCTION (TOTAL)') || m.includes('PRODUCTION (FPL)') || m.includes('PRODUCTION (OFFLINE)')) sourceCol = 'Production';
-            else if (m === 'RUNNING DAYS') sourceCol = 'Running Days';
-
-            if (isRatioMetric(metric) || isRatioMetric(sourceCol)) calculationMethod = 'avg';
-
-            if (calculationMethod === 'avg') {
-                const valid = dataArr.filter(d => d[sourceCol] !== undefined && d[sourceCol] !== null && d[sourceCol] !== '-');
-                value = valid.length ? valid.reduce((a, b) => a + (Number(b[sourceCol]) || 0), 0) / valid.length : 0;
-            } else {
-                value = dataArr.reduce((a, b) => a + (Number(b[sourceCol]) || 0), 0);
-            }
-            return value;
-        }
-
         function renderOverviewKPIs() {
             const container = document.getElementById('overview-kpis');
             if (!container) return;
 
             const year = document.getElementById('detail-year')?.value || 'all';
             const month = document.getElementById('detail-month')?.value || 'all';
+            const data = getFilteredData(dashboardData.mainData, activePlant, year, month);
+
+            // Fetch yearly data for average calculation (selected year, all months)
+            const yearData = getFilteredData(dashboardData.mainData, activePlant, year, 'all');
 
             // Helper for specific styling based on metric name
             const getKPIStyle = (metric) => {
@@ -1126,21 +1070,22 @@
             };
 
             container.innerHTML = pinnedKPIs.map(metric => {
-                const metricData = getDataSourceForMetric(metric, 'filtered', activePlant, year, month);
-                const metricYearData = getDataSourceForMetric(metric, 'year', activePlant, year, month);
+                let value = 0;
+                if (data.length > 0) {
+                    if (isRatioMetric(metric)) {
+                        const valid = data.filter(d => d[metric] !== undefined && d[metric] !== null && d[metric] !== '-');
+                        value = valid.length ? valid.reduce((a, b) => a + (Number(b[metric]) || 0), 0) / valid.length : 0;
+                    } else {
+                        value = data.reduce((a, b) => a + (Number(b[metric]) || 0), 0);
+                    }
+                }
 
-                const value = resolveMetricValue(metric, metricData);
-
+                // Yearly Average calculation for Production and Waste (exclude percentage metrics)
                 let yearlyAvg = null;
-                const mUpper = metric.toUpperCase();
-                const isVolumeMetric = mUpper.includes('PRODUCTION') || mUpper.includes('WASTE');
-
-                if (isVolumeMetric && !metric.includes('%')) {
-                    if (metricYearData.length > 0) {
-                        const totalYear = resolveMetricValue(metric, metricYearData);
-                        if (mUpper !== 'RUNNING DAYS') {
-                            yearlyAvg = totalYear / metricYearData.length;
-                        }
+                if ((metric.toLowerCase().includes('production') || metric.toLowerCase().includes('waste')) && !metric.includes('%')) {
+                    if (yearData.length > 0) {
+                        const totalYear = yearData.reduce((a, b) => a + (Number(b[metric]) || 0), 0);
+                        yearlyAvg = totalYear / yearData.length;
                     }
                 }
 
@@ -1796,21 +1741,6 @@
                 return isRatioMetric(metric) ? 'y1' : 'y';
             };
 
-            // Helper to compute charted data points intelligently matching month labels
-            const getChartDataPoints = (metricName, baseData) => {
-                const chartYear = document.getElementById('detail-year')?.value || 'all';
-                const chartMonth = document.getElementById('detail-month')?.value || 'all';
-                const metricDataSource = getDataSourceForMetric(metricName, 'filtered', activePlant, chartYear, chartMonth);
-
-                return baseData.map(mainRow => {
-                    if (!mainRow.Month) return 0;
-                    const monthStr = mainRow.Month.substring(0, 7);
-                    const matchingRows = metricDataSource.filter(d => d.Month && d.Month.substring(0, 7) === monthStr);
-                    if (matchingRows.length === 0) return 0;
-                    return resolveMetricValue(metricName, matchingRows);
-                });
-            };
-
             switch (chartType) {
                 case 'line':
                 case 'bar':
@@ -1820,7 +1750,7 @@
                         return {
                             type: type === 'mixed' ? undefined : type, // Only specify type for mixed chart datasets
                             label: metric,
-                            data: getChartDataPoints(metric, data),
+                            data: data.map(d => d[metric] || 0),
                             borderColor: colors[i],
                             backgroundColor: type === 'line' || (chartType === 'mixed' && i > 0) ? colors[i].replace('rgb', 'rgba').replace(')', ', 0.1)') : colors[i].replace('rgb', 'rgba').replace(')', ', 0.7)'),
                             borderWidth: type === 'bar' ? 1 : 2,
@@ -1858,7 +1788,7 @@
                 case 'area':
                     datasets = metrics.map((metric, i) => ({
                         label: metric,
-                        data: getChartDataPoints(metric, data),
+                        data: data.map(d => d[metric] || 0),
                         borderColor: colors[i],
                         backgroundColor: colors[i].replace('rgb', 'rgba').replace(')', ', 0.3)'),
                         fill: true,
@@ -1870,7 +1800,7 @@
                 case 'horizontalBar':
                     datasets = metrics.map((metric, i) => ({
                         label: metric,
-                        data: getChartDataPoints(metric, data),
+                        data: data.map(d => d[metric] || 0),
                         backgroundColor: colors[i].replace('rgb', 'rgba').replace(')', ', 0.7)'),
                         borderColor: colors[i],
                         borderWidth: 1
@@ -1882,7 +1812,7 @@
                 case 'doughnut':
                     // Aggregate data for pie/doughnut
                     datasets = [{
-                        data: metrics.map(metric => getChartDataPoints(metric, data).reduce((sum, val) => sum + (Number(val) || 0), 0)),
+                        data: metrics.map(metric => data.reduce((sum, d) => sum + (d[metric] || 0), 0)),
                         backgroundColor: colors.slice(0, metrics.length),
                         borderColor: '#1e293b',
                         borderWidth: 2
@@ -1898,7 +1828,7 @@
                 case 'polarArea':
                     datasets = [{
                         label: 'Metrics',
-                        data: metrics.map(metric => getChartDataPoints(metric, data).reduce((sum, val) => sum + (Number(val) || 0), 0) / data.length),
+                        data: metrics.map(metric => data.reduce((sum, d) => sum + (d[metric] || 0), 0) / data.length),
                         backgroundColor: 'rgba(59, 130, 246, 0.2)',
                         borderColor: 'rgb(59, 130, 246)',
                         borderWidth: 2
@@ -1911,7 +1841,7 @@
                         {
                             type: 'bar',
                             label: metrics[0] || 'Metric 1',
-                            data: getChartDataPoints(metrics[0], data),
+                            data: data.map(d => d[metrics[0]] || 0),
                             backgroundColor: colors[0].replace('rgb', 'rgba').replace(')', ', 0.7)'),
                             borderColor: colors[0],
                             borderWidth: 1
@@ -1919,7 +1849,7 @@
                         {
                             type: 'line',
                             label: metrics[1] || 'Metric 2',
-                            data: getChartDataPoints(metrics[1], data),
+                            data: data.map(d => d[metrics[1]] || 0),
                             borderColor: colors[1],
                             backgroundColor: colors[1].replace('rgb', 'rgba').replace(')', ', 0.1)'),
                             tension: 0.4
@@ -1931,7 +1861,7 @@
                 case 'stacked':
                     datasets = metrics.map((metric, i) => ({
                         label: metric,
-                        data: getChartDataPoints(metric, data),
+                        data: data.map(d => d[metric] || 0),
                         backgroundColor: colors[i].replace('rgb', 'rgba').replace(')', ', 0.7)'),
                         borderColor: colors[i],
                         borderWidth: 1
@@ -1946,7 +1876,7 @@
                 case 'stackedArea':
                     datasets = metrics.map((metric, i) => ({
                         label: metric,
-                        data: getChartDataPoints(metric, data),
+                        data: data.map(d => d[metric] || 0),
                         borderColor: colors[i],
                         backgroundColor: colors[i].replace('rgb', 'rgba').replace(')', ', 0.5)'),
                         fill: true,
@@ -1962,7 +1892,7 @@
                 case 'stepped':
                     datasets = metrics.map((metric, i) => ({
                         label: metric,
-                        data: getChartDataPoints(metric, data),
+                        data: data.map(d => d[metric] || 0),
                         borderColor: colors[i],
                         backgroundColor: colors[i].replace('rgb', 'rgba').replace(')', ', 0.1)'),
                         stepped: true
@@ -1973,7 +1903,7 @@
                 case 'multiAxis':
                     datasets = metrics.slice(0, 2).map((metric, i) => ({
                         label: metric,
-                        data: getChartDataPoints(metric, data),
+                        data: data.map(d => d[metric] || 0),
                         borderColor: colors[i],
                         backgroundColor: colors[i].replace('rgb', 'rgba').replace(')', ', 0.1)'),
                         tension: 0.4,
@@ -1994,7 +1924,7 @@
                 default:
                     datasets = metrics.map((metric, i) => ({
                         label: metric,
-                        data: getChartDataPoints(metric, data),
+                        data: data.map(d => d[metric] || 0),
                         borderColor: colors[i],
                         backgroundColor: colors[i].replace('rgb', 'rgba').replace(')', ', 0.1)'),
                         tension: 0.4
