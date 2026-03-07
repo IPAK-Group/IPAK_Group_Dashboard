@@ -1,0 +1,27 @@
+# Exclude source Excel files (keep data private at source)
+*.xlsx
+*.xls
+
+# Exclude backup folders
+backups/
+_backup_unused_files/
+
+# Exclude Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Exclude Python helper scripts (optional - only dashboard files needed)
+check_*.py
+create_backup.bat
+create_snapshot.py
+patch_ai_hub.py
+fix_tags.ps1
+restore_latest_backup.bat
+
+# Exclude deploy folder (we'll use root for GitHub Pages)
+deploy/
+
+# Windows system files
+Thumbs.db
+desktop.ini
