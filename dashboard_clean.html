@@ -1934,7 +1934,7 @@
                 case 'stacked':
                     datasets = metrics.map((metric, i) => ({
                         label: metric,
-                        data: data.map(d => d[metric] || 0),
+                        data: getChartDataPoints(metric, data),
                         backgroundColor: colors[i].replace('rgb', 'rgba').replace(')', ', 0.7)'),
                         borderColor: colors[i],
                         borderWidth: 1
@@ -1949,7 +1949,7 @@
                 case 'stackedArea':
                     datasets = metrics.map((metric, i) => ({
                         label: metric,
-                        data: data.map(d => d[metric] || 0),
+                        data: getChartDataPoints(metric, data),
                         borderColor: colors[i],
                         backgroundColor: colors[i].replace('rgb', 'rgba').replace(')', ', 0.5)'),
                         fill: true,
@@ -1965,7 +1965,7 @@
                 case 'stepped':
                     datasets = metrics.map((metric, i) => ({
                         label: metric,
-                        data: data.map(d => d[metric] || 0),
+                        data: getChartDataPoints(metric, data),
                         borderColor: colors[i],
                         backgroundColor: colors[i].replace('rgb', 'rgba').replace(')', ', 0.1)'),
                         stepped: true
@@ -1976,7 +1976,7 @@
                 case 'multiAxis':
                     datasets = metrics.slice(0, 2).map((metric, i) => ({
                         label: metric,
-                        data: data.map(d => d[metric] || 0),
+                        data: getChartDataPoints(metric, data),
                         borderColor: colors[i],
                         backgroundColor: colors[i].replace('rgb', 'rgba').replace(')', ', 0.1)'),
                         tension: 0.4,
@@ -1997,7 +1997,7 @@
                 default:
                     datasets = metrics.map((metric, i) => ({
                         label: metric,
-                        data: data.map(d => d[metric] || 0),
+                        data: getChartDataPoints(metric, data),
                         borderColor: colors[i],
                         backgroundColor: colors[i].replace('rgb', 'rgba').replace(')', ', 0.1)'),
                         tension: 0.4
