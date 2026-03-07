@@ -31,7 +31,11 @@
                     if (typeof initializeDashboard === 'function') {
                         initializeDashboard();
                     } else {
-                        window.addEventListener('load', initializeDashboard);
+                        window.addEventListener('load', () => {
+                            if (typeof initializeDashboard === 'function') {
+                                initializeDashboard();
+                            }
+                        });
                     }
                     return;
                 }
