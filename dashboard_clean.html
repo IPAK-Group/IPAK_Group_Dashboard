@@ -1017,17 +1017,14 @@
             }, 150);
         }
 
-        function renderOverviewKPIs() {
-            const container = document.getElementById('overview-kpis');
-            if (!container) return;
+        // ===== VIRTUAL METRIC RESOLUTION HELPERS =====
+        function getDataSourceForMetric(metric, returnDataType, activePlant, year, month) {
+            const m = metric.toUpperCase();
 
-            const year = document.getElementById('detail-year')?.value || 'all';
-            const month = document.getElementById('detail-month')?.value || 'all';
             const mainDataFiltered = getFilteredData(dashboardData.mainData, activePlant, year, month);
             const offlineDataFiltered = getFilteredData(dashboardData.offlineData, activePlant, year, month);
             const productDataFiltered = getFilteredData(dashboardData.productData, activePlant, year, month);
 
-            // Fetch yearly data for average calculation (selected year, all months)
             const yearMainData = getFilteredData(dashboardData.mainData, activePlant, year, 'all');
             const yearOfflineData = getFilteredData(dashboardData.offlineData, activePlant, year, 'all');
             const yearProductData = getFilteredData(dashboardData.productData, activePlant, year, 'all');
