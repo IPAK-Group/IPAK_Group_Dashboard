@@ -42,7 +42,7 @@
 
                 const src = scripts[index];
                 const script = document.createElement('script');
-                script.src = prefix + src;
+                script.src = prefix + src + '?v=' + new Date().getTime();
                 script.async = false;
                 script.onload = () => loadScriptsSequentially(index + 1);
                 script.onerror = (e) => {
