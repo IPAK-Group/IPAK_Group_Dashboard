@@ -909,6 +909,34 @@ const dashboardData = {
             "Quality %": 1.0,
             "FPL(KG/KWH)": 0.0,
             "No of Grade Changes": 56
+        },
+        {
+            "Month": "2026-01-26",
+            "Plant": "CPAK",
+            "Production": 453024.40134499996,
+            "Waste": 10675.278655000031,
+            "Waste %": 0.02302196683638003,
+            "Down Time": 240.5,
+            "OEE %": 0.8677,
+            "Performance %": 0.9004,
+            "Availability %": 0.9638,
+            "Quality %": 1.0,
+            "FPL(KG/KWH)": 1.208,
+            "No of Grade Changes": 6
+        },
+        {
+            "Month": "2026-02-02",
+            "Plant": "CPAK",
+            "Production": 597882.0,
+            "Waste": 7009.38,
+            "Waste %": 0.0116,
+            "Down Time": 37.9,
+            "OEE %": 0.8915,
+            "Performance %": 0.9221,
+            "Availability %": 0.952,
+            "Quality %": 1.0,
+            "FPL(KG/KWH)": 0.0,
+            "No of Grade Changes": 12
         }
     ],
     "productData": [
@@ -9773,6 +9801,104 @@ const dashboardData = {
             "Product Type": "Non-Sealable",
             "Product": "TN01-30",
             "Production": 8737.166399999998
+        },
+        {
+            "Month": "2026-01-01",
+            "Plant": "CPAK",
+            "Product Type": "Metalizable",
+            "Product": "JR-CMB21S-25",
+            "Production": 223344.48
+        },
+        {
+            "Month": "2026-01-01",
+            "Plant": "CPAK",
+            "Product Type": "Metalizable",
+            "Product": "JR-CMB21S-20",
+            "Production": 171882.3
+        },
+        {
+            "Month": "2026-01-01",
+            "Plant": "CPAK",
+            "Product Type": "Metalizable",
+            "Product": "JR-CMB21S-30",
+            "Production": 6836.86
+        },
+        {
+            "Month": "2026-01-01",
+            "Plant": "CPAK",
+            "Product Type": "Metalizable High MBS",
+            "Product": "JR-CMB21SX-25",
+            "Production": 5296.93
+        },
+        {
+            "Month": "2026-01-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable",
+            "Product": "JR-CTH21-25",
+            "Production": 35697.64
+        },
+        {
+            "Month": "2026-01-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable",
+            "Product": "JR-CTH21-30",
+            "Production": 8936.62
+        },
+        {
+            "Month": "2026-01-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable",
+            "Product": "JR-CTH21-40",
+            "Production": 1029.67
+        },
+        {
+            "Month": "2026-02-01",
+            "Plant": "CPAK",
+            "Product Type": "Metalizable",
+            "Product": "JR-CMB21S-25",
+            "Production": 320515.0
+        },
+        {
+            "Month": "2026-02-01",
+            "Plant": "CPAK",
+            "Product Type": "Metalizable",
+            "Product": "JR-CMB21S-20",
+            "Production": 151837.0
+        },
+        {
+            "Month": "2026-02-01",
+            "Plant": "CPAK",
+            "Product Type": "White Solid",
+            "Product": "JR-CW21-25",
+            "Production": 16056.0
+        },
+        {
+            "Month": "2026-02-01",
+            "Plant": "CPAK",
+            "Product Type": "Metalizable High MBS",
+            "Product": "JR-CMB21SX-25",
+            "Production": 69795.0
+        },
+        {
+            "Month": "2026-02-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable",
+            "Product": "JR-CTH21-25",
+            "Production": 13947.0
+        },
+        {
+            "Month": "2026-02-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable",
+            "Product": "JR-CTH21-30",
+            "Production": 19514.0
+        },
+        {
+            "Month": "2026-02-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable",
+            "Product": "JR-CTH21-50",
+            "Production": 6206.0
         }
     ],
     "eremaData": [
@@ -10099,6 +10225,84 @@ const dashboardData = {
             "Plant": "IPAK",
             "Erema Production": 241958.0,
             "Erema(KG/KWH)": 0.43
+        },
+        {
+            "Month": "2025-01-26",
+            "Plant": "CPAK",
+            "Erema Production": 41060.172,
+            "Erema(KG/KWH)": 0.0
+        },
+        {
+            "Month": "2025-02-26",
+            "Plant": "CPAK",
+            "Erema Production": 12480.487,
+            "Erema(KG/KWH)": 0.0
+        },
+        {
+            "Month": "2025-03-26",
+            "Plant": "CPAK",
+            "Erema Production": 4986.346,
+            "Erema(KG/KWH)": 0.0
+        },
+        {
+            "Month": "2025-04-26",
+            "Plant": "CPAK",
+            "Erema Production": 1045.839,
+            "Erema(KG/KWH)": 0.0
+        },
+        {
+            "Month": "2025-05-26",
+            "Plant": "CPAK",
+            "Erema Production": 6204.11,
+            "Erema(KG/KWH)": 0.0
+        },
+        {
+            "Month": "2025-06-26",
+            "Plant": "CPAK",
+            "Erema Production": 4546.52,
+            "Erema(KG/KWH)": 0.0
+        },
+        {
+            "Month": "2025-07-26",
+            "Plant": "CPAK",
+            "Erema Production": 976.712,
+            "Erema(KG/KWH)": 0.0
+        },
+        {
+            "Month": "2025-08-26",
+            "Plant": "CPAK",
+            "Erema Production": 11020.68,
+            "Erema(KG/KWH)": 0.0
+        },
+        {
+            "Month": "2025-09-26",
+            "Plant": "CPAK",
+            "Erema Production": 1566.89,
+            "Erema(KG/KWH)": 0.0
+        },
+        {
+            "Month": "2025-10-26",
+            "Plant": "CPAK",
+            "Erema Production": 11476.15,
+            "Erema(KG/KWH)": 0.0
+        },
+        {
+            "Month": "2025-11-26",
+            "Plant": "CPAK",
+            "Erema Production": 15226.618,
+            "Erema(KG/KWH)": 0.0
+        },
+        {
+            "Month": "2025-12-26",
+            "Plant": "CPAK",
+            "Erema Production": 11919.14,
+            "Erema(KG/KWH)": 0.0
+        },
+        {
+            "Month": "2026-01-01",
+            "Plant": "CPAK",
+            "Erema Production": 16104.35,
+            "Erema(KG/KWH)": 0.0
         }
     ],
     "trialsData": [
