@@ -10527,7 +10527,7 @@ const dashboardData = {
             "Remarks": "T.S MD/TD (23.2/24.6 Kgf/mm\u00b2), Stiffness MD/TD (8.23/9.2 N/mm\u00b2), Elongation MD/TD (129/109 %), Y.Ms MD/TD (4574/5137 N/mm\u00b2)"
         },
         {
-            "Date": "2026-07-08",
+            "Date": "2025-07-08",
             "Plant": "PETPAK",
             "Product Type": "Isotropic Film",
             "Product": "PVTN01-12",
@@ -10557,7 +10557,7 @@ const dashboardData = {
             "Remarks": "Heat Shrinkage (%) at 150\u2070C/30min: MD/TD (0.75/0.5)"
         },
         {
-            "Date": "2026-08-28",
+            "Date": "2025-08-28",
             "Plant": "PETPAK",
             "Product Type": "Hot Stamp",
             "Product": "PVTN00-12",
