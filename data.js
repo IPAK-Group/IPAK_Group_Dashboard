@@ -11098,7 +11098,7 @@ const dashboardData = {
             "Production": 1576938.0,
             "Waste": 41052.0,
             "Waste %": 0.0298,
-            "Down Time": 0.0
+            "Down Time": 232.0
         },
         {
             "Month": "2025-02-26",
@@ -11106,7 +11106,7 @@ const dashboardData = {
             "Production": 1262867.0,
             "Waste": 35106.0,
             "Waste %": 0.0301,
-            "Down Time": 0.0
+            "Down Time": 170.0
         },
         {
             "Month": "2025-03-26",
@@ -11114,7 +11114,7 @@ const dashboardData = {
             "Production": 1314388.0,
             "Waste": 34400.0,
             "Waste %": 0.0269,
-            "Down Time": 0.0
+            "Down Time": 138.0
         },
         {
             "Month": "2025-04-26",
@@ -11122,7 +11122,7 @@ const dashboardData = {
             "Production": 1032631.0,
             "Waste": 26540.0,
             "Waste %": 0.0275,
-            "Down Time": 0.0
+            "Down Time": 46.0
         },
         {
             "Month": "2025-05-26",
@@ -11130,7 +11130,7 @@ const dashboardData = {
             "Production": 1893241.0,
             "Waste": 47804.0,
             "Waste %": 0.0266,
-            "Down Time": 0.0
+            "Down Time": 138.0
         },
         {
             "Month": "2025-06-26",
@@ -11138,7 +11138,7 @@ const dashboardData = {
             "Production": 1219251.0,
             "Waste": 30982.0,
             "Waste %": 0.0254,
-            "Down Time": 0.0
+            "Down Time": 113.0
         },
         {
             "Month": "2025-07-26",
@@ -11146,7 +11146,7 @@ const dashboardData = {
             "Production": 1016599.0,
             "Waste": 26084.0,
             "Waste %": 0.0256,
-            "Down Time": 0.0
+            "Down Time": 26.0
         },
         {
             "Month": "2025-08-26",
@@ -11154,7 +11154,7 @@ const dashboardData = {
             "Production": 1310052.0,
             "Waste": 33239.0,
             "Waste %": 0.0254,
-            "Down Time": 0.0
+            "Down Time": 330.0
         },
         {
             "Month": "2025-09-26",
@@ -11162,7 +11162,7 @@ const dashboardData = {
             "Production": 2155887.0,
             "Waste": 56242.0,
             "Waste %": 0.0261,
-            "Down Time": 0.0
+            "Down Time": 94.0
         },
         {
             "Month": "2025-10-26",
@@ -11170,7 +11170,7 @@ const dashboardData = {
             "Production": 1556020.0,
             "Waste": 37829.0,
             "Waste %": 0.0244,
-            "Down Time": 0.0
+            "Down Time": 145.0
         },
         {
             "Month": "2025-11-26",
@@ -11178,7 +11178,7 @@ const dashboardData = {
             "Production": 1982423.0,
             "Waste": 51725.0,
             "Waste %": 0.0261,
-            "Down Time": 0.0
+            "Down Time": 140.0
         },
         {
             "Month": "2025-12-26",
@@ -11186,7 +11186,7 @@ const dashboardData = {
             "Production": 1984644.0,
             "Waste": 47545.0,
             "Waste %": 0.0239,
-            "Down Time": 0.0
+            "Down Time": 197.0
         },
         {
             "Month": "2026-01-26",
@@ -11203,6 +11203,22 @@ const dashboardData = {
             "Waste": 0.0,
             "Waste %": 0.0,
             "Down Time": 0.0
+        },
+        {
+            "Month": "2026-01-26",
+            "Plant": "PETPAK",
+            "Production": 2081244.0,
+            "Waste": 50082.0,
+            "Waste %": 0.0241,
+            "Down Time": 109.0
+        },
+        {
+            "Month": "2026-02-26",
+            "Plant": "PETPAK",
+            "Production": 1885755.0,
+            "Waste": 47601.0,
+            "Waste %": 0.0246,
+            "Down Time": 87.45
         }
     ],
     "reconData": [],
