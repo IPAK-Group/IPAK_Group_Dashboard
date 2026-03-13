@@ -576,8 +576,8 @@
                 const passwordInput = document.getElementById('password-input');
                 const password = passwordInput.value;
 
-                // Get custom password from localStorage, default to 'admin123'
-                const correctPassword = localStorage.getItem('gpak_custom_password') || 'admin123';
+                // Get custom password from localStorage, default to '2120PTK'
+                const correctPassword = localStorage.getItem('gpak_custom_password') || '2120PTK';
 
                 if (password === correctPassword) {
                     sessionStorage.setItem('gpak_dashboard_auth', 'true');
@@ -594,7 +594,7 @@
         }
 
         function changePassword() {
-            const currentPassword = localStorage.getItem('gpak_custom_password') || 'admin123';
+            const currentPassword = localStorage.getItem('gpak_custom_password') || '2120PTK';
             const hiddenWord = localStorage.getItem('gpak_hidden_word') || 'admin';
             
             // Check if we are in admin mode (hidden button is visible)
