@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -591,15 +591,36 @@
 
         function changePassword() {
             const currentPassword = localStorage.getItem('gpak_custom_password') || 'admin123';
-            const verifyCurrent = prompt('Enter current password to change:');
+            const hiddenWord = localStorage.getItem('gpak_hidden_word') || 'admin';
+            
+            // Check if we are in admin mode (hidden button is visible)
+            const isAdminMode = !document.getElementById('admin-password-btn')?.classList.contains('hidden');
 
-            if (verifyCurrent === currentPassword) {
-                const newPassword = prompt('Enter new password:');
-                if (newPassword && newPassword.trim().length >= 4) {
-                    localStorage.setItem('gpak_custom_password', newPassword.trim());
-                    alert('Password updated successfully! Please use your new password next time.');
-                } else if (newPassword) {
-                    alert('Password too short (min 4 characters).');
+            let verifyCurrent = null;
+            if (!isAdminMode) {
+                verifyCurrent = prompt('Enter current password to change:');
+            }
+
+            if (isAdminMode || (verifyCurrent === currentPassword)) {
+                const action = prompt('What would you like to change?\n1. Dashboard Password\n2. Hidden Word (currently: ' + hiddenWord + ')\nEnter 1 or 2:');
+                
+                if (action === '1') {
+                    const newPassword = prompt('Enter new dashboard password:');
+                    if (newPassword && newPassword.trim().length >= 4) {
+                        localStorage.setItem('gpak_custom_password', newPassword.trim());
+                        alert('Password updated successfully!');
+                    } else if (newPassword) {
+                        alert('Password too short (min 4 characters).');
+                    }
+                } else if (action === '2') {
+                    const newHidden = prompt('Enter new hidden word (used in URL to reveal settings):');
+                    if (newHidden && newHidden.trim().length >= 3) {
+                        localStorage.setItem('gpak_hidden_word', newHidden.trim().toLowerCase());
+                        alert('Hidden word updated! You must now use ?' + newHidden.trim().toLowerCase() + ' in the URL to see this button again.');
+                        location.reload();
+                    } else if (newHidden) {
+                        alert('Hidden word too short.');
+                    }
                 }
             } else if (verifyCurrent !== null) {
                 alert('Current password incorrect!');
@@ -619,12 +640,14 @@
                 if (e.key === 'Enter') unlockDashboard();
             });
 
-            // Admin Mode Check - Looking for "IPAK Group" keyword
+            // Admin Mode Check - Looking for hidden word
             const urlStr = decodeURIComponent(window.location.search + window.location.hash).toLowerCase();
-            if (urlStr.includes('ipak group') || urlStr.includes('ipakgroup')) {
+            const hiddenWord = localStorage.getItem('gpak_hidden_word') || 'admin';
+            
+            if (urlStr.includes(hiddenWord) || urlStr.includes('ipak group')) {
                 const adminBtn = document.getElementById('admin-password-btn');
                 if (adminBtn) adminBtn.classList.remove('hidden');
-                console.log('Admin Mode Enabled via Keyword');
+                console.log('Admin Mode Enabled via Keyword: ' + hiddenWord);
             }
         });
 
