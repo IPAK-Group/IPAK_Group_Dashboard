@@ -11368,10 +11368,10 @@ const dashboardData = {
         {
             "Month": "2026-03-26",
             "Plant": "PETPAK",
-            "Production": 1885755.0,
-            "Waste": 47601.0,
-            "Waste %": 0.0246,
-            "Down Time": 87.45
+            "Production": 2443036.0,
+            "Waste": 59394.0,
+            "Waste %": 0.0237,
+            "Down Time": 68.5
         }
     ],
     "reconData": [],
