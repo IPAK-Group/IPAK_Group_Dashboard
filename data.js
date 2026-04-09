@@ -1,6 +1,34 @@
 const dashboardData = {
     "mainData": [
         {
+            "Month": "2026-03-26",
+            "Plant": "GPAK",
+            "Production": 2709713.0,
+            "Waste": 68630.0,
+            "Waste %": 0.0247,
+            "Down Time": 27.22,
+            "OEE %": 0.8716,
+            "Performance %": 0.9158,
+            "Availability %": 0.9517,
+            "Quality %": 1.0,
+            "FPL(KG/KWH)": 0.49,
+            "No of Grade Changes": 52
+        },
+        {
+            "Month": "2026-03-26",
+            "Plant": "CPAK",
+            "Production": 661530.842614,
+            "Waste": 8857.096386000048,
+            "Waste %": 0.0132,
+            "Down Time": 79.37,
+            "OEE %": 0.9057,
+            "Performance %": 0.9413,
+            "Availability %": 0.9556,
+            "Quality %": 1.0,
+            "FPL(KG/KWH)": 0.9,
+            "No of Grade Changes": 10
+        },
+        {
             "Month": "2026-01-26",
             "Plant": "GPAK",
             "Production": 2350676.0,
@@ -10018,6 +10046,342 @@ const dashboardData = {
             "Product Type": "Sealable",
             "Product": "CTH21-50",
             "Production": 6206.0
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "CPAK",
+            "Product Type": "Metalizable",
+            "Product": "JR-CMB21S-30",
+            "Production": 23336.13648
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "CPAK",
+            "Product Type": "Metalizable",
+            "Product": "JR-CMB21S-25 ",
+            "Production": 297518.4324670001
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "CPAK",
+            "Product Type": "Metalizable",
+            "Product": "JR-CMB21S-20",
+            "Production": 167807.65175499997
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "CPAK",
+            "Product Type": "Metalizable High MBS",
+            "Product": "JR-CMB21SX-25",
+            "Production": 40604.911752
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable",
+            "Product": "JR-CTH21-23",
+            "Production": 37153.017900000006
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable",
+            "Product": "JR-CTH21-25",
+            "Production": 23700.574519999995
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable",
+            "Product": "JR-CTH21-27",
+            "Production": 9862.907
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable",
+            "Product": "JR-CTH21-30",
+            "Production": 27473.553239999997
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable",
+            "Product": "JR-CTH21-35",
+            "Production": 31171.87225
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable",
+            "Product": "JR-CTH21-40",
+            "Production": 2901.78525
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "GPAK",
+            "Product Type": "Metalizeable",
+            "Product": "THOM18",
+            "Production": 120979.49344000002
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "GPAK",
+            "Product Type": "Metalizeable",
+            "Product": "MB21S-15",
+            "Production": 11431.3888
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-18",
+            "Production": 97851.20696
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable",
+            "Product": "THO18",
+            "Production": 130280.11464
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-20",
+            "Production": 292752.34705599997
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable",
+            "Product": "THo20",
+            "Production": 120668.97294399998
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-25",
+            "Production": 152510.94976
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-30",
+            "Production": 355437.586504
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable",
+            "Product": "THo25",
+            "Production": 62085.06303999999
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable",
+            "Product": "THO30",
+            "Production": 76454.89009600002
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-40",
+            "Production": 16705.9308
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-50",
+            "Production": 6400.5368960000005
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "GPAK",
+            "Product Type": "Metalizeable (Broadseal)",
+            "Product": "THOM111-18",
+            "Production": 227774.84080000003
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "GPAK",
+            "Product Type": "Metalizeable",
+            "Product": "THoM20",
+            "Production": 108632.42000000001
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "GPAK",
+            "Product Type": "Plain",
+            "Product": "TNN30",
+            "Production": 22751.456
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "GPAK",
+            "Product Type": "Plain",
+            "Product": "TNO30",
+            "Production": 10258.56
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "GPAK",
+            "Product Type": "Plain",
+            "Product": "TNO1-30",
+            "Production": 3682.848
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "GPAK",
+            "Product Type": "Plain",
+            "Product": "TN01-35",
+            "Production": 8187.4
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "GPAK",
+            "Product Type": "Plain (release)",
+            "Product": "TN01U-20",
+            "Production": 31173.1472
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "GPAK",
+            "Product Type": "Plain",
+            "Product": "TNO20",
+            "Production": 115648.49919999999
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "GPAK",
+            "Product Type": "Plain (Tape grade)",
+            "Product": "TNIT-23",
+            "Production": 138451.05976
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "GPAK",
+            "Product Type": "Plain",
+            "Product": "TN02-20",
+            "Production": 1890.72
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "GPAK",
+            "Product Type": "Plain",
+            "Product": "TN02-12",
+            "Production": 21628.204
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-15",
+            "Production": 25651.718352000004
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable",
+            "Product": "THO15",
+            "Production": 900.4696480000001
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "GPAK",
+            "Product Type": "Tobacco",
+            "Product": "CG-44H-20",
+            "Production": 63343.28
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "GPAK",
+            "Product Type": "Tobacco",
+            "Product": "CG-99N-23",
+            "Production": 58667.856
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable (Overwrap)",
+            "Product": "THoW-18",
+            "Production": 12521.392
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable (Overwrap)",
+            "Product": "THoW-25",
+            "Production": 29488.576
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "GPAK",
+            "Product Type": "Metalizeable",
+            "Product": "MB21S-18",
+            "Production": 112975.42256000002
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "GPAK",
+            "Product Type": "Metalizeable (MB)",
+            "Product": "MB21MB-15",
+            "Production": 91695.8848
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "GPAK",
+            "Product Type": "Metalizeable",
+            "Product": "MB21S-20",
+            "Production": 57795.77440000001
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "GPAK",
+            "Product Type": "Matt",
+            "Product": "MT21D-20",
+            "Production": 11415.2272
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "GPAK",
+            "Product Type": "Matt",
+            "Product": "MATTWL-20",
+            "Production": 18812.768
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "GPAK",
+            "Product Type": "Matt (Low SIT)",
+            "Product": "MT21C-30",
+            "Production": 6880.5671999999995
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "GPAK",
+            "Product Type": "Matt",
+            "Product": "MATTWL-15",
+            "Production": 55462.9556
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "GPAK",
+            "Product Type": "Matt",
+            "Product": "MT11D-20",
+            "Production": 5773.9032
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable (Extrusion Lamination)",
+            "Product": "THX21-15",
+            "Production": 24689.4752
         }
     ],
     "eremaData": [
@@ -10428,6 +10792,12 @@ const dashboardData = {
             "Plant": "CPAK",
             "Erema Production": 16104.35,
             "Erema(KG/KWH)": 0.0
+        },
+        {
+            "Month": "2026-03-26",
+            "Plant": "GPAK",
+            "Erema Production": 210100.0,
+            "Erema(KG/KWH)": 0.39
         }
     ],
     "trialsData": [
@@ -10437,8 +10807,8 @@ const dashboardData = {
             "Product Type": "General",
             "Product": "MT21D-30",
             "Production": 7036.0,
-            "Waste": 1613.0,
-            "Down Time": 20.0,
+            "Waste": 1613,
+            "Down Time": 20,
             "Remarks": 0
         },
         {
@@ -10447,8 +10817,8 @@ const dashboardData = {
             "Product Type": "General",
             "Product": "MT21D-20",
             "Production": 2732.0,
-            "Waste": 1100.0,
-            "Down Time": 12.0,
+            "Waste": 1100,
+            "Down Time": 12,
             "Remarks": 0
         },
         {
@@ -10457,8 +10827,8 @@ const dashboardData = {
             "Product Type": "General",
             "Product": "THAF22-30",
             "Production": 710.58,
-            "Waste": 1385.0,
-            "Down Time": 10.0,
+            "Waste": 1385,
+            "Down Time": 10,
             "Remarks": 0
         },
         {
@@ -10467,8 +10837,8 @@ const dashboardData = {
             "Product Type": "General",
             "Product": "THAF22-35",
             "Production": 829.66,
-            "Waste": 1717.0,
-            "Down Time": 13.0,
+            "Waste": 1717,
+            "Down Time": 13,
             "Remarks": 0
         },
         {
@@ -10477,8 +10847,8 @@ const dashboardData = {
             "Product Type": "General",
             "Product": "TH21A-30",
             "Production": 998.82,
-            "Waste": 512.0,
-            "Down Time": 6.0,
+            "Waste": 512,
+            "Down Time": 6,
             "Remarks": 0
         },
         {
@@ -10487,8 +10857,8 @@ const dashboardData = {
             "Product Type": "General",
             "Product": "DMB21J-18",
             "Production": 1458.0,
-            "Waste": 40.0,
-            "Down Time": 0.0,
+            "Waste": 40,
+            "Down Time": 0,
             "Remarks": 0
         },
         {
@@ -10498,7 +10868,7 @@ const dashboardData = {
             "Product": "TH21A-20",
             "Production": 1088.17,
             "Waste": 5839.25,
-            "Down Time": 44.0,
+            "Down Time": 44,
             "Remarks": "Trials failed 2 times and wasted 5000 length. SIT not achieved due to treatment."
         },
         {
@@ -10507,8 +10877,8 @@ const dashboardData = {
             "Product Type": "General",
             "Product": "DTH22A-20",
             "Production": 1165.8,
-            "Waste": 584.0,
-            "Down Time": 12.0,
+            "Waste": 584,
+            "Down Time": 12,
             "Remarks": 0
         },
         {
@@ -10517,8 +10887,8 @@ const dashboardData = {
             "Product Type": "General",
             "Product": "DMT21C-30",
             "Production": 524.39,
-            "Waste": 900.0,
-            "Down Time": 13.0,
+            "Waste": 900,
+            "Down Time": 13,
             "Remarks": 0
         },
         {
@@ -10527,8 +10897,8 @@ const dashboardData = {
             "Product Type": "General",
             "Product": "MB22SG-25 ",
             "Production": 1423.34,
-            "Waste": 666.0,
-            "Down Time": 8.0,
+            "Waste": 666,
+            "Down Time": 8,
             "Remarks": 0
         },
         {
@@ -10537,8 +10907,8 @@ const dashboardData = {
             "Product Type": "General",
             "Product": "MB22SG-30",
             "Production": 1137.76,
-            "Waste": 583.0,
-            "Down Time": 7.0,
+            "Waste": 583,
+            "Down Time": 7,
             "Remarks": 0
         },
         {
@@ -10547,8 +10917,8 @@ const dashboardData = {
             "Product Type": "General",
             "Product": "DMBX21S-18",
             "Production": 3249.0,
-            "Waste": 630.0,
-            "Down Time": 8.0,
+            "Waste": 630,
+            "Down Time": 8,
             "Remarks": 0
         },
         {
@@ -10557,8 +10927,8 @@ const dashboardData = {
             "Product Type": "General",
             "Product": "DMTX21-25",
             "Production": 3226.39,
-            "Waste": 551.0,
-            "Down Time": 7.0,
+            "Waste": 551,
+            "Down Time": 7,
             "Remarks": 0
         },
         {
@@ -10567,8 +10937,8 @@ const dashboardData = {
             "Product Type": "General",
             "Product": "DTN01HR-30",
             "Production": 7839.99,
-            "Waste": 0.0,
-            "Down Time": 0.0,
+            "Waste": 0,
+            "Down Time": 0,
             "Remarks": 0
         },
         {
@@ -10577,8 +10947,8 @@ const dashboardData = {
             "Product Type": "General",
             "Product": "DMT21U-20",
             "Production": 1744.08,
-            "Waste": 432.0,
-            "Down Time": 7.0,
+            "Waste": 432,
+            "Down Time": 7,
             "Remarks": 0
         },
         {
@@ -10587,8 +10957,8 @@ const dashboardData = {
             "Product Type": "Plain (Tape grade)",
             "Product": "TNiT25",
             "Production": 1431.46,
-            "Waste": 0.0,
-            "Down Time": 0.0,
+            "Waste": 0,
+            "Down Time": 0,
             "Remarks": "Trial for low Haze target 0.8 but haze achieved 1.21"
         },
         {
@@ -10597,8 +10967,8 @@ const dashboardData = {
             "Product Type": "Plain (Heat resistive)",
             "Product": "DTN02HR 30",
             "Production": 1490.44,
-            "Waste": 1209.0,
-            "Down Time": 13.0,
+            "Waste": 1209,
+            "Down Time": 13,
             "Remarks": "Both side Treated heat resistive sample trial "
         },
         {
@@ -10607,8 +10977,8 @@ const dashboardData = {
             "Product Type": "Sealable (label)",
             "Product": "TL21-35",
             "Production": 2491.0,
-            "Waste": 1411.0,
-            "Down Time": 17.0,
+            "Waste": 1411,
+            "Down Time": 17,
             "Remarks": "Flame trial done successfully with 50dyne level achieved "
         },
         {
@@ -10617,8 +10987,8 @@ const dashboardData = {
             "Product Type": "Opaque",
             "Product": "OLC216-38",
             "Production": 1510.0,
-            "Waste": 2800.0,
-            "Down Time": 38.0,
+            "Waste": 2800,
+            "Down Time": 38,
             "Remarks": "Low density + flame trial (48 dyne level achieved and low density 0.63 achieved ) "
         },
         {
@@ -10627,8 +10997,8 @@ const dashboardData = {
             "Product Type": "Metalizeable",
             "Product": "MB21S-20",
             "Production": 941.0,
-            "Waste": 0.0,
-            "Down Time": 0.0,
+            "Waste": 0,
+            "Down Time": 0,
             "Remarks": "Runnability perspective trial, Antiblock increased from 1% to 5% in skin 01"
         },
         {
@@ -10637,8 +11007,8 @@ const dashboardData = {
             "Product Type": "Matt",
             "Product": "MT11D-20",
             "Production": 3677.0,
-            "Waste": 1310.0,
-            "Down Time": 18.0,
+            "Waste": 1310,
+            "Down Time": 18,
             "Remarks": "First time produced at GPAK. One side matt and one side non seal "
         },
         {
@@ -10647,8 +11017,8 @@ const dashboardData = {
             "Product Type": "Isotropic Film",
             "Product": "PTN01-12",
             "Production": 10426.776,
-            "Waste": 0.0,
-            "Down Time": 0.0,
+            "Waste": 0,
+            "Down Time": 0,
             "Remarks": "T.S MD/TD (23.2/24.6 Kgf/mm\u00b2), Stiffness MD/TD (8.23/9.2 N/mm\u00b2), Elongation MD/TD (129/109 %), Y.Ms MD/TD (4574/5137 N/mm\u00b2)"
         },
         {
@@ -10657,8 +11027,8 @@ const dashboardData = {
             "Product Type": "Isotropic Film",
             "Product": "PVTN01-12",
             "Production": 10045.91,
-            "Waste": 0.0,
-            "Down Time": 0.0,
+            "Waste": 0,
+            "Down Time": 0,
             "Remarks": "T.S MD/TD (22.2/25.2 Kgf/mm\u00b2), Stiffness MD/TD (8.04/8.6 N/mm\u00b2), Elongation MD/TD (124/114 %), Y.M MD/TD (4464/4778 N/mm\u00b2)"
         },
         {
@@ -10667,8 +11037,8 @@ const dashboardData = {
             "Product Type": "Hot Stamp",
             "Product": "PTN01-12",
             "Production": 15935.62,
-            "Waste": 0.0,
-            "Down Time": 0.0,
+            "Waste": 0,
+            "Down Time": 0,
             "Remarks": "Heat Shrinkage (%) at 150\u2070C/30min: MD/TD (1/0.5)"
         },
         {
@@ -10677,8 +11047,8 @@ const dashboardData = {
             "Product Type": "Hot Stamp",
             "Product": "PVTN01-12",
             "Production": 8700.435,
-            "Waste": 0.0,
-            "Down Time": 0.0,
+            "Waste": 0,
+            "Down Time": 0,
             "Remarks": "Heat Shrinkage (%) at 150\u2070C/30min: MD/TD (0.75/0.5)"
         },
         {
@@ -10687,8 +11057,8 @@ const dashboardData = {
             "Product Type": "Hot Stamp",
             "Product": "PVTN00-12",
             "Production": 8685.036,
-            "Waste": 0.0,
-            "Down Time": 0.0,
+            "Waste": 0,
+            "Down Time": 0,
             "Remarks": "Heat Shrinkage (%) at 150\u2070C/30min: MD/TD (1/0.5)"
         },
         {
@@ -10697,8 +11067,8 @@ const dashboardData = {
             "Product Type": "Hot Stamp",
             "Product": "PTN01-12",
             "Production": 5271.155999999999,
-            "Waste": 0.0,
-            "Down Time": 0.0,
+            "Waste": 0,
+            "Down Time": 0,
             "Remarks": "Heat Shrinkage (%) at 150\u2070C/30min: MD/TD (1/0)"
         },
         {
@@ -10707,8 +11077,8 @@ const dashboardData = {
             "Product Type": "Anti Static Twist",
             "Product": "PVTN01ST-18",
             "Production": 6990.02,
-            "Waste": 6000.0,
-            "Down Time": 243.0,
+            "Waste": 6000,
+            "Down Time": 243,
             "Remarks": "Heat Shrinkage (%) at 150\u2070C/30min: MD/TD (23/28)"
         },
         {
@@ -10717,8 +11087,8 @@ const dashboardData = {
             "Product Type": "Anti Static Twist",
             "Product": "PVTN01ST-23",
             "Production": 1123.692,
-            "Waste": 6000.0,
-            "Down Time": 243.0,
+            "Waste": 6000,
+            "Down Time": 243,
             "Remarks": "Heat Shrinkage (%) at 150\u2070C/30min: MD/TD (26/28)"
         },
         {
@@ -10727,8 +11097,8 @@ const dashboardData = {
             "Product Type": "Matt Film",
             "Product": "PVMTN00-12",
             "Production": 1881.38,
-            "Waste": 20000.0,
-            "Down Time": 1783.0,
+            "Waste": 20000,
+            "Down Time": 1783,
             "Remarks": "Haze (34 %), Gloss at 45\u2070 TRxTR/NTxNT (49/81)"
         },
         {
@@ -10737,8 +11107,8 @@ const dashboardData = {
             "Product Type": "Matt Film",
             "Product": "PVMTN01-12",
             "Production": 6960.1,
-            "Waste": 20000.0,
-            "Down Time": 1783.0,
+            "Waste": 20000,
+            "Down Time": 1783,
             "Remarks": "Haze (45 %), Gloss at 45\u2070 TRxTR/NTxNT (42/74)"
         },
         {
@@ -10747,8 +11117,8 @@ const dashboardData = {
             "Product Type": "Trasnparent Twist",
             "Product": "PTN01T-23",
             "Production": 2837.94,
-            "Waste": 2500.0,
-            "Down Time": 127.0,
+            "Waste": 2500,
+            "Down Time": 127,
             "Remarks": "Heat Shrinkage (%) at 150\u2070C/30min: MD/TD (23/27)"
         },
         {
@@ -10757,8 +11127,8 @@ const dashboardData = {
             "Product Type": "Anti Static Twist",
             "Product": "PVTN01ST-23",
             "Production": 11695.93,
-            "Waste": 2500.0,
-            "Down Time": 0.0,
+            "Waste": 2500,
+            "Down Time": 0,
             "Remarks": "Heat Shrinkage (%) at 150\u2070C/30min: MD/TD (24/32)"
         },
         {
@@ -10767,7 +11137,7 @@ const dashboardData = {
             "Product Type": "Opaque In-Mold Low density",
             "Product": "OL125I-65",
             "Production": 1039.82,
-            "Waste": 1035.0,
+            "Waste": 1035,
             "Down Time": 13.8,
             "Remarks": "Low density required"
         },
@@ -10777,8 +11147,8 @@ const dashboardData = {
             "Product Type": "White solid inmold low density",
             "Product": "OW128I-70",
             "Production": 0.0,
-            "Waste": 5500.0,
-            "Down Time": 120.0,
+            "Waste": 5500,
+            "Down Time": 120,
             "Remarks": "Low density required"
         },
         {
@@ -10787,8 +11157,8 @@ const dashboardData = {
             "Product Type": "In mold",
             "Product": "OW129I-70",
             "Production": 0.0,
-            "Waste": 3000.0,
-            "Down Time": 70.0,
+            "Waste": 3000,
+            "Down Time": 70,
             "Remarks": 0
         },
         {
@@ -10797,8 +11167,8 @@ const dashboardData = {
             "Product Type": "Opaque In-Mold Low density",
             "Product": "OL126i-60",
             "Production": 2905.71,
-            "Waste": 4300.0,
-            "Down Time": 72.0,
+            "Waste": 4300,
+            "Down Time": 72,
             "Remarks": 0
         },
         {
@@ -10807,7 +11177,7 @@ const dashboardData = {
             "Product Type": "Opaque In-Mold Low density",
             "Product": "OLC125I-60",
             "Production": 0.0,
-            "Waste": 4585.0,
+            "Waste": 4585,
             "Down Time": 89.4,
             "Remarks": 0
         },
@@ -10817,8 +11187,8 @@ const dashboardData = {
             "Product Type": "Anti-Slip",
             "Product": "THAS21-15",
             "Production": 1600.84,
-            "Waste": 183.0,
-            "Down Time": 7.0,
+            "Waste": 183,
+            "Down Time": 7,
             "Remarks": "High Cof required"
         },
         {
@@ -10827,8 +11197,8 @@ const dashboardData = {
             "Product Type": "Anti-Fogg",
             "Product": "THAF22-30",
             "Production": 1647.95,
-            "Waste": 399.0,
-            "Down Time": 16.0,
+            "Waste": 399,
+            "Down Time": 16,
             "Remarks": 0
         },
         {
@@ -10837,8 +11207,8 @@ const dashboardData = {
             "Product Type": "Anti-Fogg",
             "Product": "THAF22-35",
             "Production": 823.72,
-            "Waste": 278.0,
-            "Down Time": 6.0,
+            "Waste": 278,
+            "Down Time": 6,
             "Remarks": 0
         },
         {
@@ -10847,8 +11217,8 @@ const dashboardData = {
             "Product Type": "Pearl Soap Grade Low seal",
             "Product": "OS21A-35",
             "Production": 890.88,
-            "Waste": 1460.0,
-            "Down Time": 15.0,
+            "Waste": 1460,
+            "Down Time": 15,
             "Remarks": "very low sealing required"
         },
         {
@@ -10857,8 +11227,8 @@ const dashboardData = {
             "Product Type": "Pearl Super Seal",
             "Product": "PRL(SSG)-25",
             "Production": 956.3,
-            "Waste": 460.0,
-            "Down Time": 4.0,
+            "Waste": 460,
+            "Down Time": 4,
             "Remarks": 0
         },
         {
@@ -10867,8 +11237,8 @@ const dashboardData = {
             "Product Type": "White solid inmold low density",
             "Product": "OLW128I-70",
             "Production": 1127.81,
-            "Waste": 1250.0,
-            "Down Time": 15.0,
+            "Waste": 1250,
+            "Down Time": 15,
             "Remarks": 0
         },
         {
@@ -10877,8 +11247,8 @@ const dashboardData = {
             "Product Type": "Opaque In-Mold Low density",
             "Product": "OLC125I-60",
             "Production": 616.19,
-            "Waste": 8975.0,
-            "Down Time": 345.0,
+            "Waste": 8975,
+            "Down Time": 345,
             "Remarks": 0
         },
         {
@@ -10887,8 +11257,8 @@ const dashboardData = {
             "Product Type": "Opaque In-Mold Low density",
             "Product": "OLC125I-65",
             "Production": 1111.43,
-            "Waste": 417.0,
-            "Down Time": 5.0,
+            "Waste": 417,
+            "Down Time": 5,
             "Remarks": 0
         },
         {
@@ -10897,8 +11267,8 @@ const dashboardData = {
             "Product Type": "Opaque metalize Low density",
             "Product": "MBOC226S-30",
             "Production": 1254.19,
-            "Waste": 3850.0,
-            "Down Time": 135.0,
+            "Waste": 3850,
+            "Down Time": 135,
             "Remarks": 0
         },
         {
@@ -10907,8 +11277,8 @@ const dashboardData = {
             "Product Type": "Metalizeable High Barier",
             "Product": "MB21R-30",
             "Production": 4785.7,
-            "Waste": 4170.0,
-            "Down Time": 88.0,
+            "Waste": 4170,
+            "Down Time": 88,
             "Remarks": "High barier required"
         },
         {
@@ -10917,8 +11287,8 @@ const dashboardData = {
             "Product Type": "Plain Twist White Opaque PET",
             "Product": "POWN01T-20",
             "Production": 2093.52,
-            "Waste": 2916.0,
-            "Down Time": 50.0,
+            "Waste": 2916,
+            "Down Time": 50,
             "Remarks": "Haze: 96.2%, Opacity: 53.54%, Whiteness:95.30"
         },
         {
@@ -10927,9 +11297,69 @@ const dashboardData = {
             "Product Type": "Plain Twist White Opaque PET",
             "Product": "POWN01T-23",
             "Production": 2221.74,
-            "Waste": 2916.0,
-            "Down Time": 50.0,
+            "Waste": 2916,
+            "Down Time": 50,
             "Remarks": "Haze: 96.3%, Opacity: 57.20%, Whiteness:95.30"
+        },
+        {
+            "Date": "2026-03-04",
+            "Plant": "GPAK",
+            "Product Type": "Sealable/Metalizable",
+            "Product": "Material trial ",
+            "Production": 150000.0,
+            "Waste": "-",
+            "Down Time": "-",
+            "Remarks": "FS5713 and FS5714 material trial (SFI 841-A alternative)"
+        },
+        {
+            "Date": "2026-03-12",
+            "Plant": "GPAK",
+            "Product Type": "Plain",
+            "Product": "TN02-12",
+            "Production": 21628.2,
+            "Waste": 1600,
+            "Down Time": 26,
+            "Remarks": "Flame treated bult production for first time "
+        },
+        {
+            "Date": "2026-03-19",
+            "Plant": "GPAK",
+            "Product Type": "Medium Barrier",
+            "Product": "MB21MB-15",
+            "Production": 91695.0,
+            "Waste": 727,
+            "Down Time": 7,
+            "Remarks": "First time bulk production "
+        },
+        {
+            "Date": "2026-03-29",
+            "Plant": "GPAK",
+            "Product Type": "MATT",
+            "Product": "MT11D-20",
+            "Production": 5773.9,
+            "Waste": 1040,
+            "Down Time": 15,
+            "Remarks": "First time bulk production "
+        },
+        {
+            "Date": "2026-03-30",
+            "Plant": "GPAK",
+            "Product Type": "Metalizable",
+            "Product": "THoM(111)-18",
+            "Production": 2828.0,
+            "Waste": "-",
+            "Down Time": "-",
+            "Remarks": "Low SIT material Adsyl 6146 trial, SIT Achieved, film minot cloudy "
+        },
+        {
+            "Date": "2026-03-01",
+            "Plant": "GPAK",
+            "Product Type": "Extrusion lamination",
+            "Product": "THX21-15",
+            "Production": 24689.0,
+            "Waste": 400,
+            "Down Time": 6,
+            "Remarks": "First time bulk production "
         }
     ],
     "offlineData": [
@@ -11372,6 +11802,14 @@ const dashboardData = {
             "Waste": 59394.0,
             "Waste %": 0.0237,
             "Down Time": 68.5
+        },
+        {
+            "Month": "2026-03-26",
+            "Plant": "GPAK",
+            "Production": 2759317.0,
+            "Waste": 62064.0,
+            "Waste %": 0.0224,
+            "Down Time": 15.0
         }
     ],
     "reconData": [],
