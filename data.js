@@ -1,6 +1,20 @@
 const dashboardData = {
     "mainData": [
         {
+            "Month": "2026-03-01",
+            "Plant": "IPAK",
+            "Production": 2248226.04,
+            "Waste": 63010.0,
+            "Waste %": 0.0273,
+            "Down Time": 62.8,
+            "OEE %": 0.8206,
+            "Performance %": 0.8978,
+            "Availability %": 0.9144,
+            "Quality %": 1.0,
+            "FPL(KG/KWH)": 1.064,
+            "No of Grade Changes": 48
+        },
+        {
             "Month": "2026-03-26",
             "Plant": "GPAK",
             "Production": 2709713.0,
@@ -10382,6 +10396,258 @@ const dashboardData = {
             "Product Type": "Sealable (Extrusion Lamination)",
             "Product": "THX21-15",
             "Production": 24689.4752
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "IPAK",
+            "Product Type": "Metalizeable",
+            "Product": "MB21S-20",
+            "Production": 38773.0551
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-20",
+            "Production": 302907.88259999995
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "IPAK",
+            "Product Type": "Metalizeable Medium Barier",
+            "Product": "MB21MB-15",
+            "Production": 32100.998999999996
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable Anti Slip",
+            "Product": "THAS21-20",
+            "Production": 14429.472
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "IPAK",
+            "Product Type": "Metalizeable Cold Seal",
+            "Product": "MB22SG-20",
+            "Production": 63966.22799999999
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable Over Wrap",
+            "Product": "THOW-25",
+            "Production": 9608.802
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "THO20",
+            "Production": 5152.113899999999
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "IPAK",
+            "Product Type": "Non-Sealable",
+            "Product": "TNB-PL10",
+            "Production": 182613.35
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "IPAK",
+            "Product Type": "Metalizeable UHB",
+            "Product": "THoMUHB15",
+            "Production": 54415.859549999994
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "IPAK",
+            "Product Type": "Metalizeable HB",
+            "Product": "THoMHB15",
+            "Production": 314942.03144999995
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "IPAK",
+            "Product Type": "Metalizeable Cold Seal",
+            "Product": "MB22SG-15",
+            "Production": 63939.69299999999
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-23",
+            "Production": 138908.6457
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "IPAK",
+            "Product Type": "Metalizeable HB",
+            "Product": "MB21R-30",
+            "Production": 698.697
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "IPAK",
+            "Product Type": "Opaque",
+            "Product": "PWLO38",
+            "Production": 207318.34649999999
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "IPAK",
+            "Product Type": "Opaque",
+            "Product": "OLC217-38",
+            "Production": 89151.2055
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "IPAK",
+            "Product Type": "Opaque",
+            "Product": "OLC217-35",
+            "Production": 8204.187
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "IPAK",
+            "Product Type": "Opaque",
+            "Product": "PRL30",
+            "Production": 150085.48785
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "IPAK",
+            "Product Type": "Opaque Soap Grade",
+            "Product": "PRL-SG25",
+            "Production": 54056.449499999995
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "IPAK",
+            "Product Type": "Opaque In-Mold",
+            "Product": "OLC126I-65",
+            "Production": 14628.789
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "IPAK",
+            "Product Type": "White Solid",
+            "Product": "WSO20",
+            "Production": 54616.86
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "IPAK",
+            "Product Type": "Solid White Control Opacity",
+            "Product": "WSCO-20",
+            "Production": 9566.52
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "IPAK",
+            "Product Type": "Solid White Control Opacity",
+            "Product": "WSCO-15",
+            "Production": 15404.237399999998
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "IPAK",
+            "Product Type": "Opaque Super Seal",
+            "Product": "PRLSSG-25",
+            "Production": 14926.0245
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "IPAK",
+            "Product Type": "Non-Sealable",
+            "Product": "TNn30",
+            "Production": 120289.6365
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "IPAK",
+            "Product Type": "Non-Sealable",
+            "Product": "TNo-10",
+            "Production": 5743.392
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "IPAK",
+            "Product Type": "Non-Sealable",
+            "Product": "TN01-30",
+            "Production": 6443.306999999999
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-24",
+            "Production": 15675.659999999998
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "IPAK",
+            "Product Type": "Metalizeable HB",
+            "Product": "MB21R-20",
+            "Production": 3072.8399999999997
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "IPAK",
+            "Product Type": "Metalizeable HB",
+            "Product": "MB21R-17",
+            "Production": 56671.66949999999
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "IPAK",
+            "Product Type": "Metalizable",
+            "Product": "THoM18",
+            "Production": 1516.7579999999998
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "THO18",
+            "Production": 55125.723
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21PI-35",
+            "Production": 25311.6495
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "THo30",
+            "Production": 59647.08689999999
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "THOL40",
+            "Production": 22162.379999999997
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21PI-30",
+            "Production": 6351.278399999999
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-30",
+            "Production": 29799.7185
         }
     ],
     "eremaData": [
@@ -10798,6 +11064,12 @@ const dashboardData = {
             "Plant": "GPAK",
             "Erema Production": 210100.0,
             "Erema(KG/KWH)": 0.39
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "IPAK",
+            "Erema Production": 282952.0,
+            "Erema(KG/KWH)": 0.0
         }
     ],
     "trialsData": [
@@ -11360,6 +11632,26 @@ const dashboardData = {
             "Waste": 400,
             "Down Time": 6,
             "Remarks": "First time bulk production "
+        },
+        {
+            "Date": "2026-03-10",
+            "Plant": "IPAK",
+            "Product Type": "Metallizable B/S Seal B/S Treat ColdSeal",
+            "Product": "MB22SG-15",
+            "Production": 700.0,
+            "Waste": 405,
+            "Down Time": 9,
+            "Remarks": "To check unwind behaviour at PS and Metalzier before production/Result ok"
+        },
+        {
+            "Date": "2026-03-13",
+            "Plant": "IPAK",
+            "Product Type": "Metalizeable High Barier",
+            "Product": "MB21R-30",
+            "Production": 698.7,
+            "Waste": 1080,
+            "Down Time": 18,
+            "Remarks": "High barier required/Not achieved results"
         }
     ],
     "offlineData": [
@@ -11810,6 +12102,14 @@ const dashboardData = {
             "Waste": 62064.0,
             "Waste %": 0.0224,
             "Down Time": 15.0
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "IPAK",
+            "Production": 0.0,
+            "Waste": 0.0,
+            "Waste %": 0.0643,
+            "Down Time": 0.0
         }
     ],
     "reconData": [],
