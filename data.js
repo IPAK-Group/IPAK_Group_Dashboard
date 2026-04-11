@@ -10738,13 +10738,13 @@ const dashboardData = {
         {
             "Month": "2024-03-26",
             "Plant": "PETPAK",
-            "Erema Production": 152931.19,
+            "Erema Production": 0.0,
             "Erema(KG/KWH)": 0.0
         },
         {
             "Month": "2026-03-26",
             "Plant": "PETPAK",
-            "Erema Production": 0.0,
+            "Erema Production": 152931.19,
             "Erema(KG/KWH)": 0.28
         },
         {
