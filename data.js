@@ -12108,7 +12108,7 @@ const dashboardData = {
             "Plant": "IPAK",
             "Production": 2939371,
             "Waste": 189002.0,
-            "Waste %": 0.0643,
+            "Waste %": 0.064,
             "Down Time": 163.7
         }
     ],
