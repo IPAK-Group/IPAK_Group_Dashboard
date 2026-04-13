@@ -76,12 +76,12 @@ const dashboardData = {
             "Production": 2410166.62,
             "Waste": 89119.63,
             "Waste %": 0.0357,
-            "Down Time": 37.7,
-            "OEE %": 0.8492,
+            "Down Time": 37.4,
+            "OEE %": 0.866,
             "Performance %": 0.8913,
             "Availability %": 0.9527,
             "Quality %": 1.0,
-            "FPL(KG/KWH)": 0.0,
+            "FPL(KG/KWH)": 0.69,
             "No of Grade Changes": 58
         },
         {
