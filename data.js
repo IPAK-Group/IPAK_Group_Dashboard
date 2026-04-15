@@ -12181,6 +12181,30 @@ const dashboardData = {
             "Waste": 189002.0,
             "Waste %": 0.064,
             "Down Time": 163.7
+        },
+        {
+            "Month": "2026-01-26",
+            "Plant": "CPAK",
+            "Production": 468496,
+            "Waste": 38000.0,
+            "Waste %": 0.05,
+            "Down Time": 14.265
+        },
+        {
+            "Month": "2026-02-26",
+            "Plant": "CPAK",
+            "Production": 560496,
+            "Waste": 58800.0,
+            "Waste %": 0.101,
+            "Down Time": 30.05
+        },
+        {
+            "Month": "2026-03-26",
+            "Plant": "CPAK",
+            "Production": 611570,
+            "Waste": 68000.0,
+            "Waste %": 0.105,
+            "Down Time": 21.0
         }
     ],
     "reconData": [],

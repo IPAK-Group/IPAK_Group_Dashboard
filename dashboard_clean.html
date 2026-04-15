@@ -1109,18 +1109,29 @@
                     }
                 }
 
-                // Yearly Average calculation for Production and Waste (exclude percentage metrics)
+                // Yearly Average calculation
                 let yearlyAvg = null;
+                let yearlyAvgIsRatio = false;
                 if ((metric.toLowerCase().includes('production') || metric.toLowerCase().includes('waste')) && !metric.includes('%')) {
+                    // Volume metrics: show per-month average
                     if (yearData.length > 0) {
                         const totalYear = yearData.reduce((a, b) => a + (Number(b[metric]) || 0), 0);
                         yearlyAvg = totalYear / yearData.length;
+                    }
+                } else if (metric === 'KWh/Kg Plant' || metric === 'Rs/Kg Plant') {
+                    // Ratio/cost metrics: show average across selected period
+                    const valid = yearData.filter(d => d[metric] !== undefined && d[metric] !== null && d[metric] !== 0);
+                    if (valid.length > 0) {
+                        yearlyAvg = valid.reduce((a, b) => a + (Number(b[metric]) || 0), 0) / valid.length;
+                        yearlyAvgIsRatio = true;
                     }
                 }
 
                 let displayVal = '0';
                 if (value !== undefined && value !== null) {
                     if (metric.includes('%')) displayVal = (value * 100).toFixed(2) + '<span class="text-sm ml-1 opacity-70">%</span>';
+                    else if (metric === 'KWh/Kg Plant') displayVal = value.toFixed(2) + '<span class="text-sm ml-1 opacity-70">KWh</span>';
+                    else if (metric === 'Rs/Kg Plant') displayVal = value.toFixed(2) + '<span class="text-sm ml-1 opacity-70">Rs</span>';
                     else if (isRatioMetric(metric)) displayVal = value.toFixed(2);
                     else if (metric.toLowerCase().includes('production') || metric.toLowerCase().includes('waste')) displayVal = Math.round(value).toLocaleString() + '<span class="text-sm ml-1 opacity-70">kg</span>';
                     else if (metric.toLowerCase().includes('down time')) displayVal = Math.round(value).toLocaleString() + '<span class="text-sm ml-1 opacity-70">hrs</span>';
@@ -1159,7 +1170,7 @@
                     }
                             ${yearlyAvg !== null ? `
                                 <div class="bg-blue-500/10 border border-white/5 backdrop-blur-md px-1.5 py-0.5 rounded text-[8px] font-black tracking-tighter text-slate-400 group-hover:text-white transition-colors">
-                                    ${year !== 'all' ? year : 'FLEET'} AVG: ${Math.round(yearlyAvg).toLocaleString()}
+                                    ${year !== 'all' ? year : 'FLEET'} AVG: ${yearlyAvgIsRatio ? yearlyAvg.toFixed(2) : Math.round(yearlyAvg).toLocaleString()}
                                 </div>
                             ` : ''}
                         </div>
