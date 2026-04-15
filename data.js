@@ -10726,7 +10726,7 @@ const dashboardData = {
             "Month": "2026-02-01",
             "Plant": "PETPAK",
             "Erema Production": 253341.17,
-            "Erema(KG/KWH)": 0.0
+            "Erema(KG/KWH)": 0.37
         },
         {
             "Month": "2025-01-26",
@@ -10816,151 +10816,151 @@ const dashboardData = {
             "Month": "2026-03-26",
             "Plant": "PETPAK",
             "Erema Production": 152931.19,
-            "Erema(KG/KWH)": 0.28
+            "Erema(KG/KWH)": 0.41
         },
         {
             "Month": "2024-02-26",
             "Plant": "PETPAK",
             "Erema Production": 239354.0,
-            "Erema(KG/KWH)": 0.26
+            "Erema(KG/KWH)": 0.0
         },
         {
             "Month": "2024-03-26",
             "Plant": "PETPAK",
             "Erema Production": 184500.0,
-            "Erema(KG/KWH)": 0.26
+            "Erema(KG/KWH)": 0.0
         },
         {
             "Month": "2024-04-26",
             "Plant": "PETPAK",
             "Erema Production": 216251.34,
-            "Erema(KG/KWH)": 0.25
+            "Erema(KG/KWH)": 0.0
         },
         {
             "Month": "2024-05-26",
             "Plant": "PETPAK",
             "Erema Production": 202436.393,
-            "Erema(KG/KWH)": 0.28
+            "Erema(KG/KWH)": 0.0
         },
         {
             "Month": "2024-06-26",
             "Plant": "PETPAK",
             "Erema Production": 242292.119,
-            "Erema(KG/KWH)": 0.26
+            "Erema(KG/KWH)": 0.0
         },
         {
             "Month": "2024-07-26",
             "Plant": "PETPAK",
             "Erema Production": 14587.808,
-            "Erema(KG/KWH)": 0.26
+            "Erema(KG/KWH)": 0.0
         },
         {
             "Month": "2024-08-26",
             "Plant": "PETPAK",
             "Erema Production": 272285.35,
-            "Erema(KG/KWH)": 0.25
+            "Erema(KG/KWH)": 0.0
         },
         {
             "Month": "2024-09-26",
             "Plant": "PETPAK",
             "Erema Production": 366292.0,
-            "Erema(KG/KWH)": 0.28
+            "Erema(KG/KWH)": 0.0
         },
         {
             "Month": "2024-10-26",
             "Plant": "PETPAK",
             "Erema Production": 373234.5,
-            "Erema(KG/KWH)": 0.26
+            "Erema(KG/KWH)": 0.0
         },
         {
             "Month": "2024-11-26",
             "Plant": "PETPAK",
             "Erema Production": 320493.29,
-            "Erema(KG/KWH)": 0.26
+            "Erema(KG/KWH)": 0.0
         },
         {
             "Month": "2024-12-26",
             "Plant": "PETPAK",
             "Erema Production": 348740.0,
-            "Erema(KG/KWH)": 0.25
+            "Erema(KG/KWH)": 0.0
         },
         {
             "Month": "2025-01-26",
             "Plant": "PETPAK",
             "Erema Production": 132922.0,
-            "Erema(KG/KWH)": 0.28
+            "Erema(KG/KWH)": 0.7679247389519317
         },
         {
             "Month": "2025-02-26",
             "Plant": "PETPAK",
             "Erema Production": 58478.23,
-            "Erema(KG/KWH)": 0.26
+            "Erema(KG/KWH)": 0.4049712174940999
         },
         {
             "Month": "2025-03-26",
             "Plant": "PETPAK",
             "Erema Production": 71798.88,
-            "Erema(KG/KWH)": 0.26
+            "Erema(KG/KWH)": 0.3795880938532746
         },
         {
             "Month": "2025-04-26",
             "Plant": "PETPAK",
             "Erema Production": 72776.59,
-            "Erema(KG/KWH)": 0.0
+            "Erema(KG/KWH)": 0.36956939037676817
         },
         {
             "Month": "2025-05-26",
             "Plant": "PETPAK",
             "Erema Production": 108248.454,
-            "Erema(KG/KWH)": 0.0
+            "Erema(KG/KWH)": 0.402943399080785
         },
         {
             "Month": "2025-06-26",
             "Plant": "PETPAK",
             "Erema Production": 54414.29,
-            "Erema(KG/KWH)": 0.0
+            "Erema(KG/KWH)": 0.41235491632804544
         },
         {
             "Month": "2025-07-26",
             "Plant": "PETPAK",
             "Erema Production": 67263.792,
-            "Erema(KG/KWH)": 0.0
+            "Erema(KG/KWH)": 0.43742701868488176
         },
         {
             "Month": "2025-08-26",
             "Plant": "PETPAK",
             "Erema Production": 79433.0,
-            "Erema(KG/KWH)": 0.0
+            "Erema(KG/KWH)": 0.430261981795979
         },
         {
             "Month": "2025-09-26",
             "Plant": "PETPAK",
             "Erema Production": 118137.04,
-            "Erema(KG/KWH)": 0.0
+            "Erema(KG/KWH)": 0.3706204252281926
         },
         {
             "Month": "2025-10-26",
             "Plant": "PETPAK",
             "Erema Production": 94893.933,
-            "Erema(KG/KWH)": 0.0
+            "Erema(KG/KWH)": 0.402891931984735
         },
         {
             "Month": "2025-11-26",
             "Plant": "PETPAK",
             "Erema Production": 117320.0,
-            "Erema(KG/KWH)": 0.0
+            "Erema(KG/KWH)": 0.4000879874039085
         },
         {
             "Month": "2025-12-26",
             "Plant": "PETPAK",
             "Erema Production": 128827.85399999999,
-            "Erema(KG/KWH)": 0.0
+            "Erema(KG/KWH)": 0.41903542392057463
         },
         {
             "Month": "2026-01-26",
             "Plant": "PETPAK",
             "Erema Production": 130471.0,
-            "Erema(KG/KWH)": 0.0
+            "Erema(KG/KWH)": 0.41
         },
         {
             "Month": "2026-02-26",
