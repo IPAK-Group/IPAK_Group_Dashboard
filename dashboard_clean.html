@@ -450,7 +450,7 @@
                 </div>
 
                 <p class="text-slate-400 text-sm mb-6">Select which KPI metrics you want to display on your Overview
-                    dashboard. You can select up to 10 metrics.</p>
+                    dashboard. You can select up to 15 metrics.</p>
                 <div id="kpi-selection-grid" class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-6"></div>
 
                 <div class="flex justify-end gap-3">
@@ -538,7 +538,7 @@
                 'Waste %': 'fa-percent', 'Down Time': 'fa-clock', 'Downtime': 'fa-clock', 'Availability %': 'fa-check-circle',
                 'Performance %': 'fa-tachometer-alt', 'Quality %': 'fa-star', 'MTBF': 'fa-heartbeat',
                 'MTTR': 'fa-tools', 'Scrap Rate': 'fa-recycle', 'Yield %': 'fa-balance-scale',
-                'FPL(KG/KWH)': 'fa-bolt', 'Erema(KG/KWH)': 'fa-bolt', 'No of Grade Changes': 'fa-exchange-alt',
+                'KWh/Kg Plant': 'fa-bolt', 'Rs/Kg Plant': 'fa-money-bill-wave', 'Erema(KG/KWH)': 'fa-bolt', 'No of Grade Changes': 'fa-exchange-alt',
                 'Energy': 'fa-bolt', 'RECYCLE': 'fa-recycle', 'EREMA Production': 'fa-recycle',
                 'Avg Energy (KG/KWH)': 'fa-bolt'
             };
@@ -549,7 +549,7 @@
         function isRatioMetric(metric) {
             if (!metric) return false;
             const m = metric.toLowerCase();
-            return m.includes('%') || m.includes('ratio') || m.includes('fpl') || m.includes('/') || m.includes('mtbf') || m.includes('mttr') || m.includes('scrap rate') || m.includes('yield') || m.includes('quality');
+            return m.includes('%') || m.includes('ratio') || m.includes('/') || m.includes('mtbf') || m.includes('mttr') || m.includes('scrap rate') || m.includes('yield') || m.includes('quality');
         }
 
         // ===== UTILITY FUNCTIONS =====
@@ -1194,11 +1194,11 @@
                     selectionArray.splice(index, 1);
                 }
             } else {
-                // Select - limit to 10 metrics
-                if (selectionArray.length < 10) {
+                // Select - limit to 15 metrics
+                if (selectionArray.length < 15) {
                     selectionArray.push(metric);
                 } else {
-                    alert('Maximum 10 metrics can be selected for the chart');
+                    alert('Maximum 15 metrics can be selected for the chart');
                     return;
                 }
             }
@@ -1251,8 +1251,8 @@
             if (index > -1) {
                 window.comparisonKPIs.splice(index, 1);
             } else {
-                if (window.comparisonKPIs.length >= 10) {
-                    alert('Max 10 metrics allowed');
+                if (window.comparisonKPIs.length >= 15) {
+                    alert('Max 15 metrics allowed');
                     return;
                 }
                 window.comparisonKPIs.push(metric);
@@ -4394,9 +4394,9 @@
             const checkboxes = grid.querySelectorAll('input[type="checkbox"]:checked');
             const selectedMetrics = Array.from(checkboxes).map(cb => cb.value);
 
-            // Limit to 10 metrics
-            if (selectedMetrics.length > 10) {
-                alert('You can select a maximum of 10 metrics. Please deselect some.');
+            // Limit to 15 metrics
+            if (selectedMetrics.length > 15) {
+                alert('You can select a maximum of 15 metrics. Please deselect some.');
                 return;
             }
 
