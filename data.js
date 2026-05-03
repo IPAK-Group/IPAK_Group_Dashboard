@@ -16,6 +16,21 @@ const dashboardData = {
             "No of Grade Changes": 48
         },
         {
+            "Month": "2026-04-01",
+            "Plant": "PETPAK",
+            "Production": 2252825.76,
+            "Waste": 114764.06,
+            "Waste %": 0.0485,
+            "Down Time": 68.3,
+            "OEE %": 0.8355,
+            "Performance %": 0.9034,
+            "Availability %": 0.9299,
+            "Quality %": 1.0,
+            "KWh/Kg Plant": 0.0,
+            "Rs/Kg Plant": 0.0,
+            "No of Grade Changes": 58
+        },
+        {
             "Month": "2026-03-26",
             "Plant": "GPAK",
             "Production": 2709713.0,
@@ -10719,6 +10734,104 @@ const dashboardData = {
             "Product Type": "Sealable",
             "Product": "TH21-30",
             "Production": 29799.7185
+        },
+        {
+            "Month": "2026-04-01",
+            "Plant": "PETPAK",
+            "Product Type": "Plain PET",
+            "Product": "PTN01-12",
+            "Production": 610078.2084
+        },
+        {
+            "Month": "2026-04-01",
+            "Plant": "PETPAK",
+            "Product Type": "Chemical Treated PET",
+            "Product": "PVTN01-12",
+            "Production": 477321.0456
+        },
+        {
+            "Month": "2026-04-01",
+            "Plant": "PETPAK",
+            "Product Type": "Chemical Treated PET",
+            "Product": "PVTN00-12",
+            "Production": 542494.8553499999
+        },
+        {
+            "Month": "2026-04-01",
+            "Plant": "PETPAK",
+            "Product Type": "Chemical Treated PET",
+            "Product": "PVTN00XP-12",
+            "Production": 27020.111999999997
+        },
+        {
+            "Month": "2026-04-01",
+            "Plant": "PETPAK",
+            "Product Type": "Plain PET",
+            "Product": "PTN01-25",
+            "Production": 20255.165999999997
+        },
+        {
+            "Month": "2026-04-01",
+            "Plant": "PETPAK",
+            "Product Type": "Plain Twist PET",
+            "Product": "PTN01T-23",
+            "Production": 6496.4727
+        },
+        {
+            "Month": "2026-04-01",
+            "Plant": "PETPAK",
+            "Product Type": "Chemical Treated Twist PET",
+            "Product": "PVTN01ST-23",
+            "Production": 8546.6712
+        },
+        {
+            "Month": "2026-04-01",
+            "Plant": "PETPAK",
+            "Product Type": "Chemical Treated Twist PET",
+            "Product": "PVTN01ST-18",
+            "Production": 27318.217499999995
+        },
+        {
+            "Month": "2026-04-01",
+            "Plant": "PETPAK",
+            "Product Type": "Plain PET",
+            "Product": "PTN01-10",
+            "Production": 328826.20920000004
+        },
+        {
+            "Month": "2026-04-01",
+            "Plant": "PETPAK",
+            "Product Type": "Chemical Treated PET",
+            "Product": "PVTN01-10",
+            "Production": 44418.806999999986
+        },
+        {
+            "Month": "2026-04-01",
+            "Plant": "PETPAK",
+            "Product Type": "Chemical Treated PET",
+            "Product": "PVTN00-10",
+            "Production": 100902.51299999998
+        },
+        {
+            "Month": "2026-04-01",
+            "Plant": "PETPAK",
+            "Product Type": "Chemical Treated PET",
+            "Product": "PVTN01-19",
+            "Production": 8646.68205
+        },
+        {
+            "Month": "2026-04-01",
+            "Plant": "PETPAK",
+            "Product Type": "Twist White Opaque PET",
+            "Product": "POWN01T-23",
+            "Production": 24373.1718
+        },
+        {
+            "Month": "2026-04-01",
+            "Plant": "PETPAK",
+            "Product Type": "Chemical Treated PET",
+            "Product": "PVTN01FR-12",
+            "Production": 26126.97
         }
     ],
     "eremaData": [
@@ -11140,6 +11253,12 @@ const dashboardData = {
             "Month": "2026-03-01",
             "Plant": "IPAK",
             "Erema Production": 282952.0,
+            "Erema(KG/KWH)": 0.0
+        },
+        {
+            "Month": "2026-04-01",
+            "Plant": "PETPAK",
+            "Erema Production": 184873.07,
             "Erema(KG/KWH)": 0.0
         }
     ],
