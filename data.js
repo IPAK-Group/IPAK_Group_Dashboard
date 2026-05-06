@@ -26,8 +26,8 @@ const dashboardData = {
             "Performance %": 0.9034,
             "Availability %": 0.9299,
             "Quality %": 1.0,
-            "KWh/Kg Plant": 0.0,
-            "Rs/Kg Plant": 0.0,
+            "KWh/Kg Plant": 0.72,
+            "Rs/Kg Plant": 20.6,
             "No of Grade Changes": 58
         },
         {
@@ -12324,6 +12324,14 @@ const dashboardData = {
             "Waste": 68000.0,
             "Waste %": 0.105,
             "Down Time": 21.0
+        },
+        {
+            "Month": "2026-04-26",
+            "Plant": "PETPAK",
+            "Production": 2163008,
+            "Waste": 53799.0,
+            "Waste %": 0.0241,
+            "Down Time": 100.0
         }
     ],
     "reconData": [],
