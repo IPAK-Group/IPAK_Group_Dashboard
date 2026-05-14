@@ -11311,6 +11311,55 @@ const dashboardData = {
             "Product Type": "Solid White Control Opacity",
             "Product": "JR-WSCO-20",
             "Production": 11333.49
+        },
+        {
+            "Month": "2026-04-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable",
+            "Product": "JR-CTH21-30",
+            "Production": 31688.99
+        },
+        {
+            "Month": "2026-04-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable",
+            "Product": "JR-CTH21-25",
+            "Production": 16850.13
+        },
+        {
+            "Month": "2026-04-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable",
+            "Product": "JR-CTH21-20",
+            "Production": 136.2
+        },
+        {
+            "Month": "2026-04-01",
+            "Plant": "CPAK",
+            "Product Type": "Metalizable",
+            "Product": "JR-CMB21S-25 ",
+            "Production": 287657.36
+        },
+        {
+            "Month": "2026-04-01",
+            "Plant": "CPAK",
+            "Product Type": "Metalizable",
+            "Product": "JR-CMB21S-20",
+            "Production": 193915.94
+        },
+        {
+            "Month": "2026-04-01",
+            "Plant": "CPAK",
+            "Product Type": "White Solid",
+            "Product": "JR-CW21-25",
+            "Production": 16026.82
+        },
+        {
+            "Month": "2026-04-01",
+            "Plant": "CPAK",
+            "Product Type": "Metalizable",
+            "Product": "JR-CMB21S-30",
+            "Production": 29117.36
         }
     ],
     "eremaData": [
@@ -11751,6 +11800,24 @@ const dashboardData = {
             "Plant": "IPAK",
             "Erema Production": 260079.0,
             "Erema(KG/KWH)": 0.40314839700518335
+        },
+        {
+            "Month": "2026-02-01",
+            "Plant": "CPAK",
+            "Erema Production": 15590.49,
+            "Erema(KG/KWH)": 0.0
+        },
+        {
+            "Month": "2026-03-01",
+            "Plant": "CPAK",
+            "Erema Production": 58577.24,
+            "Erema(KG/KWH)": 0.0
+        },
+        {
+            "Month": "2026-04-01",
+            "Plant": "CPAK",
+            "Erema Production": 3603.0,
+            "Erema(KG/KWH)": 0.0
         }
     ],
     "trialsData": [
