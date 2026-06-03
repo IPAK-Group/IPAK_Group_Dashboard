@@ -1124,6 +1124,21 @@ const dashboardData = {
             "KWh/Kg Plant": 1.019,
             "Rs/Kg Plant": 0.0,
             "No of Grade Changes": 7
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "PETPAK",
+            "Production": 2270153.588,
+            "Waste": 89920.52,
+            "Waste %": 0.0381,
+            "Down Time": 125.82,
+            "OEE %": 0.8781,
+            "Performance %": 0.9406,
+            "Availability %": 0.8309,
+            "Quality %": 1.0,
+            "KWh/Kg Plant": 0.73,
+            "Rs/Kg Plant": 25.21,
+            "No of Grade Changes": 57
         }
     ],
     "productData": [
@@ -10196,70 +10211,70 @@ const dashboardData = {
             "Month": "2026-03-01",
             "Plant": "CPAK",
             "Product Type": "Metalizable",
-            "Product": "JR-CMB21S-30",
+            "Product": "CMB21S-30",
             "Production": 23336.13648
         },
         {
             "Month": "2026-03-01",
             "Plant": "CPAK",
             "Product Type": "Metalizable",
-            "Product": "JR-CMB21S-25 ",
+            "Product": "CMB21S-25 ",
             "Production": 297518.4324670001
         },
         {
             "Month": "2026-03-01",
             "Plant": "CPAK",
             "Product Type": "Metalizable",
-            "Product": "JR-CMB21S-20",
+            "Product": "CMB21S-20",
             "Production": 167807.65175499997
         },
         {
             "Month": "2026-03-01",
             "Plant": "CPAK",
             "Product Type": "Metalizable High MBS",
-            "Product": "JR-CMB21SX-25",
+            "Product": "CMB21SX-25",
             "Production": 40604.911752
         },
         {
             "Month": "2026-03-01",
             "Plant": "CPAK",
             "Product Type": "Sealable",
-            "Product": "JR-CTH21-23",
+            "Product": "CTH21-23",
             "Production": 37153.017900000006
         },
         {
             "Month": "2026-03-01",
             "Plant": "CPAK",
             "Product Type": "Sealable",
-            "Product": "JR-CTH21-25",
+            "Product": "CTH21-25",
             "Production": 23700.574519999995
         },
         {
             "Month": "2026-03-01",
             "Plant": "CPAK",
             "Product Type": "Sealable",
-            "Product": "JR-CTH21-27",
+            "Product": "CTH21-27",
             "Production": 9862.907
         },
         {
             "Month": "2026-03-01",
             "Plant": "CPAK",
             "Product Type": "Sealable",
-            "Product": "JR-CTH21-30",
+            "Product": "CTH21-30",
             "Production": 27473.553239999997
         },
         {
             "Month": "2026-03-01",
             "Plant": "CPAK",
             "Product Type": "Sealable",
-            "Product": "JR-CTH21-35",
+            "Product": "CTH21-35",
             "Production": 31171.87225
         },
         {
             "Month": "2026-03-01",
             "Plant": "CPAK",
             "Product Type": "Sealable",
-            "Product": "JR-CTH21-40",
+            "Product": "CTH21-40",
             "Production": 2901.78525
         },
         {
@@ -11085,281 +11100,358 @@ const dashboardData = {
             "Month": "2026-04-01",
             "Plant": "IPAK",
             "Product Type": "Cigerete Grade",
-            "Product": "JR-CG99N23",
+            "Product": "CG99N23",
             "Production": 18205.06
         },
         {
             "Month": "2026-04-01",
             "Plant": "IPAK",
             "Product Type": "Matt",
-            "Product": "JR-MATTPL12",
+            "Product": "MATTPL12",
             "Production": 55532.8
         },
         {
             "Month": "2026-04-01",
             "Plant": "IPAK",
             "Product Type": "Metalizeable HB",
-            "Product": "JR-MB21R-20",
+            "Product": "MB21R-20",
             "Production": 106842.84
         },
         {
             "Month": "2026-04-01",
             "Plant": "IPAK",
             "Product Type": "Metalizeable HB",
-            "Product": "JR-MB21R-30",
+            "Product": "MB21R-30",
             "Production": 1219.22
         },
         {
             "Month": "2026-04-01",
             "Plant": "IPAK",
             "Product Type": "Metalizable",
-            "Product": "JR-MB21S-08",
+            "Product": "MB21S-08",
             "Production": 267.61
         },
         {
             "Month": "2026-04-01",
             "Plant": "IPAK",
             "Product Type": "Opaque",
-            "Product": "JR-OC217-25",
+            "Product": "OC217-25",
             "Production": 11890.77
         },
         {
             "Month": "2026-04-01",
             "Plant": "IPAK",
             "Product Type": "Opaque",
-            "Product": "JR-OC217-40",
+            "Product": "OC217-40",
             "Production": 20514.18
         },
         {
             "Month": "2026-04-01",
             "Plant": "IPAK",
             "Product Type": "Opaque",
-            "Product": "JR-OLC217-38",
+            "Product": "OLC217-38",
             "Production": 1585.49
         },
         {
             "Month": "2026-04-01",
             "Plant": "IPAK",
             "Product Type": "White Solid",
-            "Product": "JR-OW219-30",
+            "Product": "OW219-30",
             "Production": 23504.53
         },
         {
             "Month": "2026-04-01",
             "Plant": "IPAK",
             "Product Type": "Opaque",
-            "Product": "JR-PWLO38",
+            "Product": "PWLO38",
             "Production": 22122.59
         },
         {
             "Month": "2026-04-01",
             "Plant": "IPAK",
             "Product Type": "Sealable",
-            "Product": "JR-TH21-18",
+            "Product": "TH21-18",
             "Production": 24931.89
         },
         {
             "Month": "2026-04-01",
             "Plant": "IPAK",
             "Product Type": "Sealable",
-            "Product": "JR-TH21-25",
+            "Product": "TH21-25",
             "Production": 53437.23
         },
         {
             "Month": "2026-04-01",
             "Plant": "IPAK",
             "Product Type": "Sealable",
-            "Product": "JR-TH21-30",
+            "Product": "TH21-30",
             "Production": 34724.58
         },
         {
             "Month": "2026-04-01",
             "Plant": "IPAK",
             "Product Type": "Sealable",
-            "Product": "JR-TH21-40",
+            "Product": "TH21-40",
             "Production": 24208.79
         },
         {
             "Month": "2026-04-01",
             "Plant": "IPAK",
             "Product Type": "Sealable",
-            "Product": "JR-TH21PI-25",
+            "Product": "TH21PI-25",
             "Production": 44008.08
         },
         {
             "Month": "2026-04-01",
             "Plant": "IPAK",
             "Product Type": "Sealable Anti Fog",
-            "Product": "JR-THAF22-25",
+            "Product": "THAF22-25",
             "Production": 6277.92
         },
         {
             "Month": "2026-04-01",
             "Plant": "IPAK",
             "Product Type": "Sealable Anti Fog",
-            "Product": "JR-THAF22-30",
+            "Product": "THAF22-30",
             "Production": 6348.95
         },
         {
             "Month": "2026-04-01",
             "Plant": "IPAK",
             "Product Type": "Sealable Anti Fog",
-            "Product": "JR-THAF22-35",
+            "Product": "THAF22-35",
             "Production": 20356.92
         },
         {
             "Month": "2026-04-01",
             "Plant": "IPAK",
             "Product Type": "Sealable",
-            "Product": "JR-THO18",
+            "Product": "THO18",
             "Production": 61033.52
         },
         {
             "Month": "2026-04-01",
             "Plant": "IPAK",
             "Product Type": "Sealable",
-            "Product": "JR-THO20",
+            "Product": "THO20",
             "Production": 3000.2
         },
         {
             "Month": "2026-04-01",
             "Plant": "IPAK",
             "Product Type": "Sealable",
-            "Product": "JR-THO30",
+            "Product": "THO30",
             "Production": 38231.03
         },
         {
             "Month": "2026-04-01",
             "Plant": "IPAK",
             "Product Type": "Sealable",
-            "Product": "JR-THO40",
+            "Product": "THO40",
             "Production": 800.34
         },
         {
             "Month": "2026-04-01",
             "Plant": "IPAK",
             "Product Type": "Metalizeable HB",
-            "Product": "JR-THOMHB15",
+            "Product": "THOMHB15",
             "Production": 228965.15
         },
         {
             "Month": "2026-04-01",
             "Plant": "IPAK",
             "Product Type": "Metalizeable UHB",
-            "Product": "JR-THOMUHB15",
+            "Product": "THOMUHB15",
             "Production": 54524.99
         },
         {
             "Month": "2026-04-01",
             "Plant": "IPAK",
             "Product Type": "Sealable",
-            "Product": "JR-TL21-40",
+            "Product": "TL21-40",
             "Production": 7587.84
         },
         {
             "Month": "2026-04-01",
             "Plant": "IPAK",
             "Product Type": "Non-Sealable",
-            "Product": "JR-TNBPL10",
+            "Product": "TNBPL10",
             "Production": 86183.41
         },
         {
             "Month": "2026-04-01",
             "Plant": "IPAK",
             "Product Type": "Non-Sealable",
-            "Product": "JR-TNN30",
+            "Product": "TNN30",
             "Production": 116402.17
         },
         {
             "Month": "2026-04-01",
             "Plant": "IPAK",
             "Product Type": "Non-Sealable",
-            "Product": "JR-TNO18",
+            "Product": "TNO18",
             "Production": 1200.0
         },
         {
             "Month": "2026-04-01",
             "Plant": "IPAK",
             "Product Type": "Non-Sealable",
-            "Product": "JR-TNO20",
+            "Product": "TNO20",
             "Production": 850.0
         },
         {
             "Month": "2026-04-01",
             "Plant": "IPAK",
             "Product Type": "Non-Sealable",
-            "Product": "JR-TNO40",
+            "Product": "TNO40",
             "Production": 45777.66
         },
         {
             "Month": "2026-04-01",
             "Plant": "IPAK",
             "Product Type": "Non-Sealable",
-            "Product": "JR-TNOL40",
+            "Product": "TNOL40",
             "Production": 2379.03
         },
         {
             "Month": "2026-04-01",
             "Plant": "IPAK",
             "Product Type": "Solid White Control Opacity",
-            "Product": "JR-WSCO-15",
+            "Product": "WSCO-15",
             "Production": 25340.38
         },
         {
             "Month": "2026-04-01",
             "Plant": "IPAK",
             "Product Type": "Solid White Control Opacity",
-            "Product": "JR-WSCO-20",
+            "Product": "WSCO-20",
             "Production": 11333.49
         },
         {
             "Month": "2026-04-01",
             "Plant": "CPAK",
             "Product Type": "Sealable",
-            "Product": "JR-CTH21-30",
+            "Product": "CTH21-30",
             "Production": 31688.99
         },
         {
             "Month": "2026-04-01",
             "Plant": "CPAK",
             "Product Type": "Sealable",
-            "Product": "JR-CTH21-25",
+            "Product": "CTH21-25",
             "Production": 16850.13
         },
         {
             "Month": "2026-04-01",
             "Plant": "CPAK",
             "Product Type": "Sealable",
-            "Product": "JR-CTH21-20",
+            "Product": "CTH21-20",
             "Production": 136.2
         },
         {
             "Month": "2026-04-01",
             "Plant": "CPAK",
             "Product Type": "Metalizable",
-            "Product": "JR-CMB21S-25 ",
+            "Product": "CMB21S-25 ",
             "Production": 287657.36
         },
         {
             "Month": "2026-04-01",
             "Plant": "CPAK",
             "Product Type": "Metalizable",
-            "Product": "JR-CMB21S-20",
+            "Product": "CMB21S-20",
             "Production": 193915.94
         },
         {
             "Month": "2026-04-01",
             "Plant": "CPAK",
             "Product Type": "White Solid",
-            "Product": "JR-CW21-25",
+            "Product": "CW21-25",
             "Production": 16026.82
         },
         {
             "Month": "2026-04-01",
             "Plant": "CPAK",
             "Product Type": "Metalizable",
-            "Product": "JR-CMB21S-30",
+            "Product": "CMB21S-30",
             "Production": 29117.36
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "PETPAK",
+            "Product Type": "Plain PET",
+            "Product": "PTN01-12",
+            "Production": 796903.93
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "PETPAK",
+            "Product Type": "Chemical Treated PET",
+            "Product": "PVTN00-12",
+            "Production": 461235.84
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "PETPAK",
+            "Product Type": "Chemical Treated PET",
+            "Product": "PVTN01-12",
+            "Production": 484000.64
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "PETPAK",
+            "Product Type": "Plain PET",
+            "Product": "PTN01-30",
+            "Production": 6627.83
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "PETPAK",
+            "Product Type": "Chemical Treated PET",
+            "Product": "PVTN01-10",
+            "Production": 95844.77
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "PETPAK",
+            "Product Type": "Chemical Treated PET",
+            "Product": "PVTN01FR-12",
+            "Production": 26168.03
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "PETPAK",
+            "Product Type": "Plain Twist PET",
+            "Product": "PTN01T-23",
+            "Production": 245998.98
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "PETPAK",
+            "Product Type": "Chemical Treated Twist PET",
+            "Product": "PVTN01ST-23",
+            "Production": 38212.44
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "PETPAK",
+            "Product Type": "Plain PET",
+            "Product": "PTN01-10",
+            "Production": 97025.11
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "PETPAK",
+            "Product Type": "Chemical Treated PET",
+            "Product": "PVTN00-10",
+            "Production": 3446.94
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "PETPAK",
+            "Product Type": "Plain PET",
+            "Product": "PTN01-30",
+            "Production": 14689.08
         }
     ],
     "eremaData": [
@@ -11817,6 +11909,12 @@ const dashboardData = {
             "Month": "2026-04-01",
             "Plant": "CPAK",
             "Erema Production": 3603.0,
+            "Erema(KG/KWH)": 0.0
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "PETPAK",
+            "Erema Production": 148429.0,
             "Erema(KG/KWH)": 0.0
         }
     ],
@@ -12954,6 +13052,14 @@ const dashboardData = {
             "Waste": 57170.0,
             "Waste %": 0.0968,
             "Down Time": 22.83
+        },
+        {
+            "Month": "2026-05-26",
+            "Plant": "PETPAK",
+            "Production": 2180105,
+            "Waste": 50863.0,
+            "Waste %": 0.023,
+            "Down Time": 50.4
         }
     ],
     "reconData": [],
