@@ -1139,6 +1139,21 @@ const dashboardData = {
             "KWh/Kg Plant": 0.73,
             "Rs/Kg Plant": 25.21,
             "No of Grade Changes": 57
+        },
+        {
+            "Month": "2025-05-26",
+            "Plant": "GPAK",
+            "Production": 3779030.0,
+            "Waste": 104310.0,
+            "Waste %": 0.0268608980928788,
+            "Down Time": 41.28,
+            "OEE %": 0.875,
+            "Performance %": 0.9327,
+            "Availability %": 0.9419,
+            "Quality %": 1.0,
+            "KWh/Kg Plant": 1.22,
+            "Rs/Kg Plant": 37.45,
+            "No of Grade Changes": 40
         }
     ],
     "productData": [
@@ -11452,6 +11467,188 @@ const dashboardData = {
             "Product Type": "Plain PET",
             "Product": "PTN01-30",
             "Production": 14689.08
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "GPAK",
+            "Product Type": "Plain",
+            "Product": "TNN30",
+            "Production": 63326.015999999996
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "GPAK",
+            "Product Type": "Plain",
+            "Product": "TNO30",
+            "Production": 122980.10400000002
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "GPAK",
+            "Product Type": "Plain",
+            "Product": "TNO20",
+            "Production": 90670.06
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "GPAK",
+            "Product Type": "Plain (Tape grade)",
+            "Product": "TNIT-23",
+            "Production": 62621.5304
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable",
+            "Product": "THO25",
+            "Production": 75006.44320000001
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable",
+            "Product": "THO30",
+            "Production": 72902.3776
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable (label)",
+            "Product": "THIL40",
+            "Production": 43519.840000000004
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable",
+            "Product": "THO40",
+            "Production": 18283.4912
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable (Extrusion Lamination)",
+            "Product": "THX21-40",
+            "Production": 6526.322400000001
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable (Extrusion Lamination)",
+            "Product": "THX21-30",
+            "Production": 33673.8584
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-30",
+            "Production": 77587.9832
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable (Extrusion Lamination)",
+            "Product": "THX21-25",
+            "Production": 11098.380799999999
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-25",
+            "Production": 45674.6888
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable",
+            "Product": "THO18",
+            "Production": 34452.16528
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-18",
+            "Production": 1724.4427200000002
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable (PIR)",
+            "Product": "TH21PI-18",
+            "Production": 22374.352
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable (PIR)",
+            "Product": "TH21PI-25",
+            "Production": 70716.7552
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-20",
+            "Production": 47938.994416
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "GPAK",
+            "Product Type": "Matt",
+            "Product": "MT21D-20",
+            "Production": 9497.0408
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "GPAK",
+            "Product Type": "Matt",
+            "Product": "MATTWL-20",
+            "Production": 11123.902399999999
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "GPAK",
+            "Product Type": "Matt",
+            "Product": "MT21C-20",
+            "Production": 20758.2128
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "GPAK",
+            "Product Type": "Matt",
+            "Product": "MATTWL-15",
+            "Production": 6872.216
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "GPAK",
+            "Product Type": "Metalizeable",
+            "Product": "MB21MB-15",
+            "Production": 21735.3136
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "GPAK",
+            "Product Type": "Metalizeable",
+            "Product": "DMBX21S-30",
+            "Production": 10448.380799999999
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable (Extrusion Lamination)",
+            "Product": "THX21-18",
+            "Production": 9857.3592
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable",
+            "Product": "THO20",
+            "Production": 4969.8584
         }
     ],
     "eremaData": [
@@ -11916,6 +12113,12 @@ const dashboardData = {
             "Plant": "PETPAK",
             "Erema Production": 148429.0,
             "Erema(KG/KWH)": 0.0
+        },
+        {
+            "Month": "2026-05-26",
+            "Plant": "GPAK",
+            "Erema Production": 63150.0,
+            "Erema(KG/KWH)": 0.37
         }
     ],
     "trialsData": [
@@ -12538,6 +12741,16 @@ const dashboardData = {
             "Waste": 10,
             "Down Time": 0,
             "Remarks": 0
+        },
+        {
+            "Date": "2026-05-24",
+            "Plant": "GPAK",
+            "Product Type": "Metalizable",
+            "Product": "MB21MB-15",
+            "Production": 21735.0,
+            "Waste": 888,
+            "Down Time": 13,
+            "Remarks": "20% Adsyl 7410 XCP blend with SFI for first time in MB21MB-15. SIT achieved and visually product ok "
         }
     ],
     "offlineData": [
@@ -13060,6 +13273,14 @@ const dashboardData = {
             "Waste": 50863.0,
             "Waste %": 0.023,
             "Down Time": 50.4
+        },
+        {
+            "Month": "2025-05-26",
+            "Plant": "GPAK",
+            "Production": 3523788,
+            "Waste": 73310.0,
+            "Waste %": 0.0208,
+            "Down Time": 48.0
         }
     ],
     "reconData": [],
