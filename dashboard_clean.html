@@ -405,6 +405,204 @@
         .splash-fade-out {
             animation: splashFadeOut 1s ease-in-out forwards;
         }
+
+        /* High-tech Shiny/Glowing Product Cards styling */
+        .product-type-card {
+            background: linear-gradient(135deg, rgba(10, 16, 30, 0.85) 0%, rgba(6, 9, 18, 0.98) 100%) !important;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.04) !important;
+            border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.01) !important;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-type-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 100% 0%, rgba(var(--active-color-rgb, 59, 130, 246), 0.08), transparent 50%);
+            opacity: 0.5;
+            transition: opacity 0.4s ease;
+            pointer-events: none;
+        }
+
+        .product-type-card:hover {
+            transform: translateY(-5px) !important;
+            border-color: rgba(var(--active-color-rgb, 59, 130, 246), 0.4) !important;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 
+                        0 0 20px rgba(var(--active-color-rgb, 59, 130, 246), 0.15) !important;
+            background: linear-gradient(135deg, rgba(14, 21, 37, 0.9) 0%, rgba(8, 12, 22, 0.98) 100%) !important;
+        }
+
+        .product-type-card:hover::before {
+            background: radial-gradient(circle at 100% 0%, rgba(var(--active-color-rgb, 59, 130, 246), 0.25), transparent 60%);
+            opacity: 1;
+        }
+
+        /* Glassmorphic light reflection sweep (Shimmer sweep) */
+        .product-type-card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -60%;
+            width: 20%;
+            height: 200%;
+            background: linear-gradient(
+                to right,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.08) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            transform: rotate(25deg);
+            transition: none;
+            pointer-events: none;
+        }
+
+        .product-type-card:hover::after {
+            left: 120%;
+            transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .product-type-icon {
+            background: rgba(var(--active-color-rgb, 59, 130, 246), 0.03) !important;
+            border: 1px solid rgba(var(--active-color-rgb, 59, 130, 246), 0.1) !important;
+            color: rgba(var(--active-color-rgb, 59, 130, 246), 0.6);
+            transition: all 0.3s ease;
+        }
+
+        .product-type-card:hover .product-type-icon {
+            background: rgba(var(--active-color-rgb, 59, 130, 246), 0.15) !important;
+            border-color: rgba(var(--active-color-rgb, 59, 130, 246), 0.4) !important;
+            color: var(--active-color, #3b82f6) !important;
+            box-shadow: 0 0 12px rgba(var(--active-color-rgb, 59, 130, 246), 0.3);
+        }
+
+        .product-type-card:hover h4 {
+            color: var(--active-color, #3b82f6) !important;
+        }
+
+        /* Individual Product Item Card (View 2) */
+        .product-item-card {
+            background: linear-gradient(135deg, rgba(8, 12, 22, 0.8) 0%, rgba(4, 6, 12, 0.95) 100%) !important;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.03) !important;
+            border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+        }
+
+        .product-item-card:hover {
+            transform: translateY(-3px) !important;
+            border-color: rgba(var(--active-color-rgb, 59, 130, 246), 0.45) !important;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 
+                        0 0 15px rgba(var(--active-color-rgb, 59, 130, 246), 0.15) !important;
+            background: linear-gradient(135deg, rgba(12, 18, 32, 0.85) 0%, rgba(6, 9, 16, 0.98) 100%) !important;
+        }
+
+        .product-item-card.selected {
+            border-color: var(--active-color, #3b82f6) !important;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 
+                        0 0 20px rgba(var(--active-color-rgb, 59, 130, 246), 0.25) !important;
+            background: radial-gradient(circle at 90% 10%, rgba(var(--active-color-rgb, 59, 130, 246), 0.12), transparent 50%), 
+                        linear-gradient(135deg, rgba(var(--active-color-rgb, 59, 130, 246), 0.08) 0%, rgba(4, 6, 12, 0.95) 100%) !important;
+        }
+
+        /* Check indicator for selected card */
+        .product-item-check {
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            color: rgba(255, 255, 255, 0.1);
+        }
+        
+        .product-item-card.selected .product-item-check {
+            color: var(--active-color, #3b82f6) !important;
+            text-shadow: 0 0 8px rgba(var(--active-color-rgb, 59, 130, 246), 0.6);
+        }
+
+        /* Shimmer reflection for hovered product item card */
+        .product-item-card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -60%;
+            width: 25%;
+            height: 200%;
+            background: linear-gradient(
+                to right,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.05) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            transform: rotate(25deg);
+            pointer-events: none;
+        }
+
+        .product-item-card:hover::after {
+            left: 120%;
+            transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .product-item-icon-container {
+            background: rgba(255, 255, 255, 0.02) !important;
+            border: 1px solid rgba(255, 255, 255, 0.05) !important;
+            transition: all 0.3s ease;
+        }
+
+        .product-item-card.selected .product-item-icon-container {
+            background: rgba(var(--active-color-rgb, 59, 130, 246), 0.15) !important;
+            border-color: rgba(var(--active-color-rgb, 59, 130, 246), 0.3) !important;
+            box-shadow: 0 0 10px rgba(var(--active-color-rgb, 59, 130, 246), 0.2);
+        }
+
+        /* Premium custom scrollbar styling */
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.01);
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: rgba(var(--active-color-rgb, 59, 130, 246), 0.3);
+        }
+
+        /* Product Controls Upgrades */
+        .product-back-btn {
+            background: rgba(255, 255, 255, 0.03) !important;
+            border: 1px solid rgba(255, 255, 255, 0.05) !important;
+            color: #cbd5e1 !important;
+            transition: all 0.3s ease !important;
+        }
+        .product-back-btn:hover {
+            background: rgba(var(--active-color-rgb, 59, 130, 246), 0.1) !important;
+            border-color: rgba(var(--active-color-rgb, 59, 130, 246), 0.3) !important;
+            color: #fff !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-search-input {
+            background: rgba(15, 23, 42, 0.6) !important;
+            border: 1px solid rgba(255, 255, 255, 0.06) !important;
+            color: #fff !important;
+            transition: all 0.3s ease !important;
+        }
+        .product-search-input:focus {
+            border-color: var(--active-color, #3b82f6) !important;
+            box-shadow: 0 0 10px rgba(var(--active-color-rgb, 59, 130, 246), 0.15) !important;
+            outline: none;
+            background: rgba(15, 23, 42, 0.8) !important;
+        }
     </style>
 </head>
 
@@ -869,6 +1067,12 @@
         function showLandingPage() {
             activePlant = 'all';
             activeTab = 'overview';
+            
+            // Set default theme variables for landing page
+            document.documentElement.style.setProperty('--active-color', '#3b82f6');
+            document.documentElement.style.setProperty('--active-color-rgb', '59, 130, 246');
+            document.documentElement.style.setProperty('--active-color-secondary', '#60a5fa');
+            
             document.getElementById('landing-view').classList.remove('hidden');
             document.getElementById('plant-detail-view').classList.add('hidden');
             document.getElementById('current-view-label').innerText = 'OVERVIEW';
@@ -881,6 +1085,11 @@
         function openPlantDetail(plant) {
             activePlant = plant;
             const colors = getPlantColor(plant);
+
+            // Set dynamic theme variables globally for active plant
+            document.documentElement.style.setProperty('--active-color', colors.primary);
+            document.documentElement.style.setProperty('--active-color-rgb', colors.rgb);
+            document.documentElement.style.setProperty('--active-color-secondary', colors.secondary);
 
             const nameEl = document.getElementById('plant-name');
             if (nameEl) {
@@ -2548,11 +2757,11 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 ${productTypes.map(type => `
                 <div onclick="selectProductType('${type}')" 
-                    class="glass-panel interactive-card p-6 rounded-2xl cursor-pointer border border-slate-800/80 hover:border-blue-500/50 group relative overflow-hidden">
-                    <div class="absolute top-4 right-4 w-10 h-10 rounded-lg icon-container-gloss flex items-center justify-center text-slate-400 group-hover:text-blue-400 group-hover:scale-110 transition-all duration-300">
+                    class="product-type-card p-6 rounded-2xl cursor-pointer group">
+                    <div class="absolute top-4 right-4 w-10 h-10 rounded-lg product-type-icon flex items-center justify-center text-slate-400 group-hover:scale-110 transition-all duration-300">
                         <i class="fa-solid fa-layer-group text-base"></i>
                     </div>
-                    <h4 class="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">${type}</h4>
+                    <h4 class="text-xl font-bold text-white mb-2 transition-colors">${type}</h4>
                     <p class="text-sm text-slate-400 font-medium">${plantProducts.filter(p => p['Product Type'] === type).length} Records</p>
                 </div>
                 `).join('')}
@@ -2579,7 +2788,7 @@
         <!-- Navigation & Controls -->
         <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 gap-4">
             <div class="flex items-center gap-4">
-                <button onclick="clearProductType()" class="flex items-center gap-2 px-4 py-2 bg-slate-800 hover:bg-slate-700 text-slate-300 rounded-lg transition-colors">
+                <button onclick="clearProductType()" class="flex items-center gap-2 px-4 py-2 product-back-btn rounded-lg">
                     <i class="fa-solid fa-arrow-left"></i> Back to Types
                 </button>
                 <h3 class="text-xl font-bold text-white"><span class="text-slate-400">${activeProductType} /</span> Analysis</h3>
@@ -2590,7 +2799,7 @@
                 <input type="text" id="products-search" placeholder="Search products..." 
                     value="${window.productsSearchQuery || ''}"
                     oninput="handleProductsSearch(this.value)"
-                    class="w-full bg-slate-800 border border-slate-700/50 rounded-lg pl-9 pr-3 py-1.5 text-sm text-white placeholder:text-slate-600 focus:border-blue-500/50 focus:ring-1 focus:ring-blue-500/20 outline-none transition-all">
+                    class="w-full product-search-input border rounded-lg pl-9 pr-3 py-1.5 text-sm placeholder:text-slate-600 outline-none">
                 ${window.productsSearchQuery ? `
                     <button onclick="handleProductsSearch('');" class="absolute right-3 top-1/2 -translate-y-1/2 text-slate-500 hover:text-white transition-colors">
                         <i class="fa-solid fa-times-circle text-xs"></i>
@@ -2611,14 +2820,10 @@
 
                 return `
                     <div id="card-${safeId}" onclick="toggleProductSelection('${prod}')" 
-                        class="relative group p-5 rounded-2xl cursor-pointer transition-all duration-300 flex flex-col justify-between min-h-[140px] overflow-hidden
-                        ${isSelected
-                        ? 'border border-blue-500 shadow-[0_0_20px_rgba(59,130,246,0.25)] bg-gradient-to-br from-blue-500/15 via-purple-500/10 to-blue-500/15'
-                        : 'border border-slate-800/80 hover:border-blue-500/50 hover:shadow-[0_0_15px_rgba(59,130,246,0.15)] bg-gradient-to-br from-slate-900/40 to-slate-950/60'
-                    }">
+                        class="product-item-card relative group p-5 rounded-2xl cursor-pointer transition-all duration-300 flex flex-col justify-between min-h-[140px] overflow-hidden ${isSelected ? 'selected' : ''}">
                         
-                        <!-- Animated Background Gradient -->
-                        <div class="absolute inset-0 bg-gradient-to-r from-blue-500/0 via-purple-500/5 to-blue-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <!-- Animated Background Glow -->
+                        <div class="absolute inset-0 bg-gradient-to-r from-[var(--active-color,#3b82f6)]/0 via-[var(--active-color,#3b82f6)]/5 to-[var(--active-color,#3b82f6)]/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                         
                         <!-- Shimmer Effect -->
                         <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 pointer-events-none"></div>
@@ -2626,13 +2831,13 @@
                         <!-- Top Section: Product Name & Check Icon -->
                         <div class="flex items-start justify-between relative z-10 mb-3">
                             <div class="flex-1 pr-2">
-                                <h5 class="text-sm font-bold leading-tight line-clamp-2 ${isSelected ? 'text-white' : 'text-slate-200'}" title="${prod}">
+                                <h5 class="text-xs font-bold leading-tight line-clamp-2 ${isSelected ? 'text-white' : 'text-slate-200'} group-hover:text-white transition-colors" title="${prod}">
                                     ${prod}
                                 </h5>
                             </div>
                             <div class="flex-shrink-0">
-                                <i id="check-${safeId}" class="fa-solid fa-circle-check text-xl transition-all duration-300 
-                                    ${isSelected ? 'text-blue-300 scale-110 opacity-100 rotate-0' : 'text-slate-600 scale-0 opacity-0 -rotate-90'}">
+                                <i id="check-${safeId}" class="fa-solid fa-circle-check text-xl transition-all duration-300 product-item-check
+                                    ${isSelected ? 'scale-110 opacity-100 rotate-0' : 'scale-0 opacity-0 -rotate-90'}">
                                 </i>
                             </div>
                         </div>
@@ -2640,15 +2845,14 @@
                         <!-- Bottom Section: Production Info -->
                         <div class="relative z-10 space-y-2">
                             <div class="flex items-center gap-2">
-                                <div class="w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-300
-                                    ${isSelected ? 'bg-blue-500/30 shadow-lg shadow-blue-500/20' : 'bg-slate-700/50'}">
-                                    <i class="fa-solid fa-industry text-sm ${isSelected ? 'text-blue-200' : 'text-slate-400'}"></i>
+                                <div class="w-8 h-8 rounded-lg flex items-center justify-center transition-all duration-300 product-item-icon-container">
+                                    <i class="fa-solid fa-industry text-sm ${isSelected ? 'text-white' : 'text-slate-400'}"></i>
                                 </div>
                                 <div class="flex-1">
-                                    <div class="text-[10px] uppercase tracking-wider font-semibold ${isSelected ? 'text-blue-200' : 'text-slate-500'}">
+                                    <div class="text-[9px] uppercase tracking-wider font-semibold ${isSelected ? 'text-slate-300' : 'text-slate-500'}">
                                         Production
                                     </div>
-                                    <div class="text-xl font-black tracking-tight ${isSelected ? 'text-white' : 'text-slate-200'}">
+                                    <div class="text-lg font-black tracking-tight ${isSelected ? 'text-white' : 'text-slate-200'}">
                                         ${totalProd.toLocaleString()}
                                     </div>
                                 </div>
@@ -2656,7 +2860,7 @@
                         </div>
 
                         <!-- Selection Indicator Border Glow -->
-                        ${isSelected ? '<div class="absolute inset-0 rounded-2xl border-2 border-blue-400 animate-pulse pointer-events-none"></div>' : ''}
+                        ${isSelected ? '<div class="absolute inset-0 rounded-2xl border border-[var(--active-color,#3b82f6)] pointer-events-none opacity-50 shadow-[0_0_15px_rgba(var(--active-color-rgb,59,130,246),0.25)] animate-pulse"></div>' : ''}
                     </div>
                     `;
             }).join('')}
@@ -2671,10 +2875,10 @@
                 </h3>
                  <div class="flex items-center gap-4">
                     <!-- Chart Type Selector -->
-                    <div class="flex bg-slate-800 rounded-lg p-1 border border-slate-700">
-                        <button onclick="setProductChartType('line')" id="btn-line" class="px-3 py-1 rounded-md text-xs font-bold transition-all ${window.productChartType === 'line' ? 'bg-slate-700 text-white shadow' : 'text-slate-400 hover:text-white'}">Line</button>
-                        <button onclick="setProductChartType('bar')" id="btn-bar" class="px-3 py-1 rounded-md text-xs font-bold transition-all ${window.productChartType === 'bar' ? 'bg-slate-700 text-white shadow' : 'text-slate-400 hover:text-white'}">Bar</button>
-                        <button onclick="setProductChartType('area')" id="btn-area" class="px-3 py-1 rounded-md text-xs font-bold transition-all ${window.productChartType === 'area' ? 'bg-slate-700 text-white shadow' : 'text-slate-400 hover:text-white'}">Area</button>
+                    <div class="flex chart-selector-container">
+                        <button onclick="setProductChartType('line')" id="btn-line" class="px-3 py-1 rounded-md text-xs font-bold transition-all chart-type-btn ${window.productChartType === 'line' ? 'active' : ''}">Line</button>
+                        <button onclick="setProductChartType('bar')" id="btn-bar" class="px-3 py-1 rounded-md text-xs font-bold transition-all chart-type-btn ${window.productChartType === 'bar' ? 'active' : ''}">Bar</button>
+                        <button onclick="setProductChartType('area')" id="btn-area" class="px-3 py-1 rounded-md text-xs font-bold transition-all chart-type-btn ${window.productChartType === 'area' ? 'active' : ''}">Area</button>
                     </div>
                     
                     <div class="h-6 w-px bg-slate-700"></div>
@@ -2999,14 +3203,11 @@
 
                 // Update UI without full re-render
                 if (card) {
-                    // Remove selected classes
-                    card.classList.remove('border-blue-500', 'shadow-[0_0_20px_rgba(59,130,246,0.25)]', 'from-blue-500/15', 'via-purple-500/10', 'to-blue-500/15');
-                    // Add default classes
-                    card.classList.add('border-slate-800/80', 'hover:border-blue-500/50', 'hover:shadow-[0_0_15px_rgba(59,130,246,0.15)]', 'from-slate-900/40', 'to-slate-950/60');
+                    card.classList.remove('selected');
                 }
                 if (check) {
-                    check.classList.remove('scale-100', 'opacity-100');
-                    check.classList.add('scale-0', 'opacity-0');
+                    check.classList.remove('scale-110', 'opacity-100', 'rotate-0');
+                    check.classList.add('scale-0', 'opacity-0', '-rotate-90');
                 }
 
             } else {
@@ -3015,14 +3216,11 @@
 
                 // Update UI without full re-render
                 if (card) {
-                    // Remove default classes
-                    card.classList.remove('border-slate-800/80', 'hover:border-blue-500/50', 'hover:shadow-[0_0_15px_rgba(59,130,246,0.15)]', 'from-slate-900/40', 'to-slate-950/60');
-                    // Add selected classes
-                    card.classList.add('border-blue-500', 'shadow-[0_0_20px_rgba(59,130,246,0.25)]', 'from-blue-500/15', 'via-purple-500/10', 'to-blue-500/15');
+                    card.classList.add('selected');
                 }
                 if (check) {
-                    check.classList.remove('scale-0', 'opacity-0');
-                    check.classList.add('scale-100', 'opacity-100');
+                    check.classList.remove('scale-0', 'opacity-0', '-rotate-90');
+                    check.classList.add('scale-110', 'opacity-100', 'rotate-0');
                 }
             }
 
@@ -3041,9 +3239,9 @@
                 const btn = document.getElementById(`btn-${t}`);
                 if (btn) {
                     if (t === type) {
-                        btn.className = 'px-3 py-1 rounded-md text-xs font-bold transition-all bg-slate-700 text-white shadow';
+                        btn.classList.add('active');
                     } else {
-                        btn.className = 'px-3 py-1 rounded-md text-xs font-bold transition-all text-slate-400 hover:text-white';
+                        btn.classList.remove('active');
                     }
                 }
             });
