@@ -81,9 +81,73 @@
         }
 
         .glass-panel {
-            background: rgba(13, 18, 30, 0.8) !important;
-            backdrop-filter: blur(12px);
+            background: linear-gradient(135deg, rgba(15, 22, 38, 0.85) 0%, rgba(9, 13, 23, 0.9) 100%) !important;
+            backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.05);
+            border-top: 1px solid rgba(255, 255, 255, 0.08); /* Top highlight */
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        /* Ambient Glow Background Orbs */
+        .ambient-glow-1 {
+            position: fixed;
+            top: -10%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
+            filter: blur(80px);
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        .ambient-glow-2 {
+            position: fixed;
+            bottom: -10%;
+            left: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(139, 92, 246, 0.05) 0%, transparent 70%);
+            filter: blur(80px);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        /* Glossy Icon Container */
+        .icon-container-gloss {
+            position: relative;
+            background: rgba(255, 255, 255, 0.02) !important;
+            border: 1px solid rgba(255, 255, 255, 0.06) !important;
+            border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+            box-shadow: inset 0 2px 4px rgba(255, 255, 255, 0.03), 0 4px 10px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .icon-container-gloss::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 50%;
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.05), transparent);
+            pointer-events: none;
+        }
+
+        /* Interactive card hover */
+        .interactive-card {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        }
+        .interactive-card:hover {
+            transform: translateY(-5px) !important;
+            border-color: rgba(255, 255, 255, 0.12) !important;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5) !important;
+            background: linear-gradient(135deg, rgba(20, 29, 48, 0.9) 0%, rgba(10, 15, 26, 0.95) 100%) !important;
         }
 
         /* Plant-specific card glows on landing page */
@@ -92,7 +156,8 @@
         }
         .plant-glow-petpak:hover {
             border-color: rgba(249, 115, 22, 0.6) !important;
-            box-shadow: 0 0 25px rgba(249, 115, 22, 0.25) !important;
+            box-shadow: 0 0 25px rgba(249, 115, 22, 0.2) !important;
+            background: radial-gradient(circle at 90% 10%, rgba(249, 115, 22, 0.05), transparent 50%), linear-gradient(135deg, rgba(18, 25, 43, 0.85) 0%, rgba(9, 13, 23, 0.9) 100%) !important;
         }
         
         .plant-glow-gpak {
@@ -100,7 +165,8 @@
         }
         .plant-glow-gpak:hover {
             border-color: rgba(59, 130, 246, 0.6) !important;
-            box-shadow: 0 0 25px rgba(59, 130, 246, 0.25) !important;
+            box-shadow: 0 0 25px rgba(59, 130, 246, 0.2) !important;
+            background: radial-gradient(circle at 90% 10%, rgba(59, 130, 246, 0.05), transparent 50%), linear-gradient(135deg, rgba(18, 25, 43, 0.85) 0%, rgba(9, 13, 23, 0.9) 100%) !important;
         }
         
         .plant-glow-ipak {
@@ -108,7 +174,8 @@
         }
         .plant-glow-ipak:hover {
             border-color: rgba(16, 185, 129, 0.6) !important;
-            box-shadow: 0 0 25px rgba(16, 185, 129, 0.25) !important;
+            box-shadow: 0 0 25px rgba(16, 185, 129, 0.2) !important;
+            background: radial-gradient(circle at 90% 10%, rgba(16, 185, 129, 0.05), transparent 50%), linear-gradient(135deg, rgba(18, 25, 43, 0.85) 0%, rgba(9, 13, 23, 0.9) 100%) !important;
         }
         
         .plant-glow-cpak {
@@ -116,53 +183,70 @@
         }
         .plant-glow-cpak:hover {
             border-color: rgba(139, 92, 246, 0.6) !important;
-            box-shadow: 0 0 25px rgba(139, 92, 246, 0.25) !important;
+            box-shadow: 0 0 25px rgba(139, 92, 246, 0.2) !important;
+            background: radial-gradient(circle at 90% 10%, rgba(139, 92, 246, 0.05), transparent 50%), linear-gradient(135deg, rgba(18, 25, 43, 0.85) 0%, rgba(9, 13, 23, 0.9) 100%) !important;
         }
 
-        /* KPI Card Glows on overview page */
+        /* High-tech Glowing Classes for KPI Cards */
         .kpi-glow-blue {
-            border-color: rgba(59, 130, 246, 0.15) !important;
+            border-color: rgba(59, 130, 246, 0.2) !important;
+            background: radial-gradient(circle at 90% 10%, rgba(59, 130, 246, 0.04), transparent 50%), linear-gradient(135deg, rgba(14, 21, 37, 0.85) 0%, rgba(7, 10, 18, 0.85) 100%) !important;
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.02) !important;
         }
         .kpi-glow-blue:hover, .kpi-glow-blue.selected {
             border-color: rgba(59, 130, 246, 0.6) !important;
-            box-shadow: 0 0 20px rgba(59, 130, 246, 0.2) !important;
+            box-shadow: 0 0 25px rgba(59, 130, 246, 0.25) !important;
+            background: radial-gradient(circle at 90% 10%, rgba(59, 130, 246, 0.15), transparent 60%), linear-gradient(135deg, rgba(14, 21, 37, 0.85) 0%, rgba(7, 10, 18, 0.85) 100%) !important;
         }
-        
+
         .kpi-glow-emerald {
-            border-color: rgba(16, 185, 129, 0.15) !important;
+            border-color: rgba(16, 185, 129, 0.2) !important;
+            background: radial-gradient(circle at 90% 10%, rgba(16, 185, 129, 0.04), transparent 50%), linear-gradient(135deg, rgba(14, 21, 37, 0.85) 0%, rgba(7, 10, 18, 0.85) 100%) !important;
+            box-shadow: 0 4px 20px rgba(16, 185, 129, 0.02) !important;
         }
         .kpi-glow-emerald:hover, .kpi-glow-emerald.selected {
             border-color: rgba(16, 185, 129, 0.6) !important;
-            box-shadow: 0 0 20px rgba(16, 185, 129, 0.2) !important;
+            box-shadow: 0 0 25px rgba(16, 185, 129, 0.25) !important;
+            background: radial-gradient(circle at 90% 10%, rgba(16, 185, 129, 0.15), transparent 60%), linear-gradient(135deg, rgba(14, 21, 37, 0.85) 0%, rgba(7, 10, 18, 0.85) 100%) !important;
         }
-        
+
         .kpi-glow-red {
-            border-color: rgba(239, 68, 68, 0.15) !important;
+            border-color: rgba(239, 68, 68, 0.2) !important;
+            background: radial-gradient(circle at 90% 10%, rgba(239, 68, 68, 0.04), transparent 50%), linear-gradient(135deg, rgba(14, 21, 37, 0.85) 0%, rgba(7, 10, 18, 0.85) 100%) !important;
+            box-shadow: 0 4px 20px rgba(239, 68, 68, 0.02) !important;
         }
         .kpi-glow-red:hover, .kpi-glow-red.selected {
             border-color: rgba(239, 68, 68, 0.6) !important;
-            box-shadow: 0 0 20px rgba(239, 68, 68, 0.2) !important;
+            box-shadow: 0 0 25px rgba(239, 68, 68, 0.25) !important;
+            background: radial-gradient(circle at 90% 10%, rgba(239, 68, 68, 0.15), transparent 60%), linear-gradient(135deg, rgba(14, 21, 37, 0.85) 0%, rgba(7, 10, 18, 0.85) 100%) !important;
         }
-        
+
         .kpi-glow-yellow {
-            border-color: rgba(245, 158, 11, 0.15) !important;
+            border-color: rgba(245, 158, 11, 0.2) !important;
+            background: radial-gradient(circle at 90% 10%, rgba(245, 158, 11, 0.04), transparent 50%), linear-gradient(135deg, rgba(14, 21, 37, 0.85) 0%, rgba(7, 10, 18, 0.85) 100%) !important;
+            box-shadow: 0 4px 20px rgba(245, 158, 11, 0.02) !important;
         }
         .kpi-glow-yellow:hover, .kpi-glow-yellow.selected {
             border-color: rgba(245, 158, 11, 0.6) !important;
-            box-shadow: 0 0 20px rgba(245, 158, 11, 0.2) !important;
+            box-shadow: 0 0 25px rgba(245, 158, 11, 0.25) !important;
+            background: radial-gradient(circle at 90% 10%, rgba(245, 158, 11, 0.15), transparent 60%), linear-gradient(135deg, rgba(14, 21, 37, 0.85) 0%, rgba(7, 10, 18, 0.85) 100%) !important;
         }
-        
+
         .kpi-glow-orange {
-            border-color: rgba(249, 115, 22, 0.15) !important;
+            border-color: rgba(249, 115, 22, 0.2) !important;
+            background: radial-gradient(circle at 90% 10%, rgba(249, 115, 22, 0.04), transparent 50%), linear-gradient(135deg, rgba(14, 21, 37, 0.85) 0%, rgba(7, 10, 18, 0.85) 100%) !important;
+            box-shadow: 0 4px 20px rgba(249, 115, 22, 0.02) !important;
         }
         .kpi-glow-orange:hover, .kpi-glow-orange.selected {
             border-color: rgba(249, 115, 22, 0.6) !important;
-            box-shadow: 0 0 20px rgba(249, 115, 22, 0.2) !important;
+            box-shadow: 0 0 25px rgba(249, 115, 22, 0.25) !important;
+            background: radial-gradient(circle at 90% 10%, rgba(249, 115, 22, 0.15), transparent 60%), linear-gradient(135deg, rgba(14, 21, 37, 0.85) 0%, rgba(7, 10, 18, 0.85) 100%) !important;
         }
 
         .glass-card-hover:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 255, 0.12) !important;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5) !important;
         }
 
         /* Refined transitions: exclude layout-impacting properties for zoom stability */
@@ -199,36 +283,40 @@
 
         /* Tab Buttons Styling */
         .tab-button {
-            padding: 8px 16px;
+            padding: 10px 20px;
             border-radius: 12px;
-            font-size: 0.875rem;
-            font-weight: 600;
+            font-size: 0.8rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            font-weight: 700;
             color: #94a3b8;
-            background: transparent;
-            border: 1px solid transparent;
+            background: rgba(255, 255, 255, 0.01) !important;
+            border: 1px solid rgba(255, 255, 255, 0.03) !important;
             display: flex;
             align-items: center;
             gap: 8px;
             white-space: nowrap;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            backdrop-filter: blur(5px);
         }
 
         .tab-button i {
-            font-size: 1rem;
+            font-size: 0.95rem;
             opacity: 0.7;
         }
 
         .tab-button:hover {
             color: #fff;
-            background: rgba(255, 255, 255, 0.05);
-            border-color: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.04) !important;
+            border-color: rgba(255, 255, 255, 0.08) !important;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
         }
 
         .tab-button.active {
-            color: #fff;
-            background: var(--active-color, #3b82f6);
-            border-color: rgba(255, 255, 255, 0.1);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            color: #fff !important;
+            background: rgba(var(--active-color-rgb, 59, 130, 246), 0.15) !important;
+            border-color: var(--active-color, #3b82f6) !important;
+            box-shadow: 0 0 15px rgba(var(--active-color-rgb, 59, 130, 246), 0.2) !important;
         }
 
         .tab-button.active i {
@@ -321,6 +409,9 @@
 </head>
 
 <body>
+    <!-- Ambient Glow Background Orbs -->
+    <div class="ambient-glow-1"></div>
+    <div class="ambient-glow-2"></div>
     <!-- Splash Screen -->
     <div id="splash-screen"
         class="fixed inset-0 z-[100] bg-[#0f172a] hidden flex-col items-center justify-center pointer-events-none">
@@ -764,14 +855,14 @@
 
         // ===== BRAND COLOR CONFIGURATION =====
         const PLANT_COLORS = {
-            'PETPAK': { primary: '#f97316', secondary: '#fb923c', glow: 'rgba(249, 115, 22, 0.6)', shadow: 'rgba(249, 115, 22, 0.2)', tailwind: 'orange-500' },
-            'GPAK': { primary: '#1d4ed8', secondary: '#3b82f6', glow: 'rgba(29, 78, 216, 0.6)', shadow: 'rgba(29, 78, 216, 0.2)', tailwind: 'blue-700' },
-            'IPAK': { primary: '#064e3b', secondary: '#166534', glow: 'rgba(34, 197, 94, 0.6)', shadow: 'rgba(6, 78, 59, 0.4)', tailwind: 'green-900' },
-            'CPAK': { primary: '#7f1d1d', secondary: '#991b1b', glow: 'rgba(239, 68, 68, 0.6)', shadow: 'rgba(127, 29, 29, 0.4)', tailwind: 'red-900' }
+            'PETPAK': { primary: '#f97316', rgb: '249, 115, 22', secondary: '#fb923c', glow: 'rgba(249, 115, 22, 0.6)', shadow: 'rgba(249, 115, 22, 0.2)', tailwind: 'orange-500' },
+            'GPAK': { primary: '#3b82f6', rgb: '59, 130, 246', secondary: '#60a5fa', glow: 'rgba(59, 130, 246, 0.6)', shadow: 'rgba(59, 130, 246, 0.2)', tailwind: 'blue-500' },
+            'IPAK': { primary: '#10b981', rgb: '16, 185, 129', secondary: '#34d399', glow: 'rgba(16, 185, 129, 0.6)', shadow: 'rgba(16, 185, 129, 0.2)', tailwind: 'emerald-500' },
+            'CPAK': { primary: '#8b5cf6', rgb: '139, 92, 246', secondary: '#a78bfa', glow: 'rgba(139, 92, 246, 0.6)', shadow: 'rgba(139, 92, 246, 0.2)', tailwind: 'purple-500' }
         };
 
         function getPlantColor(plant) {
-            return PLANT_COLORS[plant] || { primary: '#3b82f6', secondary: '#60a5fa', glow: 'rgba(59, 130, 246, 0.6)', shadow: 'rgba(59, 130, 246, 0.2)', tailwind: 'blue-500' };
+            return PLANT_COLORS[plant] || { primary: '#3b82f6', rgb: '59, 130, 246', secondary: '#60a5fa', glow: 'rgba(59, 130, 246, 0.6)', shadow: 'rgba(59, 130, 246, 0.2)', tailwind: 'blue-500' };
         }
 
         // ===== NAVIGATION =====
@@ -829,6 +920,7 @@
             document.querySelectorAll('.tab-button').forEach(btn => {
                 btn.classList.remove('active');
                 btn.style.setProperty('--active-color', colors.primary);
+                btn.style.setProperty('--active-color-rgb', colors.rgb);
             });
             document.getElementById('tab-' + tabName)?.classList.add('active');
 
@@ -1265,7 +1357,7 @@
                                     ${displayVal}
                                 </div>
                             </div>
-                            <div class="w-10 h-10 rounded-xl ${style.iconBg} flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                            <div class="w-10 h-10 rounded-xl icon-container-gloss flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                                 <i class="fa-solid ${getIcon(metric)} text-lg ${style.text}"></i>
                             </div>
                         </div>
@@ -2456,12 +2548,12 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 ${productTypes.map(type => `
                 <div onclick="selectProductType('${type}')" 
-                    class="glass-panel p-6 rounded-xl cursor-pointer hover:bg-slate-700/50 transition-all hover:scale-[1.02] border border-slate-700/50 hover:border-blue-500/50 group relative">
-                    <div class="absolute top-4 right-4 text-slate-600 group-hover:text-blue-500 transition-colors">
-                        <i class="fa-solid fa-layer-group text-2xl"></i>
+                    class="glass-panel interactive-card p-6 rounded-2xl cursor-pointer border border-slate-800/80 hover:border-blue-500/50 group relative overflow-hidden">
+                    <div class="absolute top-4 right-4 w-10 h-10 rounded-lg icon-container-gloss flex items-center justify-center text-slate-400 group-hover:text-blue-400 group-hover:scale-110 transition-all duration-300">
+                        <i class="fa-solid fa-layer-group text-base"></i>
                     </div>
-                    <h4 class="text-xl font-bold text-white mb-2">${type}</h4>
-                    <p class="text-sm text-slate-400">${plantProducts.filter(p => p['Product Type'] === type).length} Records</p>
+                    <h4 class="text-xl font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">${type}</h4>
+                    <p class="text-sm text-slate-400 font-medium">${plantProducts.filter(p => p['Product Type'] === type).length} Records</p>
                 </div>
                 `).join('')}
             </div>
@@ -2521,8 +2613,8 @@
                     <div id="card-${safeId}" onclick="toggleProductSelection('${prod}')" 
                         class="relative group p-5 rounded-2xl cursor-pointer transition-all duration-300 flex flex-col justify-between min-h-[140px] overflow-hidden
                         ${isSelected
-                        ? 'bg-gradient-to-br from-blue-600/40 via-purple-600/30 to-blue-600/40 border-2 border-blue-400 shadow-xl shadow-blue-500/30 scale-[1.02]'
-                        : 'bg-gradient-to-br from-slate-800/80 to-slate-900/80 border-2 border-slate-700/50 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-500/10 hover:scale-[1.01]'
+                        ? 'border border-blue-500 shadow-[0_0_20px_rgba(59,130,246,0.25)] bg-gradient-to-br from-blue-500/15 via-purple-500/10 to-blue-500/15'
+                        : 'border border-slate-800/80 hover:border-blue-500/50 hover:shadow-[0_0_15px_rgba(59,130,246,0.15)] bg-gradient-to-br from-slate-900/40 to-slate-950/60'
                     }">
                         
                         <!-- Animated Background Gradient -->
@@ -2908,9 +3000,9 @@
                 // Update UI without full re-render
                 if (card) {
                     // Remove selected classes
-                    card.classList.remove('bg-gradient-to-br', 'from-blue-600/30', 'to-purple-600/30', 'border-blue-500', 'text-white', 'shadow-lg', 'shadow-blue-500/20');
+                    card.classList.remove('border-blue-500', 'shadow-[0_0_20px_rgba(59,130,246,0.25)]', 'from-blue-500/15', 'via-purple-500/10', 'to-blue-500/15');
                     // Add default classes
-                    card.classList.add('bg-slate-800/50', 'border-slate-700', 'text-slate-400');
+                    card.classList.add('border-slate-800/80', 'hover:border-blue-500/50', 'hover:shadow-[0_0_15px_rgba(59,130,246,0.15)]', 'from-slate-900/40', 'to-slate-950/60');
                 }
                 if (check) {
                     check.classList.remove('scale-100', 'opacity-100');
@@ -2924,9 +3016,9 @@
                 // Update UI without full re-render
                 if (card) {
                     // Remove default classes
-                    card.classList.remove('bg-slate-800/50', 'border-slate-700', 'text-slate-400');
+                    card.classList.remove('border-slate-800/80', 'hover:border-blue-500/50', 'hover:shadow-[0_0_15px_rgba(59,130,246,0.15)]', 'from-slate-900/40', 'to-slate-950/60');
                     // Add selected classes
-                    card.classList.add('bg-gradient-to-br', 'from-blue-600/30', 'to-purple-600/30', 'border-blue-500', 'text-white', 'shadow-lg', 'shadow-blue-500/20');
+                    card.classList.add('border-blue-500', 'shadow-[0_0_20px_rgba(59,130,246,0.25)]', 'from-blue-500/15', 'via-purple-500/10', 'to-blue-500/15');
                 }
                 if (check) {
                     check.classList.remove('scale-0', 'opacity-0');
