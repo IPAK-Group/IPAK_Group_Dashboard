@@ -971,10 +971,80 @@
         .metric-checkbox-input:checked + .metric-checkbox-card .metric-checkbox-indicator i {
             opacity: 1 !important;
         }
+        
+        /* High-tech tech grid pattern overlay */
+        .tech-grid-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.012) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.012) 1px, transparent 1px);
+            background-size: 32px 32px;
+            background-position: center;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0.8;
+        }
+
+        /* Scanline animation */
+        .scanline {
+            width: 100%;
+            height: 100px;
+            background: linear-gradient(to bottom, rgba(59, 130, 246, 0), rgba(59, 130, 246, 0.012) 50%, rgba(59, 130, 246, 0) 100%);
+            position: fixed;
+            left: 0; top: -100px;
+            z-index: 2;
+            pointer-events: none;
+            animation: scanline-sweep 12s linear infinite;
+        }
+
+        @keyframes scanline-sweep {
+            0% { top: -100px; }
+            100% { top: 100%; }
+        }
+
+        /* Diagonal Glass sheen reflection */
+        .glass-panel::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -150%; width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.04), transparent);
+            transform: skewX(-25deg);
+            transition: 0.75s;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .glass-panel:hover::before {
+            left: 150%;
+        }
+
+        /* Radar Pulse status indicator */
+        .radar-pulse-container {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 10px;
+            height: 10px;
+        }
+        .radar-ring {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            animation: radar-pulse 1.8s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+        }
+        @keyframes radar-pulse {
+            0% { transform: scale(0.9); opacity: 1; }
+            100% { transform: scale(2.4); opacity: 0; }
+        }
     </style>
 </head>
 
 <body>
+    <!-- Tech Grid & Scanline Background overlays -->
+    <div class="tech-grid-overlay"></div>
+    <div class="scanline"></div>
     <!-- Ambient Glow Background Orbs -->
     <div class="ambient-glow-1"></div>
     <div class="ambient-glow-2"></div>
@@ -1126,7 +1196,10 @@
                         <div class="plant-badge" style="font-size:9px; padding: 2px 8px;">Operating Unit</div>
                         <h2 class="text-lg font-black text-white tracking-tight leading-none" id="plant-name">GPAK</h2>
                         <div class="flex items-center gap-1.5 ml-1">
-                            <span id="plant-status-dot" class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                            <div class="radar-pulse-container" style="width: 8px; height: 8px;">
+                                <span id="plant-status-ring" class="radar-ring bg-emerald-500"></span>
+                                <span id="plant-status-dot" class="relative inline-flex rounded-full h-1.5 w-1.5 bg-emerald-400"></span>
+                            </div>
                             <span class="text-[9px] text-slate-500 font-medium uppercase tracking-widest">Live</span>
                         </div>
                     </div>
@@ -1553,6 +1626,8 @@
 
             const statusDot = document.getElementById('plant-status-dot');
             if (statusDot) statusDot.style.backgroundColor = colors.primary;
+            const statusRing = document.getElementById('plant-status-ring');
+            if (statusRing) statusRing.style.backgroundColor = colors.primary;
 
             document.getElementById('landing-view').classList.add('hidden');
             document.getElementById('plant-detail-view').classList.remove('hidden');
@@ -1679,7 +1754,10 @@
                             <div class="flex justify-between items-start mb-8">
                                 <div>
                                     <div class="flex items-center gap-2 mb-2">
-                                        <span class="w-1.5 h-1.5 rounded-full bg-${colorsTailwind.primary} shadow-[0_0_8px_rgba(59,130,246,0.5)]"></span>
+                                        <div class="radar-pulse-container mr-1">
+                                            <span class="radar-ring bg-${colorsTailwind.glow}"></span>
+                                            <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-${colorsTailwind.secondary}"></span>
+                                        </div>
                                         <span class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Operational Unit</span>
                                     </div>
                                     <h3 class="text-4xl font-black text-${colorsTailwind.secondary} tracking-tighter transition-all duration-300" style="font-family: 'Space Grotesk', sans-serif;">${plant}</h3>
@@ -2042,9 +2120,19 @@
                                     ${displayVal}
                                 </div>
                             </div>
-                            <div class="w-10 h-10 rounded-xl icon-container-gloss flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                            ${metric.includes('%') ? `
+                            <div class="relative w-12 h-12 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shrink-0">
+                                <svg class="absolute inset-0 w-full h-full transform -rotate-90" viewBox="0 0 36 36">
+                                    <path class="text-slate-800/80" stroke="currentColor" stroke-width="2.5" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                                    <path class="${style.text} transition-all duration-1000 ease-out" stroke="currentColor" stroke-width="3.5" stroke-dasharray="${Math.min(100, Math.max(0, Math.round(value * 100)))}, 100" stroke-linecap="round" fill="none" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" style="filter: drop-shadow(0 0 3px currentColor);" />
+                                </svg>
+                                <i class="fa-solid ${getIcon(metric)} text-sm ${style.text} relative z-10"></i>
+                            </div>
+                            ` : `
+                            <div class="w-10 h-10 rounded-xl icon-container-gloss flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shrink-0">
                                 <i class="fa-solid ${getIcon(metric)} text-lg ${style.text}"></i>
                             </div>
+                            `}
                         </div>
 
                         <div class="relative z-10 flex items-center justify-between gap-2 mt-auto">
@@ -2885,12 +2973,18 @@
                             backgroundColor: isLine
                                 ? (context) => createVerticalGradient(context.chart.ctx, context.chart.chartArea, color, 0.25, 0)
                                 : (context) => createVerticalGradient(context.chart.ctx, context.chart.chartArea, color, 0.85, 0.15),
-                            borderWidth: isLine ? 2.5 : 1.5,
+                            borderWidth: isLine ? 3.5 : 1.5,
                             borderRadius: isLine ? 0 : 6,
                             fill: isLine,
                             tension: 0.4,
-                            pointRadius: isLine ? 3 : 0,
-                            pointHoverRadius: isLine ? 6 : 0,
+                            pointRadius: isLine ? 4.5 : 0,
+                            pointHoverRadius: isLine ? 7.5 : 0,
+                            pointBackgroundColor: isLine ? '#040711' : undefined,
+                            pointBorderColor: isLine ? color : undefined,
+                            pointBorderWidth: isLine ? 2.5 : undefined,
+                            pointHoverBackgroundColor: isLine ? color : undefined,
+                            pointHoverBorderColor: isLine ? '#ffffff' : undefined,
+                            pointHoverBorderWidth: isLine ? 2.5 : undefined,
                             yAxisID: getAxisId(metric)
                         };
                     });
@@ -2914,9 +3008,15 @@
                             backgroundColor: (context) => createVerticalGradient(context.chart.ctx, context.chart.chartArea, color, 0.3, 0),
                             fill: true,
                             tension: 0.4,
-                            borderWidth: 2.5,
-                            pointRadius: 3,
-                            pointHoverRadius: 6,
+                            borderWidth: 3.5,
+                            pointRadius: 4.5,
+                            pointHoverRadius: 7.5,
+                            pointBackgroundColor: '#040711',
+                            pointBorderColor: color,
+                            pointBorderWidth: 2.5,
+                            pointHoverBackgroundColor: color,
+                            pointHoverBorderColor: '#ffffff',
+                            pointHoverBorderWidth: 2.5,
                             yAxisID: getAxisId(metric)
                         };
                     });
@@ -3084,9 +3184,15 @@
                             backgroundColor: (context) => createVerticalGradient(context.chart.ctx, context.chart.chartArea, color, 0.25, 0),
                             fill: true,
                             tension: 0.4,
-                            borderWidth: 2.5,
-                            pointRadius: 3,
-                            pointHoverRadius: 6,
+                            borderWidth: 3.5,
+                            pointRadius: 4.5,
+                            pointHoverRadius: 7.5,
+                            pointBackgroundColor: '#040711',
+                            pointBorderColor: color,
+                            pointBorderWidth: 2.5,
+                            pointHoverBackgroundColor: color,
+                            pointHoverBorderColor: '#ffffff',
+                            pointHoverBorderWidth: 2.5,
                             yAxisID: getAxisId(metric)
                         };
                     });
@@ -3103,24 +3209,32 @@
                 },
                 plugins: {
                     legend: {
-                        labels: { color: '#fff' }
+                        labels: { color: '#fff', font: { family: "'Space Grotesk', sans-serif" } }
                     },
                     tooltip: {
-                        backgroundColor: 'rgba(15, 23, 42, 0.95)',
+                        backgroundColor: 'rgba(12, 19, 36, 0.95)',
+                        borderColor: 'rgba(255, 255, 255, 0.1)',
+                        borderWidth: 1,
                         padding: 12,
                         cornerRadius: 12,
+                        titleColor: '#ffffff',
+                        titleFont: { family: "'Space Grotesk', sans-serif", weight: 'bold', size: 12 },
+                        bodyColor: '#cbd5e1',
+                        bodyFont: { family: "'Plus Jakarta Sans', sans-serif", size: 11 },
+                        usePointStyle: true,
+                        boxPadding: 6,
                         callbacks: {
                             label: function (context) {
                                 let label = (context && context.dataset && context.dataset.label) || '';
                                 let value = context.parsed.y;
                                 const yAxisID = context.dataset.yAxisID;
                                 if (yAxisID === 'y1') {
-                                    return `${label}: ${(value * 100).toFixed(2)}%`;
+                                    return `  ${label}: ${(value * 100).toFixed(2)}%`;
                                 }
                                 if (yAxisID === 'y2') {
-                                    return `${label}: ${value.toLocaleString()} hrs`;
+                                    return `  ${label}: ${value.toLocaleString()} hrs`;
                                 }
-                                return `${label}: ${(value || 0).toLocaleString()}`;
+                                return `  ${label}: ${(value || 0).toLocaleString()}`;
                             }
                         }
                     },
@@ -3132,6 +3246,7 @@
                         rotation: metrics.length > 3 ? -45 : 0,
                         font: {
                             weight: 'bold',
+                            family: "'Space Grotesk', sans-serif",
                             size: metrics.length > 5 ? 7 : (metrics.length > 3 ? 8 : 10)
                         },
                         formatter: (value, context) => {
