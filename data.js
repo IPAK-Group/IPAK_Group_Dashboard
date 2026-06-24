@@ -1098,7 +1098,7 @@ const dashboardData = {
         {
             "Month": "2026-04-01",
             "Plant": "IPAK",
-            "Production": 1159588.6,
+            "Production": 2059700.0,
             "Waste": 32023.0,
             "Waste %": 0.027615828579204724,
             "Down Time": 74.933,
@@ -1154,6 +1154,36 @@ const dashboardData = {
             "KWh/Kg Plant": 1.22,
             "Rs/Kg Plant": 37.45,
             "No of Grade Changes": 20
+        },
+        {
+            "Month": "2026-05-26",
+            "Plant": "CPAK",
+            "Production": 533573.0,
+            "Waste": 10303.668997500092,
+            "Waste %": 0.0189,
+            "Down Time": 137.33,
+            "OEE %": 0.8649,
+            "Performance %": 0.9002,
+            "Availability %": 0.9609,
+            "Quality %": 1.0,
+            "KWh/Kg Plant": 0.79,
+            "Rs/Kg Plant": 0.0,
+            "No of Grade Changes": 8
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "IPAK",
+            "Production": 1402500.0,
+            "Waste": 18423.219,
+            "Waste %": 0.0305,
+            "Down Time": 50.0,
+            "OEE %": 0.8791,
+            "Performance %": 0.953,
+            "Availability %": 0.922,
+            "Quality %": 1.0,
+            "KWh/Kg Plant": 1.4,
+            "Rs/Kg Plant": 0.0,
+            "No of Grade Changes": 37
         }
     ],
     "productData": [
@@ -11649,6 +11679,188 @@ const dashboardData = {
             "Product Type": "Sealable",
             "Product": "THO20",
             "Production": 4969.8584
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "CPAK",
+            "Product Type": "Metalizable",
+            "Product": "JR-CMB21S-25 ",
+            "Production": 232194.03808749982
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable",
+            "Product": "JR-CTH21-25",
+            "Production": 47147.34808999999
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "CPAK",
+            "Product Type": "Metalizable High MBS",
+            "Product": "JR-CMB21SX-25",
+            "Production": 96271.41687999999
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "CPAK",
+            "Product Type": "White Solid",
+            "Product": "JR-CW21-25",
+            "Production": 14956.69056
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable",
+            "Product": "JR-CTH21-30",
+            "Production": 52568.31855
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "CPAK",
+            "Product Type": "Metalizable",
+            "Product": "JR-CMB21S-20",
+            "Production": 65287.91683500001
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable",
+            "Product": "JR-CTH21-23",
+            "Production": 25148.042000000005
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "IPAK",
+            "Product Type": "Cigerete Grade",
+            "Product": "CG-44H-20",
+            "Production": 26377.48
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "IPAK",
+            "Product Type": "Cigerete Grade",
+            "Product": "CG-99N-23",
+            "Production": 32314.79
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "IPAK",
+            "Product Type": "Metalizeable",
+            "Product": " MB21S-30",
+            "Production": 3307.65
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "IPAK",
+            "Product Type": "Opaque",
+            "Product": " OLC217-38",
+            "Production": 591.6
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "IPAK",
+            "Product Type": "Opaque Soap Grade",
+            "Product": "PRL(SG)-25",
+            "Production": 626.75
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "IPAK",
+            "Product Type": "Opaque",
+            "Product": " PRL25",
+            "Production": 6025.75
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "IPAK",
+            "Product Type": "Opaque",
+            "Product": " PRL30",
+            "Production": 3304.17
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": " TH21-15",
+            "Production": 6243.29
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": " TH21-20",
+            "Production": 11254.93
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": " TH21-25",
+            "Production": 33880.24
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": " TH21PI-18",
+            "Production": 88247.09
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": " TH21PI-25",
+            "Production": 70716.76
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable Anti fog",
+            "Product": " THAF22-30",
+            "Production": 1191.03
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": " THIL40",
+            "Production": 590.39
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": " THO18",
+            "Production": 88005.14
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": " THO30",
+            "Production": 7572.33
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "IPAK",
+            "Product Type": "Metalizeable (High barrier)",
+            "Product": "THOMHB15",
+            "Production": 172012.6
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "IPAK",
+            "Product Type": "Metalizeable (Ultra High barrier)",
+            "Product": "THOMUHB15",
+            "Production": 31960.49
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable (label)",
+            "Product": " TL21-35",
+            "Production": 1248.49
         }
     ],
     "eremaData": [
@@ -12119,6 +12331,12 @@ const dashboardData = {
             "Plant": "GPAK",
             "Erema Production": 63150.0,
             "Erema(KG/KWH)": 0.37
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "CPAK",
+            "Erema Production": 46704.79,
+            "Erema(KG/KWH)": 0.0
         }
     ],
     "trialsData": [
@@ -12751,6 +12969,16 @@ const dashboardData = {
             "Waste": 888,
             "Down Time": 13,
             "Remarks": "20% Adsyl 7410 XCP blend with SFI for first time in MB21MB-15. SIT achieved and visually product ok "
+        },
+        {
+            "Date": "2026-05-23",
+            "Plant": "IPAK",
+            "Product Type": "Sealable Anti Fog",
+            "Product": "THAFF22-30",
+            "Production": 1171.5,
+            "Waste": 650,
+            "Down Time": 13,
+            "Remarks": "Result is quite better of anti fog materail AF-20 as compared to previous PAF10226SC"
         }
     ],
     "offlineData": [
@@ -13281,6 +13509,22 @@ const dashboardData = {
             "Waste": 23500.0,
             "Waste %": 0.023,
             "Down Time": 6.0
+        },
+        {
+            "Month": "2026-05-26",
+            "Plant": "CPAK",
+            "Production": 521951,
+            "Waste": 46500.0,
+            "Waste %": 0.086,
+            "Down Time": 40.0
+        },
+        {
+            "Month": "2026-05-01",
+            "Plant": "IPAK",
+            "Production": 1587992,
+            "Waste": 0.0,
+            "Waste %": 0.0,
+            "Down Time": 291.0
         }
     ],
     "reconData": [],

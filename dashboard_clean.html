@@ -70,22 +70,70 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300..800;1,300..800&family=Space+Grotesk:wght@300..700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
     <style>
         body {
             margin: 0;
             padding: 0;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: #070b13; /* Solid deep dark black background */
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #040711; /* Extremely deep pitch dark space background */
             color: #fff;
             overflow-x: hidden;
         }
 
+        /* Ambient glows for visual fascinations */
+        .glow-text-blue {
+            background: linear-gradient(135deg, #ffffff 10%, #93c5fd 90%);
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+            text-shadow: 0 0 25px rgba(59, 130, 246, 0.35);
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .glow-text-emerald {
+            background: linear-gradient(135deg, #ffffff 10%, #34d399 90%);
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+            text-shadow: 0 0 25px rgba(16, 185, 129, 0.35);
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .glow-text-red {
+            background: linear-gradient(135deg, #ffffff 10%, #f87171 90%);
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+            text-shadow: 0 0 25px rgba(239, 68, 68, 0.35);
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .glow-text-yellow {
+            background: linear-gradient(135deg, #ffffff 10%, #fbbf24 90%);
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+            text-shadow: 0 0 25px rgba(245, 158, 11, 0.35);
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .glow-text-orange {
+            background: linear-gradient(135deg, #ffffff 10%, #fb923c 90%);
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+            text-shadow: 0 0 25px rgba(249, 115, 22, 0.35);
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .glow-text-purple {
+            background: linear-gradient(135deg, #ffffff 10%, #c084fc 90%);
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+            text-shadow: 0 0 25px rgba(139, 92, 246, 0.35);
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
         .glass-panel {
-            background: linear-gradient(135deg, rgba(15, 22, 38, 0.85) 0%, rgba(9, 13, 23, 0.9) 100%) !important;
-            backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-top: 1px solid rgba(255, 255, 255, 0.08); /* Top highlight */
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+            background: linear-gradient(135deg, rgba(12, 19, 36, 0.82) 0%, rgba(6, 10, 20, 0.92) 100%) padding-box;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.45);
             position: relative;
         }
 
@@ -145,102 +193,183 @@
         }
         .interactive-card:hover {
             transform: translateY(-5px) !important;
-            border-color: rgba(255, 255, 255, 0.12) !important;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5) !important;
-            background: linear-gradient(135deg, rgba(20, 29, 48, 0.9) 0%, rgba(10, 15, 26, 0.95) 100%) !important;
+            background: linear-gradient(135deg, rgba(20, 29, 48, 0.9) 0%, rgba(10, 15, 26, 0.95) 100%) padding-box;
+            border: 1px solid rgba(255, 255, 255, 0.18) !important;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5), 
+                        0 0 15px rgba(255, 255, 255, 0.05),
+                        inset 0 1px 3px rgba(255, 255, 255, 0.08) !important;
         }
 
         /* Plant-specific card glows on landing page */
         .plant-glow-petpak {
-            border-color: rgba(249, 115, 22, 0.15) !important;
+            background: linear-gradient(135deg, rgba(8, 12, 22, 0.88) 0%, rgba(4, 6, 12, 0.94) 100%) padding-box,
+                        url('images/bopet_plant_bg.png') center/cover no-repeat padding-box,
+                        linear-gradient(135deg, rgba(249, 115, 22, 0.25) 0%, rgba(249, 115, 22, 0.05) 100%) border-box !important;
+            border: 1px solid transparent !important;
         }
         .plant-glow-petpak:hover {
-            border-color: rgba(249, 115, 22, 0.6) !important;
-            box-shadow: 0 0 25px rgba(249, 115, 22, 0.2) !important;
-            background: radial-gradient(circle at 90% 10%, rgba(249, 115, 22, 0.05), transparent 50%), linear-gradient(135deg, rgba(18, 25, 43, 0.85) 0%, rgba(9, 13, 23, 0.9) 100%) !important;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 35px rgba(249, 115, 22, 0.4) !important;
+            background: radial-gradient(circle at 95% 5%, rgba(249, 115, 22, 0.25), transparent 50%) padding-box,
+                        linear-gradient(135deg, rgba(8, 12, 22, 0.8) 0%, rgba(4, 6, 12, 0.88) 100%) padding-box,
+                        url('images/bopet_plant_bg.png') center/cover no-repeat padding-box,
+                        linear-gradient(135deg, rgba(249, 115, 22, 0.95) 0%, rgba(249, 115, 22, 0.25) 100%) border-box !important;
+            border: 1px solid transparent !important;
         }
-        
+
         .plant-glow-gpak {
-            border-color: rgba(59, 130, 246, 0.15) !important;
+            background: linear-gradient(135deg, rgba(8, 12, 22, 0.88) 0%, rgba(4, 6, 12, 0.94) 100%) padding-box,
+                        url('images/bopp_plant_bg.png') center/cover no-repeat padding-box,
+                        linear-gradient(135deg, rgba(59, 130, 246, 0.25) 0%, rgba(59, 130, 246, 0.05) 100%) border-box !important;
+            border: 1px solid transparent !important;
         }
         .plant-glow-gpak:hover {
-            border-color: rgba(59, 130, 246, 0.6) !important;
-            box-shadow: 0 0 25px rgba(59, 130, 246, 0.2) !important;
-            background: radial-gradient(circle at 90% 10%, rgba(59, 130, 246, 0.05), transparent 50%), linear-gradient(135deg, rgba(18, 25, 43, 0.85) 0%, rgba(9, 13, 23, 0.9) 100%) !important;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 35px rgba(59, 130, 246, 0.4) !important;
+            background: radial-gradient(circle at 95% 5%, rgba(59, 130, 246, 0.25), transparent 50%) padding-box,
+                        linear-gradient(135deg, rgba(8, 12, 22, 0.8) 0%, rgba(4, 6, 12, 0.88) 100%) padding-box,
+                        url('images/bopp_plant_bg.png') center/cover no-repeat padding-box,
+                        linear-gradient(135deg, rgba(59, 130, 246, 0.95) 0%, rgba(59, 130, 246, 0.25) 100%) border-box !important;
+            border: 1px solid transparent !important;
         }
-        
+
         .plant-glow-ipak {
-            border-color: rgba(16, 185, 129, 0.15) !important;
+            background: linear-gradient(135deg, rgba(8, 12, 22, 0.88) 0%, rgba(4, 6, 12, 0.94) 100%) padding-box,
+                        url('images/bopp_plant_bg.png') center/cover no-repeat padding-box,
+                        linear-gradient(135deg, rgba(16, 185, 129, 0.25) 0%, rgba(16, 185, 129, 0.05) 100%) border-box !important;
+            border: 1px solid transparent !important;
         }
         .plant-glow-ipak:hover {
-            border-color: rgba(16, 185, 129, 0.6) !important;
-            box-shadow: 0 0 25px rgba(16, 185, 129, 0.2) !important;
-            background: radial-gradient(circle at 90% 10%, rgba(16, 185, 129, 0.05), transparent 50%), linear-gradient(135deg, rgba(18, 25, 43, 0.85) 0%, rgba(9, 13, 23, 0.9) 100%) !important;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 35px rgba(16, 185, 129, 0.4) !important;
+            background: radial-gradient(circle at 95% 5%, rgba(16, 185, 129, 0.25), transparent 50%) padding-box,
+                        linear-gradient(135deg, rgba(8, 12, 22, 0.8) 0%, rgba(4, 6, 12, 0.88) 100%) padding-box,
+                        url('images/bopp_plant_bg.png') center/cover no-repeat padding-box,
+                        linear-gradient(135deg, rgba(16, 185, 129, 0.95) 0%, rgba(16, 185, 129, 0.25) 100%) border-box !important;
+            border: 1px solid transparent !important;
         }
-        
+
         .plant-glow-cpak {
-            border-color: rgba(139, 92, 246, 0.15) !important;
+            background: linear-gradient(135deg, rgba(8, 12, 22, 0.88) 0%, rgba(4, 6, 12, 0.94) 100%) padding-box,
+                        url('images/cpp_plant_bg.png') center/cover no-repeat padding-box,
+                        linear-gradient(135deg, rgba(239, 68, 68, 0.25) 0%, rgba(239, 68, 68, 0.05) 100%) border-box !important;
+            border: 1px solid transparent !important;
         }
         .plant-glow-cpak:hover {
-            border-color: rgba(139, 92, 246, 0.6) !important;
-            box-shadow: 0 0 25px rgba(139, 92, 246, 0.2) !important;
-            background: radial-gradient(circle at 90% 10%, rgba(139, 92, 246, 0.05), transparent 50%), linear-gradient(135deg, rgba(18, 25, 43, 0.85) 0%, rgba(9, 13, 23, 0.9) 100%) !important;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 35px rgba(239, 68, 68, 0.4) !important;
+            background: radial-gradient(circle at 95% 5%, rgba(239, 68, 68, 0.25), transparent 50%) padding-box,
+                        linear-gradient(135deg, rgba(8, 12, 22, 0.8) 0%, rgba(4, 6, 12, 0.88) 100%) padding-box,
+                        url('images/cpp_plant_bg.png') center/cover no-repeat padding-box,
+                        linear-gradient(135deg, rgba(239, 68, 68, 0.95) 0%, rgba(239, 68, 68, 0.25) 100%) border-box !important;
+            border: 1px solid transparent !important;
         }
 
         /* High-tech Glowing Classes for KPI Cards */
         .kpi-glow-blue {
-            border-color: rgba(59, 130, 246, 0.2) !important;
-            background: radial-gradient(circle at 90% 10%, rgba(59, 130, 246, 0.04), transparent 50%), linear-gradient(135deg, rgba(14, 21, 37, 0.85) 0%, rgba(7, 10, 18, 0.85) 100%) !important;
-            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.02) !important;
+            background: radial-gradient(circle at 90% 10%, rgba(59, 130, 246, 0.04), transparent 60%) padding-box,
+                        linear-gradient(135deg, rgba(12, 18, 33, 0.85) 0%, rgba(6, 9, 17, 0.9) 100%) padding-box;
+            border: 1px solid rgba(59, 130, 246, 0.25) !important;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.03) !important;
         }
         .kpi-glow-blue:hover, .kpi-glow-blue.selected {
+            background: radial-gradient(circle at 90% 10%, rgba(59, 130, 246, 0.15), transparent 60%) padding-box,
+                        linear-gradient(135deg, rgba(16, 24, 48, 0.9) 0%, rgba(8, 12, 24, 0.92) 100%) padding-box;
+            border: 1px solid rgba(59, 130, 246, 0.6) !important;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.55), 
+                        0 0 25px rgba(59, 130, 246, 0.35),
+                        inset 0 1px 2px rgba(255, 255, 255, 0.1) !important;
+            transform: translateY(-5px) scale(1.02);
+        }
+        .kpi-glow-blue:hover .icon-container-gloss, .kpi-glow-blue.selected .icon-container-gloss {
+            background: rgba(59, 130, 246, 0.2) !important;
             border-color: rgba(59, 130, 246, 0.6) !important;
-            box-shadow: 0 0 25px rgba(59, 130, 246, 0.25) !important;
-            background: radial-gradient(circle at 90% 10%, rgba(59, 130, 246, 0.15), transparent 60%), linear-gradient(135deg, rgba(14, 21, 37, 0.85) 0%, rgba(7, 10, 18, 0.85) 100%) !important;
+            box-shadow: 0 0 15px rgba(59, 130, 246, 0.4), inset 0 1px 2px rgba(255, 255, 255, 0.2);
+            color: #fff !important;
         }
 
         .kpi-glow-emerald {
-            border-color: rgba(16, 185, 129, 0.2) !important;
-            background: radial-gradient(circle at 90% 10%, rgba(16, 185, 129, 0.04), transparent 50%), linear-gradient(135deg, rgba(14, 21, 37, 0.85) 0%, rgba(7, 10, 18, 0.85) 100%) !important;
-            box-shadow: 0 4px 20px rgba(16, 185, 129, 0.02) !important;
+            background: radial-gradient(circle at 90% 10%, rgba(16, 185, 129, 0.04), transparent 60%) padding-box,
+                        linear-gradient(135deg, rgba(12, 18, 33, 0.85) 0%, rgba(6, 9, 17, 0.9) 100%) padding-box;
+            border: 1px solid rgba(16, 185, 129, 0.25) !important;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.03) !important;
         }
         .kpi-glow-emerald:hover, .kpi-glow-emerald.selected {
+            background: radial-gradient(circle at 90% 10%, rgba(16, 185, 129, 0.15), transparent 60%) padding-box,
+                        linear-gradient(135deg, rgba(16, 24, 48, 0.9) 0%, rgba(8, 12, 24, 0.92) 100%) padding-box;
+            border: 1px solid rgba(16, 185, 129, 0.6) !important;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.55), 
+                        0 0 25px rgba(16, 185, 129, 0.35),
+                        inset 0 1px 2px rgba(255, 255, 255, 0.1) !important;
+            transform: translateY(-5px) scale(1.02);
+        }
+        .kpi-glow-emerald:hover .icon-container-gloss, .kpi-glow-emerald.selected .icon-container-gloss {
+            background: rgba(16, 185, 129, 0.2) !important;
             border-color: rgba(16, 185, 129, 0.6) !important;
-            box-shadow: 0 0 25px rgba(16, 185, 129, 0.25) !important;
-            background: radial-gradient(circle at 90% 10%, rgba(16, 185, 129, 0.15), transparent 60%), linear-gradient(135deg, rgba(14, 21, 37, 0.85) 0%, rgba(7, 10, 18, 0.85) 100%) !important;
+            box-shadow: 0 0 15px rgba(16, 185, 129, 0.4), inset 0 1px 2px rgba(255, 255, 255, 0.2);
+            color: #fff !important;
         }
 
         .kpi-glow-red {
-            border-color: rgba(239, 68, 68, 0.2) !important;
-            background: radial-gradient(circle at 90% 10%, rgba(239, 68, 68, 0.04), transparent 50%), linear-gradient(135deg, rgba(14, 21, 37, 0.85) 0%, rgba(7, 10, 18, 0.85) 100%) !important;
-            box-shadow: 0 4px 20px rgba(239, 68, 68, 0.02) !important;
+            background: radial-gradient(circle at 90% 10%, rgba(239, 68, 68, 0.04), transparent 60%) padding-box,
+                        linear-gradient(135deg, rgba(12, 18, 33, 0.85) 0%, rgba(6, 9, 17, 0.9) 100%) padding-box;
+            border: 1px solid rgba(239, 68, 68, 0.25) !important;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.03) !important;
         }
         .kpi-glow-red:hover, .kpi-glow-red.selected {
+            background: radial-gradient(circle at 90% 10%, rgba(239, 68, 68, 0.15), transparent 60%) padding-box,
+                        linear-gradient(135deg, rgba(16, 24, 48, 0.9) 0%, rgba(8, 12, 24, 0.92) 100%) padding-box;
+            border: 1px solid rgba(239, 68, 68, 0.6) !important;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.55), 
+                        0 0 25px rgba(239, 68, 68, 0.35),
+                        inset 0 1px 2px rgba(255, 255, 255, 0.1) !important;
+            transform: translateY(-5px) scale(1.02);
+        }
+        .kpi-glow-red:hover .icon-container-gloss, .kpi-glow-red.selected .icon-container-gloss {
+            background: rgba(239, 68, 68, 0.2) !important;
             border-color: rgba(239, 68, 68, 0.6) !important;
-            box-shadow: 0 0 25px rgba(239, 68, 68, 0.25) !important;
-            background: radial-gradient(circle at 90% 10%, rgba(239, 68, 68, 0.15), transparent 60%), linear-gradient(135deg, rgba(14, 21, 37, 0.85) 0%, rgba(7, 10, 18, 0.85) 100%) !important;
+            box-shadow: 0 0 15px rgba(239, 68, 68, 0.4), inset 0 1px 2px rgba(255, 255, 255, 0.2);
+            color: #fff !important;
         }
 
         .kpi-glow-yellow {
-            border-color: rgba(245, 158, 11, 0.2) !important;
-            background: radial-gradient(circle at 90% 10%, rgba(245, 158, 11, 0.04), transparent 50%), linear-gradient(135deg, rgba(14, 21, 37, 0.85) 0%, rgba(7, 10, 18, 0.85) 100%) !important;
-            box-shadow: 0 4px 20px rgba(245, 158, 11, 0.02) !important;
+            background: radial-gradient(circle at 90% 10%, rgba(245, 158, 11, 0.04), transparent 60%) padding-box,
+                        linear-gradient(135deg, rgba(12, 18, 33, 0.85) 0%, rgba(6, 9, 17, 0.9) 100%) padding-box;
+            border: 1px solid rgba(245, 158, 11, 0.25) !important;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.03) !important;
         }
         .kpi-glow-yellow:hover, .kpi-glow-yellow.selected {
+            background: radial-gradient(circle at 90% 10%, rgba(245, 158, 11, 0.15), transparent 60%) padding-box,
+                        linear-gradient(135deg, rgba(16, 24, 48, 0.9) 0%, rgba(8, 12, 24, 0.92) 100%) padding-box;
+            border: 1px solid rgba(245, 158, 11, 0.6) !important;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.55), 
+                        0 0 25px rgba(245, 158, 11, 0.35),
+                        inset 0 1px 2px rgba(255, 255, 255, 0.1) !important;
+            transform: translateY(-5px) scale(1.02);
+        }
+        .kpi-glow-yellow:hover .icon-container-gloss, .kpi-glow-yellow.selected .icon-container-gloss {
+            background: rgba(245, 158, 11, 0.2) !important;
             border-color: rgba(245, 158, 11, 0.6) !important;
-            box-shadow: 0 0 25px rgba(245, 158, 11, 0.25) !important;
-            background: radial-gradient(circle at 90% 10%, rgba(245, 158, 11, 0.15), transparent 60%), linear-gradient(135deg, rgba(14, 21, 37, 0.85) 0%, rgba(7, 10, 18, 0.85) 100%) !important;
+            box-shadow: 0 0 15px rgba(245, 158, 11, 0.4), inset 0 1px 2px rgba(255, 255, 255, 0.2);
+            color: #fff !important;
         }
 
         .kpi-glow-orange {
-            border-color: rgba(249, 115, 22, 0.2) !important;
-            background: radial-gradient(circle at 90% 10%, rgba(249, 115, 22, 0.04), transparent 50%), linear-gradient(135deg, rgba(14, 21, 37, 0.85) 0%, rgba(7, 10, 18, 0.85) 100%) !important;
-            box-shadow: 0 4px 20px rgba(249, 115, 22, 0.02) !important;
+            background: radial-gradient(circle at 90% 10%, rgba(249, 115, 22, 0.04), transparent 60%) padding-box,
+                        linear-gradient(135deg, rgba(12, 18, 33, 0.85) 0%, rgba(6, 9, 17, 0.9) 100%) padding-box;
+            border: 1px solid rgba(249, 115, 22, 0.25) !important;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.03) !important;
         }
         .kpi-glow-orange:hover, .kpi-glow-orange.selected {
+            background: radial-gradient(circle at 90% 10%, rgba(249, 115, 22, 0.15), transparent 60%) padding-box,
+                        linear-gradient(135deg, rgba(16, 24, 48, 0.9) 0%, rgba(8, 12, 24, 0.92) 100%) padding-box;
+            border: 1px solid rgba(249, 115, 22, 0.6) !important;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.55), 
+                        0 0 25px rgba(249, 115, 22, 0.35),
+                        inset 0 1px 2px rgba(255, 255, 255, 0.1) !important;
+            transform: translateY(-5px) scale(1.02);
+        }
+        .kpi-glow-orange:hover .icon-container-gloss, .kpi-glow-orange.selected .icon-container-gloss {
+            background: rgba(249, 115, 22, 0.2) !important;
             border-color: rgba(249, 115, 22, 0.6) !important;
-            box-shadow: 0 0 25px rgba(249, 115, 22, 0.25) !important;
-            background: radial-gradient(circle at 90% 10%, rgba(249, 115, 22, 0.15), transparent 60%), linear-gradient(135deg, rgba(14, 21, 37, 0.85) 0%, rgba(7, 10, 18, 0.85) 100%) !important;
+            box-shadow: 0 0 15px rgba(249, 115, 22, 0.4), inset 0 1px 2px rgba(255, 255, 255, 0.2);
+            color: #fff !important;
         }
 
         .glass-card-hover:hover {
@@ -408,10 +537,11 @@
 
         /* High-tech Shiny/Glowing Product Cards styling */
         .product-type-card {
-            background: linear-gradient(135deg, rgba(10, 16, 30, 0.85) 0%, rgba(6, 9, 18, 0.98) 100%) !important;
+            background: linear-gradient(135deg, rgba(8, 12, 22, 0.72) 0%, rgba(4, 6, 12, 0.88) 100%) padding-box,
+                        var(--card-bg-image) center/cover no-repeat padding-box;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            border-radius: 20px;
             backdrop-filter: blur(15px);
-            border: 1px solid rgba(255, 255, 255, 0.04) !important;
-            border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.01) !important;
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
             position: relative;
@@ -433,10 +563,11 @@
 
         .product-type-card:hover {
             transform: translateY(-5px) !important;
-            border-color: rgba(var(--active-color-rgb, 59, 130, 246), 0.4) !important;
+            background: linear-gradient(135deg, rgba(14, 21, 37, 0.65) 0%, rgba(8, 12, 22, 0.82) 100%) padding-box,
+                        var(--card-bg-image) center/cover no-repeat padding-box;
+            border: 1px solid rgba(var(--active-color-rgb, 59, 130, 246), 0.45) !important;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6), 
-                        0 0 20px rgba(var(--active-color-rgb, 59, 130, 246), 0.15) !important;
-            background: linear-gradient(135deg, rgba(14, 21, 37, 0.9) 0%, rgba(8, 12, 22, 0.98) 100%) !important;
+                        0 0 20px rgba(var(--active-color-rgb, 59, 130, 246), 0.25) !important;
         }
 
         .product-type-card:hover::before {
@@ -488,10 +619,11 @@
 
         /* Individual Product Item Card (View 2) */
         .product-item-card {
-            background: linear-gradient(135deg, rgba(8, 12, 22, 0.8) 0%, rgba(4, 6, 12, 0.95) 100%) !important;
+            background: linear-gradient(135deg, rgba(8, 12, 22, 0.72) 0%, rgba(4, 6, 12, 0.88) 100%) padding-box,
+                        var(--card-bg-image) center/cover no-repeat padding-box;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            border-radius: 20px;
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.03) !important;
-            border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3) !important;
             position: relative;
             overflow: hidden;
@@ -500,18 +632,20 @@
 
         .product-item-card:hover {
             transform: translateY(-3px) !important;
-            border-color: rgba(var(--active-color-rgb, 59, 130, 246), 0.45) !important;
+            background: linear-gradient(135deg, rgba(12, 18, 32, 0.65) 0%, rgba(6, 9, 16, 0.82) 100%) padding-box,
+                        var(--card-bg-image) center/cover no-repeat padding-box;
+            border: 1px solid rgba(var(--active-color-rgb, 59, 130, 246), 0.45) !important;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 
-                        0 0 15px rgba(var(--active-color-rgb, 59, 130, 246), 0.15) !important;
-            background: linear-gradient(135deg, rgba(12, 18, 32, 0.85) 0%, rgba(6, 9, 16, 0.98) 100%) !important;
+                        0 0 15px rgba(var(--active-color-rgb, 59, 130, 246), 0.2) !important;
         }
 
         .product-item-card.selected {
-            border-color: var(--active-color, #3b82f6) !important;
+            background: radial-gradient(circle at 90% 10%, rgba(var(--active-color-rgb, 59, 130, 246), 0.12), transparent 50%) padding-box, 
+                        linear-gradient(135deg, rgba(var(--active-color-rgb, 59, 130, 246), 0.08) 0%, rgba(4, 6, 12, 0.82) 100%) padding-box,
+                        var(--card-bg-image) center/cover no-repeat padding-box;
+            border: 1px solid var(--active-color, #3b82f6) !important;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), 
-                        0 0 20px rgba(var(--active-color-rgb, 59, 130, 246), 0.25) !important;
-            background: radial-gradient(circle at 90% 10%, rgba(var(--active-color-rgb, 59, 130, 246), 0.12), transparent 50%), 
-                        linear-gradient(135deg, rgba(var(--active-color-rgb, 59, 130, 246), 0.08) 0%, rgba(4, 6, 12, 0.95) 100%) !important;
+                        0 0 20px rgba(var(--active-color-rgb, 59, 130, 246), 0.35) !important;
         }
 
         /* Check indicator for selected card */
@@ -523,6 +657,17 @@
         .product-item-card.selected .product-item-check {
             color: var(--active-color, #3b82f6) !important;
             text-shadow: 0 0 8px rgba(var(--active-color-rgb, 59, 130, 246), 0.6);
+        }
+
+        .product-item-production {
+            font-family: 'Space Grotesk', sans-serif;
+            transition: all 0.3s ease;
+        }
+        .product-item-card.selected .product-item-production {
+            background: linear-gradient(135deg, #ffffff 10%, var(--active-color, #3b82f6) 90%);
+            -webkit-background-clip: text !important;
+            -webkit-text-fill-color: transparent !important;
+            text-shadow: 0 0 15px rgba(var(--active-color-rgb, 59, 130, 246), 0.3);
         }
 
         /* Shimmer reflection for hovered product item card */
@@ -602,6 +747,229 @@
             box-shadow: 0 0 10px rgba(var(--active-color-rgb, 59, 130, 246), 0.15) !important;
             outline: none;
             background: rgba(15, 23, 42, 0.8) !important;
+        }
+
+        /* Trial Runs High-Tech Cards */
+        .trial-card {
+            background: linear-gradient(135deg, rgba(10, 16, 30, 0.85) 0%, rgba(5, 8, 15, 0.95) 100%) padding-box;
+            border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            border-radius: 20px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45) !important;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1) !important;
+            overflow: hidden;
+            position: relative;
+        }
+        .trial-card:hover {
+            transform: translateY(-5px) scale(1.01) !important;
+            background: linear-gradient(135deg, rgba(14, 21, 37, 0.9) 0%, rgba(8, 12, 22, 0.98) 100%) padding-box;
+            border: 1px solid rgba(59, 130, 246, 0.45) !important;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 
+                        0 0 25px rgba(59, 130, 246, 0.3) !important;
+        }
+        .trial-card::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -60%;
+            width: 25%;
+            height: 200%;
+            background: linear-gradient(
+                to right,
+                rgba(255, 255, 255, 0) 0%,
+                rgba(255, 255, 255, 0.05) 50%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            transform: rotate(25deg);
+            pointer-events: none;
+        }
+        .trial-card:hover::after {
+            left: 120%;
+            transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .trial-card-header {
+            background: rgba(255, 255, 255, 0.02) !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+            padding: 1rem;
+        }
+
+        .trial-metric-row {
+            background: rgba(255, 255, 255, 0.01);
+            border: 1px solid rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+            padding: 8px 12px;
+            transition: all 0.3s ease;
+        }
+        .trial-metric-row:hover {
+            background: rgba(255, 255, 255, 0.03);
+            border-color: rgba(255, 255, 255, 0.08);
+            transform: translateX(3px);
+        }
+
+        .trial-remarks-box {
+            background: rgba(59, 130, 246, 0.03) !important;
+            border: 1px solid rgba(59, 130, 246, 0.1) !important;
+            border-left: 3px solid rgba(59, 130, 246, 0.6) !important;
+            border-radius: 8px;
+            padding: 10px 12px;
+            transition: all 0.3s ease;
+        }
+        .trial-remarks-box:hover {
+            background: rgba(59, 130, 246, 0.06) !important;
+            border-left-width: 4px !important;
+            box-shadow: inset 0 0 10px rgba(59, 130, 246, 0.05);
+        }
+
+        /* Erema/Recycling Specific Professional Styles */
+        .erema-calculator-panel {
+            background: linear-gradient(135deg, rgba(6, 10, 18, 0.9) 0%, rgba(3, 5, 9, 0.96) 100%) padding-box,
+                        url('images/erema_recycle_bg.png') center/cover no-repeat padding-box,
+                        linear-gradient(135deg, rgba(16, 185, 129, 0.2) 0%, rgba(16, 185, 129, 0.03) 100%) border-box !important;
+            border: 1px solid transparent !important;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6) !important;
+        }
+        
+        .erema-input {
+            background: rgba(15, 23, 42, 0.7) !important;
+            border: 1px solid rgba(16, 185, 129, 0.2) !important;
+            color: #fff !important;
+            transition: all 0.3s ease !important;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .erema-input:focus {
+            border-color: rgba(16, 185, 129, 0.7) !important;
+            box-shadow: 0 0 15px rgba(16, 185, 129, 0.25) !important;
+            background: rgba(15, 23, 42, 0.9) !important;
+            outline: none;
+        }
+
+        .erema-btn-calculate {
+            background: linear-gradient(135deg, #10b981 0%, #047857 100%) !important;
+            color: #fff !important;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.25);
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+            border: none !important;
+        }
+        .erema-btn-calculate:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(16, 185, 129, 0.45);
+            filter: brightness(1.1);
+        }
+        .erema-btn-calculate:active {
+            transform: translateY(0);
+        }
+
+        /* Compare Plants Styling */
+        .compare-card-petpak {
+            background: linear-gradient(135deg, rgba(8, 12, 22, 0.82) 0%, rgba(4, 6, 12, 0.88) 100%) padding-box,
+                        url('images/bopet_plant_bg.png') center/cover no-repeat padding-box,
+                        linear-gradient(135deg, rgba(245, 158, 11, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%) border-box !important;
+            border: 1px solid transparent !important;
+            opacity: 0.55;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .compare-card-petpak:hover {
+            opacity: 0.85;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 0 0 15px rgba(245, 158, 11, 0.15) !important;
+        }
+        .compare-card-petpak.selected {
+            background: linear-gradient(135deg, rgba(8, 12, 22, 0.72) 0%, rgba(4, 6, 12, 0.82) 100%) padding-box,
+                        url('images/bopet_plant_bg.png') center/cover no-repeat padding-box,
+                        linear-gradient(135deg, rgba(245, 158, 11, 0.75) 0%, rgba(245, 158, 11, 0.25) 100%) border-box !important;
+            border: 1px solid transparent !important;
+            opacity: 1 !important;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(245, 158, 11, 0.35), inset 0 1px 2px rgba(255, 255, 255, 0.1) !important;
+            transform: translateY(-4px);
+        }
+
+        .compare-card-gpak {
+            background: linear-gradient(135deg, rgba(8, 12, 22, 0.82) 0%, rgba(4, 6, 12, 0.88) 100%) padding-box,
+                        url('images/bopp_plant_bg.png') center/cover no-repeat padding-box,
+                        linear-gradient(135deg, rgba(59, 130, 246, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%) border-box !important;
+            border: 1px solid transparent !important;
+            opacity: 0.55;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .compare-card-gpak:hover {
+            opacity: 0.85;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 0 0 15px rgba(59, 130, 246, 0.15) !important;
+        }
+        .compare-card-gpak.selected {
+            background: linear-gradient(135deg, rgba(8, 12, 22, 0.72) 0%, rgba(4, 6, 12, 0.82) 100%) padding-box,
+                        url('images/bopp_plant_bg.png') center/cover no-repeat padding-box,
+                        linear-gradient(135deg, rgba(59, 130, 246, 0.75) 0%, rgba(59, 130, 246, 0.25) 100%) border-box !important;
+            border: 1px solid transparent !important;
+            opacity: 1 !important;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(59, 130, 246, 0.35), inset 0 1px 2px rgba(255, 255, 255, 0.1) !important;
+            transform: translateY(-4px);
+        }
+
+        .compare-card-ipak {
+            background: linear-gradient(135deg, rgba(8, 12, 22, 0.82) 0%, rgba(4, 6, 12, 0.88) 100%) padding-box,
+                        url('images/bopp_plant_bg.png') center/cover no-repeat padding-box,
+                        linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%) border-box !important;
+            border: 1px solid transparent !important;
+            opacity: 0.55;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .compare-card-ipak:hover {
+            opacity: 0.85;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 0 0 15px rgba(16, 185, 129, 0.15) !important;
+        }
+        .compare-card-ipak.selected {
+            background: linear-gradient(135deg, rgba(8, 12, 22, 0.72) 0%, rgba(4, 6, 12, 0.82) 100%) padding-box,
+                        url('images/bopp_plant_bg.png') center/cover no-repeat padding-box,
+                        linear-gradient(135deg, rgba(16, 185, 129, 0.75) 0%, rgba(16, 185, 129, 0.25) 100%) border-box !important;
+            border: 1px solid transparent !important;
+            opacity: 1 !important;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(16, 185, 129, 0.35), inset 0 1px 2px rgba(255, 255, 255, 0.1) !important;
+            transform: translateY(-4px);
+        }
+
+        .compare-card-cpak {
+            background: linear-gradient(135deg, rgba(8, 12, 22, 0.82) 0%, rgba(4, 6, 12, 0.88) 100%) padding-box,
+                        url('images/cpp_plant_bg.png') center/cover no-repeat padding-box,
+                        linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(255, 255, 255, 0.05) 100%) border-box !important;
+            border: 1px solid transparent !important;
+            opacity: 0.55;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .compare-card-cpak:hover {
+            opacity: 0.85;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), 0 0 15px rgba(139, 92, 246, 0.15) !important;
+        }
+        .compare-card-cpak.selected {
+            background: linear-gradient(135deg, rgba(8, 12, 22, 0.72) 0%, rgba(4, 6, 12, 0.82) 100%) padding-box,
+                        url('images/cpp_plant_bg.png') center/cover no-repeat padding-box,
+                        linear-gradient(135deg, rgba(139, 92, 246, 0.75) 0%, rgba(139, 92, 246, 0.25) 100%) border-box !important;
+            border: 1px solid transparent !important;
+            opacity: 1 !important;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6), 0 0 25px rgba(139, 92, 246, 0.35), inset 0 1px 2px rgba(255, 255, 255, 0.1) !important;
+            transform: translateY(-4px);
+        }
+
+        /* Metric selection checkbox customization */
+        .metric-checkbox-input:checked + .metric-checkbox-card {
+            border-color: rgba(139, 92, 246, 0.6) !important;
+            background-color: rgba(139, 92, 246, 0.1) !important;
+        }
+        .metric-checkbox-input:checked + .metric-checkbox-card .metric-checkbox-text {
+            color: #ffffff !important;
+        }
+        .metric-checkbox-input:checked + .metric-checkbox-card .metric-checkbox-indicator {
+            border-color: transparent !important;
+            background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%) !important;
+        }
+        .metric-checkbox-input:checked + .metric-checkbox-card .metric-checkbox-indicator i {
+            opacity: 1 !important;
         }
     </style>
 </head>
@@ -730,50 +1098,44 @@
         </div>
 
         <!-- Plant Detail View -->
-        <div id="plant-detail-view" class="hidden dashboard-container mx-auto px-4 py-6">
-            <!-- Back Button -->
-            <button onclick="showLandingPage()"
-                class="group px-4 py-2.5 rounded-xl bg-slate-800/40 hover:bg-slate-800/60 border border-white/5 hover:border-white/10 mb-8 flex items-center gap-3 transition-all transition-all duration-300 backdrop-blur-md">
-                <i class="fa-solid fa-arrow-left text-slate-400 group-hover:text-blue-400 transition-colors"></i>
-                <span class="text-sm font-semibold text-slate-300 group-hover:text-white transition-colors">Back to
-                    Overview</span>
-            </button>
+        <div id="plant-detail-view" class="hidden dashboard-container mx-auto px-4 py-4">
 
-            <!-- Plant Header -->
-            <div class="glass-panel p-8 rounded-3xl mb-8 relative overflow-hidden group">
-                <!-- Background Decoration -->
-                <div id="plant-header-deco-1"
-                    class="absolute top-0 right-0 w-64 h-64 bg-blue-600/5 blur-[100px] -mr-32 -mt-32 rounded-full">
-                </div>
-                <div id="plant-header-deco-2"
-                    class="absolute bottom-0 left-0 w-64 h-64 bg-purple-600/5 blur-[100px] -ml-32 -mb-32 rounded-full">
-                </div>
+            <!-- Compact Top Bar: Back button + Plant Identity -->
+            <div class="flex items-center justify-between mb-4 gap-4">
+                <!-- Back Button -->
+                <button onclick="showLandingPage()"
+                    class="group flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-800/50 hover:bg-slate-800/80 border border-white/5 hover:border-white/15 transition-all duration-200 backdrop-blur-md shrink-0">
+                    <i class="fa-solid fa-arrow-left text-slate-400 group-hover:text-blue-400 transition-colors text-xs"></i>
+                    <span class="text-xs font-semibold text-slate-400 group-hover:text-white transition-colors">Back</span>
+                </button>
 
-                <div class="flex flex-col md:flex-row justify-between items-start md:items-center relative z-10 gap-6">
-                    <div class="flex items-center gap-6">
-                        <div id="plant-header-icon-container"
-                            class="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue-600/20 to-purple-600/20 border border-white/10 flex items-center justify-center text-3xl shadow-xl transition-all duration-500">
-                            <i id="plant-header-icon"
-                                class="fa-solid fa-industry text-blue-400 transition-colors duration-500"></i>
-                        </div>
-                        <div>
-                            <div class="plant-badge">Operating Unit</div>
-                            <h2 class="text-4xl font-extrabold text-white tracking-tight" id="plant-name">GPAK</h2>
-                            <div class="flex items-center gap-2 mt-1">
-                                <span id="plant-status-dot"
-                                    class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                                <span class="text-xs text-slate-400 font-medium uppercase tracking-widest">Live System
-                                    Active</span>
-                            </div>
-                        </div>
+                <!-- Plant Identity Strip -->
+                <div class="flex-1 flex items-center gap-3 glass-panel px-4 py-2.5 rounded-xl border border-white/5 relative overflow-hidden">
+                    <!-- Subtle glow -->
+                    <div id="plant-header-deco-1" class="absolute right-0 top-0 w-32 h-full bg-blue-600/5 blur-[60px] pointer-events-none"></div>
+                    <div id="plant-header-deco-2" class="absolute left-0 top-0 w-16 h-full bg-purple-600/5 blur-[40px] pointer-events-none"></div>
+
+                    <!-- Icon -->
+                    <div id="plant-header-icon-container"
+                        class="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-600/20 to-purple-600/20 border border-white/10 flex items-center justify-center shadow-md transition-all duration-500 shrink-0">
+                        <i id="plant-header-icon" class="fa-solid fa-industry text-blue-400 text-sm transition-colors duration-500"></i>
                     </div>
 
+                    <!-- Name + Badge -->
+                    <div class="flex items-center gap-2.5 relative z-10">
+                        <div class="plant-badge" style="font-size:9px; padding: 2px 8px;">Operating Unit</div>
+                        <h2 class="text-lg font-black text-white tracking-tight leading-none" id="plant-name">GPAK</h2>
+                        <div class="flex items-center gap-1.5 ml-1">
+                            <span id="plant-status-dot" class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                            <span class="text-[9px] text-slate-500 font-medium uppercase tracking-widest">Live</span>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <!-- Tabs Navigation -->
             <div
-                class="p-1.5 bg-slate-900/40 backdrop-blur-xl rounded-2xl mb-8 flex flex-wrap gap-1 border border-white/5 shadow-2xl">
+                class="p-1.5 bg-slate-900/40 backdrop-blur-xl rounded-2xl mb-5 flex flex-wrap gap-1 border border-white/5 shadow-2xl">
                 <button onclick="switchTab('overview')" id="tab-overview" class="tab-button active">
                     <i class="fa-solid fa-chart-line"></i> Overview
                 </button>
@@ -868,6 +1230,73 @@
             'CPAK': '#8b5cf6'
         };
 
+        // Coordinated glowing chart colors
+        const METRIC_COLORS = {
+            'Production': 'rgb(56, 189, 248)',      // Neon Sky Blue
+            'Waste': 'rgb(244, 63, 94)',           // Crimson Rose
+            'Waste %': 'rgb(236, 72, 153)',         // Hot Pink
+            'Down Time': 'rgb(245, 158, 11)',       // Amber / Gold
+            'Downtime': 'rgb(245, 158, 11)',        // Amber / Gold
+            'OEE %': 'rgb(52, 211, 153)',           // Mint Emerald
+            'Performance %': 'rgb(129, 140, 248)',  // Indigo
+            'Availability %': 'rgb(167, 139, 250)',  // Purple / Lavender
+            'Quality %': 'rgb(251, 191, 36)',        // Bright Yellow
+            'KWh/Kg Plant': 'rgb(45, 212, 191)',     // Vibrant Teal
+            'Rs/Kg Plant': 'rgb(251, 146, 60)',       // Coral / Soft Orange
+            'Erema(KG/KWH)': 'rgb(52, 211, 153)',     // Mint Emerald
+            'EREMA Production': 'rgb(52, 211, 153)',  // Mint Emerald
+            'Avg Energy (KG/KWH)': 'rgb(251, 191, 36)', // Bright Yellow
+            'No of Grade Changes': 'rgb(168, 85, 247)' // Violet
+        };
+
+        const METRIC_COLORS_FALLBACK = [
+            'rgb(56, 189, 248)',  // Neon Blue
+            'rgb(52, 211, 153)',  // Mint
+            'rgb(167, 139, 250)', // Purple
+            'rgb(251, 146, 60)',  // Orange
+            'rgb(244, 63, 94)',   // Red
+            'rgb(236, 72, 153)',  // Pink
+            'rgb(45, 212, 191)',  // Teal
+            'rgb(251, 191, 36)',  // Gold
+            'rgb(99, 102, 241)',  // Indigo
+            'rgb(168, 85, 247)'   // Violet
+        ];
+
+        function getMetricColor(metric, index = 0) {
+            if (!metric) return METRIC_COLORS_FALLBACK[index % METRIC_COLORS_FALLBACK.length];
+            if (METRIC_COLORS[metric]) {
+                return METRIC_COLORS[metric];
+            }
+            // Try to match partial strings
+            for (const key in METRIC_COLORS) {
+                if (metric.toLowerCase().includes(key.toLowerCase()) || key.toLowerCase().includes(metric.toLowerCase())) {
+                    return METRIC_COLORS[key];
+                }
+            }
+            return METRIC_COLORS_FALLBACK[index % METRIC_COLORS_FALLBACK.length];
+        }
+
+        function getRgbaColor(color, opacity) {
+            if (color.startsWith('#')) {
+                let r = parseInt(color.slice(1, 3), 16);
+                let g = parseInt(color.slice(3, 5), 16);
+                let b = parseInt(color.slice(5, 7), 16);
+                return `rgba(${r}, ${g}, ${b}, ${opacity})`;
+            }
+            if (color.startsWith('rgb')) {
+                return color.replace('rgb', 'rgba').replace(')', `, ${opacity})`);
+            }
+            return color;
+        }
+
+        function createVerticalGradient(ctx, chartArea, color, opacityStart = 0.85, opacityEnd = 0.05) {
+            if (!chartArea) return color;
+            const gradient = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+            gradient.addColorStop(0, getRgbaColor(color, opacityEnd));
+            gradient.addColorStop(1, getRgbaColor(color, opacityStart));
+            return gradient;
+        }
+
         let activePlant = 'all';
         let activeTab = 'overview';
         let pinnedKPIs = ['OEE %', 'Production', 'Waste', 'Down Time'];
@@ -917,6 +1346,19 @@
             if (!metric) return false;
             const m = metric.toLowerCase();
             return m.includes('%') || m.includes('ratio') || m.includes('/') || m.includes('mtbf') || m.includes('mttr') || m.includes('scrap rate') || m.includes('yield') || m.includes('quality');
+        }
+
+        // Helper to map metric names to chart y-axes (Volume, Percent, Time)
+        function getMetricAxis(metric) {
+            if (!metric) return 'y';
+            const m = metric.toLowerCase();
+            if (m.includes('%') || m.includes('ratio') || m.includes('rate') || m.includes('yield') || m.includes('quality') || m.includes('efficiency')) {
+                return 'y1';
+            }
+            if (m.includes('time') || m.includes('mtbf') || m.includes('mttr') || m.includes('hour')) {
+                return 'y2';
+            }
+            return 'y';
         }
 
         // ===== UTILITY FUNCTIONS =====
@@ -1211,6 +1653,13 @@
                     'CPAK': 'plant-glow-cpak'
                 }[plant] || '';
 
+                const textGlowClass = {
+                    'PETPAK': 'glow-text-orange',
+                    'GPAK': 'glow-text-blue',
+                    'IPAK': 'glow-text-emerald',
+                    'CPAK': 'glow-text-red'
+                }[plant] || 'glow-text-blue';
+
                 return `
                     <div onclick="openPlantDetail('${plant}')" 
                         class="glass-panel p-8 rounded-[2rem] cursor-pointer group relative overflow-hidden transition-all duration-500 hover:-translate-y-2 active:scale-[0.98] ${plantGlowClass} ${isFirstEntry ? 'animate-card-entrance' : ''}"
@@ -1233,7 +1682,7 @@
                                         <span class="w-1.5 h-1.5 rounded-full bg-${colorsTailwind.primary} shadow-[0_0_8px_rgba(59,130,246,0.5)]"></span>
                                         <span class="text-[10px] font-black text-slate-400 uppercase tracking-[0.2em]">Operational Unit</span>
                                     </div>
-                                    <h3 class="text-4xl font-black text-${colorsTailwind.secondary} tracking-tighter transition-all duration-300">${plant}</h3>
+                                    <h3 class="text-4xl font-black text-${colorsTailwind.secondary} tracking-tighter transition-all duration-300" style="font-family: 'Space Grotesk', sans-serif;">${plant}</h3>
                                 </div>
                                 <div class="w-12 h-12 rounded-2xl bg-slate-800/50 border border-white/5 flex items-center justify-center group-hover:border-${colorsTailwind.primary}/30 group-hover:bg-${colorsTailwind.primary}/10 transition-all duration-500">
                                     <i class="fa-solid fa-arrow-up-right text-slate-500 group-hover:text-${colorsTailwind.primary} group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all"></i>
@@ -1249,7 +1698,7 @@
                                             <i class="fa-solid fa-industry text-[10px]"></i>
                                             <span class="text-xs font-bold uppercase tracking-widest opacity-60">Production</span>
                                         </div>
-                                        <span class="text-2xl font-black text-white">${displayProd} <span class="text-xs font-bold text-slate-500 opacity-60">kg</span></span>
+                                        <span class="text-2xl font-black ${textGlowClass}">${displayProd} <span class="text-xs font-bold text-slate-500" style="-webkit-text-fill-color: #64748b;">kg</span></span>
                                     </div>
                                     <div class="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden p-[2px]">
                                         <div class="h-full bg-gradient-to-r from-${colorsTailwind.glow} to-${colorsTailwind.secondary} rounded-full w-full opacity-80 shadow-[0_0_10px_rgba(59,130,246,0.3)]"></div>
@@ -1264,7 +1713,7 @@
                                             <i class="fa-solid fa-chart-pie text-[10px]"></i>
                                             <span class="text-xs font-bold uppercase tracking-widest opacity-60">Overall Efficiency</span>
                                         </div>
-                                        <span class="text-2xl font-black text-white">${displayOEE}</span>
+                                        <span class="text-2xl font-black ${textGlowClass}">${displayOEE}</span>
                                     </div>
                                     <div class="h-1.5 w-full bg-slate-800 rounded-full overflow-hidden p-[2px]">
                                         <div class="h-full bg-gradient-to-r from-${colorsTailwind.glow} to-${colorsTailwind.secondary} rounded-full" style="width: ${oeeLevel}%"></div>
@@ -1412,7 +1861,7 @@
                                 <div class="flex items-center gap-2 bg-slate-800/50 p-2 rounded-xl border border-slate-700">
                                     <span class="text-[10px] font-bold text-purple-400 uppercase px-2">Period B</span>
                                     <select id="comp-b-year" onchange="updateComparisonAnalysis()" class="bg-transparent text-white text-xs outline-none cursor-pointer">
-                                        ${[2024, 2025, 2026].map(y => `<option value="${y}" class="bg-slate-900 text-white" ${y === 2024 ? 'selected' : ''}>${y}</option>`).join('')}
+                                        ${[2024, 2025, 2026].map(y => `<option value="${y}" class="bg-slate-900 text-white" ${y === 2025 ? 'selected' : ''}>${y}</option>`).join('')}
                                     </select>
                                     <select id="comp-b-month" onchange="window.updateComparisonAnalysis()" class="bg-transparent text-white text-xs outline-none cursor-pointer">
                                         <option value="all" class="bg-slate-900 text-white">Full Year</option>
@@ -1421,7 +1870,7 @@
                     { v: '04', n: 'April' }, { v: '05', n: 'May' }, { v: '06', n: 'June' },
                     { v: '07', n: 'July' }, { v: '08', n: 'August' }, { v: '09', n: 'September' },
                     { v: '10', n: 'October' }, { v: '11', n: 'November' }, { v: '12', n: 'December' }
-                ].map(m => `<option value="${m.v}" class="bg-slate-900 text-white" ${m.v === '02' ? 'selected' : ''}>${m.n}</option>`).join('')}
+                ].map(m => `<option value="${m.v}" class="bg-slate-900 text-white">${m.n}</option>`).join('')}
                                     </select>
                                 </div>
                                 <select id="comp-chart-type" onchange="updateComparisonAnalysis()" 
@@ -1477,32 +1926,58 @@
                     gradient: 'from-orange-500/10 to-red-500/10',
                     text: 'text-orange-400',
                     iconBg: 'bg-orange-500/10',
-                    glowClass: 'kpi-glow-orange'
+                    glowClass: 'kpi-glow-orange',
+                    glowTextClass: 'glow-text-orange',
+                    image: 'images/waste_kpi_bg.png'
                 };
-                if (m.includes('oee') || m.includes('efficiency') || m.includes('performance')) return {
+                if (m.includes('quality')) return {
                     gradient: 'from-emerald-500/10 to-green-500/10',
                     text: 'text-emerald-400',
                     iconBg: 'bg-emerald-500/10',
-                    glowClass: 'kpi-glow-emerald'
+                    glowClass: 'kpi-glow-emerald',
+                    glowTextClass: 'glow-text-emerald',
+                    image: 'images/proper_quality_bg.png'
                 };
-                if (m.includes('down') || m.includes('stop')) return {
+                if (m.includes('oee')) return {
+                    gradient: 'from-emerald-500/10 to-green-500/10',
+                    text: 'text-emerald-400',
+                    iconBg: 'bg-emerald-500/10',
+                    glowClass: 'kpi-glow-emerald',
+                    glowTextClass: 'glow-text-emerald',
+                    image: 'images/quality_kpi_bg.png'
+                };
+                if (m.includes('performance') || m.includes('availability') || m.includes('grade') || m.includes('down') || m.includes('stop')) return {
                     gradient: 'from-red-500/10 to-rose-500/10',
                     text: 'text-red-400',
                     iconBg: 'bg-red-500/10',
-                    glowClass: 'kpi-glow-red'
+                    glowClass: 'kpi-glow-red',
+                    glowTextClass: 'glow-text-red',
+                    image: 'images/uptime_kpi_bg.png'
                 };
-                if (m.includes('cost') || m.includes('value')) return {
+                if (m.includes('rs/kg') || m.includes('cost') || m.includes('rate')) return {
                     gradient: 'from-yellow-500/10 to-amber-500/10',
                     text: 'text-yellow-400',
                     iconBg: 'bg-yellow-500/10',
-                    glowClass: 'kpi-glow-yellow'
+                    glowClass: 'kpi-glow-yellow',
+                    glowTextClass: 'glow-text-yellow',
+                    image: 'images/cost_rate_kpi_bg.png'
+                };
+                if (m.includes('kwh') || m.includes('value') || m.includes('energy')) return {
+                    gradient: 'from-yellow-500/10 to-amber-500/10',
+                    text: 'text-yellow-400',
+                    iconBg: 'bg-yellow-500/10',
+                    glowClass: 'kpi-glow-yellow',
+                    glowTextClass: 'glow-text-yellow',
+                    image: 'images/energy_kpi_bg.png'
                 };
                 // Default / Production
                 return {
                     gradient: 'from-blue-600/10 to-cyan-500/10',
                     text: 'text-blue-400',
                     iconBg: 'bg-blue-500/10',
-                    glowClass: 'kpi-glow-blue'
+                    glowClass: 'kpi-glow-blue',
+                    glowTextClass: 'glow-text-blue',
+                    image: 'images/production_kpi_bg.png'
                 };
             };
 
@@ -1537,12 +2012,12 @@
 
                 let displayVal = '0';
                 if (value !== undefined && value !== null) {
-                    if (metric.includes('%')) displayVal = (value * 100).toFixed(2) + '<span class="text-sm ml-1 opacity-70">%</span>';
-                    else if (metric === 'KWh/Kg Plant') displayVal = value.toFixed(2) + '<span class="text-sm ml-1 opacity-70">KWh</span>';
-                    else if (metric === 'Rs/Kg Plant') displayVal = value.toFixed(2) + '<span class="text-sm ml-1 opacity-70">Rs</span>';
+                    if (metric.includes('%')) displayVal = (value * 100).toFixed(2) + '<span class="text-xs ml-1 font-bold text-slate-400" style="-webkit-text-fill-color: #94a3b8;">%</span>';
+                    else if (metric === 'KWh/Kg Plant') displayVal = value.toFixed(2) + '<span class="text-xs ml-1 font-bold text-slate-400" style="-webkit-text-fill-color: #94a3b8;">KWh</span>';
+                    else if (metric === 'Rs/Kg Plant') displayVal = value.toFixed(2) + '<span class="text-xs ml-1 font-bold text-slate-400" style="-webkit-text-fill-color: #94a3b8;">Rs</span>';
                     else if (isRatioMetric(metric)) displayVal = value.toFixed(2);
-                    else if (metric.toLowerCase().includes('production') || metric.toLowerCase().includes('waste')) displayVal = Math.round(value).toLocaleString() + '<span class="text-sm ml-1 opacity-70">kg</span>';
-                    else if (metric.toLowerCase().includes('down time')) displayVal = Math.round(value).toLocaleString() + '<span class="text-sm ml-1 opacity-70">hrs</span>';
+                    else if (metric.toLowerCase().includes('production') || metric.toLowerCase().includes('waste')) displayVal = Math.round(value).toLocaleString() + '<span class="text-xs ml-1 font-bold text-slate-400" style="-webkit-text-fill-color: #94a3b8;">kg</span>';
+                    else if (metric.toLowerCase().includes('down time')) displayVal = Math.round(value).toLocaleString() + '<span class="text-xs ml-1 font-bold text-slate-400" style="-webkit-text-fill-color: #94a3b8;">hrs</span>';
                     else displayVal = Math.round(value).toLocaleString();
                 }
 
@@ -1553,16 +2028,17 @@
                 return `
                     <div class="glass-panel p-5 rounded-2xl relative overflow-hidden group transition-all duration-300 cursor-pointer flex flex-col justify-between h-32 border ${style.glowClass} ${activeClass}"
                         onclick="toggleKPISelection('${metric}')" 
-                        data-metric="${metric}">
+                        data-metric="${metric}"
+                        style="background: linear-gradient(135deg, ${isSelected ? 'rgba(8, 12, 22, 0.72)' : 'rgba(8, 12, 22, 0.82)'} 0%, rgba(4, 6, 12, 0.88) 100%) padding-box, url('${style.image}') center/cover no-repeat padding-box;">
                         
                         <!-- Background Gradient -->
-                        <div class="absolute inset-0 bg-gradient-to-br ${style.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                        ${isSelected ? `<div class="absolute inset-0 bg-gradient-to-br ${style.gradient} opacity-30"></div>` : ''}
+                        <div class="absolute inset-0 bg-gradient-to-br ${style.gradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0"></div>
+                        ${isSelected ? `<div class="absolute inset-0 bg-gradient-to-br ${style.gradient} opacity-30 z-0"></div>` : ''}
 
                         <div class="flex justify-between items-start relative z-10">
                             <div>
                                 <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1 group-hover:text-white transition-colors">${metric}</h4>
-                                <div class="text-2xl font-black text-white tracking-tight flex items-baseline">
+                                <div class="text-2xl font-black tracking-tight flex items-baseline ${style.glowTextClass}">
                                     ${displayVal}
                                 </div>
                             </div>
@@ -1719,6 +2195,23 @@
             if (btn) btn.innerText = window.comparisonKPIs.length ? `${window.comparisonKPIs.length} Selected` : 'Select KPIs';
         }
 
+        // Dedicated filter for Comparison Engine — bypasses global page filters
+        function getComparisonData(data, plant, year, month) {
+            if (!data || !Array.isArray(data)) return [];
+            return data.filter(row => {
+                const plantMatch = plant === 'all' || row.Plant === plant;
+                const dateVal = row.Month || row.Date || '';
+                if (!dateVal) return plantMatch;
+                const yearMatch = !year || year === 'all' || dateVal.startsWith(year);
+                let monthMatch = true;
+                if (month && month !== 'all') {
+                    const rowMonth = (dateVal.split('-')[1] || '').padStart(2, '0');
+                    monthMatch = rowMonth === month.padStart(2, '0');
+                }
+                return plantMatch && yearMatch && monthMatch;
+            });
+        }
+
         window.updateComparisonAnalysis = function () {
             const yearA = document.getElementById('comp-a-year')?.value;
             const monthA = document.getElementById('comp-a-month')?.value;
@@ -1726,8 +2219,8 @@
             const monthB = document.getElementById('comp-b-month')?.value;
             const chartType = document.getElementById('comp-chart-type')?.value || 'bar';
 
-            const dataA = getFilteredData(dashboardData.mainData, activePlant, yearA, monthA);
-            const dataB = getFilteredData(dashboardData.mainData, activePlant, yearB, monthB);
+            const dataA = getComparisonData(dashboardData.mainData, activePlant, yearA, monthA);
+            const dataB = getComparisonData(dashboardData.mainData, activePlant, yearB, monthB);
 
             // Use comparison KPIs if selected, otherwise fallback to global or default
             const activeMetrics = window.comparisonKPIs.length > 0 ? window.comparisonKPIs : (window.selectedKPIs && window.selectedKPIs.length > 0 ? window.selectedKPIs : pinnedKPIs.slice(0, 5));
@@ -1767,8 +2260,17 @@
                 const arrow = isPositive ? '↑' : (diff < 0 ? '↓' : '→');
 
                 const format = (v) => {
+                    const ml = metric.toLowerCase();
                     if (metric.includes('%')) return (v * 100).toFixed(2) + '%';
                     if (isRatioMetric(metric)) return v.toFixed(2);
+                    if (ml.includes('production') || ml.includes('waste')) {
+                        const tons = v / 1000;
+                        return tons >= 1000
+                            ? (tons / 1000).toFixed(2) + 'k T'
+                            : Math.round(tons).toLocaleString() + ' T';
+                    }
+                    if (ml.includes('down time') || ml.includes('downtime')) return Math.round(v).toLocaleString() + ' hrs';
+                    if (ml.includes('kwh')) return v.toFixed(2) + ' KWh';
                     return Math.round(v).toLocaleString();
                 };
 
@@ -1820,14 +2322,25 @@
                 'rgb(251, 146, 60)', 'rgb(236, 72, 153)', 'rgb(245, 158, 11)'
             ];
 
-            // Analyze metrics for dual axis
-            const percentMetrics = metrics.filter(m => m.includes('%') || m.includes('Ratio') || m.includes('Efficiency') || m.includes('Performance') || m.includes('Yield') || m.includes('Quality') || m.includes('Availability'));
-            const numberMetrics = metrics.filter(m => !percentMetrics.includes(m));
-            const useDualAxis = percentMetrics.length > 0 && numberMetrics.length > 0;
+            // Analyze metrics for tri-axis
+            const percentMetrics = metrics.filter(m =>
+                m.includes('%') || m.includes('Ratio') || m.includes('Efficiency') ||
+                m.includes('Performance') || m.includes('Yield') || m.includes('Quality') ||
+                m.includes('Availability') || m.includes('OEE')
+            );
+            const timeMetrics = metrics.filter(m =>
+                m.toLowerCase().includes('down time') || m.toLowerCase().includes('downtime') ||
+                m.toLowerCase().includes('mtbf') || m.toLowerCase().includes('mttr') ||
+                m.toLowerCase().includes('uptime') || m.toLowerCase().includes('run time') ||
+                m.toLowerCase().includes('runtime')
+            );
+            const numberMetrics = metrics.filter(m => !percentMetrics.includes(m) && !timeMetrics.includes(m));
+            const useDualAxis = (percentMetrics.length > 0 || timeMetrics.length > 0) && numberMetrics.length > 0;
 
             const getAxisId = (metric) => {
-                if (!useDualAxis) return 'y';
-                return percentMetrics.includes(metric) ? 'y1' : 'y';
+                if (percentMetrics.includes(metric)) return 'y1';
+                if (timeMetrics.includes(metric)) return 'y2';
+                return 'y';
             };
 
             if (chartType === 'radar') {
@@ -1894,13 +2407,24 @@
                         });
                     };
 
+                    const isLine = chartType === 'line' || chartType === 'area';
                     datasets.push({
                         label: `${metric} (${pA.year})`,
                         data: getTrendData(dataA, pA.year),
                         borderColor: color,
-                        backgroundColor: color.replace('rgb', 'rgba').replace(')', ', 0.2)'),
-                        borderWidth: 2,
-                        fill: chartType === 'area',
+                        backgroundColor: isLine
+                            ? (context) => {
+                                const chart = context.chart;
+                                const { ctx, chartArea } = chart;
+                                if (!chartArea) return null;
+                                const gradient = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+                                gradient.addColorStop(0, color.replace('rgb', 'rgba').replace(')', ', 0)'));
+                                gradient.addColorStop(1, color.replace('rgb', 'rgba').replace(')', ', 0.25)'));
+                                return gradient;
+                              }
+                            : color.replace('rgb', 'rgba').replace(')', ', 0.7)'),
+                        borderWidth: isLine ? 2.5 : 1,
+                        fill: isLine,
                         tension: 0.4,
                         yAxisID: getAxisId(metric),
                         borderRadius: chartType === 'bar' ? 6 : 0
@@ -1909,10 +2433,20 @@
                         label: `${metric} (${pB.year})`,
                         data: getTrendData(dataB, pB.year),
                         borderColor: color,
-                        borderDash: [5, 5],
-                        backgroundColor: color.replace('rgb', 'rgba').replace(')', ', 0.1)'),
-                        borderWidth: 2,
-                        fill: chartType === 'area',
+                        borderDash: isLine ? [5, 5] : undefined,
+                        backgroundColor: isLine
+                            ? (context) => {
+                                const chart = context.chart;
+                                const { ctx, chartArea } = chart;
+                                if (!chartArea) return null;
+                                const gradient = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+                                gradient.addColorStop(0, color.replace('rgb', 'rgba').replace(')', ', 0)'));
+                                gradient.addColorStop(1, color.replace('rgb', 'rgba').replace(')', ', 0.12)'));
+                                return gradient;
+                              }
+                            : color.replace('rgb', 'rgba').replace(')', ', 0.4)'),
+                        borderWidth: isLine ? 2.5 : 1,
+                        fill: isLine,
                         tension: 0.4,
                         yAxisID: getAxisId(metric),
                         borderRadius: chartType === 'bar' ? 6 : 0
@@ -2039,6 +2573,15 @@
                 // Actually, let's use the "many datasets" approach but fix the clustering.
                 // By default, Chart.js groups all datasets for a given label.
 
+                // Helper: human-readable period label
+                const fmtPeriod = (p) => {
+                    const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+                    const mName = (p.month && p.month !== 'all') ? ' ' + (months[parseInt(p.month, 10) - 1] || p.month) : '';
+                    return p.year + mName;
+                };
+                const labelA = fmtPeriod(pA);
+                const labelB = fmtPeriod(pB);
+
                 const groupedDatasets = [];
                 metrics.forEach((metric, i) => {
                     const color = compColors[i % compColors.length];
@@ -2052,27 +2595,55 @@
                     dataArrayA[i] = valA;
                     dataArrayB[i] = valB;
 
+                    const isLine = chartType === 'line' || chartType === 'area';
                     groupedDatasets.push({
-                        label: `${metric} (A)`,
+                        label: `${metric} ▸ ${labelA}`,
                         data: dataArrayA,
-                        backgroundColor: color.replace('rgb', 'rgba').replace(')', ', 0.4)'),
+                        backgroundColor: isLine
+                            ? (context) => {
+                                const chart = context.chart;
+                                const { ctx, chartArea } = chart;
+                                if (!chartArea) return null;
+                                const gradient = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+                                gradient.addColorStop(0, color.replace('rgb', 'rgba').replace(')', ', 0)'));
+                                gradient.addColorStop(1, color.replace('rgb', 'rgba').replace(')', ', 0.25)'));
+                                return gradient;
+                              }
+                            : color.replace('rgb', 'rgba').replace(')', ', 0.4)'),
                         borderColor: color,
-                        borderWidth: 1.5,
+                        borderWidth: isLine ? 2.5 : 1.5,
+                        fill: isLine,
+                        tension: 0.4,
                         borderRadius: 4,
                         yAxisID: axis,
                         offset: true,
-                        skipNull: true
+                        skipNull: true,
+                        _periodKey: 'A'
                     });
                     groupedDatasets.push({
-                        label: `${metric} (B)`,
+                        label: `${metric} ▸ ${labelB}`,
                         data: dataArrayB,
-                        backgroundColor: color,
+                        backgroundColor: isLine
+                            ? (context) => {
+                                const chart = context.chart;
+                                const { ctx, chartArea } = chart;
+                                if (!chartArea) return null;
+                                const gradient = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+                                gradient.addColorStop(0, color.replace('rgb', 'rgba').replace(')', ', 0)'));
+                                gradient.addColorStop(1, color.replace('rgb', 'rgba').replace(')', ', 0.12)'));
+                                return gradient;
+                              }
+                            : color,
                         borderColor: color,
-                        borderWidth: 1.5,
+                        borderDash: isLine ? [5, 5] : undefined,
+                        borderWidth: isLine ? 2.5 : 1.5,
+                        fill: isLine,
+                        tension: 0.4,
                         borderRadius: 4,
                         yAxisID: axis,
                         offset: true,
-                        skipNull: true
+                        skipNull: true,
+                        _periodKey: 'B'
                     });
                 });
 
@@ -2092,24 +2663,71 @@
                                     font: { size: 9 },
                                     boxWidth: 10,
                                     padding: 15,
-                                    filter: (item) => item.text.includes('(A)') // Only show (A) in legend to save space?
+                                    // Show all period labels in legend
                                 }
                             },
                             datalabels: {
-                                color: '#fff',
-                                anchor: 'end',
-                                align: 'top',
-                                offset: 4,
-                                font: { weight: 'bold', size: 9 },
-                                formatter: (v, context) => {
-                                    // Handle object-based values (like {y: ...}) which can cause TypeErrors
-                                    const val = (v !== null && typeof v === 'object') ? (v.y ?? v.v ?? 0) : v;
-                                    if (val === null || val === undefined) return '';
-                                    const label = (context && context.dataset && context.dataset.label) || '';
-                                    const m = label.split(' (')[0];
-                                    if (m.includes('%') || m.includes('Ratio') || m.includes('OEE') || m.includes('Efficiency') || isRatioMetric(m)) return (val * 100).toFixed(2) + '%';
-                                    if (Math.abs(val) >= 1000) return (val / 1000).toFixed(2) + 'k';
-                                    return (typeof val === 'number' ? val.toFixed(2) : val);
+                                labels: {
+                                    // ── Value: shown above the bar ──────────────────
+                                    value: {
+                                        anchor: 'end',
+                                        align: 'top',
+                                        offset: 4,
+                                        color: '#ffffff',
+                                        font: { weight: 'bold', size: 9 },
+                                        textAlign: 'center',
+                                        display: (context) => {
+                                            const v = context.dataset.data[context.dataIndex];
+                                            return v !== null && v !== undefined && v !== 0;
+                                        },
+                                        formatter: (v, context) => {
+                                            const val = (v !== null && typeof v === 'object') ? (v.y ?? v.v ?? 0) : v;
+                                            if (!val) return '';
+                                            const label = (context?.dataset?.label) || '';
+                                            const m = label.split(' \u25b8')[0].trim();
+                                            const ml = m.toLowerCase();
+                                            // Ratio / percentage metrics
+                                            if (m.includes('%') || m.includes('Ratio') || m.includes('OEE') || m.includes('Efficiency') || isRatioMetric(m)) {
+                                                return (val * 100).toFixed(2) + '%';
+                                            }
+                                            // Production & Waste: data is in kg → show in Tons
+                                            if (ml.includes('production') || ml.includes('waste')) {
+                                                const tons = val / 1000;
+                                                return tons >= 1000
+                                                    ? (tons / 1000).toFixed(2) + 'k T'
+                                                    : Math.round(tons).toLocaleString() + ' T';
+                                            }
+                                            // Down Time → hours
+                                            if (ml.includes('down time') || ml.includes('downtime')) {
+                                                return Math.round(val).toLocaleString() + ' hrs';
+                                            }
+                                            // Energy metrics
+                                            if (ml.includes('kwh')) {
+                                                return val.toFixed(2) + ' KWh';
+                                            }
+                                            // Generic large numbers
+                                            if (Math.abs(val) >= 1000000) return (val / 1000000).toFixed(2) + 'M';
+                                            if (Math.abs(val) >= 1000) return (val / 1000).toFixed(1) + 'k';
+                                            return typeof val === 'number' ? val.toFixed(1) : val;
+                                        }
+                                    },
+                                    // ── Period: rotated inside the bar ──────────────
+                                    period: {
+                                        anchor: 'center',
+                                        align: 'center',
+                                        rotation: -90,
+                                        color: 'rgba(255, 255, 255, 0.65)',
+                                        font: { weight: 'bold', size: 9, family: "'Space Grotesk', sans-serif" },
+                                        textAlign: 'center',
+                                        display: (context) => {
+                                            const v = context.dataset.data[context.dataIndex];
+                                            return v !== null && v !== undefined && v !== 0;
+                                        },
+                                        formatter: (v, context) => {
+                                            const label = (context?.dataset?.label) || '';
+                                            return label.includes('\u25b8') ? label.split('\u25b8')[1].trim() : '';
+                                        }
+                                    }
                                 }
                             },
                             tooltip: {
@@ -2125,19 +2743,52 @@
                         scales: {
                             y: {
                                 type: 'linear', position: 'left',
-                                ticks: { color: '#94a3b8', font: { size: 10 } },
+                                display: numberMetrics.length > 0,
+                                ticks: {
+                                    color: '#94a3b8', font: { size: 10 },
+                                    callback: (val) => {
+                                        const hasKgMetric = metrics.some(m => m.toLowerCase().includes('production') || m.toLowerCase().includes('waste'));
+                                        if (hasKgMetric) {
+                                            const tons = val / 1000;
+                                            if (tons >= 1000) return (tons / 1000).toFixed(1) + 'k T';
+                                            if (tons > 0) return Math.round(tons).toLocaleString() + ' T';
+                                            return '0';
+                                        }
+                                        if (Math.abs(val) >= 1000000) return (val / 1000000).toFixed(1) + 'M';
+                                        if (Math.abs(val) >= 1000) return (val / 1000).toFixed(0) + 'k';
+                                        return val.toLocaleString();
+                                    }
+                                },
                                 grid: { color: 'rgba(148, 163, 184, 0.05)' },
-                                title: { display: useDualAxis, text: 'Values', color: '#94a3b8', font: { size: 10, weight: 'bold' } }
+                                title: {
+                                    display: true,
+                                    text: metrics.some(m => m.toLowerCase().includes('production') || m.toLowerCase().includes('waste')) ? 'Tons (T)' : 'Values',
+                                    color: '#94a3b8', font: { size: 10, weight: 'bold' }
+                                }
                             },
                             y1: {
                                 type: 'linear', position: 'right',
-                                display: useDualAxis,
+                                display: percentMetrics.length > 0,
                                 grid: { drawOnChartArea: false },
                                 ticks: {
                                     color: '#10b981', font: { size: 10 },
-                                    callback: (v) => (v * 100).toFixed(2) + '%'
+                                    callback: (v) => (v * 100).toFixed(1) + '%'
                                 },
                                 title: { display: true, text: 'Percentages / Ratios', color: '#10b981', font: { size: 10, weight: 'bold' } }
+                            },
+                            y2: {
+                                type: 'linear', position: 'right',
+                                display: timeMetrics.length > 0,
+                                offset: percentMetrics.length > 0,
+                                grid: { drawOnChartArea: false, color: 'rgba(251,146,60,0.05)' },
+                                ticks: {
+                                    color: '#fb923c', font: { size: 10 },
+                                    callback: (v) => {
+                                        if (v >= 1000) return (v / 1000).toFixed(1) + 'k h';
+                                        return Math.round(v).toLocaleString() + ' h';
+                                    }
+                                },
+                                title: { display: true, text: 'Hours (h)', color: '#fb923c', font: { size: 10, weight: 'bold' } }
                             },
                             x: {
                                 ticks: { color: '#94a3b8', font: { size: 10, weight: 'bold' } },
@@ -2169,25 +2820,63 @@
                 : pinnedKPIs.slice(0, 5);
 
             // Analyze metrics to determine axis assignment
-            const percentMetrics = metrics.filter(m => isRatioMetric(m));
-            const numberMetrics = metrics.filter(m => !isRatioMetric(m));
-            const useDualAxis = percentMetrics.length > 0 && numberMetrics.length > 0;
+            const usePercentAxis = metrics.some(m => isRatioMetric(m));
+            const useTimeAxis = metrics.some(m => m.toLowerCase().includes('time') || m.includes('MTBF') || m.includes('MTTR') || m.toLowerCase().includes('hour'));
+            const useValueAxis = metrics.some(m => !isRatioMetric(m) && !(m.toLowerCase().includes('time') || m.includes('MTBF') || m.includes('MTTR') || m.toLowerCase().includes('hour')));
 
-            const colors = [
-                'rgb(59, 130, 246)', 'rgb(16, 185, 129)', 'rgb(139, 92, 246)',
-                'rgb(251, 146, 60)', 'rgb(236, 72, 153)', 'rgb(245, 158, 11)',
-                'rgb(20, 184, 166)', 'rgb(244, 63, 94)', 'rgb(168, 85, 247)',
-                'rgb(34, 197, 94)'
-            ];
+            const getAxisId = (metric) => {
+                return getMetricAxis(metric);
+            };
+
+            const chartScales = {
+                x: {
+                    ticks: { color: '#94a3b8', font: { size: 10 } },
+                    grid: { color: 'rgba(255, 255, 255, 0.04)' }
+                },
+                y: {
+                    type: 'linear',
+                    display: useValueAxis,
+                    position: 'left',
+                    title: { display: true, text: 'Volume / Mass Metrics', color: '#64748b', font: { size: 10, weight: 'bold' } },
+                    ticks: {
+                        color: '#94a3b8',
+                        font: { size: 10 },
+                        callback: (val) => {
+                            if (val >= 1000000) return (val / 1000000).toLocaleString() + 'M';
+                            if (val >= 1000) return (val / 1000).toLocaleString() + 'K';
+                            return val.toLocaleString();
+                        }
+                    },
+                    grid: { color: 'rgba(255, 255, 255, 0.04)' }
+                },
+                y1: {
+                    type: 'linear',
+                    display: usePercentAxis,
+                    position: 'right',
+                    title: { display: true, text: 'Efficiency / Rates (%)', color: '#64748b', font: { size: 10, weight: 'bold' } },
+                    grid: { drawOnChartArea: false },
+                    ticks: {
+                        color: '#94a3b8',
+                        font: { size: 10 },
+                        callback: (val) => (val * 100).toFixed(1) + '%'
+                    }
+                },
+                y2: {
+                    type: 'linear',
+                    display: useTimeAxis,
+                    position: 'right',
+                    title: { display: true, text: 'Time Metrics (Hrs)', color: '#64748b', font: { size: 10, weight: 'bold' } },
+                    grid: { drawOnChartArea: false },
+                    ticks: {
+                        color: '#94a3b8',
+                        font: { size: 10 },
+                        callback: (val) => val.toLocaleString() + ' hrs'
+                    }
+                }
+            };
 
             let datasets = [];
             let config = {};
-
-            // Helper to get axis ID
-            const getAxisId = (metric) => {
-                if (!useDualAxis) return 'y';
-                return isRatioMetric(metric) ? 'y1' : 'y';
-            };
 
             switch (chartType) {
                 case 'line':
@@ -2195,14 +2884,22 @@
                 case 'mixed':
                     datasets = metrics.map((metric, i) => {
                         const type = chartType === 'mixed' ? (i === 0 ? 'bar' : 'line') : chartType;
+                        const isLine = type === 'line';
+                        const color = getMetricColor(metric, i);
                         return {
                             type: type === 'mixed' ? undefined : type, // Only specify type for mixed chart datasets
                             label: metric,
                             data: data.map(d => d[metric] || 0),
-                            borderColor: colors[i],
-                            backgroundColor: type === 'line' || (chartType === 'mixed' && i > 0) ? colors[i].replace('rgb', 'rgba').replace(')', ', 0.1)') : colors[i].replace('rgb', 'rgba').replace(')', ', 0.7)'),
-                            borderWidth: type === 'bar' ? 1 : 2,
+                            borderColor: color,
+                            backgroundColor: isLine
+                                ? (context) => createVerticalGradient(context.chart.ctx, context.chart.chartArea, color, 0.25, 0)
+                                : (context) => createVerticalGradient(context.chart.ctx, context.chart.chartArea, color, 0.85, 0.15),
+                            borderWidth: isLine ? 2.5 : 1.5,
+                            borderRadius: isLine ? 0 : 6,
+                            fill: isLine,
                             tension: 0.4,
+                            pointRadius: isLine ? 3 : 0,
+                            pointHoverRadius: isLine ? 6 : 0,
                             yAxisID: getAxisId(metric)
                         };
                     });
@@ -2211,48 +2908,50 @@
                         type: chartType === 'mixed' ? 'bar' : chartType,
                         data: { labels, datasets },
                         options: {
-                            scales: {
-                                y: {
-                                    type: 'linear',
-                                    display: true,
-                                    position: 'left',
-                                    title: { display: useDualAxis, text: 'Values' },
-                                    ticks: { color: '#94a3b8' },
-                                    grid: { color: 'rgba(148, 163, 184, 0.1)' }
-                                },
-                                y1: {
-                                    type: 'linear',
-                                    display: useDualAxis,
-                                    position: 'right',
-                                    title: { display: true, text: 'Percentage (%)' },
-                                    grid: { drawOnChartArea: false },
-                                    ticks: { color: '#94a3b8' }
-                                }
-                            }
+                            scales: chartScales
                         }
                     };
                     break;
 
                 case 'area':
-                    datasets = metrics.map((metric, i) => ({
-                        label: metric,
-                        data: data.map(d => d[metric] || 0),
-                        borderColor: colors[i],
-                        backgroundColor: colors[i].replace('rgb', 'rgba').replace(')', ', 0.3)'),
-                        fill: true,
-                        tension: 0.4
-                    }));
-                    config = { type: 'line', data: { labels, datasets } };
+                    datasets = metrics.map((metric, i) => {
+                        const color = getMetricColor(metric, i);
+                        return {
+                            label: metric,
+                            data: data.map(d => d[metric] || 0),
+                            borderColor: color,
+                            backgroundColor: (context) => createVerticalGradient(context.chart.ctx, context.chart.chartArea, color, 0.3, 0),
+                            fill: true,
+                            tension: 0.4,
+                            borderWidth: 2.5,
+                            pointRadius: 3,
+                            pointHoverRadius: 6,
+                            yAxisID: getAxisId(metric)
+                        };
+                    });
+                    config = { type: 'line', data: { labels, datasets }, options: { scales: chartScales } };
                     break;
 
                 case 'horizontalBar':
-                    datasets = metrics.map((metric, i) => ({
-                        label: metric,
-                        data: data.map(d => d[metric] || 0),
-                        backgroundColor: colors[i].replace('rgb', 'rgba').replace(')', ', 0.7)'),
-                        borderColor: colors[i],
-                        borderWidth: 1
-                    }));
+                    datasets = metrics.map((metric, i) => {
+                        const color = getMetricColor(metric, i);
+                        return {
+                            label: metric,
+                            data: data.map(d => d[metric] || 0),
+                            backgroundColor: (context) => {
+                                const chart = context.chart;
+                                const { ctx, chartArea } = chart;
+                                if (!chartArea) return color;
+                                const gradient = ctx.createLinearGradient(chartArea.left, 0, chartArea.right, 0);
+                                gradient.addColorStop(0, getRgbaColor(color, 0.15));
+                                gradient.addColorStop(1, getRgbaColor(color, 0.85));
+                                return gradient;
+                            },
+                            borderColor: color,
+                            borderWidth: 1.5,
+                            borderRadius: 6
+                        };
+                    });
                     config = { type: 'bar', data: { labels, datasets }, options: { indexAxis: 'y' } };
                     break;
 
@@ -2261,7 +2960,7 @@
                     // Aggregate data for pie/doughnut
                     datasets = [{
                         data: metrics.map(metric => data.reduce((sum, d) => sum + (d[metric] || 0), 0)),
-                        backgroundColor: colors.slice(0, metrics.length),
+                        backgroundColor: metrics.map((metric, i) => getMetricColor(metric, i)),
                         borderColor: '#1e293b',
                         borderWidth: 2
                     }];
@@ -2274,110 +2973,133 @@
 
                 case 'radar':
                 case 'polarArea':
-                    datasets = [{
-                        label: 'Metrics',
-                        data: metrics.map(metric => data.reduce((sum, d) => sum + (d[metric] || 0), 0) / data.length),
-                        backgroundColor: 'rgba(59, 130, 246, 0.2)',
-                        borderColor: 'rgb(59, 130, 246)',
-                        borderWidth: 2
-                    }];
-                    config = { type: chartType, data: { labels: metrics, datasets } };
-                    break;
-
-                case 'mixed':
-                    datasets = [
-                        {
-                            type: 'bar',
-                            label: metrics[0] || 'Metric 1',
-                            data: data.map(d => d[metrics[0]] || 0),
-                            backgroundColor: colors[0].replace('rgb', 'rgba').replace(')', ', 0.7)'),
-                            borderColor: colors[0],
-                            borderWidth: 1
-                        },
-                        {
-                            type: 'line',
-                            label: metrics[1] || 'Metric 2',
-                            data: data.map(d => d[metrics[1]] || 0),
-                            borderColor: colors[1],
-                            backgroundColor: colors[1].replace('rgb', 'rgba').replace(')', ', 0.1)'),
-                            tension: 0.4
-                        }
-                    ];
-                    config = { type: 'bar', data: { labels, datasets } };
+                    {
+                        const activeColor = COLORS[activePlant] || 'rgb(56, 189, 248)';
+                        datasets = [{
+                            label: 'Metrics',
+                            data: metrics.map(metric => data.reduce((sum, d) => sum + (d[metric] || 0), 0) / data.length),
+                            backgroundColor: getRgbaColor(activeColor, 0.2),
+                            borderColor: activeColor,
+                            borderWidth: 2,
+                            pointBackgroundColor: activeColor
+                        }];
+                        config = { type: chartType, data: { labels: metrics, datasets } };
+                    }
                     break;
 
                 case 'stacked':
-                    datasets = metrics.map((metric, i) => ({
-                        label: metric,
-                        data: data.map(d => d[metric] || 0),
-                        backgroundColor: colors[i].replace('rgb', 'rgba').replace(')', ', 0.7)'),
-                        borderColor: colors[i],
-                        borderWidth: 1
-                    }));
+                    datasets = metrics.map((metric, i) => {
+                        const color = getMetricColor(metric, i);
+                        return {
+                            label: metric,
+                            data: data.map(d => d[metric] || 0),
+                            backgroundColor: (context) => createVerticalGradient(context.chart.ctx, context.chart.chartArea, color, 0.8, 0.2),
+                            borderColor: color,
+                            borderWidth: 1.5,
+                            borderRadius: 4,
+                            yAxisID: getAxisId(metric)
+                        };
+                    });
                     config = {
                         type: 'bar',
                         data: { labels, datasets },
-                        options: { scales: { x: { stacked: true }, y: { stacked: true } } }
+                        options: {
+                            scales: {
+                                ...chartScales,
+                                x: { ...chartScales.x, stacked: true },
+                                y: { ...chartScales.y, stacked: true }
+                              }
+                        }
                     };
                     break;
 
                 case 'stackedArea':
-                    datasets = metrics.map((metric, i) => ({
-                        label: metric,
-                        data: data.map(d => d[metric] || 0),
-                        borderColor: colors[i],
-                        backgroundColor: colors[i].replace('rgb', 'rgba').replace(')', ', 0.5)'),
-                        fill: true,
-                        tension: 0.4
-                    }));
-                    config = {
-                        type: 'line',
-                        data: { labels, datasets },
-                        options: { scales: { y: { stacked: true } } }
-                    };
-                    break;
-
-                case 'stepped':
-                    datasets = metrics.map((metric, i) => ({
-                        label: metric,
-                        data: data.map(d => d[metric] || 0),
-                        borderColor: colors[i],
-                        backgroundColor: colors[i].replace('rgb', 'rgba').replace(')', ', 0.1)'),
-                        stepped: true
-                    }));
-                    config = { type: 'line', data: { labels, datasets } };
-                    break;
-
-                case 'multiAxis':
-                    datasets = metrics.slice(0, 2).map((metric, i) => ({
-                        label: metric,
-                        data: data.map(d => d[metric] || 0),
-                        borderColor: colors[i],
-                        backgroundColor: colors[i].replace('rgb', 'rgba').replace(')', ', 0.1)'),
-                        tension: 0.4,
-                        yAxisID: i === 0 ? 'y' : 'y1'
-                    }));
+                    datasets = metrics.map((metric, i) => {
+                        const color = getMetricColor(metric, i);
+                        return {
+                            label: metric,
+                            data: data.map(d => d[metric] || 0),
+                            borderColor: color,
+                            backgroundColor: (context) => createVerticalGradient(context.chart.ctx, context.chart.chartArea, color, 0.45, 0.05),
+                            fill: true,
+                            tension: 0.4,
+                            borderWidth: 2,
+                            pointRadius: 2,
+                            pointHoverRadius: 5,
+                            yAxisID: getAxisId(metric)
+                        };
+                    });
                     config = {
                         type: 'line',
                         data: { labels, datasets },
                         options: {
                             scales: {
-                                y: { type: 'linear', position: 'left', ticks: { color: '#94a3b8' }, grid: { color: 'rgba(148, 163, 184, 0.1)' } },
-                                y1: { type: 'linear', position: 'right', ticks: { color: '#94a3b8' }, grid: { display: false } }
+                                ...chartScales,
+                                y: { ...chartScales.y, stacked: true }
                             }
                         }
                     };
                     break;
 
+                case 'stepped':
+                    datasets = metrics.map((metric, i) => {
+                        const color = getMetricColor(metric, i);
+                        return {
+                            label: metric,
+                            data: data.map(d => d[metric] || 0),
+                            borderColor: color,
+                            backgroundColor: (context) => createVerticalGradient(context.chart.ctx, context.chart.chartArea, color, 0.15, 0),
+                            fill: true,
+                            stepped: true,
+                            borderWidth: 2.5,
+                            yAxisID: getAxisId(metric)
+                        };
+                    });
+                    config = { type: 'line', data: { labels, datasets }, options: { scales: chartScales } };
+                    break;
+
+                case 'multiAxis':
+                    datasets = metrics.slice(0, 3).map((metric, i) => {
+                        const color = getMetricColor(metric, i);
+                        return {
+                            label: metric,
+                            data: data.map(d => d[metric] || 0),
+                            borderColor: color,
+                            backgroundColor: (context) => createVerticalGradient(context.chart.ctx, context.chart.chartArea, color, 0.25, 0),
+                            fill: true,
+                            tension: 0.4,
+                            borderWidth: 2.5,
+                            pointRadius: 3,
+                            pointHoverRadius: 6,
+                            yAxisID: getAxisId(metric)
+                        };
+                    });
+                    config = {
+                        type: 'line',
+                        data: { labels, datasets },
+                        options: {
+                            scales: chartScales
+                        }
+                    };
+                    break;
+
                 default:
-                    datasets = metrics.map((metric, i) => ({
-                        label: metric,
-                        data: data.map(d => d[metric] || 0),
-                        borderColor: colors[i],
-                        backgroundColor: colors[i].replace('rgb', 'rgba').replace(')', ', 0.1)'),
-                        tension: 0.4
-                    }));
-                    config = { type: 'line', data: { labels, datasets } };
+                    datasets = metrics.map((metric, i) => {
+                        const color = getMetricColor(metric, i);
+                        return {
+                            label: metric,
+                            data: data.map(d => d[metric] || 0),
+                            borderColor: color,
+                            backgroundColor: (context) => createVerticalGradient(context.chart.ctx, context.chart.chartArea, color, 0.25, 0),
+                            fill: true,
+                            tension: 0.4,
+                            borderWidth: 2.5,
+                            pointRadius: 3,
+                            pointHoverRadius: 6,
+                            yAxisID: getAxisId(metric)
+                        };
+                    });
+                    config = { type: 'line', data: { labels, datasets }, options: { scales: chartScales } };
             }
 
             // Merge with default options
@@ -2400,8 +3122,12 @@
                             label: function (context) {
                                 let label = (context && context.dataset && context.dataset.label) || '';
                                 let value = context.parsed.y;
-                                if (label.includes('%') || label.includes('Ratio')) {
+                                const yAxisID = context.dataset.yAxisID;
+                                if (yAxisID === 'y1') {
                                     return `${label}: ${(value * 100).toFixed(2)}%`;
+                                }
+                                if (yAxisID === 'y2') {
+                                    return `${label}: ${value.toLocaleString()} hrs`;
                                 }
                                 return `${label}: ${(value || 0).toLocaleString()}`;
                             }
@@ -2419,13 +3145,15 @@
                         },
                         formatter: (value, context) => {
                             const label = (context && context.dataset && context.dataset.label) || '';
-                            // Handle object-based values (like {y: ...}) which can cause TypeErrors in parseFloat
                             const val = (value !== null && typeof value === 'object') ? (value.y ?? value.v ?? 0) : value;
                             const numValue = parseFloat(val);
 
                             if (isNaN(numValue)) return val;
-                            if (label.includes('%') || label.toLowerCase().includes('ratio') || isRatioMetric(label)) return (numValue * 100).toFixed(2) + '%';
-                            if (Math.abs(numValue) >= 1000) return (numValue / 1000).toFixed(2) + 'k';
+                            const yAxisID = context.dataset.yAxisID;
+                            if (yAxisID === 'y1') return (numValue * 100).toFixed(1) + '%';
+                            if (yAxisID === 'y2') return numValue.toLocaleString() + 'h';
+                            if (Math.abs(numValue) >= 1000000) return (numValue / 1000000).toFixed(1) + 'M';
+                            if (Math.abs(numValue) >= 1000) return (numValue / 1000).toFixed(1) + 'k';
                             return numValue.toLocaleString();
                         },
                         display: true,
@@ -2433,16 +3161,7 @@
                         clip: false
                     }
                 },
-                scales: {
-                    x: {
-                        ticks: { color: '#94a3b8' },
-                        grid: { color: 'rgba(148, 163, 184, 0.1)' }
-                    },
-                    y: {
-                        ticks: { color: '#94a3b8' },
-                        grid: { color: 'rgba(148, 163, 184, 0.1)' }
-                    }
-                }
+                scales: chartScales
             };
 
             config.options = { ...defaultOptions, ...(config.options || {}) };
@@ -2499,24 +3218,59 @@
             // Helper for clickable cards
             const renderClickableCard = (title, value, color, icon, avgValue) => {
                 const cardIcon = icon || getIcon(title);
-                return `
-                <div class="glass-panel p-4 rounded-xl border-t-4 border-${color}-500 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300 cursor-pointer kpi-card ${window.selectedKPIs?.includes(title) ? `ring-2 ring-${color}-400 bg-${color}-500/20` : ''}" 
-                    onclick="toggleKPISelection('${title}')">
-                    
-                    <div class="absolute top-0 right-0 p-3 opacity-10 group-hover:opacity-20 transition-opacity">
-                        <i class="fa-solid ${cardIcon} text-4xl text-${color}-500"></i>
-                    </div>
-                    ${window.selectedKPIs?.includes(title) ? `<div class="absolute top-2 right-2"><i class="fa-solid fa-check-circle text-${color}-400 text-lg"></i></div>` : ''}
-                    <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">${title}</h4>
-                    <span class="text-2xl font-bold text-white mb-2">${value}</span>
+                const isSelected = window.selectedKPIs?.includes(title);
+                const glowClass = `kpi-glow-${color}`;
+                const activeClass = isSelected ? 'selected' : '';
+                
+                let cardImg = 'images/slitter_machine_bg.png';
+                if (title.toLowerCase().includes('production')) {
+                    cardImg = 'images/slitter_machine_bg.png';
+                } else if (title.toLowerCase().includes('waste')) {
+                    cardImg = 'images/waste_kpi_bg.png';
+                } else if (title.toLowerCase().includes('down time')) {
+                    cardImg = 'images/uptime_kpi_bg.png';
+                }
 
-                    ${avgValue ? `
-                        <div class="mt-auto flex justify-end">
-                            <div class="bg-slate-900/50 border border-white/5 backdrop-blur-md px-1.5 py-0.5 rounded text-[8px] font-black tracking-tighter text-slate-400 group-hover:text-white transition-colors inline-block">
-                                ${year !== 'all' ? year : 'FLEET'} AVG: ${Math.round(avgValue).toLocaleString()}
+                const getGradientClass = (col) => {
+                    if (col === 'blue') return 'from-blue-600/10 to-cyan-500/10';
+                    if (col === 'orange') return 'from-orange-500/10 to-red-500/10';
+                    if (col === 'yellow') return 'from-yellow-500/10 to-amber-500/10';
+                    if (col === 'red') return 'from-red-500/10 to-rose-500/10';
+                    return `from-${col}-500/10 to-${col}-600/10`;
+                };
+
+                return `
+                <div class="glass-panel p-5 rounded-2xl relative overflow-hidden group transition-all duration-300 cursor-pointer flex flex-col justify-between h-32 border ${glowClass} ${activeClass}" 
+                    onclick="toggleKPISelection('${title}')"
+                    style="background: linear-gradient(135deg, ${isSelected ? 'rgba(8, 12, 22, 0.72)' : 'rgba(8, 12, 22, 0.82)'} 0%, rgba(4, 6, 12, 0.88) 100%) padding-box, url('${cardImg}') center/cover no-repeat padding-box;">
+                    
+                    <!-- Background Gradient -->
+                    <div class="absolute inset-0 bg-gradient-to-br ${getGradientClass(color)} opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-0"></div>
+                    ${isSelected ? `<div class="absolute inset-0 bg-gradient-to-br ${getGradientClass(color)} opacity-30 z-0"></div>` : ''}
+
+                    <div class="flex justify-between items-start relative z-10">
+                        <div>
+                            <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1 group-hover:text-white transition-colors">${title}</h4>
+                            <div class="text-2xl font-black tracking-tight flex items-baseline glow-text-${color}">
+                                ${value}
                             </div>
                         </div>
-                    ` : ''}
+                        <div class="w-10 h-10 rounded-xl icon-container-gloss flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                            <i class="fa-solid ${cardIcon} text-lg text-${color}-400"></i>
+                        </div>
+                    </div>
+
+                    <div class="relative z-10 flex items-center justify-between gap-2 mt-auto">
+                        ${isSelected
+                            ? `<span class="text-[10px] font-bold text-${color}-400 flex items-center gap-1"><i class="fa-solid fa-check-circle"></i> Active</span>`
+                            : `<span class="text-[10px] text-slate-500 font-medium group-hover:text-slate-300 transition-colors">${year === 'all' ? 'All Time' : year} Data</span>`
+                        }
+                        ${avgValue ? `
+                            <div class="bg-blue-500/10 border border-white/5 backdrop-blur-md px-1.5 py-0.5 rounded text-[8px] font-black tracking-tighter text-slate-400 group-hover:text-white transition-colors">
+                                ${year !== 'all' ? year : 'FLEET'} AVG: ${Math.round(avgValue).toLocaleString()}
+                            </div>
+                        ` : ''}
+                    </div>
                 </div>
                 `;
             };
@@ -2601,24 +3355,61 @@
             const labels = data.map(d => d.Month ? formatMonthLabel(d.Month.substring(0, 7)) : '');
 
             // Analyze metrics to determine axis assignment
-            const hasProduction = metrics.includes('Production');
-            const otherMetrics = metrics.filter(m => m !== 'Production');
-            const useDualAxis = hasProduction && otherMetrics.length > 0;
+            const usePercentAxis = metrics.some(m => isRatioMetric(m));
+            const useTimeAxis = metrics.some(m => m.toLowerCase().includes('time') || m.includes('MTBF') || m.includes('MTTR') || m.toLowerCase().includes('hour'));
+            const useValueAxis = metrics.some(m => !isRatioMetric(m) && !(m.toLowerCase().includes('time') || m.includes('MTBF') || m.includes('MTTR') || m.toLowerCase().includes('hour')));
 
-            const colors = {
-                'Production': 'rgb(59, 130, 246)',
-                'Waste': 'rgb(251, 146, 60)',
-                'Waste %': 'rgb(234, 179, 8)',
-                'Down Time': 'rgb(239, 68, 68)'
+            const getAxisId = (metric) => {
+                return getMetricAxis(metric);
             };
 
-            // Helper to get axis ID
-            const getAxisId = (metric) => {
-                if (!useDualAxis) return 'y';
-                // If dual axis is active:
-                // Production goes to 'y' (Left)
-                // Everything else goes to 'y1' (Right)
-                return metric === 'Production' ? 'y' : 'y1';
+            const chartScales = {
+                x: {
+                    stacked: chartType.includes('stacked'),
+                    ticks: { color: '#94a3b8', font: { size: 10 } },
+                    grid: { color: 'rgba(255, 255, 255, 0.04)' }
+                },
+                y: {
+                    stacked: chartType.includes('stacked'),
+                    type: 'linear',
+                    display: useValueAxis,
+                    position: 'left',
+                    title: { display: true, text: 'Volume / Mass Metrics', color: '#64748b', font: { size: 10, weight: 'bold' } },
+                    ticks: {
+                        color: '#94a3b8',
+                        font: { size: 10 },
+                        callback: (val) => {
+                            if (val >= 1000000) return (val / 1000000).toLocaleString() + 'M';
+                            if (val >= 1000) return (val / 1000).toLocaleString() + 'K';
+                            return val.toLocaleString();
+                        }
+                    },
+                    grid: { color: 'rgba(255, 255, 255, 0.04)' }
+                },
+                y1: {
+                    type: 'linear',
+                    display: usePercentAxis,
+                    position: 'right',
+                    title: { display: true, text: 'Efficiency / Rates (%)', color: '#64748b', font: { size: 10, weight: 'bold' } },
+                    grid: { drawOnChartArea: false },
+                    ticks: {
+                        color: '#94a3b8',
+                        font: { size: 10 },
+                        callback: (val) => (val * 100).toFixed(1) + '%'
+                    }
+                },
+                y2: {
+                    type: 'linear',
+                    display: useTimeAxis,
+                    position: 'right',
+                    title: { display: true, text: 'Time Metrics (Hrs)', color: '#64748b', font: { size: 10, weight: 'bold' } },
+                    grid: { drawOnChartArea: false },
+                    ticks: {
+                        color: '#94a3b8',
+                        font: { size: 10 },
+                        callback: (val) => val.toLocaleString() + ' hrs'
+                    }
+                }
             };
 
             let datasets = [];
@@ -2632,9 +3423,9 @@
                     const latestData = data[data.length - 1] || {};
                     datasets = [{
                         data: metrics.map(m => latestData[m] || 0),
-                        backgroundColor: metrics.map(m => colors[m] || 'rgb(148, 163, 184)'),
-                        borderColor: 'rgba(255, 255, 255, 0.1)',
-                        borderWidth: 1
+                        backgroundColor: metrics.map(m => getMetricColor(m)),
+                        borderColor: 'rgba(255, 255, 255, 0.05)',
+                        borderWidth: 1.5
                     }];
                     config = {
                         type: chartType,
@@ -2645,17 +3436,21 @@
 
                 case 'radar':
                     const latestRadar = data[data.length - 1] || {};
-                    datasets = [{
-                        label: 'Current Status',
-                        data: metrics.map(m => latestRadar[m] || 0),
-                        backgroundColor: 'rgba(59, 130, 246, 0.2)',
-                        borderColor: 'rgb(59, 130, 246)',
-                        pointBackgroundColor: 'rgb(59, 130, 246)'
-                    }];
+                    {
+                        const activeColor = COLORS[activePlant] || 'rgb(56, 189, 248)';
+                        datasets = [{
+                            label: 'Current Status',
+                            data: metrics.map(m => latestRadar[m] || 0),
+                            backgroundColor: getRgbaColor(activeColor, 0.2),
+                            borderColor: activeColor,
+                            pointBackgroundColor: activeColor,
+                            borderWidth: 2
+                        }];
+                    }
                     config = {
                         type: 'radar',
                         data: { labels: metrics, datasets },
-                        options: { scales: { r: { grid: { color: 'rgba(255,255,255,0.1)' }, pointLabels: { color: '#94a3b8' } } } }
+                        options: { scales: { r: { grid: { color: 'rgba(255,255,255,0.04)' }, pointLabels: { color: '#94a3b8' } } } }
                     };
                     break;
 
@@ -2668,16 +3463,22 @@
                 default:
                     datasets = metrics.map((metric, i) => {
                         const type = chartType.includes('stacked') ? 'bar' : (chartType === 'area' ? 'line' : (chartType === 'mixed' ? (i === 0 ? 'bar' : 'line') : (chartType || 'line')));
-                        const color = colors[metric] || 'rgb(148, 163, 184)';
+                        const color = getMetricColor(metric);
+                        const isLine = type === 'line';
                         return {
                             type: type === 'mixed' ? undefined : type,
                             label: metric,
                             data: data.map(d => d[metric] || 0),
                             borderColor: color,
-                            backgroundColor: (type === 'line' || chartType === 'area' || chartType === 'stackedArea') ? color.replace('rgb', 'rgba').replace(')', ', 0.1)') : color.replace('rgb', 'rgba').replace(')', ', 0.7)'),
-                            borderWidth: (type === 'bar' || type === 'mixed') ? 1 : 2,
-                            fill: (chartType === 'area' || chartType === 'stackedArea'),
+                            backgroundColor: isLine
+                                ? (context) => createVerticalGradient(context.chart.ctx, context.chart.chartArea, color, 0.25, 0)
+                                : (context) => createVerticalGradient(context.chart.ctx, context.chart.chartArea, color, 0.85, 0.15),
+                            borderWidth: isLine ? 2.5 : 1.5,
+                            borderRadius: isLine ? 0 : 6,
+                            fill: isLine,
                             tension: 0.4,
+                            pointRadius: isLine ? 3 : 0,
+                            pointHoverRadius: isLine ? 6 : 0,
                             yAxisID: getAxisId(metric)
                         };
                     });
@@ -2686,20 +3487,7 @@
                         type: (chartType === 'mixed' || chartType.includes('stacked')) ? 'bar' : (chartType === 'area' ? 'line' : (chartType || 'line')),
                         data: { labels, datasets },
                         options: {
-                            scales: {
-                                x: { stacked: chartType.includes('stacked') },
-                                y: {
-                                    stacked: chartType.includes('stacked'),
-                                    type: 'linear', position: 'left',
-                                    ticks: { color: '#94a3b8' },
-                                    grid: { color: 'rgba(148, 163, 184, 0.1)' }
-                                },
-                                y1: {
-                                    display: useDualAxis, position: 'right',
-                                    grid: { drawOnChartArea: false },
-                                    ticks: { color: '#94a3b8' }
-                                }
-                            }
+                            scales: chartScales
                         }
                     };
                     break;
@@ -2712,18 +3500,42 @@
                 interaction: { mode: 'index', intersect: false },
                 plugins: {
                     legend: { labels: { color: '#fff' } },
+                    tooltip: {
+                        backgroundColor: 'rgba(15, 23, 42, 0.95)',
+                        padding: 12,
+                        cornerRadius: 12,
+                        callbacks: {
+                            label: function (context) {
+                                let label = (context && context.dataset && context.dataset.label) || '';
+                                let value = context.parsed.y;
+                                const yAxisID = context.dataset.yAxisID;
+                                if (yAxisID === 'y1') {
+                                    return `${label}: ${(value * 100).toFixed(2)}%`;
+                                }
+                                if (yAxisID === 'y2') {
+                                    return `${label}: ${value.toLocaleString()} hrs`;
+                                }
+                                return `${label}: ${(value || 0).toLocaleString()}`;
+                            }
+                        }
+                    },
                     datalabels: {
                         color: '#fff',
                         anchor: 'end',
                         align: 'top',
                         font: { weight: 'bold', size: 10 },
-                        formatter: (value) => {
-                            // Handle object-based values
-                            const v = (value !== null && typeof value === 'object') ? (value.y ?? value.v ?? 0) : value;
-                            const val = parseFloat(v);
-                            if (isNaN(val)) return v;
-                            if (Math.abs(val) >= 1000) return (val / 1000).toFixed(2) + 'k';
-                            return val.toFixed(2);
+                        formatter: (value, context) => {
+                            const label = (context && context.dataset && context.dataset.label) || '';
+                            const val = (value !== null && typeof value === 'object') ? (value.y ?? value.v ?? 0) : value;
+                            const numValue = parseFloat(val);
+
+                            if (isNaN(numValue)) return val;
+                            const yAxisID = context.dataset.yAxisID;
+                            if (yAxisID === 'y1') return (numValue * 100).toFixed(1) + '%';
+                            if (yAxisID === 'y2') return numValue.toLocaleString() + 'h';
+                            if (Math.abs(numValue) >= 1000000) return (numValue / 1000000).toFixed(1) + 'M';
+                            if (Math.abs(numValue) >= 1000) return (numValue / 1000).toFixed(1) + 'k';
+                            return numValue.toLocaleString();
                         },
                         display: 'auto'
                     }
@@ -2748,6 +3560,16 @@
             // Get Unique Product Types
             const productTypes = [...new Set(plantProducts.map(p => p['Product Type']).filter(Boolean))];
 
+            // Map active plant to dynamic film roll background image
+            let rollImage = 'images/bopet_roll_bg.png';
+            if (activePlant === 'PETPAK') {
+                rollImage = 'images/bopet_roll_bg.png';
+            } else if (activePlant === 'GPAK' || activePlant === 'IPAK') {
+                rollImage = 'images/bopp_roll_bg.png';
+            } else if (activePlant === 'CPAK') {
+                rollImage = 'images/cpp_roll_bg.png';
+            }
+
             // View 1: Product Type Selection
             if (!activeProductType) {
                 container.innerHTML = `
@@ -2757,12 +3579,13 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 ${productTypes.map(type => `
                 <div onclick="selectProductType('${type}')" 
-                    class="product-type-card p-6 rounded-2xl cursor-pointer group">
+                    class="product-type-card p-6 rounded-2xl cursor-pointer group"
+                    style="--card-bg-image: url('${rollImage}');">
                     <div class="absolute top-4 right-4 w-10 h-10 rounded-lg product-type-icon flex items-center justify-center text-slate-400 group-hover:scale-110 transition-all duration-300">
                         <i class="fa-solid fa-layer-group text-base"></i>
                     </div>
-                    <h4 class="text-xl font-bold text-white mb-2 transition-colors">${type}</h4>
-                    <p class="text-sm text-slate-400 font-medium">${plantProducts.filter(p => p['Product Type'] === type).length} Records</p>
+                    <h4 class="text-xl font-bold text-white mb-3 transition-colors" style="font-family: 'Space Grotesk', sans-serif;">${type}</h4>
+                    <span class="inline-block px-2.5 py-1 text-[10px] font-bold text-slate-400 bg-white/5 border border-white/5 rounded-full group-hover:bg-[var(--active-color,#3b82f6)]/10 group-hover:border-[var(--active-color,#3b82f6)]/30 group-hover:text-[var(--active-color,#3b82f6)] transition-all">${plantProducts.filter(p => p['Product Type'] === type).length} Records</span>
                 </div>
                 `).join('')}
             </div>
@@ -2820,7 +3643,8 @@
 
                 return `
                     <div id="card-${safeId}" onclick="toggleProductSelection('${prod}')" 
-                        class="product-item-card relative group p-5 rounded-2xl cursor-pointer transition-all duration-300 flex flex-col justify-between min-h-[140px] overflow-hidden ${isSelected ? 'selected' : ''}">
+                        class="product-item-card relative group p-5 rounded-2xl cursor-pointer transition-all duration-300 flex flex-col justify-between min-h-[140px] overflow-hidden ${isSelected ? 'selected' : ''}"
+                        style="--card-bg-image: url('${rollImage}');">
                         
                         <!-- Animated Background Glow -->
                         <div class="absolute inset-0 bg-gradient-to-r from-[var(--active-color,#3b82f6)]/0 via-[var(--active-color,#3b82f6)]/5 to-[var(--active-color,#3b82f6)]/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
@@ -2831,7 +3655,7 @@
                         <!-- Top Section: Product Name & Check Icon -->
                         <div class="flex items-start justify-between relative z-10 mb-3">
                             <div class="flex-1 pr-2">
-                                <h5 class="text-xs font-bold leading-tight line-clamp-2 ${isSelected ? 'text-white' : 'text-slate-200'} group-hover:text-white transition-colors" title="${prod}">
+                                <h5 class="text-xs font-bold leading-tight line-clamp-2 ${isSelected ? 'text-white' : 'text-slate-200'} group-hover:text-white transition-colors" title="${prod}" style="font-family: 'Space Grotesk', sans-serif;">
                                     ${prod}
                                 </h5>
                             </div>
@@ -2852,7 +3676,7 @@
                                     <div class="text-[9px] uppercase tracking-wider font-semibold ${isSelected ? 'text-slate-300' : 'text-slate-500'}">
                                         Production
                                     </div>
-                                    <div class="text-lg font-black tracking-tight ${isSelected ? 'text-white' : 'text-slate-200'}">
+                                    <div class="text-lg font-black tracking-tight product-item-production ${isSelected ? '' : 'text-slate-200'}">
                                         ${totalProd.toLocaleString()}
                                     </div>
                                 </div>
@@ -3303,11 +4127,21 @@
             const distinctLabels = allMonths.map(m => formatMonthLabel(m.substring(0, 7)));
 
             // Color Pallete (ensure available)
-            const COLORS_LIST = [
-                'rgb(59, 130, 246)', 'rgb(16, 185, 129)', 'rgb(139, 92, 246)',
-                'rgb(251, 146, 60)', 'rgb(236, 72, 153)', 'rgb(245, 158, 11)',
-                'rgb(20, 184, 166)', 'rgb(244, 63, 94)', 'rgb(168, 85, 247)'
+            // Color Pallete (ensure available)
+            const PRODUCT_COLORS = [
+                'rgb(56, 189, 248)',   // Neon Blue
+                'rgb(52, 211, 153)',   // Mint Green
+                'rgb(167, 139, 250)',  // Lavender Purple
+                'rgb(251, 146, 60)',   // Coral Orange
+                'rgb(244, 63, 94)',    // Crimson Rose
+                'rgb(45, 212, 191)',   // Bright Teal
+                'rgb(251, 191, 36)',   // Bright Yellow/Gold
+                'rgb(99, 102, 241)',   // Deep Indigo
+                'rgb(236, 72, 153)'    // Hot Pink
             ];
+
+            const isBar = window.productChartType === 'bar';
+            const chartType = window.productChartType || 'line';
 
             // Build Datasets
             const datasets = selectedProducts.map((prod, i) => {
@@ -3316,35 +4150,27 @@
                     return record ? record.Production : 0;
                 });
 
-                const color = COLORS_LIST[i % COLORS_LIST.length];
+                const color = PRODUCT_COLORS[i % PRODUCT_COLORS.length];
 
                 return {
                     label: prod,
                     data: prodData,
                     borderColor: color,
-                    backgroundColor: color.replace('rgb', 'rgba').replace(')', ', 0.1)'),
+                    backgroundColor: isBar
+                        ? (context) => createVerticalGradient(context.chart.ctx, context.chart.chartArea, color, 0.85, 0.15)
+                        : (context) => createVerticalGradient(context.chart.ctx, context.chart.chartArea, color, 0.25, 0),
                     tension: 0.4,
-                    fill: false,
-                    borderWidth: 2
+                    fill: !isBar,
+                    borderWidth: isBar ? 1.5 : 2.5,
+                    borderRadius: isBar ? 6 : 0
                 };
             });
-
-            // Common Chart Config (reused from Overview generally)
-            const isArea = window.productChartType === 'area';
-            const chartType = isArea ? 'line' : (window.productChartType || 'line');
-
-            // Register the plugin if not already available globally (though it should be via script tag)
-            // Chart.register(ChartDataLabels); 
 
             const config = {
                 type: chartType,
                 data: {
                     labels: distinctLabels,
-                    datasets: datasets.map(d => ({
-                        ...d,
-                        fill: isArea ? true : false,
-                        tension: 0.4
-                    }))
+                    datasets: datasets
                 },
                 options: {
                     responsive: true,
@@ -3381,11 +4207,11 @@
                     scales: {
                         x: {
                             ticks: { color: '#94a3b8' },
-                            grid: { color: 'rgba(148, 163, 184, 0.1)' }
+                            grid: { color: 'rgba(255, 255, 255, 0.04)' }
                         },
                         y: {
                             ticks: { color: '#94a3b8' },
-                            grid: { color: 'rgba(148, 163, 184, 0.1)' },
+                            grid: { color: 'rgba(255, 255, 255, 0.04)' },
                             title: { display: true, text: 'Production', color: '#64748b' }
                         }
                     }
@@ -3485,13 +4311,13 @@
                     return plantTrials.map(t => {
                         const trialCount = productTrialCount[t.Product] || 1;
                         return `
-                    <div class="glass-panel p-0 rounded-xl overflow-hidden hover:border-blue-500/50 transition-all duration-300 group relative flex flex-col h-full active:scale-[0.99]">
+                    <div class="trial-card flex flex-col h-full">
                         <!-- Header -->
-                        <div class="p-4 bg-slate-800/50 border-b border-slate-700/50 flex justify-between items-start">
+                        <div class="trial-card-header flex justify-between items-start">
                             <div class="max-w-[80%]">
-                                <h4 class="font-bold text-white text-lg tracking-tight mb-0.5">${t.Product}</h4>
+                                <h4 class="font-bold text-white text-lg tracking-tight mb-0.5" style="font-family: 'Space Grotesk', sans-serif;">${t.Product}</h4>
                                 <div class="flex flex-wrap gap-2 items-center text-[10px] mb-1">
-                                    <span class="px-1.5 py-0.5 bg-blue-500/20 text-blue-400 rounded-md font-bold uppercase tracking-wider border border-blue-500/20">${t['Product Type'] || 'General'}</span>
+                                    <span class="px-2 py-0.5 bg-blue-500/15 text-blue-400 rounded-full font-bold uppercase tracking-wider text-[9px] border border-blue-500/25">${t['Product Type'] || 'General'}</span>
                                     <div class="flex items-center gap-1.5 text-slate-400">
                                         <i class="fa-regular fa-calendar opacity-70"></i>
                                         <span>${t.Date}</span>
@@ -3509,31 +4335,31 @@
                         </div>
 
                         <!-- Body (Metrics) -->
-                        <div class="p-4 flex-grow space-y-3">
-                            <div class="flex justify-between items-center p-2 rounded-lg bg-slate-800/30 hover:bg-slate-800/50 transition-colors">
+                        <div class="p-4 flex-grow space-y-2">
+                            <div class="flex justify-between items-center trial-metric-row">
                                 <div class="flex items-center gap-2">
                                     <i class="fa-solid ${getIcon('Production')} text-[10px] text-blue-400"></i>
                                     <span class="text-xs text-slate-400 uppercase tracking-wider">Production</span>
                                 </div>
-                                <span class="font-bold text-white">${(t.Production || 0).toLocaleString()}</span>
+                                <span class="font-bold text-white" style="font-family: 'Space Grotesk', sans-serif;">${(t.Production || 0).toLocaleString()} <span class="text-[10px] text-slate-500">kg</span></span>
                             </div>
-                            <div class="flex justify-between items-center p-2 rounded-lg bg-slate-800/30 hover:bg-slate-800/50 transition-colors">
+                            <div class="flex justify-between items-center trial-metric-row">
                                 <div class="flex items-center gap-2">
                                     <i class="fa-solid ${getIcon('Waste')} text-[10px] text-orange-400"></i>
                                     <span class="text-xs text-slate-400 uppercase tracking-wider">Waste</span>
                                 </div>
-                                <span class="font-bold text-orange-400">${(t.Waste || 0).toLocaleString()}</span>
+                                <span class="font-bold text-orange-400" style="font-family: 'Space Grotesk', sans-serif;">${(t.Waste || 0).toLocaleString()} <span class="text-[10px] text-orange-500/70">kg</span></span>
                             </div>
-                            <div class="flex justify-between items-center p-2 rounded-lg bg-slate-800/30 hover:bg-slate-800/50 transition-colors">
+                            <div class="flex justify-between items-center trial-metric-row">
                                 <div class="flex items-center gap-2">
                                     <i class="fa-solid ${getIcon('Down Time')} text-[10px] text-slate-400"></i>
                                     <span class="text-xs text-slate-400 uppercase tracking-wider">Down Time</span>
                                 </div>
-                                <span class="font-bold text-slate-300">${t['Down Time'] || 0} min</span>
+                                <span class="font-bold text-slate-300" style="font-family: 'Space Grotesk', sans-serif;">${t['Down Time'] || 0} <span class="text-[10px] text-slate-500">min</span></span>
                             </div>
                             
                             ${t.Remarks ? `
-                            <div class="mt-3 p-3 bg-slate-900/40 rounded-lg border border-slate-700/30">
+                            <div class="trial-remarks-box mt-3">
                                 <p class="text-[13px] leading-relaxed text-slate-200 font-medium" title="${t.Remarks}">
                                     <i class="fa-solid fa-quote-left text-blue-400/50 mr-2 text-[10px]"></i>
                                     ${t.Remarks}
@@ -3609,17 +4435,44 @@
             const totalProduction = plantData.reduce((sum, d) => sum + (d["Erema Production"] || 0), 0);
             const avgEnergy = plantData.length > 0 ? plantData.reduce((sum, d) => sum + (d["Erema(KG/KWH)"] || 0), 0) / plantData.length : 0;
 
-            const renderClickableCard = (title, value, color) => `
-                <div class="glass-panel p-3 rounded-xl border-t-4 border-${color}-500 relative overflow-hidden group hover:scale-[1.02] transition-transform duration-300 cursor-pointer kpi-card ${window.eremaSelectedKPIs?.includes(title) ? `ring-2 ring-${color}-400 bg-${color}-500/20 shadow-lg shadow-${color}-500/20` : ''}" 
-                    onclick="toggleKPISelection('${title}')">
-                    <div class="absolute top-0 right-0 p-2.5 opacity-10 group-hover:opacity-20 transition-opacity">
-                        <i class="fa-solid ${getIcon(title)} text-3xl text-${color}-500"></i>
+            const renderClickableCard = (title, value, color) => {
+                const glowClass = color === 'emerald' ? 'kpi-glow-emerald' : 'kpi-glow-yellow';
+                const textGlowClass = color === 'emerald' ? 'glow-text-emerald' : 'glow-text-yellow';
+                const textColorClass = color === 'emerald' ? 'text-emerald-400' : 'text-yellow-400';
+                const bgGradient = color === 'emerald' ? 'from-emerald-500/10 to-green-500/10' : 'from-yellow-500/10 to-amber-500/10';
+                const isSelected = window.eremaSelectedKPIs?.includes(title);
+                const activeClass = isSelected ? 'selected' : '';
+
+                return `
+                    <div class="glass-panel p-5 rounded-2xl relative overflow-hidden group transition-all duration-300 cursor-pointer flex flex-col justify-between h-32 border ${glowClass} ${activeClass}" 
+                        onclick="toggleKPISelection('${title}')"
+                        style="background: linear-gradient(135deg, ${isSelected ? 'rgba(8, 12, 22, 0.72)' : 'rgba(8, 12, 22, 0.82)'} 0%, rgba(4, 6, 12, 0.88) 100%) padding-box, url('images/erema_recycle_bg.png') center/cover no-repeat padding-box;">
+                        
+                        <!-- Background Gradient -->
+                        <div class="absolute inset-0 bg-gradient-to-br ${bgGradient} opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        ${isSelected ? `<div class="absolute inset-0 bg-gradient-to-br ${bgGradient} opacity-30"></div>` : ''}
+
+                        <div class="flex justify-between items-start relative z-10">
+                            <div>
+                                <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-1 group-hover:text-white transition-colors">${title}</h4>
+                                <div class="text-2xl font-black tracking-tight flex items-baseline ${textGlowClass}">
+                                    ${value}
+                                </div>
+                            </div>
+                            <div class="w-10 h-10 rounded-xl icon-container-gloss flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                <i class="fa-solid ${getIcon(title)} text-lg ${textColorClass}"></i>
+                            </div>
+                        </div>
+
+                        <div class="relative z-10 flex items-center justify-between gap-2 mt-auto">
+                            ${isSelected
+                                ? `<span class="text-[10px] font-bold ${textColorClass} flex items-center gap-1"><i class="fa-solid fa-check-circle"></i> Active</span>`
+                                : `<span class="text-[10px] text-slate-500 font-medium group-hover:text-slate-300 transition-colors">Select Metric</span>`
+                            }
+                        </div>
                     </div>
-                    ${window.eremaSelectedKPIs?.includes(title) ? `<div class="absolute top-2 right-2"><i class="fa-solid fa-check-circle text-${color}-400 text-sm"></i></div>` : ''}
-                    <h4 class="text-[10px] font-bold text-slate-400 uppercase tracking-wider mb-1">${title}</h4>
-                    <span class="text-xl font-bold text-white">${value}</span>
-                </div>
-            `;
+                `;
+            };
 
             container.innerHTML = `
 <div class="space-y-6">
@@ -3648,44 +4501,17 @@
     </div>
 
     <!-- Financial Calculator Section -->
-    <div class="glass-panel p-8 rounded-[2rem] relative overflow-hidden group">
+    <div class="glass-panel p-8 rounded-[2rem] relative overflow-hidden group erema-calculator-panel">
         <!-- Background Decorations -->
         <div class="absolute -top-24 -right-24 w-48 h-48 bg-emerald-600/10 blur-[60px] rounded-full"></div>
-        <!-- Top Navigation Bar -->
-        <nav class="glass-panel sticky top-0 z-50 px-6 py-4 flex justify-between items-center mb-8">
-            <div class="flex items-center gap-4">
-                <div class="bg-gradient-to-br from-blue-600 to-blue-400 w-10 h-10 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
-                    <i class="fa-solid fa-cube text-white text-lg"></i>
-                </div>
-                <div>
-                    <h1 class="text-xl font-black tracking-tighter text-white leading-none">Sustainability <span class="text-blue-400">Hub</span></h1>
-                    <p class="text-[10px] font-bold text-slate-500 tracking-widest uppercase">Eco-Efficiency Tracker</p>
-                </div>
-            </div>
-
-            <!-- AI Search Bar -->
-            <div class="hidden md:flex flex-1 max-w-xl mx-8 relative group">
-                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <i class="fa-solid fa-wand-magic-sparkles text-blue-500 animate-pulse"></i>
-                </div>
-                <input type="text" 
-                    id="ai-search-input"
-                    onkeydown="handleAISearch(event)"
-                    class="block w-full pl-10 pr-3 py-2.5 border border-slate-700 rounded-xl leading-5 bg-slate-800/50 text-slate-300 placeholder-slate-500 focus:outline-none focus:bg-slate-800 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 sm:text-sm transition-all shadow-inner" 
-                    placeholder="Ask AI (e.g., 'Show PETPAK waste', 'Forecast for next month')...">
-                <div class="absolute inset-y-0 right-0 pr-3 flex items-center">
-                    <span class="text-xs text-slate-600 border border-slate-700 rounded px-1.5 py-0.5">Enter</span>
-                </div>
-            </div>
-
-            <div class="flex items-center gap-2 overflow-x-auto no-scrollbar py-1">
+        
         <div class="relative z-10">
             <div class="flex items-center gap-3 mb-8">
                 <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
                     <i class="fa-solid fa-calculator text-emerald-400 text-xl"></i>
                 </div>
                 <div>
-                    <h3 class="text-xl font-bold text-white">Financial Impact Calculator</h3>
+                    <h3 class="text-xl font-bold text-white" style="font-family: 'Space Grotesk', sans-serif;">Financial Impact Calculator</h3>
                     <p class="text-slate-400 text-xs mt-1">Simulate recycling efficiency and cost savings.</p>
                 </div>
             </div>
@@ -3712,7 +4538,7 @@
                     <div>
                         <label class="block text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2 ml-1">Select Material / Plant</label>
                         <select id="erema-material" onchange="updateEremaDefaults()" 
-                            class="w-full bg-slate-900/50 border border-white/5 rounded-2xl px-5 py-4 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 transition-all appearance-none cursor-pointer">
+                            class="erema-input w-full rounded-2xl px-5 py-4 transition-all appearance-none cursor-pointer">
                             <option value="custom">Custom (Manual Input)</option>
                             <option value="bopet" selected>BOPET (PETPAK) - 2.5 kg CO2/kg</option>
                             <option value="bopp">BOPP (IPAK / GPAK) - 1.8 kg CO2/kg</option>
@@ -3722,7 +4548,7 @@
                     <div>
                         <label class="block text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2 ml-1">Waste Input (KG)</label>
                         <input type="number" id="erema-waste" placeholder="e.g. 5000"
-                            class="w-full bg-slate-900/50 border border-white/5 rounded-2xl px-5 py-4 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 transition-all placeholder:text-slate-600">
+                            class="erema-input w-full rounded-2xl px-5 py-4 transition-all placeholder:text-slate-600">
                     </div>
                 </div>
 
@@ -3732,12 +4558,12 @@
                          <div>
                             <label class="block text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2 ml-1">Conversion Eff. (%)</label>
                             <input type="number" id="erema-rate" value="85"
-                                class="w-full bg-slate-900/50 border border-white/5 rounded-2xl px-5 py-4 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 transition-all">
+                                class="erema-input w-full rounded-2xl px-5 py-4 transition-all">
                         </div>
                         <div>
                             <label class="block text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2 ml-1">Savings (PKR/KG)</label>
                             <input type="number" id="erema-price" value="50"
-                                class="w-full bg-slate-900/50 border border-white/5 rounded-2xl px-5 py-4 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 transition-all">
+                                class="erema-input w-full rounded-2xl px-5 py-4 transition-all">
                         </div>
                     </div>
                     
@@ -3745,7 +4571,7 @@
                         <label class="block text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2 ml-1">Sustainability (CO2/KG)</label>
                         <div class="relative">
                             <input type="number" id="erema-sustainability" value="2.5" step="0.1"
-                                class="w-full bg-slate-900/50 border border-white/5 rounded-2xl px-5 py-4 text-white focus:outline-none focus:ring-2 focus:ring-emerald-500/50 transition-all">
+                                class="erema-input w-full rounded-2xl px-5 py-4 transition-all">
                              <div class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-500 text-xs pointer-events-none">
                                 <i class="fa-solid fa-leaf text-emerald-500/50"></i>
                             </div>
@@ -3759,24 +4585,24 @@
                 <!-- Action Button (Full Width) -->
                 <div class="md:col-span-2 mt-2">
                     <button onclick="calculateErema()"
-                        class="w-full py-5 bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-500 hover:to-teal-500 text-white font-black text-sm uppercase tracking-widest rounded-2xl shadow-lg shadow-emerald-500/20 transition-all hover:scale-[1.02] active:scale-[0.98]">
+                        class="erema-btn-calculate w-full py-5 rounded-2xl transition-all">
                         Calculate ROI & Sustainability Impact
                     </button>
                 </div>
             </div>
 
             <div id="erema-results" class="hidden grid grid-cols-1 md:grid-cols-3 gap-4 pt-8 border-t border-white/5">
-                <div class="glass-panel p-6 rounded-2xl border-l-4 border-emerald-500">
+                <div class="glass-panel p-6 rounded-2xl border-l-4 border-emerald-500 kpi-glow-emerald">
                     <p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2 text-center">Recycled Output</p>
-                    <p class="text-3xl font-black text-white text-center" id="erema-output">-</p>
+                    <p class="text-3xl font-black text-center glow-text-emerald" id="erema-output">-</p>
                 </div>
-                <div class="glass-panel p-6 rounded-2xl border-l-4 border-blue-500">
+                <div class="glass-panel p-6 rounded-2xl border-l-4 border-yellow-500 kpi-glow-yellow">
                     <p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2 text-center">Projected Savings</p>
-                    <p class="text-3xl font-black text-white text-center" id="erema-savings">-</p>
+                    <p class="text-3xl font-black text-center glow-text-yellow" id="erema-savings">-</p>
                 </div>
-                <div class="glass-panel p-6 rounded-2xl border-l-4 border-teal-500">
+                <div class="glass-panel p-6 rounded-2xl border-l-4 border-blue-500 kpi-glow-blue">
                     <p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2 text-center">CO2 Reduction</p>
-                    <p class="text-3xl font-black text-white text-center" id="erema-impact">-</p>
+                    <p class="text-3xl font-black text-center glow-text-blue" id="erema-impact">-</p>
                 </div>
             </div>
         </div>
@@ -3804,26 +4630,48 @@
             const month = document.getElementById('detail-from-month')?.value || 'all';
             const allMetrics = getAllAvailableMetrics();
 
+            const borderColors = {
+                'PETPAK': 'border-l-amber-500',
+                'GPAK': 'border-l-blue-500',
+                'IPAK': 'border-l-emerald-500',
+                'CPAK': 'border-l-violet-500'
+            };
+            const textColors = {
+                'PETPAK': 'text-amber-400',
+                'GPAK': 'text-blue-400',
+                'IPAK': 'text-emerald-400',
+                'CPAK': 'text-violet-400'
+            };
+            const plantSubtitles = {
+                'PETPAK': 'BOPET Plant',
+                'GPAK': 'BOPP Plant',
+                'IPAK': 'BOPP Plant',
+                'CPAK': 'CPP Plant'
+            };
+
             container.innerHTML = `
             <div class="space-y-6">
                 <!-- Comparison Controls -->
                 <div class="glass-panel p-6 rounded-2xl flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
                     <div>
-                        <h3 class="text-xl font-bold text-white">Comparative Analysis</h3>
+                        <h3 class="text-xl font-bold text-white font-space tracking-tight">Comparative Analysis</h3>
                         <p class="text-slate-400 text-xs mt-1">Select plants and metrics to benchmark performance.</p>
                     </div>
                     <div class="flex flex-wrap items-center gap-4">
                         <div class="flex flex-wrap gap-2 max-w-[400px]">
                             ${window.compareSelectedMetrics.map(m => `
-                                <div class="px-3 py-1.5 rounded-full bg-blue-500/20 border border-blue-500/40 text-[10px] font-black text-blue-400 uppercase tracking-widest flex items-center gap-2">
+                                <div class="px-3.5 py-1.5 rounded-xl bg-slate-900/60 border border-slate-700/60 hover:border-slate-500/60 text-[10px] font-extrabold text-slate-300 uppercase tracking-widest flex items-center gap-2.5 shadow-inner transition-all duration-200">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-indigo-500 animate-pulse"></span>
                                     ${m}
-                                    <i class="fa-solid fa-times cursor-pointer hover:text-white" onclick="removeCompareMetric('${m}')"></i>
+                                    <span class="w-4 h-4 rounded-full bg-slate-800 hover:bg-slate-700 text-[8px] flex items-center justify-center text-slate-400 hover:text-white cursor-pointer transition-colors" onclick="event.stopPropagation(); removeCompareMetric('${m}')">
+                                        <i class="fa-solid fa-times"></i>
+                                    </span>
                                 </div>
                             `).join('')}
                         </div>
                         <button onclick="openCompareMetricModal()" 
-                            class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-xl text-xs font-black uppercase tracking-widest transition-all shadow-lg shadow-blue-900/20 flex items-center gap-2">
-                            <i class="fa-solid fa-plus"></i>
+                            class="px-5 py-2.5 rounded-xl text-xs font-bold uppercase tracking-wider transition-all duration-300 flex items-center gap-2 bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white shadow-[0_4px_15px_rgba(139,92,246,0.35)] hover:shadow-[0_4px_22px_rgba(139,92,246,0.55)] border border-violet-500/30 hover:scale-[1.02] active:scale-[0.98]">
+                            <i class="fa-solid fa-plus text-[10px]"></i>
                             Select Metrics
                         </button>
                     </div>
@@ -3833,49 +4681,73 @@
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                     ${PLANTS.map(plant => {
                 const isSelected = window.compareSelectedPlants.includes(plant);
-                const pData = dashboardData.mainData.filter(d =>
-                    d.Plant === plant &&
-                    (year === 'all' || d.Month.startsWith(year)) &&
-                    (month === 'all' || d.Month.substring(5, 7) === month)
-                );
+                const pData = dashboardData.mainData.filter(d => {
+                    if (d.Plant !== plant) return false;
+                    const mk = (d.Month || '').substring(0, 7);
+                    if (year !== 'all' && !mk.startsWith(year)) return false;
+                    if (month !== 'all' && mk.substring(5, 7) !== month.padStart(2, '0')) return false;
+                    return true;
+                });
 
                 const metricsHtml = window.compareSelectedMetrics.map(metric => {
-                    const isEfficiency = metric.includes('%') || metric.includes('Ratio') || metric.includes('MTBF') || metric.includes('MTTR');
+                    const isRatio = isRatioMetric(metric);
                     let displayValue = 0;
                     if (pData.length > 0) {
-                        const sum = pData.reduce((s, d) => s + (d[metric] || 0), 0);
-                        displayValue = isEfficiency ? sum / pData.length : sum;
+                        const valid = pData.filter(d => d[metric] !== undefined && d[metric] !== null && d[metric] !== '-' && !isNaN(Number(d[metric])));
+                        if (valid.length > 0) {
+                            const sum = valid.reduce((s, d) => s + (Number(d[metric]) || 0), 0);
+                            displayValue = isRatio ? sum / valid.length : sum;
+                        }
                     }
-                    const formattedValue = isEfficiency ? (displayValue * (metric.includes('%') ? 100 : 1)).toFixed(2) + (metric.includes('%') ? '%' : '') : Math.round(displayValue).toLocaleString();
+                    const formattedValue = isRatio ? (displayValue * (metric.includes('%') ? 100 : 1)).toFixed(2) + (metric.includes('%') ? '%' : '') : Math.round(displayValue).toLocaleString();
 
                     return `
-                        <div class="py-2 border-b border-white/5 last:border-0 hover:bg-white/5 px-2 rounded-lg transition-colors cursor-pointer" onclick="event.stopPropagation(); window.compareSelectedMetrics = ['${metric}']; renderCompareTab();">
-                            <p class="text-[9px] font-bold text-slate-500 uppercase tracking-widest mb-0.5">${metric}</p>
-                            <p class="text-md font-black text-white">${formattedValue}</p>
+                        <div class="py-2.5 px-3 mb-2 rounded-xl bg-slate-950/45 border-l-[3px] ${borderColors[plant]} border-y border-r border-white/5 hover:bg-slate-900/60 hover:border-white/12 transition-all duration-200 flex items-center justify-between cursor-pointer" onclick="event.stopPropagation(); window.compareSelectedMetrics = ['${metric}']; renderCompareTab();">
+                            <div class="min-w-0 flex-1">
+                                <p class="text-[9px] font-bold text-slate-400 uppercase tracking-widest mb-0.5 truncate">${metric}</p>
+                                <p class="text-md font-black text-white font-space">${formattedValue}</p>
+                            </div>
+                            <div class="w-6 h-6 rounded-lg bg-white/5 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                                <i class="fa-solid fa-chevron-right text-slate-500 text-[10px]"></i>
+                            </div>
                         </div>
                     `;
                 }).join('');
 
+                const plantCardClass = `compare-card-${plant.toLowerCase()}`;
+
                 return `
                         <div onclick="toggleComparePlant('${plant}')" 
-                            class="glass-panel p-6 rounded-2xl relative overflow-hidden group border transition-all duration-300 cursor-pointer ${isSelected ? 'border-blue-500/40 bg-blue-500/5' : 'border-white/5 opacity-60 hover:opacity-100'}">
+                            class="${plantCardClass} p-6 rounded-2xl relative overflow-hidden group transition-all duration-300 cursor-pointer ${isSelected ? 'selected' : ''}">
                             
-                            <!-- Status Indicator -->
-                            <div class="absolute top-4 right-4">
-                                <div class="w-2 h-2 rounded-full ${isSelected ? 'bg-blue-400 shadow-[0_0_8px_rgba(96,165,250,0.5)] animate-pulse' : 'bg-slate-600'}"></div>
+                            <!-- Top glowing border accent -->
+                            <div class="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r ${plant === 'PETPAK' ? 'from-amber-500 to-yellow-400' : plant === 'GPAK' ? 'from-blue-500 to-indigo-400' : plant === 'IPAK' ? 'from-emerald-500 to-teal-400' : 'from-violet-500 to-fuchsia-400'} opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                            
+                            <!-- Status Indicator / Checkbox style -->
+                            <div class="absolute top-4 right-4 flex items-center gap-1.5 z-10">
+                                <span class="text-[9px] font-extrabold uppercase tracking-wider text-slate-500 group-hover:text-slate-300 transition-colors">${isSelected ? 'Active' : 'Select'}</span>
+                                <div class="w-5 h-5 rounded-lg border ${isSelected ? 'border-transparent bg-gradient-to-br ' + (plant === 'PETPAK' ? 'from-amber-500 to-yellow-500' : plant === 'GPAK' ? 'from-blue-500 to-indigo-500' : plant === 'IPAK' ? 'from-emerald-500 to-teal-500' : 'from-violet-500 to-purple-500') + ' shadow-[0_0_10px_rgba(255,255,255,0.1)]' : 'border-slate-600 bg-slate-900/80'} flex items-center justify-center transition-all duration-300">
+                                    <i class="fa-solid fa-check text-[9px] text-white ${isSelected ? 'scale-100' : 'scale-0'} transition-transform duration-300"></i>
+                                </div>
                             </div>
 
-                            <h4 class="text-lg font-black text-white mb-4 tracking-tighter flex items-center gap-2">
-                                ${plant}
-                            </h4>
+                            <div class="flex items-center gap-3 mb-5 mt-1">
+                                <div class="w-10 h-10 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center shadow-md">
+                                    <i class="fa-solid fa-industry ${textColors[plant]} text-lg"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-xl font-black text-white font-space tracking-tight">
+                                        ${plant}
+                                    </h4>
+                                    <p class="text-[9px] font-bold text-slate-400 uppercase tracking-widest">
+                                        ${plantSubtitles[plant]}
+                                    </p>
+                                </div>
+                            </div>
 
-                            <div class="space-y-1">
+                            <div class="space-y-2 mt-4">
                                 ${metricsHtml}
                             </div>
-
-                            ${isSelected ? `
-                            <div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-600 to-purple-600"></div>
-                            ` : ''}
                         </div>
                         `;
             }).join('')}
@@ -3885,12 +4757,12 @@
                 <div class="glass-panel p-8 rounded-[2rem]">
                     <div class="flex justify-between items-center mb-8">
                         <div>
-                            <h3 class="text-xl font-bold text-white tracking-tight">${window.compareSelectedMetric} Benchmarking</h3>
-                            <p class="text-slate-400 text-xs mt-1">Comparing ${window.compareSelectedMetric} across selected units.</p>
+                            <h3 class="text-xl font-bold text-white tracking-tight font-space">${window.compareSelectedMetrics.join(' / ')} Benchmarking</h3>
+                            <p class="text-slate-400 text-xs mt-1">Comparing ${window.compareSelectedMetrics.join(', ')} performance across selected units.</p>
                         </div>
-                        <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-chart-column text-blue-500"></i>
-                            <span class="text-[10px] font-black text-slate-500 uppercase tracking-widest">Grouped Bar Trend</span>
+                        <div class="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-slate-900/60 border border-slate-800 shadow-inner">
+                            <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+                            <span class="text-[9px] font-black text-slate-400 uppercase tracking-widest font-space">Multi-Metric Trend Analysis</span>
                         </div>
                     </div>
                     <div class="relative h-[450px] w-full">
@@ -3945,51 +4817,69 @@
 
             const ctx = canvas.getContext('2d');
 
-            const allMonths = [...new Set(dashboardData.mainData.map(d => d.Month))]
-                .filter(m => (year === 'all' || m.startsWith(year)) && (month === 'all' || m.substring(5, 7) === month))
-                .sort((a, b) => new Date(a) - new Date(b));
+            // Build unique YYYY-MM month keys from all data, filtered by selected year/month
+            const allMonthKeys = [...new Set(
+                dashboardData.mainData.map(d => (d.Month || '').substring(0, 7))
+            )]
+                .filter(mk => {
+                    if (!mk) return false;
+                    if (year !== 'all' && !mk.startsWith(year)) return false;
+                    if (month !== 'all' && mk.substring(5, 7) !== month.padStart(2, '0')) return false;
+                    return true;
+                })
+                .sort();
 
-            const labels = allMonths.map(m => formatMonthLabel(m.substring(0, 7)));
+            const labels = allMonthKeys.map(mk => formatMonthLabel(mk));
 
             const colors = {
-                'PETPAK': 'rgb(59, 130, 246)',
-                'GPAK': 'rgb(16, 185, 129)',
-                'IPAK': 'rgb(139, 92, 246)',
-                'CPAK': 'rgb(249, 115, 22)'
+                'PETPAK': 'rgb(245, 158, 11)',
+                'GPAK':   'rgb(59, 130, 246)',
+                'IPAK':   'rgb(16, 185, 129)',
+                'CPAK':   'rgb(139, 92, 246)'
             };
 
             const datasets = [];
             metrics.forEach((metric, mIdx) => {
-                const isEfficiency = metric.includes('%') || metric.includes('Ratio') || metric.includes('MTBF') || metric.includes('MTTR');
-                const axisId = isEfficiency ? 'y1' : 'y';
+                const axisId = getMetricAxis(metric);
+                const isRatio = isRatioMetric(metric);
 
-                selectedPlants.forEach((plant) => {
+                selectedPlants.forEach(plant => {
                     const baseColor = colors[plant] || 'rgb(148, 163, 184)';
-                    const plantData = dashboardData.mainData.filter(d => d.Plant === plant);
+                    const plantRows = dashboardData.mainData.filter(d => d.Plant === plant);
 
-                    const data = allMonths.map(m => {
-                        const row = plantData.find(d => d.Month === m);
-                        return row ? (row[metric] || 0) : 0;
+                    const data = allMonthKeys.map(mk => {
+                        const rows = plantRows.filter(d => (d.Month || '').substring(0, 7) === mk);
+                        if (!rows.length) return 0;
+                        const valid = rows.filter(d =>
+                            d[metric] !== undefined && d[metric] !== null &&
+                            d[metric] !== '-' && d[metric] !== '' && !isNaN(Number(d[metric]))
+                        );
+                        if (!valid.length) return 0;
+                        const sum = valid.reduce((s, d) => s + (Number(d[metric]) || 0), 0);
+                        return isRatio ? sum / valid.length : sum;
                     });
-
-                    // Variations for multiple metrics
-                    const opacity = 1 - (mIdx * 0.3);
-                    const backgroundColor = baseColor.replace('rgb', 'rgba').replace(')', `, ${opacity})`);
 
                     datasets.push({
                         label: `${plant} - ${metric}`,
-                        data: data,
+                        data,
                         borderColor: baseColor,
-                        backgroundColor: backgroundColor,
-                        borderWidth: 1,
-                        borderRadius: 4,
-                        maxBarThickness: 20,
+                        backgroundColor: (context) => createVerticalGradient(
+                            context.chart.ctx, context.chart.chartArea, baseColor,
+                            0.85 - (mIdx * 0.2), 0.15
+                        ),
+                        borderWidth: 1.5,
+                        borderRadius: 6,
+                        maxBarThickness: 30,
                         categoryPercentage: 0.8,
                         barPercentage: 0.9,
                         yAxisID: axisId
                     });
                 });
             });
+
+            const usePercentAxis = datasets.some(d => d.yAxisID === 'y1');
+            const useTimeAxis   = datasets.some(d => d.yAxisID === 'y2');
+            const useValueAxis  = datasets.some(d => d.yAxisID === 'y');
 
             window.compareChart = new Chart(ctx, {
                 type: 'bar',
@@ -4015,18 +4905,17 @@
                             cornerRadius: 12,
                             callbacks: {
                                 label: function (context) {
-                                    let label = (context && context.dataset && context.dataset.label) || '';
+                                    const label = (context?.dataset?.label) || '';
                                     const val = context.parsed.y;
-                                    const metric = label.split(' - ')[1];
-                                    if (metric.includes('%')) {
-                                        return `${label}: ${(val * 100).toFixed(2)}%`;
-                                    }
+                                    const yAxisID = context.dataset.yAxisID;
+                                    if (yAxisID === 'y1') return `${label}: ${(val * 100).toFixed(2)}%`;
+                                    if (yAxisID === 'y2') return `${label}: ${val.toLocaleString()} hrs`;
                                     return `${label}: ${val.toLocaleString()}`;
                                 }
                             }
                         },
                         datalabels: {
-                            display: true,
+                            display: datasets.length <= 8,
                             color: '#fff',
                             anchor: 'end',
                             align: 'top',
@@ -4037,8 +4926,11 @@
                             },
                             formatter: (val, ctx) => {
                                 const v = (val !== null && typeof val === 'object') ? (val.y ?? val.v ?? 0) : val;
-                                const metric = ctx.dataset.label.split(' - ')[1];
-                                if (metric.includes('%') || isRatioMetric(metric)) return (v * 100).toFixed(2) + '%';
+                                if (!v) return '';
+                                const yAxisID = ctx.dataset.yAxisID;
+                                if (yAxisID === 'y1') return (v * 100).toFixed(1) + '%';
+                                if (yAxisID === 'y2') return v.toLocaleString() + 'h';
+                                if (v >= 1000000) return (v / 1000000).toFixed(1) + 'M';
                                 if (v >= 1000) return Math.round(v / 1000).toLocaleString() + 'K';
                                 return v.toLocaleString();
                             }
@@ -4047,34 +4939,41 @@
                     scales: {
                         x: {
                             grid: { display: false },
-                            ticks: { color: '#64748b', font: { size: 10 } }
+                            ticks: { color: '#94a3b8', font: { size: 10 } }
                         },
                         y: {
-                            type: 'linear',
-                            position: 'left',
-                            display: datasets.some(d => d.yAxisID === 'y'),
-                            grid: { color: 'rgba(148, 163, 184, 0.05)' },
+                            type: 'linear', position: 'left',
+                            display: useValueAxis,
+                            grid: { color: 'rgba(255, 255, 255, 0.04)' },
                             ticks: {
-                                color: '#64748b',
-                                font: { size: 10 },
+                                color: '#94a3b8', font: { size: 10 },
                                 callback: (val) => {
+                                    if (val >= 1000000) return (val / 1000000).toLocaleString() + 'M';
                                     if (val >= 1000) return (val / 1000).toLocaleString() + 'K';
                                     return val.toLocaleString();
                                 }
                             },
-                            title: { display: true, text: 'Volume Metrics', color: '#64748b', font: { size: 10, weight: 'bold' } }
+                            title: { display: true, text: 'Volume / Mass Metrics', color: '#64748b', font: { size: 10, weight: 'bold' } }
                         },
                         y1: {
-                            type: 'linear',
-                            position: 'right',
-                            display: datasets.some(d => d.yAxisID === 'y1'),
+                            type: 'linear', position: 'right',
+                            display: usePercentAxis,
                             grid: { drawOnChartArea: false },
                             ticks: {
-                                color: '#64748b',
-                                font: { size: 10 },
-                                callback: (val) => (val * 100).toFixed(2) + '%'
+                                color: '#94a3b8', font: { size: 10 },
+                                callback: (val) => (val * 100).toFixed(1) + '%'
                             },
-                            title: { display: true, text: 'Efficiency Metrics (%)', color: '#64748b', font: { size: 10, weight: 'bold' } }
+                            title: { display: true, text: 'Efficiency / Rates (%)', color: '#64748b', font: { size: 10, weight: 'bold' } }
+                        },
+                        y2: {
+                            type: 'linear', position: 'right',
+                            display: useTimeAxis,
+                            grid: { drawOnChartArea: false },
+                            ticks: {
+                                color: '#94a3b8', font: { size: 10 },
+                                callback: (val) => val.toLocaleString() + ' hrs'
+                            },
+                            title: { display: true, text: 'Time Metrics (Hrs)', color: '#64748b', font: { size: 10, weight: 'bold' } }
                         }
                     }
                 },
@@ -4321,6 +5220,8 @@
                 lowerBounds.push(lastActual);
                 forecastPoints.forEach(d => lowerBounds.push(d.lower));
 
+                const metricColor = getMetricColor(metric);
+
                 window.forecastChart = new Chart(ctx, {
                     type: 'line',
                     data: {
@@ -4329,21 +5230,13 @@
                             {
                                 label: 'Historical Actuals',
                                 data: historyDataParams,
-                                borderColor: '#3b82f6',
-                                backgroundColor: (context) => {
-                                    const chart = context.chart;
-                                    const { ctx, chartArea } = chart;
-                                    if (!chartArea) return null;
-                                    const gradient = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
-                                    gradient.addColorStop(0, 'rgba(59, 130, 246, 0)');
-                                    gradient.addColorStop(1, 'rgba(59, 130, 246, 0.2)');
-                                    return gradient;
-                                },
+                                borderColor: metricColor,
+                                backgroundColor: (context) => createVerticalGradient(context.chart.ctx, context.chart.chartArea, metricColor, 0.25, 0),
                                 borderWidth: 3,
                                 fill: true,
                                 tension: 0.4,
                                 pointRadius: 4,
-                                pointBackgroundColor: '#3b82f6',
+                                pointBackgroundColor: metricColor,
                                 z: 10
                             },
                             {
@@ -4362,7 +5255,7 @@
                                 label: 'Confidence Interval (95%)',
                                 data: upperBounds,
                                 borderColor: 'transparent',
-                                backgroundColor: 'rgba(168, 85, 247, 0.1)',
+                                backgroundColor: 'rgba(168, 85, 247, 0.08)',
                                 fill: '+1', // Fill to lowerBounds (since upper is index 2, lower is index 3)
                                 tension: 0.4,
                                 pointRadius: 0,
@@ -4432,7 +5325,7 @@
                         scales: {
                             x: {
                                 ticks: { color: '#94a3b8', font: { weight: 'bold', size: 11 } },
-                                grid: { color: 'rgba(255,255,255,0.05)' }
+                                grid: { color: 'rgba(255, 255, 255, 0.04)' }
                             },
                             y: {
                                 ticks: {
@@ -4444,7 +5337,7 @@
                                         return Math.round(val / 1000).toLocaleString() + 'K';
                                     }
                                 },
-                                grid: { color: 'rgba(255,255,255,0.05)' }
+                                grid: { color: 'rgba(255, 255, 255, 0.04)' }
                             }
                         }
                     }
@@ -4636,8 +5529,8 @@
             const labels = allMonths.map(m => formatMonthLabel(m.substring(0, 7)));
 
             const datasets = [];
-            const isArea = window.eremaChartType === 'area';
-            const chartType = isArea ? 'line' : (window.eremaChartType || 'line');
+            const isBar = window.eremaChartType === 'bar';
+            const chartType = window.eremaChartType || 'line';
 
             const selectedKPIs = window.eremaSelectedKPIs || ['EREMA Production'];
 
@@ -4646,13 +5539,20 @@
                     const record = filteredData.find(d => d.Month === m);
                     return record ? record["Erema Production"] : 0;
                 });
+                const color = getMetricColor('EREMA Production');
                 datasets.push({
                     label: 'Production (KG)',
                     data: prodData,
-                    borderColor: 'rgb(52, 211, 153)', // Emerald-400 (Brighter)
-                    backgroundColor: 'rgba(52, 211, 153, 0.2)',
-                    fill: isArea,
+                    borderColor: color,
+                    backgroundColor: isBar
+                        ? (context) => createVerticalGradient(context.chart.ctx, context.chart.chartArea, color, 0.85, 0.15)
+                        : (context) => createVerticalGradient(context.chart.ctx, context.chart.chartArea, color, 0.25, 0),
+                    fill: !isBar,
                     tension: 0.4,
+                    borderWidth: isBar ? 1.5 : 2.5,
+                    borderRadius: isBar ? 6 : 0,
+                    pointRadius: isBar ? 0 : 3,
+                    pointHoverRadius: isBar ? 0 : 6,
                     yAxisID: 'y'
                 });
             }
@@ -4662,13 +5562,20 @@
                     const record = filteredData.find(d => d.Month === m);
                     return record ? record["Erema(KG/KWH)"] : 0;
                 });
+                const color = getMetricColor('Avg Energy (KG/KWH)');
                 datasets.push({
                     label: 'Energy (KG/KWH)',
                     data: energyData,
-                    borderColor: 'rgb(251, 191, 36)', // Amber-400 (Brighter)
-                    backgroundColor: 'rgba(251, 191, 36, 0.2)',
-                    fill: isArea,
+                    borderColor: color,
+                    backgroundColor: isBar
+                        ? (context) => createVerticalGradient(context.chart.ctx, context.chart.chartArea, color, 0.85, 0.15)
+                        : (context) => createVerticalGradient(context.chart.ctx, context.chart.chartArea, color, 0.25, 0),
+                    fill: !isBar,
                     tension: 0.4,
+                    borderWidth: isBar ? 1.5 : 2.5,
+                    borderRadius: isBar ? 6 : 0,
+                    pointRadius: isBar ? 0 : 3,
+                    pointHoverRadius: isBar ? 0 : 6,
                     yAxisID: 'y1'
                 });
             }
@@ -4705,14 +5612,14 @@
                     scales: {
                         x: {
                             ticks: { color: '#94a3b8' },
-                            grid: { color: 'rgba(148, 163, 184, 0.1)' }
+                            grid: { color: 'rgba(255, 255, 255, 0.04)' }
                         },
                         y: {
                             type: 'linear',
                             display: datasets.some(d => d.yAxisID === 'y'),
                             position: 'left',
                             ticks: { color: '#94a3b8' },
-                            grid: { color: 'rgba(148, 163, 184, 0.1)' },
+                            grid: { color: 'rgba(255, 255, 255, 0.04)' },
                             title: { display: true, text: 'Production (KG)', color: '#64748b' }
                         },
                         y1: {
@@ -4841,13 +5748,13 @@
             grid.innerHTML = allMetrics.map(metric => {
                 const isChecked = selected.includes(metric);
                 return `
-                    <label class="cursor-pointer group">
-                        <input type="checkbox" value="${metric}" ${isChecked ? 'checked' : ''} class="peer sr-only">
-                        <div class="p-3 rounded-xl bg-slate-800/50 border-2 border-slate-700 peer-checked:border-blue-500 peer-checked:bg-blue-500/10 transition-all flex items-center gap-3">
-                            <div class="w-2.4 h-2.4 rounded border border-slate-500 peer-checked:bg-blue-500 flex items-center justify-center">
-                                <i class="fa-solid fa-check text-[8px] text-white"></i>
+                    <label class="cursor-pointer group block">
+                        <input type="checkbox" value="${metric}" ${isChecked ? 'checked' : ''} class="sr-only metric-checkbox-input">
+                        <div class="metric-checkbox-card p-3.5 rounded-xl transition-all flex items-center justify-between bg-slate-900/60 border border-slate-800/80 hover:border-slate-700/80">
+                            <span class="metric-checkbox-text text-xs font-bold text-slate-400 transition-colors">${metric}</span>
+                            <div class="metric-checkbox-indicator w-5 h-5 rounded-md border border-slate-700 flex items-center justify-center transition-all">
+                                <i class="fa-solid fa-check text-[9px] text-white opacity-0 transition-opacity"></i>
                             </div>
-                            <span class="text-xs font-bold text-slate-300 peer-checked:text-white">${metric}</span>
                         </div>
                     </label>
                 `;
@@ -5406,12 +6313,20 @@
                                 type: 'line',
                                 data: chartData.map(d => d.cumulativePct),
                                 borderColor: '#fbbf24',
-                                backgroundColor: 'rgba(251, 191, 36, 0.1)',
+                                backgroundColor: (context) => {
+                                    const chart = context.chart;
+                                    const { ctx, chartArea } = chart;
+                                    if (!chartArea) return null;
+                                    const gradient = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+                                    gradient.addColorStop(0, 'rgba(251, 191, 36, 0)');
+                                    gradient.addColorStop(1, 'rgba(251, 191, 36, 0.15)');
+                                    return gradient;
+                                },
                                 borderWidth: 3,
                                 pointRadius: 4,
                                 pointBackgroundColor: '#fbbf24',
                                 tension: 0.1,
-                                fill: false,
+                                fill: true,
                                 order: 1,
                                 yAxisID: 'yPct'
                             }
