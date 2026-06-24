@@ -2686,26 +2686,17 @@
                                             const label = (context?.dataset?.label) || '';
                                             const m = label.split(' \u25b8')[0].trim();
                                             const ml = m.toLowerCase();
-                                            // Ratio / percentage metrics
                                             if (m.includes('%') || m.includes('Ratio') || m.includes('OEE') || m.includes('Efficiency') || isRatioMetric(m)) {
                                                 return (val * 100).toFixed(2) + '%';
                                             }
-                                            // Production & Waste: data is in kg → show in Tons
                                             if (ml.includes('production') || ml.includes('waste')) {
                                                 const tons = val / 1000;
-                                                return tons >= 1000
-                                                    ? (tons / 1000).toFixed(2) + 'k T'
-                                                    : Math.round(tons).toLocaleString() + ' T';
+                                                return tons >= 1000 ? (tons / 1000).toFixed(2) + 'k T' : Math.round(tons).toLocaleString() + ' T';
                                             }
-                                            // Down Time → hours
-                                            if (ml.includes('down time') || ml.includes('downtime')) {
-                                                return Math.round(val).toLocaleString() + ' hrs';
+                                            if (ml.includes('down time') || ml.includes('downtime') || ml.includes('mtbf') || ml.includes('mttr') || ml.includes('uptime') || ml.includes('run time') || ml.includes('runtime')) {
+                                                return val >= 1000 ? (val / 1000).toFixed(1) + 'k h' : Math.round(val).toLocaleString() + ' h';
                                             }
-                                            // Energy metrics
-                                            if (ml.includes('kwh')) {
-                                                return val.toFixed(2) + ' KWh';
-                                            }
-                                            // Generic large numbers
+                                            if (ml.includes('kwh')) return val.toFixed(2) + ' KWh';
                                             if (Math.abs(val) >= 1000000) return (val / 1000000).toFixed(2) + 'M';
                                             if (Math.abs(val) >= 1000) return (val / 1000).toFixed(1) + 'k';
                                             return typeof val === 'number' ? val.toFixed(1) : val;
