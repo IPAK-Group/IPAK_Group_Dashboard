@@ -591,6 +591,13 @@ function fmtMonth(s){
     }
     catch{ return s; }
 }
+function fmtFullMonth(s){
+    if(!s) return '';
+    try {
+        const d=new Date(s);
+        return d.toLocaleDateString('en-US',{month:'long'});
+    } catch { return s; }
+}
 function toT(kg){ return kg>=1000?(kg/1000).toFixed(1)+'T':kg.toFixed(0)+'Kg'; }
 function rawPct(v){ return v===null||v===undefined?null:(v>1?v:v*100); }
 
@@ -686,7 +693,7 @@ function renderKPICards(rows, p){
 
     // Highest Month
     const bestMonth = rows.length ? [...rows].sort((a,b)=>(b.Production||0)-(a.Production||0))[0] : null;
-    const bestMonthLabel = bestMonth ? fmtMonth(bestMonth.Month) : '—';
+    const bestMonthLabel = bestMonth ? fmtFullMonth(bestMonth.Month) : '—';
     const bestMonthT     = bestMonth ? ((bestMonth.Production||0)/1000).toFixed(1)+'T' : '—';
 
     const cards=[
@@ -722,10 +729,6 @@ function renderBreakdown(rows, p){
     const sorted=[...rows].sort((a,b)=>a.Month<b.Month?-1:1);
     const labels=sorted.map(r=>fmtMonth(r.Month));
 
-    const maxProd=Math.max(...rows.map(r=>r.Production||0));
-
-    // Proportional scaling for visual visibility (so large Production doesn't squash OEE and Waste)
-    const prodVals = sorted.map(r => maxProd > 0 ? ((r.Production || 0) / maxProd) * 100 : 0);
     const oeeVals = sorted.map(r => r['OEE %'] ? (r['OEE %'] > 1 ? r['OEE %'] : r['OEE %'] * 100) : 0);
     const wasteValsScaled = sorted.map(r => r['Waste %'] ? (r['Waste %'] > 1 ? r['Waste %'] * 8 : r['Waste %'] * 800) : 0);
 
@@ -748,10 +751,8 @@ function renderBreakdown(rows, p){
                     const row = sorted[i];
                     let labelText = '';
                     if (datasetIndex === 0) {
-                        labelText = toT(row.Production || 0);
-                    } else if (datasetIndex === 1) {
                         const oee = rawPct(row['OEE %']) || 0;
-                        labelText = oee.toFixed(0) + '%'; // Shorter text to fit
+                        labelText = oee.toFixed(0) + '%';
                     } else {
                         const wp = rawPct(row['Waste %']) || 0;
                         labelText = wp.toFixed(1) + '%';
@@ -780,7 +781,6 @@ function renderBreakdown(rows, p){
         data: {
             labels: labels,
             datasets: [
-                { label: 'Production', data: prodVals, backgroundColor: '#38bdf8', stack: 'bd' },
                 { label: 'OEE %', data: oeeVals, backgroundColor: '#10b981', stack: 'bd' },
                 { label: 'Waste % (x8)', data: wasteValsScaled, backgroundColor: '#f43f5e', stack: 'bd' }
             ]
@@ -801,8 +801,6 @@ function renderBreakdown(rows, p){
                         label: c => {
                             const row = sorted[c.dataIndex];
                             if (c.datasetIndex === 0) {
-                                return ` Production: ${toT(row.Production||0)}`;
-                            } else if (c.datasetIndex === 1) {
                                 const oee = rawPct(row['OEE %']) || 0;
                                 return ` OEE: ${oee.toFixed(1)}%`;
                             } else {
@@ -1213,10 +1211,10 @@ function renderInsight(rows, p){
     const bestWaste = [...rows].sort((a,b)=>rawPct(b['Waste %'])-rawPct(a['Waste %']))[0];
 
     const insights=[
-        { isAlert: false, icon:'fa-gauge-high',        head:'Highest OEE',        text:`Peak OEE in <strong>${fmtMonth(bestOEE?.Month)}</strong> at <strong>${rawPct(bestOEE['OEE %']).toFixed(1)}%</strong>.` },
-        { isAlert: true,  icon:'fa-circle-down',        head:'Lowest OEE',         text:`Lowest OEE in <strong>${fmtMonth(worstOEE?.Month)}</strong> at <strong>${rawPct(worstOEE['OEE %']).toFixed(1)}%</strong>.` },
-        { isAlert: false, icon:'fa-industry',           head:'Highest Production', text:`Peak production in <strong>${fmtMonth(bestProd?.Month)}</strong> reaching <strong>${toT(bestProd?.Production||0)}</strong>.` },
-        { isAlert: true,  icon:'fa-trash-can',          head:'Highest Waste %',    text:`Max waste in <strong>${fmtMonth(bestWaste?.Month)}</strong> at <strong>${rawPct(bestWaste['Waste %']).toFixed(2)}%</strong>.` }
+        { isAlert: false, icon:'fa-gauge-high',        head:'Highest OEE',        text:`Peak OEE in <strong>${fmtFullMonth(bestOEE?.Month)}</strong> at <strong>${rawPct(bestOEE['OEE %']).toFixed(1)}%</strong>.` },
+        { isAlert: true,  icon:'fa-circle-down',        head:'Lowest OEE',         text:`Lowest OEE in <strong>${fmtFullMonth(worstOEE?.Month)}</strong> at <strong>${rawPct(worstOEE['OEE %']).toFixed(1)}%</strong>.` },
+        { isAlert: false, icon:'fa-industry',           head:'Highest Production', text:`Peak production in <strong>${fmtFullMonth(bestProd?.Month)}</strong> reaching <strong>${toT(bestProd?.Production||0)}</strong>.` },
+        { isAlert: true,  icon:'fa-trash-can',          head:'Highest Waste %',    text:`Max waste in <strong>${fmtFullMonth(bestWaste?.Month)}</strong> at <strong>${rawPct(bestWaste['Waste %']).toFixed(2)}%</strong>.` }
     ];
 
     insights.forEach(ins=>{
