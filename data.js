@@ -1229,6 +1229,21 @@ const dashboardData = {
             "KWh/Kg Plant": 1.326,
             "Rs/Kg Plant": 40.94,
             "No of Grade Changes": 39
+        },
+        {
+            "Month": "2026-06-26",
+            "Plant": "CPAK",
+            "Production": 616047.4319049999,
+            "Waste": 8324.40300000005,
+            "Waste %": 0.0133,
+            "Down Time": 40.81,
+            "OEE %": 0.9234,
+            "Performance %": 0.9627,
+            "Availability %": 0.9592,
+            "Quality %": 1.0,
+            "KWh/Kg Plant": 0.986,
+            "Rs/Kg Plant": 0.0,
+            "No of Grade Changes": 13
         }
     ],
     "productData": [
@@ -12431,6 +12446,76 @@ const dashboardData = {
             "Product Type": "Sealable",
             "Product": "THO18",
             "Production": 11490.002999999999
+        },
+        {
+            "Month": "2026-06-01",
+            "Plant": "CPAK",
+            "Product Type": "Metalizable",
+            "Product": "JR-CMB21S-20",
+            "Production": 65126.0
+        },
+        {
+            "Month": "2026-06-01",
+            "Plant": "CPAK",
+            "Product Type": "Metalizable",
+            "Product": "JR-CMB21S-25 ",
+            "Production": 310794.0
+        },
+        {
+            "Month": "2026-06-01",
+            "Plant": "CPAK",
+            "Product Type": "Metalizable",
+            "Product": "JR-CMB21S-30",
+            "Production": 15463.0
+        },
+        {
+            "Month": "2026-06-01",
+            "Plant": "CPAK",
+            "Product Type": "Metalizable High MBS",
+            "Product": "JR-CMB21SX-25",
+            "Production": 126932.0
+        },
+        {
+            "Month": "2026-06-01",
+            "Plant": "CPAK",
+            "Product Type": "White Metalizable",
+            "Product": "JR-CMBW21-40",
+            "Production": 22095.0
+        },
+        {
+            "Month": "2026-06-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable",
+            "Product": "JR-CTH21-25",
+            "Production": 38314.0
+        },
+        {
+            "Month": "2026-06-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable",
+            "Product": "JR-CTH21-30",
+            "Production": 31715.0
+        },
+        {
+            "Month": "2026-06-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable",
+            "Product": "JR-CTH21-40",
+            "Production": 1127.0
+        },
+        {
+            "Month": "2026-06-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable Low COF",
+            "Product": "JR-CTH2L-25",
+            "Production": 2348.0
+        },
+        {
+            "Month": "2026-06-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable Low COF",
+            "Product": "JR-CTH2L-40",
+            "Production": 2127.0
         }
     ],
     "eremaData": [
@@ -12925,6 +13010,12 @@ const dashboardData = {
             "Plant": "IPAK",
             "Erema Production": 251790.0,
             "Erema(KG/KWH)": 0.41
+        },
+        {
+            "Month": "2026-06-01",
+            "Plant": "CPAK",
+            "Erema Production": 0.0,
+            "Erema(KG/KWH)": 0.0
         }
     ],
     "trialsData": [
@@ -14179,6 +14270,14 @@ const dashboardData = {
             "Waste": 97043.0,
             "Waste %": 0.05661217194073873,
             "Down Time": 0.0
+        },
+        {
+            "Month": "2026-06-26",
+            "Plant": "CPAK",
+            "Production": 537669,
+            "Waste": 73690.0,
+            "Waste %": 0.131,
+            "Down Time": 5.5
         }
     ],
     "reconData": [],
