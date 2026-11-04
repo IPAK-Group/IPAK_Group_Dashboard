@@ -1244,21 +1244,6 @@ const dashboardData = {
             "KWh/Kg Plant": 0.986,
             "Rs/Kg Plant": 0.0,
             "No of Grade Changes": 13
-        },
-        {
-            "Month": "2026-07-01",
-            "Plant": "PETPAK",
-            "Production": 3027951.0,
-            "Waste": 103.5,
-            "Waste %": 0.0331,
-            "Down Time": 338.59,
-            "OEE %": 0.8785,
-            "Performance %": 0.9555,
-            "Availability %": 0.8954,
-            "Quality %": 1.0,
-            "KWh/Kg Plant": 0.87,
-            "Rs/Kg Plant": 32.01,
-            "No of Grade Changes": 37
         }
     ],
     "productData": [
