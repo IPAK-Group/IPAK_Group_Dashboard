@@ -1248,7 +1248,7 @@ const dashboardData = {
         {
             "Month": "2026-07-01",
             "Plant": "PETPAK",
-            "Production": 302795.0,
+            "Production": 3027951.0,
             "Waste": 103.5,
             "Waste %": 0.0331,
             "Down Time": 338.59,
