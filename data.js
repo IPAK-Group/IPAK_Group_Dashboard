@@ -1106,8 +1106,8 @@ const dashboardData = {
             "Performance %": 0.96,
             "Availability %": 0.8913,
             "Quality %": 1.0,
-            "KWh/Kg Plant": 1.159,
-            "Rs/Kg Plant": 0.0,
+            "KWh/Kg Plant": 1.13,
+            "Rs/Kg Plant": 36.05,
             "No of Grade Changes": 66
         },
         {
@@ -1122,7 +1122,7 @@ const dashboardData = {
             "Availability %": 0.9456,
             "Quality %": 1.0,
             "KWh/Kg Plant": 1.019,
-            "Rs/Kg Plant": 0.0,
+            "Rs/Kg Plant": 32.41,
             "No of Grade Changes": 7
         },
         {
@@ -1166,8 +1166,8 @@ const dashboardData = {
             "Performance %": 0.9002,
             "Availability %": 0.9609,
             "Quality %": 1.0,
-            "KWh/Kg Plant": 0.79,
-            "Rs/Kg Plant": 0.0,
+            "KWh/Kg Plant": 1.04,
+            "Rs/Kg Plant": 31.89,
             "No of Grade Changes": 8
         },
         {
@@ -1182,7 +1182,7 @@ const dashboardData = {
             "Availability %": 0.922,
             "Quality %": 1.0,
             "KWh/Kg Plant": 1.4,
-            "Rs/Kg Plant": 0.0,
+            "Rs/Kg Plant": 43.02,
             "No of Grade Changes": 37
         },
         {
@@ -1211,8 +1211,8 @@ const dashboardData = {
             "Performance %": 0.9164,
             "Availability %": 0.8231,
             "Quality %": 1.0,
-            "KWh/Kg Plant": 0.0,
-            "Rs/Kg Plant": 0.0,
+            "KWh/Kg Plant": 0.97,
+            "Rs/Kg Plant": 32.32,
             "No of Grade Changes": 42
         },
         {
@@ -1242,7 +1242,7 @@ const dashboardData = {
             "Availability %": 0.9592,
             "Quality %": 1.0,
             "KWh/Kg Plant": 0.986,
-            "Rs/Kg Plant": 0.0,
+            "Rs/Kg Plant": 34.31,
             "No of Grade Changes": 13
         },
         {
@@ -1256,8 +1256,8 @@ const dashboardData = {
             "Performance %": 0.8922,
             "Availability %": 0.9254,
             "Quality %": 1.0,
-            "KWh/Kg Plant": 0.0,
-            "Rs/Kg Plant": 0.0,
+            "KWh/Kg Plant": 1.2,
+            "Rs/Kg Plant": 48.29,
             "No of Grade Changes": 49
         },
         {
@@ -1271,8 +1271,8 @@ const dashboardData = {
             "Performance %": 0.9304,
             "Availability %": 0.9166,
             "Quality %": 1.0,
-            "KWh/Kg Plant": 0.0,
-            "Rs/Kg Plant": 0.0,
+            "KWh/Kg Plant": 1.5,
+            "Rs/Kg Plant": 47.36,
             "No of Grade Changes": 16
         },
         {
@@ -1287,7 +1287,7 @@ const dashboardData = {
             "Availability %": 0.9129,
             "Quality %": 1.0,
             "KWh/Kg Plant": 1.171,
-            "Rs/Kg Plant": 40.36,
+            "Rs/Kg Plant": 45.55,
             "No of Grade Changes": 56
         },
         {
@@ -1302,7 +1302,7 @@ const dashboardData = {
             "Availability %": 0.8919,
             "Quality %": 1.0,
             "KWh/Kg Plant": 1.738,
-            "Rs/Kg Plant": 57.59,
+            "Rs/Kg Plant": 53.82,
             "No of Grade Changes": 41
         },
         {
@@ -1316,8 +1316,8 @@ const dashboardData = {
             "Performance %": 0.943,
             "Availability %": 0.924,
             "Quality %": 1.0,
-            "KWh/Kg Plant": 1.777,
-            "Rs/Kg Plant": 54.54,
+            "KWh/Kg Plant": 1.77,
+            "Rs/Kg Plant": 57.94,
             "No of Grade Changes": 21
         },
         {
@@ -1332,7 +1332,7 @@ const dashboardData = {
             "Availability %": 0.92,
             "Quality %": 1.0,
             "KWh/Kg Plant": 1.15,
-            "Rs/Kg Plant": 34.61,
+            "Rs/Kg Plant": 37.1,
             "No of Grade Changes": 49
         },
         {
@@ -1346,8 +1346,8 @@ const dashboardData = {
             "Performance %": 0.9044,
             "Availability %": 0.9681,
             "Quality %": 1.0,
-            "KWh/Kg Plant": 0.0,
-            "Rs/Kg Plant": 0.0,
+            "KWh/Kg Plant": 0.8082953433188174,
+            "Rs/Kg Plant": 36.769355167573,
             "No of Grade Changes": 20
         },
         {
@@ -1361,8 +1361,8 @@ const dashboardData = {
             "Performance %": 0.9105,
             "Availability %": 0.9231,
             "Quality %": 1.0,
-            "KWh/Kg Plant": 0.0,
-            "Rs/Kg Plant": 0.0,
+            "KWh/Kg Plant": 0.7949640744408053,
+            "Rs/Kg Plant": 25.089066189351815,
             "No of Grade Changes": 42
         },
         {
@@ -1376,8 +1376,8 @@ const dashboardData = {
             "Performance %": 0.9325,
             "Availability %": 0.9295,
             "Quality %": 1.0,
-            "KWh/Kg Plant": 0.0,
-            "Rs/Kg Plant": 0.0,
+            "KWh/Kg Plant": 0.7294189391505862,
+            "Rs/Kg Plant": 22.925637257502924,
             "No of Grade Changes": 44
         },
         {
@@ -1391,8 +1391,8 @@ const dashboardData = {
             "Performance %": 0.9754,
             "Availability %": 1.0,
             "Quality %": 1.0,
-            "KWh/Kg Plant": 0.0,
-            "Rs/Kg Plant": 0.0,
+            "KWh/Kg Plant": 0.6726777703213261,
+            "Rs/Kg Plant": 23.402459629478937,
             "No of Grade Changes": 46
         }
     ],
