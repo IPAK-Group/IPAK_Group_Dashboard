@@ -14308,6 +14308,22 @@ const dashboardData = {
             "Waste": 73690.0,
             "Waste %": 0.131,
             "Down Time": 5.5
+        },
+        {
+            "Month": "2026-07-26",
+            "Plant": "GPAK",
+            "Production": 1878210,
+            "Waste": 46450.0,
+            "Waste %": 0.024,
+            "Down Time": 36.0
+        },
+        {
+            "Month": "2026-08-26",
+            "Plant": "GPAK",
+            "Production": 1300340,
+            "Waste": 30720.0,
+            "Waste %": 0.023,
+            "Down Time": 5.0
         }
     ],
     "reconData": [],
