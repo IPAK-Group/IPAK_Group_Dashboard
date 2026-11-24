@@ -1274,6 +1274,66 @@ const dashboardData = {
             "KWh/Kg Plant": 0.0,
             "Rs/Kg Plant": 0.0,
             "No of Grade Changes": 16
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Production": 2215930.0,
+            "Waste": 67004.0,
+            "Waste %": 0.0293,
+            "Down Time": 85.25,
+            "OEE %": 0.8748,
+            "Performance %": 0.95149,
+            "Availability %": 0.9129,
+            "Quality %": 1.0,
+            "KWh/Kg Plant": 1.171,
+            "Rs/Kg Plant": 40.36,
+            "No of Grade Changes": 56
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "IPAK",
+            "Production": 1181593.0,
+            "Waste": 52500.0,
+            "Waste %": 0.0425,
+            "Down Time": 68.8,
+            "OEE %": 0.8518,
+            "Performance %": 0.955,
+            "Availability %": 0.8919,
+            "Quality %": 1.0,
+            "KWh/Kg Plant": 1.738,
+            "Rs/Kg Plant": 57.59,
+            "No of Grade Changes": 41
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "IPAK",
+            "Production": 1052189.63,
+            "Waste": 42800.0,
+            "Waste %": 0.0391,
+            "Down Time": 87.3,
+            "OEE %": 0.8714,
+            "Performance %": 0.943,
+            "Availability %": 0.924,
+            "Quality %": 1.0,
+            "KWh/Kg Plant": 1.777,
+            "Rs/Kg Plant": 54.54,
+            "No of Grade Changes": 21
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Production": 2103406.5594300004,
+            "Waste": 82340.0,
+            "Waste %": 0.03767133917917393,
+            "Down Time": 82.8,
+            "OEE %": 0.859,
+            "Performance %": 0.934,
+            "Availability %": 0.92,
+            "Quality %": 1.0,
+            "KWh/Kg Plant": 1.15,
+            "Rs/Kg Plant": 34.61,
+            "No of Grade Changes": 49
         }
     ],
     "productData": [
@@ -12980,6 +13040,1021 @@ const dashboardData = {
             "Product Type": "Opaque",
             "Product": "PWLO-38",
             "Production": 5419.3152
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "Metalizeable (High barrier)",
+            "Product": "THOM(HB)-15",
+            "Production": 38913.88199999999
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "Metalizeable (Ultra High barrier)",
+            "Product": "THOM(UHB)-15",
+            "Production": 96059.658
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "Non-Sealable",
+            "Product": "TNn30",
+            "Production": 310812.8505
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-18",
+            "Production": 21395.283599999995
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-20",
+            "Production": 180248.7402
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "TL21-35",
+            "Production": 69152.77649999999
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "BOPE Non-Sealable",
+            "Product": "HTN01-25",
+            "Production": 2654.8224
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "BOPE Non-Sealable",
+            "Product": "HTN02-25",
+            "Production": 1266.0327
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "BOPE Sealable",
+            "Product": "HTH12-25",
+            "Production": 628.488
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "THo30",
+            "Production": 105678.98700000001
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "BOPE Sealable",
+            "Product": "HTH11-25",
+            "Production": 1203.471
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "BOPE Sealable",
+            "Product": "HTH11-30",
+            "Production": 1190.9951999999998
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "Non-Sealable",
+            "Product": "TNo18",
+            "Production": 30352.124999999996
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "BOPE Metalizeable",
+            "Product": "HMB11S-25",
+            "Production": 614.655
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "Metalizeable",
+            "Product": "MB21S-20",
+            "Production": 231371.98208999998
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-15",
+            "Production": 22266.8235
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "Cigerete Grade",
+            "Product": "CG-44H-20",
+            "Production": 74686.716
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "Cigerete Grade",
+            "Product": "TC20-20",
+            "Production": 16141.805999999999
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "Cigerete Grade",
+            "Product": "CG-99N-23",
+            "Production": 32877.73499999999
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "Cigerete Grade",
+            "Product": "TC20A-23",
+            "Production": 8139.284999999999
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable Over Wrap",
+            "Product": "THOW-18",
+            "Production": 5088.977999999999
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "Metalizeable",
+            "Product": "MB21S-18",
+            "Production": 36472.59153
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "Metalizeable (High barrier)",
+            "Product": "MB21R-18",
+            "Production": 1511.52147
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "Metalizeable Broad Seal",
+            "Product": "THoM111-18",
+            "Production": 30903.00899999999
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "Metalizeable Medium Barier",
+            "Product": "MB21MB-15",
+            "Production": 25615.801499999994
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-25",
+            "Production": 169236.7326
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-30",
+            "Production": 236003.68199999997
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "Metalizeable",
+            "Product": "MB21S-30",
+            "Production": 3316.6139999999996
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-35",
+            "Production": 33456.1458
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-40",
+            "Production": 9773.492999999999
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "Opaque",
+            "Product": "OLC217-38",
+            "Production": 168365.18399999998
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "Opaque",
+            "Product": "PWLO38",
+            "Production": 61192.015499999994
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "White Solid",
+            "Product": "WSO-20",
+            "Production": 39754.258499999996
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "Opaque Soap Grade",
+            "Product": "PRL(SG)-25",
+            "Production": 1261.848
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "Opaque",
+            "Product": "OC217-25",
+            "Production": 315.81
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "Opaque",
+            "Product": "PRL-25",
+            "Production": 10968.350999999999
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "Metalizeable",
+            "Product": "THOM20",
+            "Production": 15296.861999999997
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "Opaque",
+            "Product": "PRL-30",
+            "Production": 4821.400799999999
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "THO20",
+            "Production": 2766.3825
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "Non-Sealable",
+            "Product": "TNO20",
+            "Production": 9076.057499999999
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "Metalizeable (High barrier)",
+            "Product": "MB21R-20",
+            "Production": 35790.06
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "THO-40",
+            "Production": 42919.0662
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "THO25",
+            "Production": 26373.014699999996
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "IPAK",
+            "Product Type": "Metalizeable",
+            "Product": "MB21S-20",
+            "Production": 105910.23299999998
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "IPAK",
+            "Product Type": "Metalizeable Medium Barier",
+            "Product": "MB21MB-15",
+            "Production": 99698.781
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "THO30",
+            "Production": 13227.827999999998
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "IPAK",
+            "Product Type": "Metalizeable",
+            "Product": "THOM20",
+            "Production": 37229.88389999999
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "IPAK",
+            "Product Type": "Metalizeable",
+            "Product": "THOM18",
+            "Production": 18877.48185
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-08",
+            "Production": 964.3949999999999
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable Anti fog",
+            "Product": "THAF22-30",
+            "Production": 7362.113999999999
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable Over Wrap",
+            "Product": "THOW-18",
+            "Production": 3069.4035
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-30",
+            "Production": 79884.9747
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-20",
+            "Production": 73790.094
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "IPAK",
+            "Product Type": "Metalizeable Broad Seal",
+            "Product": "THoM111-18",
+            "Production": 32046.710999999996
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "IPAK",
+            "Product Type": "Opaque",
+            "Product": "OLC217-38",
+            "Production": 53624.407499999994
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "IPAK",
+            "Product Type": "Opaque Low density",
+            "Product": "OLC216-38",
+            "Production": 1331.187
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "IPAK",
+            "Product Type": "White Solid",
+            "Product": "WSO-20",
+            "Production": 66215.72175
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "IPAK",
+            "Product Type": "Opaque Metalizeable",
+            "Product": "MBOC216S-28",
+            "Production": 2974.0950000000003
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "IPAK",
+            "Product Type": "Opaque",
+            "Product": "PWLo38",
+            "Production": 59102.031899999994
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "IPAK",
+            "Product Type": "Metalizeable",
+            "Product": "MB21S-30",
+            "Production": 6467.249399999999
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "IPAK",
+            "Product Type": "Metalizeable HB",
+            "Product": "THOM(HB)-15",
+            "Production": 156809.061
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "IPAK",
+            "Product Type": "Metalizeable UHB",
+            "Product": "THOM(UHB)-15",
+            "Production": 135688.90619999997
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "IPAK",
+            "Product Type": "Cigerete Grade",
+            "Product": "CG-44H-20",
+            "Production": 64602.981
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable Over Wrap",
+            "Product": "THOW-25",
+            "Production": 11217.867
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "IPAK",
+            "Product Type": "Non-Sealable High Resistive",
+            "Product": "DTN01-HR-20",
+            "Production": 4482.065999999999
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "THO18",
+            "Production": 45823.274099999995
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "THO20",
+            "Production": 27850.1355
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "IPAK",
+            "Product Type": "Solid White Control Opacity",
+            "Product": "WSCO-20",
+            "Production": 10029.359999999999
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "IPAK",
+            "Product Type": "Solid White Control Opacity",
+            "Product": "WSCO-15",
+            "Production": 9547.118999999999
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "IPAK",
+            "Product Type": "Opaque In-Mold",
+            "Product": "OLC125I-60",
+            "Production": 6741.777899999999
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "IPAK",
+            "Product Type": "Opaque In-Mold",
+            "Product": "OLC125I-65",
+            "Production": 3870.6821999999997
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "IPAK",
+            "Product Type": "Opaque In-Mold",
+            "Product": "OLC126I-65",
+            "Production": 13182.065999999999
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "IPAK",
+            "Product Type": "Solid White In-Mold",
+            "Product": "OLW128I-70",
+            "Production": 1575.9179999999997
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "IPAK",
+            "Product Type": "Solid White In-Mold",
+            "Product": "OLW129I-70",
+            "Production": 1749.744
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "IPAK",
+            "Product Type": "Opaque",
+            "Product": "OC217-40",
+            "Production": 4352.218499999999
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "IPAK",
+            "Product Type": "Opaque Soap Grade",
+            "Product": "PRL(SG)-25",
+            "Production": 18856.119
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "IPAK",
+            "Product Type": "Opaque Soap Grade Low SIT",
+            "Product": "OS21A-30",
+            "Production": 1305.087
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "IPAK",
+            "Product Type": "Opaque",
+            "Product": "OC217-25",
+            "Production": 2132.892
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "THO30",
+            "Production": 95684.40090000001
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-30",
+            "Production": 161544.1752
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "IPAK",
+            "Product Type": "Metalizeable HB",
+            "Product": "THOMHB-15",
+            "Production": 124315.37444999999
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-20",
+            "Production": 41160.6483
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "IPAK",
+            "Product Type": "Metalizeable UHB",
+            "Product": "THOMUHB-15",
+            "Production": 25603.316999999995
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "IPAK",
+            "Product Type": "White Solid",
+            "Product": "WSO-20",
+            "Production": 215971.6275
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "IPAK",
+            "Product Type": "Opaque",
+            "Product": "PRL-30",
+            "Production": 4612.0005
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "IPAK",
+            "Product Type": "Opaque Soap Grade",
+            "Product": "PRL(SG)25",
+            "Production": 16221.228299999999
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "IPAK",
+            "Product Type": "Non-Sealable",
+            "Product": "TNn30",
+            "Production": 1898.6879999999999
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "IPAK",
+            "Product Type": "Non-Sealable",
+            "Product": "TN01-30",
+            "Production": 3149.3129999999996
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "IPAK",
+            "Product Type": "Non-Sealable",
+            "Product": "TNb-10",
+            "Production": 80853.14549999998
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "IPAK",
+            "Product Type": "Opaque",
+            "Product": "PRL25",
+            "Production": 15173.496
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "IPAK",
+            "Product Type": "Opaque",
+            "Product": "OC217-25",
+            "Production": 1583.3999999999999
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "IPAK",
+            "Product Type": "Opaque",
+            "Product": "OL217-30",
+            "Production": 1694.4119999999998
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "IPAK",
+            "Product Type": "Non-Sealable",
+            "Product": "TNO-10",
+            "Production": 10270.880699999998
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "IPAK",
+            "Product Type": "Non-Sealable",
+            "Product": "TNo18",
+            "Production": 10940.415299999999
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "IPAK",
+            "Product Type": "Non-Sealable",
+            "Product": "TNo20",
+            "Production": 55338.611999999994
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "THO20",
+            "Production": 3317.8319999999994
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "IPAK",
+            "Product Type": "Non-Sealable Tape Grade",
+            "Product": "TNIT-23",
+            "Production": 56432.07149999999
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "IPAK",
+            "Product Type": "Non-Sealable",
+            "Product": "TNO30",
+            "Production": 10475.148
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "THoL40",
+            "Production": 11072.498699999998
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "THO18",
+            "Production": 30873.820499999994
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "THO15",
+            "Production": 20780.8983
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-40",
+            "Production": 1272.636
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "IPAK",
+            "Product Type": "Cigerete Grade",
+            "Product": "CG99N-23",
+            "Production": 51948.935399999995
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable Over Wrap",
+            "Product": "THOW-25",
+            "Production": 48436.684499999996
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Product Type": "Metalizeable UHB",
+            "Product": "THOMUHB-15",
+            "Production": 113998.15754999997
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Product Type": "Cigerete Grade",
+            "Product": "CG-99N-23",
+            "Production": 9676.400999999998
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Product Type": "Metalizeable HB",
+            "Product": "THOMHB-15",
+            "Production": 176014.78949999998
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "THO18",
+            "Production": 84265.416
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Product Type": "Non-Sealable",
+            "Product": "TNb-10",
+            "Production": 52759.45349999999
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-20",
+            "Production": 163843.4895
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-30",
+            "Production": 166344.89609999998
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-40",
+            "Production": 39963.266429999996
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Product Type": "Metalizeable",
+            "Product": "MB21S-18",
+            "Production": 18966.478499999997
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Product Type": "Matt",
+            "Product": "MATT-WL20",
+            "Production": 17623.4595
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Product Type": "Matt",
+            "Product": "MT21D-20",
+            "Production": 3236.5739999999996
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "THO30",
+            "Production": 18635.256449999997
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Product Type": "Metalizeable",
+            "Product": "THOM18",
+            "Production": 12657.7605
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Product Type": "Matt",
+            "Product": "MATT-WL15",
+            "Production": 59955.1974
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Product Type": "Matt",
+            "Product": "MATT-PL12",
+            "Production": 22818.647099999995
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-25",
+            "Production": 139619.9838
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Product Type": "Metalizeable HB",
+            "Product": "MBX21R-18",
+            "Production": 30238.8075
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Product Type": "Metalizeable Medium Barier",
+            "Product": "MB21MB-15",
+            "Production": 62208.8541
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "TL21-40",
+            "Production": 50179.7034
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21PI-25",
+            "Production": 111510.4056
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "TL21-35",
+            "Production": 12643.779599999998
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "THO40",
+            "Production": 8723.5596
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-15",
+            "Production": 17644.905
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Product Type": "Non-Sealable",
+            "Product": "TNO18",
+            "Production": 42834.7545
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Product Type": "Non-Sealable",
+            "Product": "TNO20",
+            "Production": 83343.86850000001
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Product Type": "Cigerete Grade",
+            "Product": "CG-44H-20",
+            "Production": 38690.7618
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable Over Wrap",
+            "Product": "THOW-18",
+            "Production": 6460.794
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Product Type": "Opaque",
+            "Product": "OLC217-38",
+            "Production": 256477.2876
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Product Type": "Sealable",
+            "Product": "THO25",
+            "Production": 11360.894999999999
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Product Type": "Opaque",
+            "Product": "OC217-25",
+            "Production": 4169.996999999999
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Product Type": "Opaque",
+            "Product": "PRL25",
+            "Production": 9854.838
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Product Type": "Opaque Soap Grade",
+            "Product": "PRL(SG)25",
+            "Production": 8235.7593
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Product Type": "Opaque",
+            "Product": "PRL-30",
+            "Production": 14671.331999999999
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Product Type": "White Solid",
+            "Product": "WSO20",
+            "Production": 24172.3845
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Product Type": "White Solid Control Opacity",
+            "Product": "WSCO-20",
+            "Production": 20175.038999999997
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Product Type": "White Solid Control Opacity",
+            "Product": "WSCO-15",
+            "Production": 20594.109299999996
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Product Type": "Opaque In-Mold",
+            "Product": "OLC126I-60",
+            "Production": 4558.365
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Product Type": "Opaque In-Mold",
+            "Product": "OLC126I-65",
+            "Production": 11479.6065
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Product Type": "Solid White In-Mold",
+            "Product": "OLW128I-70",
+            "Production": 3616.5464999999995
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Product Type": "Metalizeable Broad Seal",
+            "Product": "THoM111-18",
+            "Production": 82249.05179999999
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Product Type": "Metalizeable Broad Seal",
+            "Product": "THoM111-20",
+            "Production": 18495.243
         }
     ],
     "eremaData": [
@@ -13492,6 +14567,30 @@ const dashboardData = {
             "Plant": "GPAK",
             "Erema Production": 231000.0,
             "Erema(KG/KWH)": 0.37
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Erema Production": 242767.5,
+            "Erema(KG/KWH)": 0.43
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "IPAK",
+            "Erema Production": 137366.809,
+            "Erema(KG/KWH)": 0.4
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "IPAK",
+            "Erema Production": 209350.0,
+            "Erema(KG/KWH)": 0.44
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "IPAK",
+            "Erema Production": 226234.135,
+            "Erema(KG/KWH)": 0.46
         }
     ],
     "trialsData": [
@@ -14214,6 +15313,126 @@ const dashboardData = {
             "Waste": 700,
             "Down Time": 8,
             "Remarks": "Produced for first time, Customer A4 size sample requirement"
+        },
+        {
+            "Date": "2026-07-04",
+            "Plant": "IPAK",
+            "Product Type": "Trans Non- Heat Seal,One Side Treat BOPE",
+            "Product": "HTN01-25",
+            "Production": 2654.8224,
+            "Waste": 7760,
+            "Down Time": 194,
+            "Remarks": "BOPE Trials"
+        },
+        {
+            "Date": "2026-07-04",
+            "Plant": "IPAK",
+            "Product Type": "Trans Non-Heat Seal, Bothside Treat BOPE",
+            "Product": "HTN02-25",
+            "Production": 1266.0327,
+            "Waste": 1920,
+            "Down Time": 48,
+            "Remarks": "BOPE Trials"
+        },
+        {
+            "Date": "2026-07-04",
+            "Plant": "IPAK",
+            "Product Type": "Trans OneSide HeatSeal,OtherSide Treated",
+            "Product": "HTH11-25",
+            "Production": 1203.471,
+            "Waste": 1240,
+            "Down Time": 31,
+            "Remarks": "BOPE Trials"
+        },
+        {
+            "Date": "2026-07-04",
+            "Plant": "IPAK",
+            "Product Type": "Trans OneSide HeatSeal,bothSide Treated",
+            "Product": "HTH12-25",
+            "Production": 628.49,
+            "Waste": 1440,
+            "Down Time": 36,
+            "Remarks": "BOPE Trials"
+        },
+        {
+            "Date": "2026-07-04",
+            "Plant": "IPAK",
+            "Product Type": "Metalizble One/S HeatSeal,OtherSideTreat",
+            "Product": "HMB11S-25",
+            "Production": 614.66,
+            "Waste": 0,
+            "Down Time": 0,
+            "Remarks": "BOPE Trials"
+        },
+        {
+            "Date": "2026-07-04",
+            "Plant": "IPAK",
+            "Product Type": "Trans OneSide HeatSeal,OtherSide Treated",
+            "Product": "HTH11-30",
+            "Production": 1191,
+            "Waste": 320,
+            "Down Time": 8,
+            "Remarks": "BOPE Trials"
+        },
+        {
+            "Date": "2026-08-05",
+            "Plant": "IPAK",
+            "Product Type": "Transparent Heat Sealable BOPP Film",
+            "Product": "TH21-08",
+            "Production": 964.4,
+            "Waste": 1800,
+            "Down Time": 60,
+            "Remarks": 0
+        },
+        {
+            "Date": "2026-08-07",
+            "Plant": "IPAK",
+            "Product Type": "Trans B/S Seal, B/S Treat Anti-Fog Film",
+            "Product": "THAF22-30",
+            "Production": 7362.11,
+            "Waste": 2500,
+            "Down Time": 56.4,
+            "Remarks": 0
+        },
+        {
+            "Date": "2026-08-07",
+            "Plant": "IPAK",
+            "Product Type": "Pearl Metallizable Low Density Heat Seal",
+            "Product": "MBOC216S-28",
+            "Production": 2974.1,
+            "Waste": 587,
+            "Down Time": 25.8,
+            "Remarks": 0
+        },
+        {
+            "Date": "2026-08-25",
+            "Plant": "IPAK",
+            "Product Type": "Solid White Injection In-Mould Label",
+            "Product": "OLW128I-70",
+            "Production": 1575.92,
+            "Waste": 3815,
+            "Down Time": 69,
+            "Remarks": 0
+        },
+        {
+            "Date": "2026-08-26",
+            "Plant": "IPAK",
+            "Product Type": "Pearl SoapGrade V.Low HeatSeal BOPP Film",
+            "Product": "OS21A-30",
+            "Production": 1305.09,
+            "Waste": 648,
+            "Down Time": 10.799999999999999,
+            "Remarks": 0
+        },
+        {
+            "Date": "2026-10-02",
+            "Plant": "IPAK",
+            "Product Type": "Metallizable High Barrier BOPP Film",
+            "Product": "THOMHB-15",
+            "Production": 0,
+            "Waste": 0,
+            "Down Time": 0,
+            "Remarks": "A new material RD508M was used in place of KS607"
         }
     ],
     "offlineData": [
@@ -14800,6 +16019,30 @@ const dashboardData = {
             "Waste": 30720.0,
             "Waste %": 0.023,
             "Down Time": 5.0
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "IPAK",
+            "Production": 2369074,
+            "Waste": 157523.0,
+            "Waste %": 0.0664913801763896,
+            "Down Time": 0.0
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "IPAK",
+            "Production": 1190363,
+            "Waste": 61636.0,
+            "Waste %": 0.05177916316283352,
+            "Down Time": 0.0
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "IPAK",
+            "Production": 1027342,
+            "Waste": 55093.0,
+            "Waste %": 0.053626737736800406,
+            "Down Time": 0.0
         }
     ],
     "reconData": [],
