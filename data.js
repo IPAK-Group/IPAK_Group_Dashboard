@@ -1244,6 +1244,36 @@ const dashboardData = {
             "KWh/Kg Plant": 0.986,
             "Rs/Kg Plant": 0.0,
             "No of Grade Changes": 13
+        },
+        {
+            "Month": "2026-07-26",
+            "Plant": "GPAK",
+            "Production": 1761879.0,
+            "Waste": 69774.0,
+            "Waste %": 0.0381,
+            "Down Time": 30.85,
+            "OEE %": 0.8256,
+            "Performance %": 0.8922,
+            "Availability %": 0.9254,
+            "Quality %": 1.0,
+            "KWh/Kg Plant": 0.0,
+            "Rs/Kg Plant": 0.0,
+            "No of Grade Changes": 49
+        },
+        {
+            "Month": "2026-08-26",
+            "Plant": "GPAK",
+            "Production": 1234883.0,
+            "Waste": 44570.0,
+            "Waste %": 0.0348,
+            "Down Time": 23.01,
+            "OEE %": 0.8528,
+            "Performance %": 0.9304,
+            "Availability %": 0.9166,
+            "Quality %": 1.0,
+            "KWh/Kg Plant": 0.0,
+            "Rs/Kg Plant": 0.0,
+            "No of Grade Changes": 16
         }
     ],
     "productData": [
