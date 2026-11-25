@@ -15013,25 +15013,25 @@ const dashboardData = {
             "Month": "2026-07-01",
             "Plant": "PETPAK",
             "Erema Production": 105740.0,
-            "Erema(KG/KWH)": 0.0
+            "Erema(KG/KWH)": 0.28
         },
         {
             "Month": "2026-08-01",
             "Plant": "PETPAK",
             "Erema Production": 200090.55,
-            "Erema(KG/KWH)": 0.0
+            "Erema(KG/KWH)": 0.33
         },
         {
             "Month": "2026-09-01",
             "Plant": "PETPAK",
             "Erema Production": 217299.15,
-            "Erema(KG/KWH)": 0.0
+            "Erema(KG/KWH)": 0.35
         },
         {
             "Month": "2026-10-01",
             "Plant": "PETPAK",
             "Erema Production": 197480.699,
-            "Erema(KG/KWH)": 0.0
+            "Erema(KG/KWH)": 0.28
         }
     ],
     "trialsData": [
