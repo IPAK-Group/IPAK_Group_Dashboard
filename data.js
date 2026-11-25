@@ -1338,8 +1338,8 @@ const dashboardData = {
         {
             "Month": "2026-07-01",
             "Plant": "PETPAK",
-            "Production": 1646092.0,
-            "Waste": 52650.0,
+            "Production": 1646924.79,
+            "Waste": 52654.21,
             "Waste %": 3.1,
             "Down Time": 338.59,
             "OEE %": 0.8785,
@@ -1353,8 +1353,8 @@ const dashboardData = {
         {
             "Month": "2026-08-01",
             "Plant": "PETPAK",
-            "Production": 2205672.0,
-            "Waste": 102095.0,
+            "Production": 2205672.246,
+            "Waste": 102095.35,
             "Waste %": 4.42,
             "Down Time": 196.96,
             "OEE %": 0.8421,
@@ -1368,8 +1368,8 @@ const dashboardData = {
         {
             "Month": "2026-09-01",
             "Plant": "PETPAK",
-            "Production": 2789310.0,
-            "Waste": 143960.0,
+            "Production": 2789312.172,
+            "Waste": 143960.83,
             "Waste %": 4.91,
             "Down Time": 70.15,
             "OEE %": 0.8742,
@@ -1383,8 +1383,8 @@ const dashboardData = {
         {
             "Month": "2026-10-01",
             "Plant": "PETPAK",
-            "Production": 3027952.533,
-            "Waste": 103500.0,
+            "Production": 3027952.553,
+            "Waste": 103506.11,
             "Waste %": 3.31,
             "Down Time": 70.05,
             "OEE %": 0.8899,
