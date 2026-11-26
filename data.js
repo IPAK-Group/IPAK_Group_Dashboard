@@ -1394,6 +1394,96 @@ const dashboardData = {
             "KWh/Kg Plant": 0.6726777703213261,
             "Rs/Kg Plant": 23.402459629478937,
             "No of Grade Changes": 46
+        },
+        {
+            "Month": "2026-09-26",
+            "Plant": "GPAK",
+            "Production": 2073801.8899999997,
+            "Waste": 95180.0,
+            "Waste %": 0.0439,
+            "Down Time": 34.69,
+            "OEE %": 0.8606,
+            "Performance %": 0.9298,
+            "Availability %": 0.9278,
+            "Quality %": 0.9975,
+            "KWh/Kg Plant": 1.12,
+            "Rs/Kg Plant": 35.06,
+            "No of Grade Changes": 41
+        },
+        {
+            "Month": "2026-10-26",
+            "Plant": "GPAK",
+            "Production": 1771400.0,
+            "Waste": 81390.0,
+            "Waste %": 0.0439,
+            "Down Time": 30.03,
+            "OEE %": 0.8691,
+            "Performance %": 0.9434,
+            "Availability %": 0.9302,
+            "Quality %": 0.9904,
+            "KWh/Kg Plant": 1.16,
+            "Rs/Kg Plant": 40.41,
+            "No of Grade Changes": 29
+        },
+        {
+            "Month": "2026-07-26",
+            "Plant": "CPAK",
+            "Production": 502070.3402890001,
+            "Waste": 9290.659710999927,
+            "Waste %": 0.0182,
+            "Down Time": 260.63,
+            "OEE %": 0.9172,
+            "Performance %": 0.954,
+            "Availability %": 0.9576,
+            "Quality %": 1.0,
+            "KWh/Kg Plant": 1.108,
+            "Rs/Kg Plant": 0.0,
+            "No of Grade Changes": 15
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "CPAK",
+            "Production": 675875.0417860001,
+            "Waste": 8925.958213999867,
+            "Waste %": 0.013,
+            "Down Time": 24.05,
+            "OEE %": 0.9166,
+            "Performance %": 0.9477,
+            "Availability %": 0.9672,
+            "Quality %": 1.0,
+            "KWh/Kg Plant": 0.993,
+            "Rs/Kg Plant": 0.0,
+            "No of Grade Changes": 13
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "CPAK",
+            "Production": 685654.0,
+            "Waste": 8594.0,
+            "Waste %": 0.0124,
+            "Down Time": 36.9,
+            "OEE %": 0.9157,
+            "Performance %": 0.9348,
+            "Availability %": 0.9796,
+            "Quality %": 1.0,
+            "KWh/Kg Plant": 0.957,
+            "Rs/Kg Plant": 0.0,
+            "No of Grade Changes": 14
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "CPAK",
+            "Production": 631106.0,
+            "Waste": 8293.0,
+            "Waste %": 0.013,
+            "Down Time": 75.9,
+            "OEE %": 0.9241,
+            "Performance %": 0.9659,
+            "Availability %": 0.9568,
+            "Quality %": 1.0,
+            "KWh/Kg Plant": 10.48,
+            "Rs/Kg Plant": 0.0,
+            "No of Grade Changes": 25
         }
     ],
     "productData": [
@@ -14472,566 +14562,1026 @@ const dashboardData = {
             "Product Type": "Chemical Treated MATT PET",
             "Product": "PVMTN01-12",
             "Production": 10929.37935
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-18",
+            "Production": 138193.28119999997
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable",
+            "Product": "THO18",
+            "Production": 79110.33
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-20",
+            "Production": 94148.41384000001
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-30",
+            "Production": 54450.75064
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "GPAK",
+            "Product Type": "Plain(Flame)",
+            "Product": "STL21-35",
+            "Production": 7856.1808
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-25",
+            "Production": 38535.744
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-15",
+            "Production": 70291.47839999999
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "GPAK",
+            "Product Type": "Plain (Tape grade)",
+            "Product": "TNIT-23",
+            "Production": 259622.49039999998
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "GPAK",
+            "Product Type": "Plain",
+            "Product": "TNO20",
+            "Production": 11378.848000000002
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "GPAK",
+            "Product Type": "Plain(Flame)",
+            "Product": "STN02-20",
+            "Production": 22618.544
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable",
+            "Product": "THO20",
+            "Production": 72196.03976000001
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable",
+            "Product": "THO30",
+            "Production": 50101.66615999999
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "GPAK",
+            "Product Type": "Plain (Tape grade)",
+            "Product": "TNiT-25",
+            "Production": 18136.612
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "GPAK",
+            "Product Type": "Plain",
+            "Product": "TNO18",
+            "Production": 35460.45360000001
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "GPAK",
+            "Product Type": "Tobacco",
+            "Product": "CG-44H-20",
+            "Production": 52470.600000000006
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "GPAK",
+            "Product Type": "Tobacco",
+            "Product": "CG-99N-23",
+            "Production": 38033.6528
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable(Overwrap)",
+            "Product": "THOW-18",
+            "Production": 19638.1224
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "GPAK",
+            "Product Type": "Metalizeable",
+            "Product": "MB21S-20",
+            "Production": 200167.505824
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "GPAK",
+            "Product Type": "Matt (Low SIT)",
+            "Product": "MT21C-30",
+            "Production": 3494.6028
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "GPAK",
+            "Product Type": "Matt",
+            "Product": "MT21D-20",
+            "Production": 102299.24640000002
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "GPAK",
+            "Product Type": "Opaque(Flame)",
+            "Product": "SOLC216-38",
+            "Production": 14622.5664
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "GPAK",
+            "Product Type": "Metalizeable",
+            "Product": "THOM20",
+            "Production": 61278.094176
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "GPAK",
+            "Product Type": "Metalizeable",
+            "Product": "MB21S-30",
+            "Production": 3893.6976
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "GPAK",
+            "Product Type": "Metalizeable",
+            "Product": "MB21S-18",
+            "Production": 83252.46477599998
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "GPAK",
+            "Product Type": "Metalizeable (Broadseal)",
+            "Product": "THOM111-18",
+            "Production": 104788.65280000001
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "GPAK",
+            "Product Type": "Opaque",
+            "Product": "OLC217-38",
+            "Production": 6289.244000000001
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "GPAK",
+            "Product Type": "Metalizeable",
+            "Product": "THOM18",
+            "Production": 70501.135224
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-40",
+            "Production": 6318.634400000001
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "GPAK",
+            "Product Type": "Metalizeable (MB)",
+            "Product": "MB21MB-15",
+            "Production": 196354.4024
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "GPAK",
+            "Product Type": "Opaque",
+            "Product": "OLC216-38",
+            "Production": 3632.7200000000003
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "GPAK",
+            "Product Type": "Opaque",
+            "Product": "PWLO-38",
+            "Production": 1504.464
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable(Sustainable)",
+            "Product": "TH21PI-25",
+            "Production": 112808.592
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable",
+            "Product": "THo25",
+            "Production": 2996.8848000000003
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable(overwrap)",
+            "Product": "THoW-25",
+            "Production": 35136.441600000006
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable",
+            "Product": "THo-40",
+            "Production": 2219.3912
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-30",
+            "Production": 98103.17296
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "GPAK",
+            "Product Type": "Metalizeable",
+            "Product": "MB21S-20",
+            "Production": 232384.52692000003
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "GPAK",
+            "Product Type": "Plain",
+            "Product": "TNO40",
+            "Production": 4224.729600000001
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "GPAK",
+            "Product Type": "Plain(Flame)",
+            "Product": "STL01-40",
+            "Production": 47484.372
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "GPAK",
+            "Product Type": "Plain(Tape)",
+            "Product": "TNIT-25",
+            "Production": 44442.1744
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "GPAK",
+            "Product Type": "Metalizeable",
+            "Product": "THoM18",
+            "Production": 39088.7432
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "GPAK",
+            "Product Type": "Metalizeable (Broadseal)",
+            "Product": "MB21MB-15",
+            "Production": 427298.76279999997
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "GPAK",
+            "Product Type": "Metalizeable",
+            "Product": "THOM20",
+            "Production": 40797.18708
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable",
+            "Product": "THO30",
+            "Production": 23862.58784
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "GPAK",
+            "Product Type": "Plain",
+            "Product": "TN01-40",
+            "Production": 19111.5808
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "GPAK",
+            "Product Type": "Plain(Tape)",
+            "Product": "TNIT-23",
+            "Production": 265785.07279999997
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "GPAK",
+            "Product Type": "Matt",
+            "Product": "MT11D-20",
+            "Production": 6356.7192
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "GPAK",
+            "Product Type": "Metalizeable",
+            "Product": "MB21S-18",
+            "Production": 41951.676
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "GPAK",
+            "Product Type": "Matt",
+            "Product": "MATTPL-12",
+            "Production": 123286.91440000001
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "GPAK",
+            "Product Type": "Matt",
+            "Product": "MATTWL-15",
+            "Production": 6884.487999999999
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "GPAK",
+            "Product Type": "Matt",
+            "Product": "MATTWL-20",
+            "Production": 20724.756
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "GPAK",
+            "Product Type": "Matt",
+            "Product": "MT21D-30",
+            "Production": 6821.1
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "GPAK",
+            "Product Type": "Matt (Low SIT)",
+            "Product": "MT21C-30",
+            "Production": 10456.0404
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "GPAK",
+            "Product Type": "Matt (Low SIT)",
+            "Product": "MT21C-20",
+            "Production": 24541.420800000004
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-20",
+            "Production": 58281.17360000001
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-25",
+            "Production": 9575.030400000001
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-18",
+            "Production": 43430.61424
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable",
+            "Product": "THo25",
+            "Production": 10969.2024
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable",
+            "Product": "THO20",
+            "Production": 4042.74
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable",
+            "Product": "THo18",
+            "Production": 55527.72576
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "GPAK",
+            "Product Type": "Sealable",
+            "Product": "TH21-15",
+            "Production": 20689.2192
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "GPAK",
+            "Product Type": "White Solid",
+            "Product": "WSO-20",
+            "Production": 83958.26400000001
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "GPAK",
+            "Product Type": "Matt(Sustainable)",
+            "Product": "MT12DPI-12",
+            "Production": 331.65600000000006
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "GPAK",
+            "Product Type": "White Solid(Sustaiable)",
+            "Product": "OW219PI-20",
+            "Production": 997.36
         }
     ],
     "eremaData": [
         {
-            "Month": "2026-02-01",
+            "Month": "46054",
             "Plant": "PETPAK",
             "Erema Production": 253341.17,
             "Erema(KG/KWH)": 0.37
         },
         {
-            "Month": "2025-01-26",
+            "Month": "2025-01-26 00:00:00",
             "Plant": "GPAK",
             "Erema Production": 179200.0,
             "Erema(KG/KWH)": 0.56
         },
         {
-            "Month": "2025-02-26",
+            "Month": "2025-02-26 00:00:00",
             "Plant": "GPAK",
             "Erema Production": 174366.0,
             "Erema(KG/KWH)": 0.39
         },
         {
-            "Month": "2025-03-26",
+            "Month": "2025-03-26 00:00:00",
             "Plant": "GPAK",
             "Erema Production": 145550.0,
             "Erema(KG/KWH)": 0.41
         },
         {
-            "Month": "2025-04-26",
+            "Month": "2025-04-26 00:00:00",
             "Plant": "GPAK",
             "Erema Production": 86500.0,
             "Erema(KG/KWH)": 0.45
         },
         {
-            "Month": "2025-05-26",
+            "Month": "2025-05-26 00:00:00",
             "Plant": "GPAK",
             "Erema Production": 183650.0,
             "Erema(KG/KWH)": 0.42
         },
         {
-            "Month": "2025-06-26",
+            "Month": "2025-06-26 00:00:00",
             "Plant": "GPAK",
             "Erema Production": 168520.0,
             "Erema(KG/KWH)": 0.4
         },
         {
-            "Month": "2025-07-26",
+            "Month": "2025-07-26 00:00:00",
             "Plant": "GPAK",
             "Erema Production": 255102.0,
             "Erema(KG/KWH)": 0.42
         },
         {
-            "Month": "2025-08-26",
+            "Month": "2025-08-26 00:00:00",
             "Plant": "GPAK",
             "Erema Production": 231263.0,
             "Erema(KG/KWH)": 0.41
         },
         {
-            "Month": "2025-09-26",
+            "Month": "2025-09-26 00:00:00",
             "Plant": "GPAK",
             "Erema Production": 236560.0,
             "Erema(KG/KWH)": 0.42
         },
         {
-            "Month": "2025-10-26",
+            "Month": "2025-10-26 00:00:00",
             "Plant": "GPAK",
             "Erema Production": 222360.0,
             "Erema(KG/KWH)": 0.41
         },
         {
-            "Month": "2025-11-26",
+            "Month": "2025-11-26 00:00:00",
             "Plant": "GPAK",
             "Erema Production": 213614.0,
             "Erema(KG/KWH)": 0.39
         },
         {
-            "Month": "2025-12-26",
+            "Month": "2025-12-26 00:00:00",
             "Plant": "GPAK",
             "Erema Production": 202102.0,
             "Erema(KG/KWH)": 0.41
         },
         {
-            "Month": "2026-01-26",
+            "Month": "2026-01-26 00:00:00",
             "Plant": "GPAK",
             "Erema Production": 171150.0,
             "Erema(KG/KWH)": 0.41
         },
         {
-            "Month": "2024-03-26",
+            "Month": "2024-03-26 00:00:00",
             "Plant": "PETPAK",
             "Erema Production": 0.0,
             "Erema(KG/KWH)": 0.0
         },
         {
-            "Month": "2026-03-26",
+            "Month": "46107",
             "Plant": "PETPAK",
             "Erema Production": 152931.19,
             "Erema(KG/KWH)": 0.41
         },
         {
-            "Month": "2024-02-26",
+            "Month": "2024-02-26 00:00:00",
             "Plant": "PETPAK",
             "Erema Production": 239354.0,
             "Erema(KG/KWH)": 0.0
         },
         {
-            "Month": "2024-03-26",
+            "Month": "2024-03-26 00:00:00",
             "Plant": "PETPAK",
             "Erema Production": 184500.0,
             "Erema(KG/KWH)": 0.0
         },
         {
-            "Month": "2024-04-26",
+            "Month": "2024-04-26 00:00:00",
             "Plant": "PETPAK",
             "Erema Production": 216251.34,
             "Erema(KG/KWH)": 0.0
         },
         {
-            "Month": "2024-05-26",
+            "Month": "2024-05-26 00:00:00",
             "Plant": "PETPAK",
             "Erema Production": 202436.393,
             "Erema(KG/KWH)": 0.0
         },
         {
-            "Month": "2024-06-26",
+            "Month": "2024-06-26 00:00:00",
             "Plant": "PETPAK",
             "Erema Production": 242292.119,
             "Erema(KG/KWH)": 0.0
         },
         {
-            "Month": "2024-07-26",
+            "Month": "2024-07-26 00:00:00",
             "Plant": "PETPAK",
             "Erema Production": 14587.808,
             "Erema(KG/KWH)": 0.0
         },
         {
-            "Month": "2024-08-26",
+            "Month": "2024-08-26 00:00:00",
             "Plant": "PETPAK",
             "Erema Production": 272285.35,
             "Erema(KG/KWH)": 0.0
         },
         {
-            "Month": "2024-09-26",
+            "Month": "2024-09-26 00:00:00",
             "Plant": "PETPAK",
             "Erema Production": 366292.0,
             "Erema(KG/KWH)": 0.0
         },
         {
-            "Month": "2024-10-26",
+            "Month": "2024-10-26 00:00:00",
             "Plant": "PETPAK",
             "Erema Production": 373234.5,
             "Erema(KG/KWH)": 0.0
         },
         {
-            "Month": "2024-11-26",
+            "Month": "2024-11-26 00:00:00",
             "Plant": "PETPAK",
             "Erema Production": 320493.29,
             "Erema(KG/KWH)": 0.0
         },
         {
-            "Month": "2024-12-26",
+            "Month": "2024-12-26 00:00:00",
             "Plant": "PETPAK",
             "Erema Production": 348740.0,
             "Erema(KG/KWH)": 0.0
         },
         {
-            "Month": "2025-01-26",
+            "Month": "2025-01-26 00:00:00",
             "Plant": "PETPAK",
             "Erema Production": 132922.0,
             "Erema(KG/KWH)": 0.7679247389519317
         },
         {
-            "Month": "2025-02-26",
+            "Month": "2025-02-26 00:00:00",
             "Plant": "PETPAK",
             "Erema Production": 58478.23,
             "Erema(KG/KWH)": 0.4049712174940999
         },
         {
-            "Month": "2025-03-26",
+            "Month": "2025-03-26 00:00:00",
             "Plant": "PETPAK",
             "Erema Production": 71798.88,
             "Erema(KG/KWH)": 0.3795880938532746
         },
         {
-            "Month": "2025-04-26",
+            "Month": "2025-04-26 00:00:00",
             "Plant": "PETPAK",
             "Erema Production": 72776.59,
             "Erema(KG/KWH)": 0.36956939037676817
         },
         {
-            "Month": "2025-05-26",
+            "Month": "2025-05-26 00:00:00",
             "Plant": "PETPAK",
             "Erema Production": 108248.454,
             "Erema(KG/KWH)": 0.402943399080785
         },
         {
-            "Month": "2025-06-26",
+            "Month": "2025-06-26 00:00:00",
             "Plant": "PETPAK",
             "Erema Production": 54414.29,
             "Erema(KG/KWH)": 0.41235491632804544
         },
         {
-            "Month": "2025-07-26",
+            "Month": "2025-07-26 00:00:00",
             "Plant": "PETPAK",
             "Erema Production": 67263.792,
             "Erema(KG/KWH)": 0.43742701868488176
         },
         {
-            "Month": "2025-08-26",
+            "Month": "2025-08-26 00:00:00",
             "Plant": "PETPAK",
             "Erema Production": 79433.0,
             "Erema(KG/KWH)": 0.430261981795979
         },
         {
-            "Month": "2025-09-26",
+            "Month": "2025-09-26 00:00:00",
             "Plant": "PETPAK",
             "Erema Production": 118137.04,
             "Erema(KG/KWH)": 0.3706204252281926
         },
         {
-            "Month": "2025-10-26",
+            "Month": "2025-10-26 00:00:00",
             "Plant": "PETPAK",
             "Erema Production": 94893.933,
             "Erema(KG/KWH)": 0.402891931984735
         },
         {
-            "Month": "2025-11-26",
+            "Month": "2025-11-26 00:00:00",
             "Plant": "PETPAK",
             "Erema Production": 117320.0,
             "Erema(KG/KWH)": 0.4000879874039085
         },
         {
-            "Month": "2025-12-26",
+            "Month": "2025-12-26 00:00:00",
             "Plant": "PETPAK",
             "Erema Production": 128827.85399999999,
             "Erema(KG/KWH)": 0.41903542392057463
         },
         {
-            "Month": "2026-01-26",
+            "Month": "46048",
             "Plant": "PETPAK",
             "Erema Production": 130471.0,
             "Erema(KG/KWH)": 0.41
         },
         {
-            "Month": "2026-02-26",
+            "Month": "2026-02-26 00:00:00",
             "Plant": "GPAK",
             "Erema Production": 190350.0,
             "Erema(KG/KWH)": 0.41
         },
         {
-            "Month": "2025-01-26",
+            "Month": "2025-01-26 00:00:00",
             "Plant": "IPAK",
             "Erema Production": 140600.0,
             "Erema(KG/KWH)": 0.38
         },
         {
-            "Month": "2025-02-26",
+            "Month": "2025-02-26 00:00:00",
             "Plant": "IPAK",
             "Erema Production": 205800.0,
             "Erema(KG/KWH)": 0.38
         },
         {
-            "Month": "2025-03-26",
+            "Month": "2025-03-26 00:00:00",
             "Plant": "IPAK",
             "Erema Production": 324000.0,
             "Erema(KG/KWH)": 0.36
         },
         {
-            "Month": "2025-04-26",
+            "Month": "2025-04-26 00:00:00",
             "Plant": "IPAK",
             "Erema Production": 243500.0,
             "Erema(KG/KWH)": 0.34
         },
         {
-            "Month": "2025-05-26",
+            "Month": "2025-05-26 00:00:00",
             "Plant": "IPAK",
             "Erema Production": 427400.0,
             "Erema(KG/KWH)": 0.37
         },
         {
-            "Month": "2025-06-26",
+            "Month": "2025-06-26 00:00:00",
             "Plant": "IPAK",
             "Erema Production": 239600.0,
             "Erema(KG/KWH)": 0.39
         },
         {
-            "Month": "2025-07-26",
+            "Month": "2025-07-26 00:00:00",
             "Plant": "IPAK",
             "Erema Production": 169100.0,
             "Erema(KG/KWH)": 0.46
         },
         {
-            "Month": "2025-08-26",
+            "Month": "2025-08-26 00:00:00",
             "Plant": "IPAK",
             "Erema Production": 240800.0,
             "Erema(KG/KWH)": 0.49
         },
         {
-            "Month": "2025-09-26",
+            "Month": "2025-09-26 00:00:00",
             "Plant": "IPAK",
             "Erema Production": 165600.0,
             "Erema(KG/KWH)": 0.72
         },
         {
-            "Month": "2025-10-26",
+            "Month": "2025-10-26 00:00:00",
             "Plant": "IPAK",
             "Erema Production": 200200.0,
             "Erema(KG/KWH)": 0.54
         },
         {
-            "Month": "2025-11-26",
+            "Month": "2025-11-26 00:00:00",
             "Plant": "IPAK",
             "Erema Production": 178500.0,
             "Erema(KG/KWH)": 0.55
         },
         {
-            "Month": "2025-12-26",
+            "Month": "2025-12-26 00:00:00",
             "Plant": "IPAK",
             "Erema Production": 236000.0,
             "Erema(KG/KWH)": 0.42
         },
         {
-            "Month": "2026-01-01",
+            "Month": "2026-01-01 00:00:00",
             "Plant": "IPAK",
             "Erema Production": 234070.0,
             "Erema(KG/KWH)": 0.46
         },
         {
-            "Month": "2026-02-01",
+            "Month": "2026-02-01 00:00:00",
             "Plant": "IPAK",
             "Erema Production": 241958.0,
             "Erema(KG/KWH)": 0.43
         },
         {
-            "Month": "2025-01-26",
+            "Month": "2025-01-26 00:00:00",
             "Plant": "CPAK",
             "Erema Production": 41060.172,
             "Erema(KG/KWH)": 0.0
         },
         {
-            "Month": "2025-02-26",
+            "Month": "2025-02-26 00:00:00",
             "Plant": "CPAK",
             "Erema Production": 12480.487,
             "Erema(KG/KWH)": 0.0
         },
         {
-            "Month": "2025-03-26",
+            "Month": "2025-03-26 00:00:00",
             "Plant": "CPAK",
             "Erema Production": 4986.346,
             "Erema(KG/KWH)": 0.0
         },
         {
-            "Month": "2025-04-26",
+            "Month": "2025-04-26 00:00:00",
             "Plant": "CPAK",
             "Erema Production": 1045.839,
             "Erema(KG/KWH)": 0.0
         },
         {
-            "Month": "2025-05-26",
+            "Month": "2025-05-26 00:00:00",
             "Plant": "CPAK",
             "Erema Production": 6204.11,
             "Erema(KG/KWH)": 0.0
         },
         {
-            "Month": "2025-06-26",
+            "Month": "2025-06-26 00:00:00",
             "Plant": "CPAK",
             "Erema Production": 4546.52,
             "Erema(KG/KWH)": 0.0
         },
         {
-            "Month": "2025-07-26",
+            "Month": "2025-07-26 00:00:00",
             "Plant": "CPAK",
             "Erema Production": 976.712,
             "Erema(KG/KWH)": 0.0
         },
         {
-            "Month": "2025-08-26",
+            "Month": "2025-08-26 00:00:00",
             "Plant": "CPAK",
             "Erema Production": 11020.68,
             "Erema(KG/KWH)": 0.0
         },
         {
-            "Month": "2025-09-26",
+            "Month": "2025-09-26 00:00:00",
             "Plant": "CPAK",
             "Erema Production": 1566.89,
             "Erema(KG/KWH)": 0.0
         },
         {
-            "Month": "2025-10-26",
+            "Month": "2025-10-26 00:00:00",
             "Plant": "CPAK",
             "Erema Production": 11476.15,
             "Erema(KG/KWH)": 0.0
         },
         {
-            "Month": "2025-11-26",
+            "Month": "2025-11-26 00:00:00",
             "Plant": "CPAK",
             "Erema Production": 15226.618,
             "Erema(KG/KWH)": 0.0
         },
         {
-            "Month": "2025-12-26",
+            "Month": "2025-12-26 00:00:00",
             "Plant": "CPAK",
             "Erema Production": 11919.14,
             "Erema(KG/KWH)": 0.0
         },
         {
-            "Month": "2026-01-01",
+            "Month": "2026-01-01 00:00:00",
             "Plant": "CPAK",
             "Erema Production": 16104.35,
             "Erema(KG/KWH)": 0.0
         },
         {
-            "Month": "2026-03-26",
+            "Month": "2026-03-26 00:00:00",
             "Plant": "GPAK",
             "Erema Production": 210100.0,
             "Erema(KG/KWH)": 0.39
         },
         {
-            "Month": "2026-03-01",
+            "Month": "2026-03-01 00:00:00",
             "Plant": "IPAK",
             "Erema Production": 282952.0,
             "Erema(KG/KWH)": 0.0
         },
         {
-            "Month": "2026-04-01",
+            "Month": "46113",
             "Plant": "PETPAK",
             "Erema Production": 184873.07,
             "Erema(KG/KWH)": 0.34
         },
         {
-            "Month": "2026-04-26",
+            "Month": "2026-04-26 00:00:00",
             "Plant": "GPAK",
             "Erema Production": 141500.0,
             "Erema(KG/KWH)": 0.398
         },
         {
-            "Month": "2026-04-01",
+            "Month": "2026-04-01 00:00:00",
             "Plant": "IPAK",
             "Erema Production": 260079.0,
             "Erema(KG/KWH)": 0.40314839700518335
         },
         {
-            "Month": "2026-02-01",
+            "Month": "2026-02-01 00:00:00",
             "Plant": "CPAK",
             "Erema Production": 15590.49,
             "Erema(KG/KWH)": 0.0
         },
         {
-            "Month": "2026-03-01",
+            "Month": "2026-03-01 00:00:00",
             "Plant": "CPAK",
             "Erema Production": 58577.24,
             "Erema(KG/KWH)": 0.0
         },
         {
-            "Month": "2026-04-01",
+            "Month": "2026-04-01 00:00:00",
             "Plant": "CPAK",
             "Erema Production": 3603.0,
             "Erema(KG/KWH)": 0.0
         },
         {
-            "Month": "2026-05-01",
+            "Month": "46143",
             "Plant": "PETPAK",
             "Erema Production": 148429.0,
             "Erema(KG/KWH)": 0.33
         },
         {
-            "Month": "2026-05-26",
+            "Month": "2026-05-26 00:00:00",
             "Plant": "GPAK",
             "Erema Production": 63150.0,
             "Erema(KG/KWH)": 0.37
         },
         {
-            "Month": "2026-05-01",
+            "Month": "2026-05-01 00:00:00",
             "Plant": "CPAK",
             "Erema Production": 46704.79,
             "Erema(KG/KWH)": 0.0
         },
         {
-            "Month": "2026-06-01",
+            "Month": "46174",
             "Plant": "PETPAK",
             "Erema Production": 106995.0,
             "Erema(KG/KWH)": 0.24
         },
         {
-            "Month": "2026-06-26",
+            "Month": "46199",
             "Plant": "GPAK",
             "Erema Production": 172700.0,
             "Erema(KG/KWH)": 0.0
         },
         {
-            "Month": "2026-06-01",
+            "Month": "46174",
             "Plant": "IPAK",
             "Erema Production": 251790.0,
             "Erema(KG/KWH)": 0.41
         },
         {
-            "Month": "2026-06-01",
+            "Month": "46174",
             "Plant": "CPAK",
             "Erema Production": 0.0,
             "Erema(KG/KWH)": 0.0
         },
         {
-            "Month": "2026-07-26",
+            "Month": "46229",
             "Plant": "GPAK",
             "Erema Production": 150100.0,
             "Erema(KG/KWH)": 0.39
         },
         {
-            "Month": "2026-08-26",
+            "Month": "46260",
             "Plant": "GPAK",
             "Erema Production": 231000.0,
             "Erema(KG/KWH)": 0.37
         },
         {
-            "Month": "2026-07-01",
+            "Month": "46204",
             "Plant": "IPAK",
             "Erema Production": 242767.5,
             "Erema(KG/KWH)": 0.43
         },
         {
-            "Month": "2026-08-01",
+            "Month": "46235",
             "Plant": "IPAK",
             "Erema Production": 137366.809,
             "Erema(KG/KWH)": 0.4
         },
         {
-            "Month": "2026-09-01",
+            "Month": "46266",
             "Plant": "IPAK",
             "Erema Production": 209350.0,
             "Erema(KG/KWH)": 0.44
         },
         {
-            "Month": "2026-10-01",
+            "Month": "46296",
             "Plant": "IPAK",
             "Erema Production": 226234.135,
             "Erema(KG/KWH)": 0.46
         },
         {
-            "Month": "2026-07-01",
+            "Month": "46204",
             "Plant": "PETPAK",
             "Erema Production": 105740.0,
             "Erema(KG/KWH)": 0.28
         },
         {
-            "Month": "2026-08-01",
+            "Month": "46235",
             "Plant": "PETPAK",
             "Erema Production": 200090.55,
             "Erema(KG/KWH)": 0.33
         },
         {
-            "Month": "2026-09-01",
+            "Month": "46266",
             "Plant": "PETPAK",
             "Erema Production": 217299.15,
             "Erema(KG/KWH)": 0.35
         },
         {
-            "Month": "2026-10-01",
+            "Month": "46296",
             "Plant": "PETPAK",
             "Erema Production": 197480.699,
             "Erema(KG/KWH)": 0.28
+        },
+        {
+            "Month": "46291",
+            "Plant": "GPAK",
+            "Erema Production": 195300.0,
+            "Erema(KG/KWH)": 0.35
+        },
+        {
+            "Month": "46321",
+            "Plant": "GPAK",
+            "Erema Production": 110900.0,
+            "Erema(KG/KWH)": 0.0
         }
     ],
     "trialsData": [
@@ -15874,6 +16424,56 @@ const dashboardData = {
             "Waste": 0,
             "Down Time": 0,
             "Remarks": "A new material RD508M was used in place of KS607"
+        },
+        {
+            "Date": "2026-09-08",
+            "Plant": "GPAK",
+            "Product Type": "Opaque",
+            "Product": "OLC217-38",
+            "Production": 4709,
+            "Waste": 8620,
+            "Down Time": 73,
+            "Remarks": "Flame trials on Pearlized film"
+        },
+        {
+            "Date": "2026-09-11",
+            "Plant": "GPAK",
+            "Product Type": "Opaque",
+            "Product": "SOLC216-38",
+            "Production": 14622,
+            "Waste": 9370,
+            "Down Time": 22,
+            "Remarks": "Flame trials on Pearlized film"
+        },
+        {
+            "Date": "2026-10-15",
+            "Plant": "GPAK",
+            "Product Type": "Plain",
+            "Product": "STL01-40",
+            "Production": 47484,
+            "Waste": 835,
+            "Down Time": 10,
+            "Remarks": "Flame trials on Plain film"
+        },
+        {
+            "Date": "2026-11-01",
+            "Plant": "GPAK",
+            "Product Type": "Metalizable",
+            "Product": "MB21MB-15",
+            "Production": 2124,
+            "Waste": 1557,
+            "Down Time": 28,
+            "Remarks": "Adsyl 5c30 repalce with Adsyl 6146 in Non treated side "
+        },
+        {
+            "Date": "2026-11-23",
+            "Plant": "GPAK",
+            "Product Type": "Metalizable",
+            "Product": "THOM(HB)15",
+            "Production": 3666,
+            "Waste": 200,
+            "Down Time": 4,
+            "Remarks": "Flame inside run "
         }
     ],
     "offlineData": [
@@ -16516,6 +17116,22 @@ const dashboardData = {
             "Waste": 80755.0,
             "Waste %": 0.0268,
             "Down Time": 54.35
+        },
+        {
+            "Month": "2026-09-26",
+            "Plant": "GPAK",
+            "Production": 2190148,
+            "Waste": 54008.0,
+            "Waste %": 0.0246,
+            "Down Time": 18.0
+        },
+        {
+            "Month": "2026-10-26",
+            "Plant": "GPAK",
+            "Production": 1460968,
+            "Waste": 34691.0,
+            "Waste %": 0.0238,
+            "Down Time": 12.0
         }
     ],
     "reconData": [],
