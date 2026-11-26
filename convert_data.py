@@ -1,19 +1,61 @@
 import pandas as pd
 import json
 import os
+import sys
+from datetime import datetime, timedelta
 
 # File paths
 file_primary = 'IPAK Group Dashboard.xlsx'
 js_file = 'data.js'
+EXCEL_EPOCH = datetime(1899, 12, 30)
 
-def convert_excel_to_js():
-    if not os.path.exists(file_primary):
-        print(f"Error: {file_primary} not found.")
-        return
 
+def format_date_value(value):
+    """Write every Excel date as YYYY-MM-DD.
+
+    A plain number such as 46321 is Excel's day count, not a year.
+    Text such as 07.08.2025 or 3.11.2025 is day.month.year.
+    """
+    if value is None or value == "":
+        return ""
     try:
-        print(f"Reading {file_primary}...")
-        xl_pri = pd.ExcelFile(file_primary)
+        if pd.isna(value):
+            return ""
+    except TypeError:
+        pass
+
+    if hasattr(value, "strftime") and hasattr(value, "year"):
+        return value.strftime("%Y-%m-%d")
+
+    text = str(value).strip()
+    if text.lower() in {"nat", "nan", "none"}:
+        return ""
+    if text.endswith(".0") and text[:-2].replace("-", "").isdigit():
+        text = text[:-2]
+    if text.lstrip("-").isdigit():
+        serial = int(text)
+        if 20000 <= serial <= 80000:
+            return (EXCEL_EPOCH + timedelta(days=serial)).strftime("%Y-%m-%d")
+
+    parsed = pd.to_datetime(text, dayfirst=True, errors="coerce")
+    if pd.isna(parsed):
+        return ""
+    return parsed.strftime("%Y-%m-%d")
+
+
+def format_date_column(series):
+    return series.map(format_date_value)
+
+def convert_excel_to_js(source=None):
+    workbook = source or file_primary
+    if not os.path.exists(workbook):
+        print(f"Error: {workbook} not found.")
+        return False
+
+    xl_pri = None
+    try:
+        print(f"Reading {workbook}...")
+        xl_pri = pd.ExcelFile(workbook)
         
         # --- PROCESS MAIN DATA ---
         main_data = []
@@ -22,7 +64,7 @@ def convert_excel_to_js():
             main_df.columns = main_df.columns.str.strip()
             main_df = main_df.rename(columns={'Date': 'Month'})
             if 'Month' in main_df.columns:
-                main_df['Month'] = main_df['Month'].astype(str)
+                main_df['Month'] = format_date_column(main_df['Month'])
             
             # Fill NaN with 0 for numeric/safer JSON
             main_df = main_df.fillna(0)
@@ -38,7 +80,7 @@ def convert_excel_to_js():
             product_df.columns = product_df.columns.str.strip()
             product_df = product_df.rename(columns={'Date': 'Month'})
             if 'Month' in product_df.columns:
-                product_df['Month'] = product_df['Month'].astype(str)
+                product_df['Month'] = format_date_column(product_df['Month'])
             
             # Extract Product Type if available
             if 'Product Type' not in product_df.columns:
@@ -58,7 +100,7 @@ def convert_excel_to_js():
             erema_df.columns = erema_df.columns.str.strip()
             erema_df = erema_df.rename(columns={'Date': 'Month'})
             if 'Month' in erema_df.columns:
-                erema_df['Month'] = erema_df['Month'].astype(str)
+                erema_df['Month'] = format_date_column(erema_df['Month'])
             erema_df = erema_df.fillna(0)
             erema_data = erema_df.to_dict(orient='records')
             print(f"Erema Data: {len(erema_data)} records")
@@ -71,7 +113,7 @@ def convert_excel_to_js():
             
             # Keep Date as Date, formatted as YYYY-MM-DD
             if 'Date' in trials_df.columns:
-                trials_df['Date'] = pd.to_datetime(trials_df['Date']).dt.strftime('%Y-%m-%d')
+                trials_df['Date'] = format_date_column(trials_df['Date'])
             
             # Extract Product Type if available
             if 'Product Type' not in trials_df.columns:
@@ -92,7 +134,7 @@ def convert_excel_to_js():
             offline_df.columns = offline_df.columns.str.strip()
             offline_df = offline_df.rename(columns={'Date': 'Month'})
             if 'Month' in offline_df.columns:
-                offline_df['Month'] = offline_df['Month'].astype(str)
+                offline_df['Month'] = format_date_column(offline_df['Month'])
             offline_df = offline_df.fillna(0)
             offline_data = offline_df.to_dict(orient='records')
             print(f"Offline Data: {len(offline_data)} records")
@@ -138,7 +180,7 @@ def convert_excel_to_js():
             
             # Ensure Month is string
             if 'Month' in recon_df.columns:
-                recon_df['Month'] = recon_df['Month'].astype(str)
+                recon_df['Month'] = format_date_column(recon_df['Month'])
             
             recon_df = recon_df.fillna(0)
             recon_data = recon_df.to_dict(orient='records')
@@ -161,14 +203,32 @@ def convert_excel_to_js():
             'summaryKPIs': summary_kpis
         }
 
-        # Write to data.js
-        with open(js_file, 'w') as f:
-            f.write(f"const dashboardData = {json.dumps(dashboard_data, indent=4)};\n")
-            
+        # Write to data.js, keeping the existing newline style so an
+        # unchanged workbook does not rewrite the whole file.
+        payload = f"const dashboardData = {json.dumps(dashboard_data, indent=4)};\n"
+        existing = ""
+        if os.path.exists(js_file):
+            with open(js_file, "r", encoding="utf-8", newline="") as f:
+                existing = f.read()
+        newline = "\r\n" if "\r\n" in existing else "\n"
+        text = payload.replace("\n", newline)
+        if existing.replace("\r\n", "\n").replace("\r", "\n") == payload:
+            print(f"{js_file} already matches the Excel file.")
+            return True
+
+        tmp_file = js_file + ".tmp"
+        with open(tmp_file, "w", encoding="utf-8", newline="") as f:
+            f.write(text)
+        os.replace(tmp_file, js_file)
         print(f"Successfully converted to {js_file}")
-        
+        return True
+
     except Exception as e:
         print(f"Error converting data: {e}")
+        return False
+    finally:
+        if xl_pri is not None:
+            xl_pri.close()
 
 if __name__ == "__main__":
-    convert_excel_to_js()
+    sys.exit(0 if convert_excel_to_js() else 1)

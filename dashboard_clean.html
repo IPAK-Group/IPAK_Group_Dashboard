@@ -1394,6 +1394,13 @@
             Chart.register(ChartDataLabels);
         }
 
+        // A real year is 19xx or 20xx. Excel serials such as 46321 must not
+        // become a year by keeping only the first four digits.
+        function calendarYear(value) {
+            const match = String(value || "").match(/^(19|20)\d{2}/);
+            return match ? match[0] : "";
+        }
+
         // Helper for formatting dates (e.g. 2025-01 -> Jan 2025)
         function formatMonthLabel(yyyymm) {
             if (!yyyymm || yyyymm.length < 7) return yyyymm;
@@ -1484,6 +1491,28 @@
                 }
 
                 return plantMatch && yearMatch && monthMatch;
+            });
+        }
+
+        // Trials are individual dates. One selected month means that month only.
+        // From and To together mean that inclusive range, including a wrap such as Nov–Feb.
+        function filterTrials(data, plant, year) {
+            const fm = document.getElementById('detail-from-month')?.value || 'all';
+            const tm = document.getElementById('detail-to-month')?.value || 'all';
+
+            return (data || []).filter(row => {
+                if (plant !== 'all' && row.Plant !== plant) return false;
+                const parts = String(row.Date || '').split('-');
+                if (parts.length < 2) return false;
+                const rowYear = parts[0];
+                const rowMonth = parts[1];
+                if (year !== 'all' && rowYear !== year) return false;
+                if (fm === 'all' && tm === 'all') return true;
+                if (fm !== 'all' && tm !== 'all') {
+                    if (fm <= tm) return rowMonth >= fm && rowMonth <= tm;
+                    return rowMonth >= fm || rowMonth <= tm;
+                }
+                return rowMonth === (fm !== 'all' ? fm : tm);
             });
         }
 
@@ -4342,24 +4371,16 @@
 
             const trialsData = dashboardData.trialsData || [];
             const year = document.getElementById('detail-year')?.value || 'all';
-            const month = document.getElementById('detail-from-month')?.value || 'all';
 
-            // Filter logic
-            let plantTrials = [];
+            // Month range first, then optional text search inside that range.
+            let plantTrials = filterTrials(trialsData, activePlant, year);
             if (window.trialsSearchQuery && window.trialsSearchQuery.trim() !== '') {
-                // Search across ALL months for this plant
                 const query = window.trialsSearchQuery.toLowerCase().trim();
-                plantTrials = trialsData.filter(t =>
-                    t.Plant === activePlant && (
-                        (t.Product || '').toLowerCase().includes(query) ||
-                        (t['Product Type'] || '').toLowerCase().includes(query) ||
-                        (t.Remarks || '').toLowerCase().includes(query)
-                    )
+                plantTrials = plantTrials.filter(t =>
+                    (t.Product || '').toLowerCase().includes(query) ||
+                    (t['Product Type'] || '').toLowerCase().includes(query) ||
+                    (String(t.Remarks || '')).toLowerCase().includes(query)
                 );
-                console.log(`Searching across all months. Found ${plantTrials.length} results.`);
-            } else {
-                // Standard month-based filtering
-                plantTrials = getFilteredData(trialsData, activePlant, year, month);
             }
 
             plantTrials.sort((a, b) => new Date(b.Date) - new Date(a.Date));
@@ -4399,7 +4420,7 @@
                         </div>
                         <div>
                             <p class="text-[11px] font-bold text-blue-400 uppercase tracking-wider leading-none mb-1">Search Active</p>
-                            <p class="text-xs text-blue-200">Searching across <b>all months</b> for "${window.trialsSearchQuery}"</p>
+                            <p class="text-xs text-blue-200">Searching the selected period for "${window.trialsSearchQuery}"</p>
                         </div>
                     </div>
                     <button onclick="handleTrialsSearch('')" class="text-[10px] font-bold text-blue-400 hover:text-blue-300 uppercase tracking-widest border border-blue-400/30 px-2 py-1 rounded transition-colors">Clear</button>
@@ -6529,7 +6550,7 @@
 
             // Collect all unique years from product data
             const uniqueYears = [...new Set(
-                allProductData.map(p => (p.Month || p.Date || '').substring(0, 4)).filter(y => y && y.length === 4)
+                allProductData.map(p => calendarYear(p.Month || p.Date)).filter(y => y)
             )].sort().reverse();
 
             if (uniqueYears.length === 0) {
@@ -6968,7 +6989,7 @@
             // Find all unique available months and years from product data
             const productDataPlant = (dashboardData.productData || []).filter(d => d.Plant === activePlant);
 
-            const uniqueYears = [...new Set(productDataPlant.map(d => (d.Month || d.Date || '').substring(0, 4)).filter(y => y))].sort().reverse();
+            const uniqueYears = [...new Set(productDataPlant.map(d => calendarYear(d.Month || d.Date)).filter(y => y))].sort().reverse();
 
             // Default select the latest year
             const defaultYear = uniqueYears.length > 0 ? uniqueYears[0] : new Date().getFullYear().toString();
@@ -7678,7 +7699,7 @@
                     if (activePlant === 'all') {
                         // Landing Page Summary: Show cards/table for ALL plants
                         let plantsHTML = '<div class="grid grid-cols-2 gap-6 mb-8">';
-                        const allYears = [...new Set(dashboardData.mainData.map(d => d.Month.substring(0, 4)))].sort();
+                        const allYears = [...new Set(dashboardData.mainData.map(d => calendarYear(d.Month)).filter(y => y))].sort();
                         const latestYear = allYears[allYears.length - 1];
 
                         PLANTS.forEach(p => {
@@ -7832,24 +7853,21 @@
                 const searchActive = window.trialsSearchQuery && window.trialsSearchQuery.trim() !== '';
                 reportBody += `<h2 class="text-xl font-bold mb-1 text-slate-800 border-b pb-2"> Trial Runs Report</h2> `;
                 if (searchActive) {
-                    reportBody += `<p class="text-xs text-blue-600 font-bold uppercase tracking-wider mb-4"> Filtered by Search: "${window.trialsSearchQuery}"(All Periods)</p> `;
+                    reportBody += `<p class="text-xs text-blue-600 font-bold uppercase tracking-wider mb-4"> Filtered by Search: "${window.trialsSearchQuery}" (selected period)</p> `;
                 }
 
                 if (includeOverview) {
                     const trialsData = dashboardData.trialsData || [];
                     let filtered = [];
 
+                    filtered = filterTrials(trialsData, activePlant, year);
                     if (searchActive) {
                         const query = window.trialsSearchQuery.toLowerCase().trim();
-                        filtered = trialsData.filter(t =>
-                            t.Plant === activePlant && (
-                                (t.Product || '').toLowerCase().includes(query) ||
-                                (t['Product Type'] || '').toLowerCase().includes(query) ||
-                                (t.Remarks || '').toLowerCase().includes(query)
-                            )
+                        filtered = filtered.filter(t =>
+                            (t.Product || '').toLowerCase().includes(query) ||
+                            (t['Product Type'] || '').toLowerCase().includes(query) ||
+                            (String(t.Remarks || '')).toLowerCase().includes(query)
                         );
-                    } else {
-                        filtered = getFilteredData(trialsData, activePlant, year, month);
                     }
 
                     filtered.sort((a, b) => new Date(b.Date) - new Date(a.Date));
@@ -8302,11 +8320,15 @@
                 if (yearSelect && yearSelect.options.length <= 1) {
                     const years = new Set();
                     // Extract years from all available datasets
-                    if (dashboardData.mainData) dashboardData.mainData.forEach(d => { if (d.Month) years.add(d.Month.substring(0, 4)); });
-                    if (dashboardData.productData) dashboardData.productData.forEach(d => { if (d.Month) years.add(d.Month.substring(0, 4)); });
-                    if (dashboardData.offlineData) dashboardData.offlineData.forEach(d => { if (d.Month) years.add(d.Month.substring(0, 4)); });
-                    if (dashboardData.eremaData) dashboardData.eremaData.forEach(d => { if (d.Month) years.add(d.Month.substring(0, 4)); });
-                    if (dashboardData.trialsData) dashboardData.trialsData.forEach(d => { if (d.Date) years.add(d.Date.substring(0, 4)); });
+                    const addYear = (value) => {
+                        const year = calendarYear(value);
+                        if (year) years.add(year);
+                    };
+                    if (dashboardData.mainData) dashboardData.mainData.forEach(d => addYear(d.Month));
+                    if (dashboardData.productData) dashboardData.productData.forEach(d => addYear(d.Month));
+                    if (dashboardData.offlineData) dashboardData.offlineData.forEach(d => addYear(d.Month));
+                    if (dashboardData.eremaData) dashboardData.eremaData.forEach(d => addYear(d.Month));
+                    if (dashboardData.trialsData) dashboardData.trialsData.forEach(d => addYear(d.Date));
 
                     const sortedYears = Array.from(years).sort().reverse();
                     sortedYears.forEach(y => {

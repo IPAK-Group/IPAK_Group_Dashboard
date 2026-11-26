@@ -1335,8 +1335,8 @@ function init(){
         const years = new Set();
         dashboardData.mainData.forEach(r => {
             if (r.Month) {
-                const y = r.Month.split('-')[0];
-                if (y && y.length === 4) years.add(y);
+                const match = String(r.Month).match(/^(19|20)\d{2}/);
+                if (match) years.add(match[0]);
             }
         });
         const sortedYears = Array.from(years).sort((a, b) => b - a);
