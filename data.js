@@ -15010,6 +15010,356 @@ const dashboardData = {
             "Product Type": "White Solid(Sustaiable)",
             "Product": "OW219PI-20",
             "Production": 997.36
+        },
+        {
+            "Month": "2026-06-01",
+            "Plant": "CPAK",
+            "Product Type": "Metalizable",
+            "Product": "JR-CMB21S-20",
+            "Production": 65126.0
+        },
+        {
+            "Month": "2026-06-01",
+            "Plant": "CPAK",
+            "Product Type": "Metalizable",
+            "Product": "JR-CMB21S-25 ",
+            "Production": 310794.0
+        },
+        {
+            "Month": "2026-06-01",
+            "Plant": "CPAK",
+            "Product Type": "Metalizable",
+            "Product": "JR-CMB21S-30",
+            "Production": 15463.0
+        },
+        {
+            "Month": "2026-06-01",
+            "Plant": "CPAK",
+            "Product Type": "Metalizable High MBS",
+            "Product": "JR-CMB21SX-25",
+            "Production": 126932.0
+        },
+        {
+            "Month": "2026-06-01",
+            "Plant": "CPAK",
+            "Product Type": "White Metalizable",
+            "Product": "JR-CMBW21-40",
+            "Production": 22095.0
+        },
+        {
+            "Month": "2026-06-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable",
+            "Product": "JR-CTH21-25",
+            "Production": 38314.0
+        },
+        {
+            "Month": "2026-06-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable",
+            "Product": "JR-CTH21-30",
+            "Production": 31715.0
+        },
+        {
+            "Month": "2026-06-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable",
+            "Product": "JR-CTH21-40",
+            "Production": 1127.0
+        },
+        {
+            "Month": "2026-06-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable Low COF",
+            "Product": "JR-CTH2L-25",
+            "Production": 2348.0
+        },
+        {
+            "Month": "2026-06-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable Low COF",
+            "Product": "JR-CTH2L-40",
+            "Production": 2127.0
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable Low COF",
+            "Product": "JR-CTH21L-25",
+            "Production": 4239.47
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable Low COF",
+            "Product": "JR-CTH21L-30",
+            "Production": 6982.7
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable Low COF",
+            "Product": "JR-CTH21L-40",
+            "Production": 2583.26
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "CPAK",
+            "Product Type": "Metalizable",
+            "Product": "JR-CMB21S-25",
+            "Production": 363551.06
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable",
+            "Product": "JR-CTH21-40",
+            "Production": 2897.5
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable",
+            "Product": "JR-CTH21-50",
+            "Production": 452.23
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable",
+            "Product": "JR-CTH21-20",
+            "Production": 240.5
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "CPAK",
+            "Product Type": "Metalizable",
+            "Product": "JR-CMB21S-30",
+            "Production": 28281.05
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "CPAK",
+            "Product Type": "Metalizable",
+            "Product": "JR-CMB21S-40",
+            "Production": 481.4
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable",
+            "Product": "JR-CTH21-25",
+            "Production": 44059.04
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "CPAK",
+            "Product Type": "Metalizable",
+            "Product": "JR-CMB21S-20",
+            "Production": 22821.93
+        },
+        {
+            "Month": "2026-07-01",
+            "Plant": "CPAK",
+            "Product Type": "Metalizable High MBS",
+            "Product": "JR-CMB21SX-25",
+            "Production": 25480.19
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "CPAK",
+            "Product Type": "Metalizable",
+            "Product": "JR-CMB21S-20",
+            "Production": 102252.33
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "CPAK",
+            "Product Type": "Metalizable",
+            "Product": "JR-CMB21S-30",
+            "Production": 8011.2
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable",
+            "Product": "JR-CTH21-25",
+            "Production": 30413.68
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "CPAK",
+            "Product Type": "Metalizable High MBS",
+            "Product": "JR-CMB21SX-25",
+            "Production": 48399.41
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "CPAK",
+            "Product Type": "Metalizable",
+            "Product": "JR-CMB21S-25",
+            "Production": 415201.39
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "CPAK",
+            "Product Type": "Low Sealable",
+            "Product": "JR-CTH21L-25",
+            "Production": 1462.86
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable",
+            "Product": "JR-CTH21-38",
+            "Production": 6490.07
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable",
+            "Product": "JR-CTH21-30",
+            "Production": 6479.0
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable",
+            "Product": "JR-CTH21-40",
+            "Production": 31798.25
+        },
+        {
+            "Month": "2026-08-01",
+            "Plant": "CPAK",
+            "Product Type": "Low Sealable",
+            "Product": "JR-CTH21L-30",
+            "Production": 25366.89
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "CPAK",
+            "Product Type": "Metalizable",
+            "Product": "JR-CMB21S-25",
+            "Production": 515088.64
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "CPAK",
+            "Product Type": "White Metalizable",
+            "Product": "JR-CMBW21-40",
+            "Production": 14165.9
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable",
+            "Product": "JR-CTH21-40",
+            "Production": 1956.15
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable",
+            "Product": "JR-CTH21-25",
+            "Production": 29916.74
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "CPAK",
+            "Product Type": "Metalizable",
+            "Product": "JR-CMB21S-20",
+            "Production": 54972.79
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "CPAK",
+            "Product Type": "Metalizable High MBS",
+            "Product": "JR-CMB21SX-25",
+            "Production": 62195.57
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "CPAK",
+            "Product Type": "HB Metalizable",
+            "Product": "JR-CMB21R-25",
+            "Production": 6985.74
+        },
+        {
+            "Month": "2026-09-01",
+            "Plant": "CPAK",
+            "Product Type": "UHB Metalizable",
+            "Product": "JR-CMB21KB-25",
+            "Production": 373.07
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "CPAK",
+            "Product Type": "Metalizable",
+            "Product": "JR-CMB21S-25",
+            "Production": 336174.37
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "CPAK",
+            "Product Type": "Metalizable",
+            "Product": "JR-CMB21S-20",
+            "Production": 138281.95
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable",
+            "Product": "JR-CTH21-25",
+            "Production": 72914.7
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "CPAK",
+            "Product Type": "White Solid",
+            "Product": "JR-CW21-25",
+            "Production": 16709.55
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "CPAK",
+            "Product Type": "Metalizable High MBS",
+            "Product": "JR-CMB21SX-25",
+            "Production": 48964.63
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "CPAK",
+            "Product Type": "Sealable",
+            "Product": "JR-CTH21L-30",
+            "Production": 320.47
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "CPAK",
+            "Product Type": "Low Sealable",
+            "Product": "JR-CTH21L-25",
+            "Production": 12224.19
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "CPAK",
+            "Product Type": "Low Sealable",
+            "Product": "JR-CTH21L-30",
+            "Production": 3268.35
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "CPAK",
+            "Product Type": "Low Sealable",
+            "Product": "JR-CTH21L-20",
+            "Production": 1083.46
+        },
+        {
+            "Month": "2026-10-01",
+            "Plant": "CPAK",
+            "Product Type": "Low Sealable",
+            "Product": "JR-CTH21L-35",
+            "Production": 1165.2
         }
     ],
     "eremaData": [
@@ -17132,6 +17482,38 @@ const dashboardData = {
             "Waste": 34691.0,
             "Waste %": 0.0238,
             "Down Time": 12.0
+        },
+        {
+            "Month": "2026-07-26",
+            "Plant": "CPAK",
+            "Production": 520391,
+            "Waste": 66790.0,
+            "Waste %": 0.123,
+            "Down Time": 2.0
+        },
+        {
+            "Month": "2026-08-26",
+            "Plant": "CPAK",
+            "Production": 658185,
+            "Waste": 85060.0,
+            "Waste %": 0.122,
+            "Down Time": 5.0
+        },
+        {
+            "Month": "2026-09-26",
+            "Plant": "CPAK",
+            "Production": 618744,
+            "Waste": 51630.0,
+            "Waste %": 0.076,
+            "Down Time": 4.7
+        },
+        {
+            "Month": "2026-10-26",
+            "Plant": "CPAK",
+            "Production": 611282,
+            "Waste": 47810.0,
+            "Waste %": 0.073,
+            "Down Time": 7.3
         }
     ],
     "reconData": [],
